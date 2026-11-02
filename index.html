@@ -201,6 +201,15 @@ ol.chron li:last-child { border-bottom: 0; }
 .transcript .tx-note { margin: 0; padding: 10px 18px 14px; color: var(--muted); font-size: 14px; border-top: 1px dotted var(--rule); }
 
 /* Repositories: styled like finding-aid entries */
+.roll-status { border-left: 3px solid var(--accent); padding-left: 10px; }
+.roll-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 18px 0 8px; }
+.roll-tools input { font: inherit; padding: 6px 10px; border: 1px solid var(--rule); background: var(--panel); min-width: 220px; }
+.roll-tools #roll-count { color: var(--muted); font-size: 14px; }
+.roll-letters { font-family: var(--font-sc); letter-spacing: .04em; word-spacing: .35em; }
+.roll-letter { font-family: var(--font-display); font-size: 22px; margin: 18px 0 6px; border-bottom: 1px solid var(--rule); }
+.roll-list { columns: 3 13em; column-gap: 24px; list-style: none; padding: 0; margin: 0 0 8px; }
+.roll-list li { break-inside: avoid; padding: 1px 0; }
+.roll-notes li, .roll-officers li { font-size: 15px; }
 .repo { border: 1px solid var(--rule); background: var(--panel); margin-bottom: 14px; }
 .repo-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding: 14px 18px; border-bottom: 1px solid var(--rule); }
 .repo-top h3 { font-family: var(--font-display); font-size: 22px; margin: 0; line-height: 1.2; }
@@ -272,6 +281,7 @@ footer .wrap { display: grid; gap: 8px; }
       <a href="#repositories">Repositories</a>
       <a href="bibliography.html">Bibliography</a>
       <a href="images.html">Images</a>
+      <a href="roll.html">Roll of membership</a>
       <a href="questions.html">Open questions</a>
       <a href="#share">Share records</a>
       <a href="#about">About</a>
@@ -299,6 +309,7 @@ footer .wrap { display: grid; gap: 8px; }
       </div>
       <div class="series-body">
         <ol class="chron">
+          <li><span class="date">Nov 2026</span><span><b>Added to this guide.</b> The 1861&ndash;62 roll of membership, printed by George S. Dove &amp; Co. in 1886: 429 names, searchable. Draft transcription, to be checked against the pamphlet. See <a href="roll.html#roll">Roll of membership</a>.</span></li>
           <li><span class="date">14 Nov 2026</span><span><b>Podcast.</b> &ldquo;Episode 113: Kirk Watson on Reincarnation in Early Mormonism,&rdquo; <i>Scriptural Mormonism</i> podcast, hosted by Robert Boylan. The conversation includes the Morrisites. Premieres live on YouTube November 14, 2026, at 10:00 a.m. Mountain. <a href="https://www.youtube.com/watch?v=Wi8ooinkCEA" target="_blank" rel="noopener">Watch on YouTube</a></span></li>
           <li><span class="date">Oct 2026</span><span><b>New book.</b> Kirk Watson, ed., <i>The Morrisites: Writings and Revelations</i> (2026), collects writings of Joseph Morris, George Williams, William W. Davies, George S. Dove, and James Dove. See <a href="bibliography.html#bibliography">Bibliography</a>.</span></li>
           <li><span class="date">Nov 2026</span><span><b>Added to this guide.</b> A dated photographic record of the Racetrack church, from before 2004 to 2018, along with views of South Weber, cannonballs from the siege, and an entry on the Morrisite scepters. See <a href="images.html#images">Images</a> and <a href="#repositories">Repositories</a>.</span></li>
@@ -625,7 +636,7 @@ footer .wrap { display: grid; gap: 8px; }
             <li>Citations follow <i>The Chicago Manual of Style</i>. Every work in the bibliography has been examined by the editor in at least one edition; where a page reference comes from an edition not seen, the entry says so. A work known only from another source&rsquo;s citation will be marked <span class="tag">Not yet checked</span>.</li>
             <li>Facts are drawn from published works with citations; their text is not reproduced. Videos and photographs by others are linked, not copied.</li>
             <li>Dates marked provisional, approximate, or &ldquo;ca.&rdquo; are flagged as such and revised when better evidence turns up.</li>
-            <li>Membership rolls and other records naming private individuals are cited but not republished. The 1861&ndash;62 South Weber roll, for example, lists about 430 names (Anderson, <i>Revisited</i>, 214&ndash;18).</li>
+            <li>Membership rolls and other records naming private individuals are cited but not republished, with one exception: the 1861&ndash;62 South Weber roll, printed in 1886 and naming only people baptized more than 160 years ago, is given in full on the <a href="roll.html#roll">Roll of membership</a> page.</li>
             <li>Changes are listed under <a href="#new">What&rsquo;s new</a>.</li>
           </ul>
         </div>
