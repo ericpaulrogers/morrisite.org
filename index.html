@@ -210,6 +210,21 @@ ol.chron li:last-child { border-bottom: 0; }
 .roll-list { columns: 3 13em; column-gap: 24px; list-style: none; padding: 0; margin: 0 0 8px; }
 .roll-list li { break-inside: avoid; padding: 1px 0; }
 .fs-link { font-family: var(--font-mono, monospace); font-size: 12px; letter-spacing: .02em; white-space: nowrap; }
+.fs-probable { color: var(--muted); }
+.aff { margin: 6px 0 4px; }
+.aff-row { display: grid; grid-template-columns: 13em 1fr; gap: 10px; align-items: center; margin: 8px 0; }
+.aff-rowlab { font-size: 14px; color: var(--muted); }
+.aff-bar { display: flex; gap: 2px; height: 22px; }
+.aff-seg { border-radius: 4px; min-width: 6px; border: 0; padding: 0; cursor: help; }
+.aff-legend { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.aff-key { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: 0; }
+.aff-dot { display: inline-block; width: 18px; height: 18px; margin: 0 2px 0 -5px; padding: 0; border: 0; background: transparent; cursor: help; vertical-align: -3px; position: relative; }
+.aff-dot::before { content: ""; position: absolute; left: 5px; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+.aff-dot:hover::before, .aff-dot:focus-visible::before { box-shadow: 0 0 0 2px var(--panel), 0 0 0 3px var(--c); }
+.aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: #fff; font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.aff-detail { margin-top: 8px; font-size: 14px; }
+@media (max-width: 600px) { .aff-row { grid-template-columns: 1fr; gap: 4px; } }
+
 .roll-notes li, .roll-officers li { font-size: 15px; }
 .repo { border: 1px solid var(--rule); background: var(--panel); margin-bottom: 14px; }
 .repo-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding: 14px 18px; border-bottom: 1px solid var(--rule); }
@@ -244,11 +259,11 @@ ul.cites li { padding-left: 2em; text-indent: -2em; max-width: 68ch; }
 
 /* Photographs */
 .place figure { margin: -16px -18px 6px; }
-.place figure img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-bottom: 1px solid var(--rule); }
+.place figure img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-bottom: 1px solid var(--rule); }
 .place figcaption { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); padding: 6px 18px 0; letter-spacing: 0.02em; }
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
 .gallery figure { margin: 0; background: var(--panel); border: 1px solid var(--rule); display: grid; align-content: start; }
-.gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
 .gallery figcaption { padding: 10px 12px 12px; font-size: 14.5px; line-height: 1.45; display: grid; gap: 4px; }
 .gallery .itemno { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.06em; color: var(--accent); }
 .gallery .meta { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); }
@@ -256,7 +271,7 @@ ul.cites li { padding-left: 2em; text-indent: -2em; max-width: 68ch; }
 .gallery-sub { margin: 0 0 14px; max-width: 62ch; font-size: 15px; color: var(--muted); }
 .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 30px 0 6px; }
 .compare figure { margin: 0; }
-.compare img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--rule); }
+.compare img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--rule); }
 .compare figcaption { font-family: var(--font-mono); font-size: 12px; color: var(--muted); padding-top: 6px; }
 @media (max-width: 460px) { .compare { grid-template-columns: 1fr; } }
 .photo-note { margin: 18px 0 0; max-width: 62ch; color: var(--muted); font-size: 15px; }
@@ -310,6 +325,7 @@ footer .wrap { display: grid; gap: 8px; }
       </div>
       <div class="series-body">
         <ol class="chron">
+          <li><span class="date">Nov 2026</span><span><b>Added to this guide.</b> Twenty photographs of the Racetrack church, inside and out, taken September 5, 1989: the earliest views in the condition record. Courtesy of Barbara B. Walden, Community of Christ Historic Sites Foundation. See <a href="images.html#images">Images</a>.</span></li>
           <li><span class="date">Nov 2026</span><span><b>Added to this guide.</b> The 1861&ndash;62 roll of membership, printed by George S. Dove &amp; Co. in 1886: 429 names, searchable. Draft transcription, to be checked against the pamphlet. See <a href="roll.html#roll">Roll of membership</a>.</span></li>
           <li><span class="date">14 Nov 2026</span><span><b>Podcast.</b> &ldquo;Episode 113: Kirk Watson on Reincarnation in Early Mormonism,&rdquo; <i>Scriptural Mormonism</i> podcast, hosted by Robert Boylan. The conversation includes the Morrisites. Premieres live on YouTube November 14, 2026, at 10:00 a.m. Mountain. <a href="https://www.youtube.com/watch?v=Wi8ooinkCEA" target="_blank" rel="noopener">Watch on YouTube</a></span></li>
           <li><span class="date">Oct 2026</span><span><b>New book.</b> Kirk Watson, ed., <i>The Morrisites: Writings and Revelations</i> (2026), collects writings of Joseph Morris, George Williams, William W. Davies, George S. Dove, and James Dove. See <a href="bibliography.html#bibliography">Bibliography</a>.</span></li>
@@ -635,7 +651,7 @@ footer .wrap { display: grid; gap: 8px; }
           <h3>Standards</h3>
           <ul>
             <li>Citations follow <i>The Chicago Manual of Style</i>. Every work in the bibliography has been examined by the editor in at least one edition; where a page reference comes from an edition not seen, the entry says so. A work known only from another source&rsquo;s citation will be marked <span class="tag">Not yet checked</span>.</li>
-            <li>Facts are drawn from published works with citations; their text is not reproduced. Videos and photographs by others are linked, not copied.</li>
+            <li>Facts are drawn from published works with citations; their text is not reproduced. Videos and photographs by others are linked, not copied, unless they have been shared for this guide; those are credited.</li>
             <li>Dates marked provisional, approximate, or &ldquo;ca.&rdquo; are flagged as such and revised when better evidence turns up.</li>
             <li>Membership rolls and other records naming private individuals are cited but not republished, with one exception: the 1861&ndash;62 South Weber roll, printed in 1886 and naming only people baptized more than 160 years ago, is given in full on the <a href="roll.html#roll">Roll of membership</a> page.</li>
             <li>Changes are listed under <a href="#new">What&rsquo;s new</a>.</li>
