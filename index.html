@@ -110,7 +110,13 @@ h1, h2, h3 { text-wrap: balance; font-weight: 400; }
 }
 .mast .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; justify-content: space-between; }
 .mast .mark { font-family: var(--font-sc); font-size: 20px; letter-spacing: 0.04em; color: var(--ink); text-decoration: none; }
-.mast nav { display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--font-mono); font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.06em; }
+.mast nav { display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; }
+.mast nav.util { font-size: 11px; gap: 4px 14px; }
+.mast nav.main { flex-basis: 100%; font-size: 13.5px; gap: 6px 26px; padding-top: 6px; }
+.subnav { display: flex; flex-wrap: wrap; gap: 4px 6px; margin: -6px 0 8px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; }
+.subnav a { color: var(--muted); text-decoration: none; padding: 6px 12px 8px; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.subnav a:hover { color: var(--accent); }
+.subnav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
 .mast nav a { color: var(--muted); text-decoration: none; }
 .mast nav a:hover { color: var(--accent); }
 
@@ -335,21 +341,18 @@ footer .wrap { display: grid; gap: 8px; }
 <header class="mast">
   <div class="wrap">
     <a class="mark" href="#top">Morrisite.org</a>
-    <nav aria-label="Sections">
+    <nav class="util" aria-label="Site">
       <a href="#new">What&rsquo;s new</a>
-      <a href="#essentials">Start here</a>
-      <a href="#featured">Forscutt edition</a>
-      <a href="#chronology">Chronology</a>
-      <a href="#places">Places</a>
-      <a href="#repositories">Repositories</a>
-      <a href="bibliography.html">Bibliography</a>
-      <a href="documents.html">Documents</a>
-      <a href="images.html">Images</a>
-      <a href="roll.html">Roll of membership</a>
-      <a href="people.html">Who they were</a>
-      <a href="questions.html">Open questions</a>
       <a href="#share">Share records</a>
       <a href="#about">About</a>
+    </nav>
+    <nav class="main" aria-label="Sections">
+      <a href="#essentials">Start here</a>
+      <a href="#chronology">History</a>
+      <a href="documents.html">Sources</a>
+      <a href="roll.html">People</a>
+      <a href="images.html">Images</a>
+      <a href="questions.html">Questions</a>
     </nav>
   </div>
 </header>
