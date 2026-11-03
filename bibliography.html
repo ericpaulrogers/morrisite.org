@@ -221,6 +221,7 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .roll-letter { font-family: var(--font-display); font-size: 22px; margin: 18px 0 6px; border-bottom: 1px solid var(--rule); }
 .roll-list { columns: 3 13em; column-gap: 24px; list-style: none; padding: 0; margin: 0 0 8px; }
 .roll-list li { break-inside: avoid; padding: 1px 0; }
+.bail-chip { font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: .02em; white-space: nowrap; padding: 0 5px; border: 1px solid var(--rule); border-radius: 3px; color: inherit; text-decoration: none; }
 .fs-link { font-family: var(--font-mono, monospace); font-size: 12px; letter-spacing: .02em; white-space: nowrap; }
 .fs-probable { color: var(--muted); }
 .aff { margin: 6px 0 4px; }
@@ -235,6 +236,33 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .aff-dot:hover::before, .aff-dot:focus-visible::before { box-shadow: 0 0 0 2px var(--panel), 0 0 0 3px var(--c); }
 .aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: #fff; font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 .aff-detail { margin-top: 8px; font-size: 14px; }
+.doc-text { margin: 4px 0; padding: 10px 14px; border-left: 3px solid var(--rule); background: var(--paper); font-size: 15px; line-height: 1.55; }
+.doc-text p { margin: 0 0 .6em; }
+.doc-text p:last-child { margin-bottom: 0; }
+.dem-grid { display: block; }
+.dem-set[hidden] { display: none; }
+.dem-set { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px 32px; }
+.dem-block { margin: 6px 0 14px; }
+.dem-block h4 { font-family: var(--font-display); font-size: 18px; margin: 0 0 8px; font-weight: normal; }
+.dem-note { font-size: 13px; color: var(--muted); margin: 6px 0 0; line-height: 1.45; }
+.dem-cov { font-size: 15px; color: var(--ink); background: var(--panel); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 0 0 12px; }
+.dem-toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; margin: 0 0 14px; cursor: pointer; }
+.dem-row { display: grid; grid-template-columns: 11em 1fr; gap: 10px; align-items: center; margin: 5px 0; font-size: 14px; }
+.dem-lab { color: var(--ink); }
+.dem-track { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.dem-bar { display: inline-block; height: 16px; min-width: 3px; border-radius: 0 4px 4px 0; cursor: help; }
+.dem-n { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pyr-row { display: grid; grid-template-columns: 1fr 3.6em 1fr; gap: 6px; align-items: center; margin: 3px 0; font-size: 13px; }
+.pyr-head { color: var(--muted); margin-bottom: 6px; }
+.pyr-lab { text-align: center; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pyr-side { display: flex; align-items: center; gap: 6px; }
+.pyr-l { justify-content: flex-end; }
+.pyr-l .dem-bar { border-radius: 4px 0 0 4px; }
+.dem-tablewrap { overflow-x: auto; }
+.dem-table { border-collapse: collapse; font-size: 13px; margin-top: 8px; min-width: 640px; }
+.dem-table th, .dem-table td { text-align: left; padding: 3px 10px 3px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.dem-table th { font-weight: 600; color: var(--muted); }
+@media (max-width: 600px) { .dem-row { grid-template-columns: 8em 1fr; } }
 @media (max-width: 600px) { .aff-row { grid-template-columns: 1fr; gap: 4px; } }
 
 .roll-notes li, .roll-officers li { font-size: 15px; }
@@ -308,8 +336,10 @@ footer .wrap { display: grid; gap: 8px; }
       <a href="index.html#places">Places</a>
       <a href="index.html#repositories">Repositories</a>
       <a href="bibliography.html" aria-current="page">Bibliography</a>
+      <a href="documents.html">Documents</a>
       <a href="images.html">Images</a>
       <a href="roll.html">Roll of membership</a>
+      <a href="people.html">Who they were</a>
       <a href="questions.html">Open questions</a>
       <a href="index.html#share">Share records</a>
       <a href="index.html#about">About</a>
@@ -338,10 +368,12 @@ footer .wrap { display: grid; gap: 8px; }
           <li>Dove, George S., and James Dove. <i>A Voice from the West.</i> San Francisco: Church of the Firstborn, 1879.</li>
           <li>Dove, James. <i>A Few Items in the History of the Morrisites.</i> San Francisco: Church of the Firstborn, 1892.</li>
           <li>Eardley, John R. <i>Gems of Inspiration: A Collection of Sublime Thoughts by Modern Prophets.</i> San Francisco: Joseph A. Dove, printer, 1899. <a href="https://archive.org/details/gemsofinspiratio00eard_202403" target="_blank" rel="noopener">Internet Archive</a></li>
+          <li>Fuller, Frank, Acting Governor of Utah Territory. Order to Gen. Daniel H. Wells, June 11, 1862, calling out the militia as a posse to arrest Joseph Morris. Copy in a letter from Nauvoo Legion headquarters, January 14, 1871. Utah Territorial Militia Records, series 2210, document 1,215. Utah State Archives, Salt Lake City. <a href="https://www.familysearch.org/ark:/61903/3:1:33SQ-G5XQ-FQ1" target="_blank" rel="noopener">FamilySearch image</a> (free account).</li>
           <li>Gibbs, Josiah F. <i>Lights and Shadows of Mormonism.</i> Salt Lake City: Salt Lake Tribune Publishing, 1909. Includes an account of the Morrisite War.</li>
           <li>Gilbert, Frank T. <i>Historic Sketches of Walla Walla, Whitman, Columbia and Garfield Counties, Washington Territory, and Umatilla County, Oregon.</i> Portland, 1882. Includes an interview with William W. Davies.</li>
           <li>Hickman, Bill. <i>Brigham&rsquo;s Destroying Angel: Life, Confessions and Startling Disclosures.</i> Salt Lake City: Shepard Book Company, 1904.</li>
           <li>Morris, Joseph. <i>The Spirit Prevails: Containing the Revelations, Articles and Letters Written by Joseph Morris.</i> San Francisco: George S. Dove and Company, 1886. <a href="https://archive.org/details/spiritprevails00morrrich" target="_blank" rel="noopener">Internet Archive</a></li>
+          <li>Stenhouse, Fanny (Mrs. T. B. H.). <i>An Englishwoman in Utah: The Story of a Life&rsquo;s Experience in Mormonism.</i> London: Sampson Low, Marston, Searle &amp; Rivington, 1880. The chapter &ldquo;Killing a Rival Prophet&rdquo; covers the Morrisites, with Alexander Dow&rsquo;s affidavit and the 1863 sentences. <a href="https://www.gutenberg.org/ebooks/60076" target="_blank" rel="noopener">Project Gutenberg</a></li>
           <li>Stenhouse, T. B. H. <i>The Rocky Mountain Saints: A Full and Complete History of the Mormons.</i> New York: D. Appleton, 1873.</li>
           <li>Watson, Kirk, ed. <i>The Morrisites: Writings and Revelations.</i> Writings of Joseph Morris, George Williams, William W. Davies, George S. Dove, and James Dove. Independently published, 2026. <span class="tag">New</span></li>
         </ul>
@@ -377,7 +409,7 @@ footer .wrap { display: grid; gap: 8px; }
           <li>Cannon, M. Hamlin. &ldquo;The Morrisite War.&rdquo; <i>The American West</i> 7 (November 1970): 4&ndash;9, 62&ndash;63.</li>
           <li>Godfrey, Kenneth. &ldquo;The Morrisites.&rdquo; In <i>Utah History Encyclopedia</i>, edited by Allan Kent Powell. Salt Lake City: University of Utah Press, 1994. <a href="https://www.uen.org/utah_history_encyclopedia/m/MORRISITES.shtml" target="_blank" rel="noopener">Online</a></li>
           <li>Halford, Larry J., C. LeRoy Anderson, and Robert E. Clark. &ldquo;Prophecy Fails Again and Again: The Morrisites.&rdquo; <i>Free Inquiry in Creative Sociology</i> 9, no. 1 (May 1981). <a href="https://ojs.library.okstate.edu/osu/index.php/FICS/article/view/717/658" target="_blank" rel="noopener">Online</a></li>
-          <li>Holley, Val. &ldquo;Slouching Toward Slaterville: Joseph Morris&rsquo;s Wide Swath in Weber County.&rdquo; <i>Utah Historical Quarterly</i> 76, no. 3 (Summer 2008).</li>
+          <li>Holley, Val. &ldquo;Slouching Towards Slaterville: Joseph Morris&rsquo;s Wide Swath in Weber County.&rdquo; <i>Utah Historical Quarterly</i> 76, no. 3 (Summer 2008): 247 ff. Names eleven Slaterville and Marriott men among the prisoners of June 1862. <a href="https://issuu.com/utah10/docs/uhq_volume76_2008_number3" target="_blank" rel="noopener">Issuu</a></li>
           <li>Holzapfel, Richard N. &ldquo;The Flight of the Doves from Utah Mormonism to California Morrisitism: The Saga of James and George Dove.&rdquo; In <i>Differing Visions: Dissenters in Mormon History</i>, edited by Roger D. Launius and Linda Thatcher, 196&ndash;219. Urbana: University of Illinois Press, 1994.</li>
           <li>Howard, G. M. &ldquo;Men, Motives, and Misunderstandings: A New Look at the Morrisite War of 1862.&rdquo; <i>Utah Historical Quarterly</i> 44, no. 2 (1976): 112&ndash;32. <a href="https://issuu.com/utah10/docs/uhq_volume44_1976_number2/s/125322" target="_blank" rel="noopener">Online</a></li>
           <li>Quinn, D. Michael. &ldquo;To Whom Shall We Go? Historical Patterns of Restoration Believers with Serious Doubts.&rdquo; Paper presented at the Sunstone Symposium. Audio recording SL04361. <a href="https://sunstone.org/to-whom-shall-we-go-historical-patterns-of-restoration-believers-with-serious-doubts" target="_blank" rel="noopener">Listen</a></li>

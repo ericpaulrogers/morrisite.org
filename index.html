@@ -228,6 +228,7 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .roll-letter { font-family: var(--font-display); font-size: 22px; margin: 18px 0 6px; border-bottom: 1px solid var(--rule); }
 .roll-list { columns: 3 13em; column-gap: 24px; list-style: none; padding: 0; margin: 0 0 8px; }
 .roll-list li { break-inside: avoid; padding: 1px 0; }
+.bail-chip { font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: .02em; white-space: nowrap; padding: 0 5px; border: 1px solid var(--rule); border-radius: 3px; color: inherit; text-decoration: none; }
 .fs-link { font-family: var(--font-mono, monospace); font-size: 12px; letter-spacing: .02em; white-space: nowrap; }
 .fs-probable { color: var(--muted); }
 .aff { margin: 6px 0 4px; }
@@ -242,6 +243,33 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .aff-dot:hover::before, .aff-dot:focus-visible::before { box-shadow: 0 0 0 2px var(--panel), 0 0 0 3px var(--c); }
 .aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: #fff; font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 .aff-detail { margin-top: 8px; font-size: 14px; }
+.doc-text { margin: 4px 0; padding: 10px 14px; border-left: 3px solid var(--rule); background: var(--paper); font-size: 15px; line-height: 1.55; }
+.doc-text p { margin: 0 0 .6em; }
+.doc-text p:last-child { margin-bottom: 0; }
+.dem-grid { display: block; }
+.dem-set[hidden] { display: none; }
+.dem-set { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px 32px; }
+.dem-block { margin: 6px 0 14px; }
+.dem-block h4 { font-family: var(--font-display); font-size: 18px; margin: 0 0 8px; font-weight: normal; }
+.dem-note { font-size: 13px; color: var(--muted); margin: 6px 0 0; line-height: 1.45; }
+.dem-cov { font-size: 15px; color: var(--ink); background: var(--panel); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 0 0 12px; }
+.dem-toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; margin: 0 0 14px; cursor: pointer; }
+.dem-row { display: grid; grid-template-columns: 11em 1fr; gap: 10px; align-items: center; margin: 5px 0; font-size: 14px; }
+.dem-lab { color: var(--ink); }
+.dem-track { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.dem-bar { display: inline-block; height: 16px; min-width: 3px; border-radius: 0 4px 4px 0; cursor: help; }
+.dem-n { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pyr-row { display: grid; grid-template-columns: 1fr 3.6em 1fr; gap: 6px; align-items: center; margin: 3px 0; font-size: 13px; }
+.pyr-head { color: var(--muted); margin-bottom: 6px; }
+.pyr-lab { text-align: center; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pyr-side { display: flex; align-items: center; gap: 6px; }
+.pyr-l { justify-content: flex-end; }
+.pyr-l .dem-bar { border-radius: 4px 0 0 4px; }
+.dem-tablewrap { overflow-x: auto; }
+.dem-table { border-collapse: collapse; font-size: 13px; margin-top: 8px; min-width: 640px; }
+.dem-table th, .dem-table td { text-align: left; padding: 3px 10px 3px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.dem-table th { font-weight: 600; color: var(--muted); }
+@media (max-width: 600px) { .dem-row { grid-template-columns: 8em 1fr; } }
 @media (max-width: 600px) { .aff-row { grid-template-columns: 1fr; gap: 4px; } }
 
 .roll-notes li, .roll-officers li { font-size: 15px; }
@@ -315,8 +343,10 @@ footer .wrap { display: grid; gap: 8px; }
       <a href="#places">Places</a>
       <a href="#repositories">Repositories</a>
       <a href="bibliography.html">Bibliography</a>
+      <a href="documents.html">Documents</a>
       <a href="images.html">Images</a>
       <a href="roll.html">Roll of membership</a>
+      <a href="people.html">Who they were</a>
       <a href="questions.html">Open questions</a>
       <a href="#share">Share records</a>
       <a href="#about">About</a>
@@ -344,6 +374,10 @@ footer .wrap { display: grid; gap: 8px; }
       </div>
       <div class="series-body">
         <ol class="chron">
+          <li><span class="date">Nov 2026</span><span><b>The men taken at Kington Fort.</b> The <i>Deseret News</i> of June 25, 1862, printed the names of the ninety-eight men brought before Judge Kinney after the siege; the list is now on the <a href="documents.html#documents">Documents</a> page, checked against the roll. A new question asks whether the posse lost one man or two. See <a href="questions.html#questions">Questions</a>.</span></li>
+          <li><span class="date">Nov 2026</span><span><b>Documents.</b> A new page gathers the primary documents that can be read online, from <i>The Spirit Prevails</i> to the 1862 order calling out the posse, with transcriptions of two militia records. <a href="documents.html#documents">See the page</a>.</span></li>
+          <li><span class="date">Nov 2026</span><span><b>The order that sent the posse.</b> Acting Governor Frank Fuller&rsquo;s order of June 11, 1862, calling out the militia to arrest Joseph Morris, found in the territorial militia records, is now in the <a href="#chronology">Chronology</a> and the <a href="bibliography.html#bibliography">Bibliography</a>.</span></li>
+          <li><span class="date">Nov 2026</span><span><b>Who they were.</b> A new page counts the people on the <a href="roll.html#roll">roll of membership</a>: women and men, Scandinavian and English-language names, and, for the members identified in FamilySearch, their ages in 1862, birthplaces, families, arrival in Utah, and where they died. It also reads 91 of them in the 1860 census: where they lived, their occupations, and what their households owned. <a href="people.html#people">See the page</a>.</span></li>
           <li><span class="date">Nov 2026</span><span><b>Families on the roll.</b> More than 100 names on the <a href="roll.html#roll">roll of membership</a> now link to FamilySearch Family Tree, and a new list groups the people on the roll who were related by birth or marriage, such as the Christoffersen, Hanson and Anderson families of Soda Springs and Deer Lodge and the Park, McCue, Cowan and Bull families of the Carson Valley. A work in progress; corrections welcome.</span></li>
           <li><span class="date">Nov 2026</span><span><b>Added to this guide.</b> Twenty photographs of the Racetrack church, inside and out, taken September 5, 1989: the earliest views in the condition record. Courtesy of Barbara B. Walden, Community of Christ Historic Sites Foundation. See <a href="images.html#images">Images</a>.</span></li>
           <li><span class="date">Nov 2026</span><span><b>Person notes on the roll.</b> Names on the <a href="roll.html#roll">roll of membership</a> now have a notes button summarizing what Anderson, <i>The Spirit Prevails</i>, <i>Gems of Inspiration</i>, Watson and Forscutt&rsquo;s manuscript say about them, with page references. More to come.</span></li>
@@ -447,7 +481,9 @@ footer .wrap { display: grid; gap: 8px; }
           <li><span class="date">1857&ndash;1862</span><span>Joseph Morris, an English convert to the Latter-day Saint church, records the revelations later gathered as <i>The Spirit Prevails</i>. He writes repeatedly to Brigham Young. No written reply is known; Anderson reports that the first letter, dated December 7, 1857, bears a penciled note on its margin, &ldquo;He&rsquo;s weak minded.&rdquo; The church&rsquo;s answer comes in February 1861, when Wilford Woodruff and another apostle visit South Weber and Morris and his followers are excommunicated.</span></li>
           <li><span class="date">6 Apr 1861</span><span>Morris organizes the Church of the Firstborn and calls his followers to gather at Kington Fort, an abandoned 1853 settler fort at South Weber.</span></li>
           <li><span class="date">1861&ndash;1862</span><span>The community holds its goods in common and awaits the Second Coming. As appointed days pass, some members grow discontented and try to leave.</span></li>
+          <li><span class="date">11 Jun 1862</span><span>Acting Governor Frank Fuller orders General Daniel H. Wells to furnish the territorial marshal, Henry W. Lawrence, and his deputies, Robert T. Burton and Theodore McKean, &ldquo;a sufficient military force&rdquo; to act as a posse in serving Third District Court writs for the arrest of &ldquo;Joseph Morris and others residing in the northern part of Davis County.&rdquo; The order survives in a copy Wells made in 1871 (Utah Territorial Militia Records, series 2210, document 1,215, Utah State Archives; <a href="https://www.familysearch.org/ark:/61903/3:1:33SQ-G5XQ-FQ1" target="_blank" rel="noopener">page image</a> on FamilySearch).</span></li>
           <li><span class="date">13&ndash;15 Jun 1862</span><span>A territorial posse under Robert T. Burton besieges the fort. Morris and John Banks are killed during the surrender; eleven people die in all, including a young posse member, Jared Smith.</span></li>
+          <li><span class="date">18&ndash;19 Jun 1862</span><span>Before Judge Kinney in Salt Lake City, Richard Cook is fined and jailed for contempt, Peter Klemgaard and Christian Neilson are held in prison, and ninety-five other men are bound over on $1,500 bail each for the March 1863 term (<a href="documents.html#documents"><i>Deseret News</i>, June 25, 1862</a>).</span></li>
           <li><span class="date">Mar 1863</span><span>In Salt Lake City, seven Morrisites are convicted of second-degree murder and sixty-six of resisting arrest. The new territorial governor, Stephen S. Harding, pardons them all three days later.</span></li>
           <li><span class="date">May 1863</span><span>Many Morrisites leave Utah under the protection of Patrick Edward Connor, commanding the District of Utah. On May 5 a party of 160 (53 families, seven single men, and four widows) sets out with a company of California Volunteers; it reaches Soda Springs on May 20, where Connor has a town site surveyed on the north bank of the Bear River beside a new military post, Camp Connor (established by order of May 23). The Morrisites call their town Morristown. Connor also gives 150 Morrisites passage to Carson City, Nevada, in an empty supply train. Others settle in California. (Connor&rsquo;s report, June 2, 1863, <i>Official Records</i>, ser. 1, vol. 50, pt. 1, 226&ndash;29.)</span></li>
           <li><span class="date">1860s&ndash;</span><span>Some Morrisites return to the Church of Jesus Christ of Latter-day Saints, in Utah and elsewhere. The 2006 monument at South Weber notes that a few were rebaptized and remained there. Others find a home in the Reorganized Church (RLDS): the former Morrisite apostle Mark Hill Forscutt joins it in Salt Lake City in 1865, and John L. Bear (Johann Lebrecht B&auml;r, 1838&ndash;1919), a Swiss convert from Affoltern am Albis who emigrated from Z&uuml;rich in 1860 and lost his wife and child at Kington Fort, later serves as an RLDS missionary to Switzerland and Germany, dies in Independence, Missouri, and publishes his autobiography in the RLDS <i>Journal of History</i>. In 1865 RLDS missionaries at Malad, Idaho, baptize several people who appear on the roll. Others join only after years in the Morrisite groups: Erick and Caroline Eliason are baptized together at Soda Springs on June 9, 1870; Margaretta Cook leaves the Morrisites in Nevada in 1870 and is baptized RLDS in 1873; and Lena Hanson, at Soda Springs and then Deer Lodge, in 1895 (see the <a href="roll.html#roll">roll</a>).</span></li>
@@ -581,7 +617,7 @@ footer .wrap { display: grid; gap: 8px; }
           <dl>
             <dt>Held by</dt><dd>Utah State Historical Society, Salt Lake City</dd>
             <dt>Extent</dt><dd>3 boxes</dd>
-            <dt>Contents</dt><dd>Howard's research notes, correspondence, and draft chapters on Joseph Morris and the Morrisite War.</dd>
+            <dt>Contents</dt><dd>Howard's research notes, correspondence, and draft chapters on Joseph Morris and the Morrisite War. Box 2 holds copies of court papers: <i>People v. Peter Klingard</i>, Third Judicial District, 1863 (folder 5), and a register of arrests of Morrisites, 1863 (folder 6).</dd>
             <dt>Access</dt><dd><a href="https://history.utah.gov/finding-aids/data/B00279/B0279.xml" target="_blank" rel="noopener">Finding aid</a></dd>
           </dl>
         </div>
@@ -604,6 +640,7 @@ footer .wrap { display: grid; gap: 8px; }
           <dl>
             <dt>Church History Library</dt><dd>Brigham Young correspondence; Journal of Wilford Woodruff; Journal History of the Church; &ldquo;Niels Anderson matter, 1903&rdquo; (Joseph F. Smith stake correspondence, CR 1 191; <a href="https://catalog.churchofjesuschrist.org/assets/d114f781-fdd3-4220-8a88-a267c0c14221/0/0" target="_blank" rel="noopener">digitized</a>), letters of January&ndash;March 1903 from Niels Anderson, one also signed by Mary Christoffersen Anderson, asking the church&rsquo;s help for the injury Mary received in 1862, with a clerk&rsquo;s draft for the reply and the Bannock Stake president&rsquo;s report of May 19, 1903, on the First Presidency&rsquo;s inquiry; &ldquo;A Short Sketch of the Genealogy and History of George Morris,&rdquo; by Joseph Morris&rsquo;s brother.</dd>
             <dt>University of Utah</dt><dd>Diary of Hans Olsen Magleby; journal of John L. Blyth, 1858&ndash;1863; pioneer journal of Jacob Miller; Timothy Kendell autobiography (MS 0041), recalling South Weber as briefly called Morristown.</dd>
+            <dt>Utah State Archives</dt><dd>Territorial militia records (series 2210; images and a name index on <a href="https://www.familysearch.org/search/collection/1462415" target="_blank" rel="noopener">FamilySearch, collection 1462415</a>): Acting Governor Fuller&rsquo;s order of June 11, 1862, calling out the posse (copied in document 1,215); a list of the South Weber company&rsquo;s officers, April 22, 1859; Weber District muster rolls of the 1857 call-up, which include Robert Farley and John Parson.</dd>
             <dt>National Archives</dt><dd>Record Group 60, Department of Justice chronological files, Utah, box 683: Sumner Howard to Attorney General Charles Devens, July 28, 1877.</dd>
             <dt>Weber State University</dt><dd>Oral history of Clayton Holt (OH10_046), a teacher who researched the Morrisites in South Weber.</dd>
           </dl>

@@ -221,6 +221,7 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .roll-letter { font-family: var(--font-display); font-size: 22px; margin: 18px 0 6px; border-bottom: 1px solid var(--rule); }
 .roll-list { columns: 3 13em; column-gap: 24px; list-style: none; padding: 0; margin: 0 0 8px; }
 .roll-list li { break-inside: avoid; padding: 1px 0; }
+.bail-chip { font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: .02em; white-space: nowrap; padding: 0 5px; border: 1px solid var(--rule); border-radius: 3px; color: inherit; text-decoration: none; }
 .fs-link { font-family: var(--font-mono, monospace); font-size: 12px; letter-spacing: .02em; white-space: nowrap; }
 .fs-probable { color: var(--muted); }
 .aff { margin: 6px 0 4px; }
@@ -235,6 +236,33 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .aff-dot:hover::before, .aff-dot:focus-visible::before { box-shadow: 0 0 0 2px var(--panel), 0 0 0 3px var(--c); }
 .aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: #fff; font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 .aff-detail { margin-top: 8px; font-size: 14px; }
+.doc-text { margin: 4px 0; padding: 10px 14px; border-left: 3px solid var(--rule); background: var(--paper); font-size: 15px; line-height: 1.55; }
+.doc-text p { margin: 0 0 .6em; }
+.doc-text p:last-child { margin-bottom: 0; }
+.dem-grid { display: block; }
+.dem-set[hidden] { display: none; }
+.dem-set { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px 32px; }
+.dem-block { margin: 6px 0 14px; }
+.dem-block h4 { font-family: var(--font-display); font-size: 18px; margin: 0 0 8px; font-weight: normal; }
+.dem-note { font-size: 13px; color: var(--muted); margin: 6px 0 0; line-height: 1.45; }
+.dem-cov { font-size: 15px; color: var(--ink); background: var(--panel); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 0 0 12px; }
+.dem-toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; margin: 0 0 14px; cursor: pointer; }
+.dem-row { display: grid; grid-template-columns: 11em 1fr; gap: 10px; align-items: center; margin: 5px 0; font-size: 14px; }
+.dem-lab { color: var(--ink); }
+.dem-track { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.dem-bar { display: inline-block; height: 16px; min-width: 3px; border-radius: 0 4px 4px 0; cursor: help; }
+.dem-n { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pyr-row { display: grid; grid-template-columns: 1fr 3.6em 1fr; gap: 6px; align-items: center; margin: 3px 0; font-size: 13px; }
+.pyr-head { color: var(--muted); margin-bottom: 6px; }
+.pyr-lab { text-align: center; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pyr-side { display: flex; align-items: center; gap: 6px; }
+.pyr-l { justify-content: flex-end; }
+.pyr-l .dem-bar { border-radius: 4px 0 0 4px; }
+.dem-tablewrap { overflow-x: auto; }
+.dem-table { border-collapse: collapse; font-size: 13px; margin-top: 8px; min-width: 640px; }
+.dem-table th, .dem-table td { text-align: left; padding: 3px 10px 3px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.dem-table th { font-weight: 600; color: var(--muted); }
+@media (max-width: 600px) { .dem-row { grid-template-columns: 8em 1fr; } }
 @media (max-width: 600px) { .aff-row { grid-template-columns: 1fr; gap: 4px; } }
 
 .roll-notes li, .roll-officers li { font-size: 15px; }
@@ -308,8 +336,10 @@ footer .wrap { display: grid; gap: 8px; }
       <a href="index.html#places">Places</a>
       <a href="index.html#repositories">Repositories</a>
       <a href="bibliography.html">Bibliography</a>
+      <a href="documents.html">Documents</a>
       <a href="images.html">Images</a>
       <a href="roll.html">Roll of membership</a>
+      <a href="people.html">Who they were</a>
       <a href="questions.html" aria-current="page">Open questions</a>
       <a href="index.html#share">Share records</a>
       <a href="index.html#about">About</a>
@@ -406,8 +436,18 @@ footer .wrap { display: grid; gap: 8px; }
             <span class="callno">Open</span>
           </div>
           <dl>
-            <dt>Known</dt><dd>Seven Morrisites were convicted of second-degree murder and others fined in March 1863, before Governor Harding pardoned them. Accounts come mainly from newspapers and later histories.</dd>
-            <dt>Where to look</dt><dd>Utah territorial court case files at the Utah State Archives; federal records for the territory; Harding&rsquo;s papers and pardon records.</dd>
+            <dt>Known</dt><dd>At the March 1863 term, ten Morrisites were indicted for killing the two posse men: seven were convicted of second-degree murder, two were acquitted, and one case was dropped (nolle prosequi). One man was sentenced to fifteen years, one to twelve, and five to ten. Sixty-six others were fined $100 for resisting the posse (Fanny Stenhouse, <i>An Englishwoman in Utah</i>, 1880; Bancroft, <i>History of Utah</i>, ch. 22). Governor Harding pardoned them all a few days later. The names of the seven are not yet on this site; accounts come mainly from newspapers and later histories.</dd>
+            <dt>Where to look</dt><dd>The Gordon M. Howard papers at the Utah State Historical Society (Mss B 279), box 2: <i>People v. Peter Klingard</i>, 1863 (folder 5), and a register of arrests of Morrisites, 1863 (folder 6). The <i>Deseret News</i> of March 11 and 25, 1863, cited by Bancroft. Utah territorial court case files at the Utah State Archives; Harding&rsquo;s papers and pardon records.</dd>
+          </dl>
+        </div>
+        <div class="repo">
+          <div class="repo-top">
+            <h3>Did one posse member die, or two?</h3>
+            <span class="callno">Open</span>
+          </div>
+          <dl>
+            <dt>Known</dt><dd>Most modern accounts name Jared Smith, aged nineteen, as the posse&rsquo;s only death. The <i>Deseret News</i> of June 18, 1862 (&ldquo;Fatal Resistance to the Laws,&rdquo; p. 404) reports two young men of the posse killed, &ldquo;Smith and Wahler,&rdquo; Wilford Woodruff&rsquo;s journal for June 29, 1862, also speaks of two posse men killed, without names, and Bancroft (<i>History of Utah</i>, p. 618) gives the posse&rsquo;s loss as two, as does the inscription on the 2006 Kington Fort monument. No second name appears in the standard histories. One local history of about 1990, digitized by BYU, says a John Wahlin was killed as the posse broke open a locked cabin; the name fits the newspaper&rsquo;s &ldquo;Wahler,&rdquo; but that account cites no source (<a href="https://contentdm.lib.byu.edu/digital/api/collection/p15999coll7/id/2070/download" target="_blank" rel="noopener">BYU Library</a>). Fanny Stenhouse (1880) says the ten Morrisites indicted in 1863 were charged with killing two of the posse.</dd>
+            <dt>Where to look</dt><dd>Later issues of the <i>Deseret News</i> (June 25, 1862 onward) for a correction or a funeral notice; Salt Lake and Davis County burial records for June 1862; the Nauvoo Legion muster rolls for the posse.</dd>
           </dl>
         </div>
         <div class="repo">
