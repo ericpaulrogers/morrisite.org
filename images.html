@@ -195,6 +195,24 @@ ol.chron li:last-child { border-bottom: 0; }
 
 /* Repositories: styled like finding-aid entries */
 .roll-status { border-left: 3px solid var(--accent); padding-left: 10px; }
+.roll-key { max-width: 60em; margin: 0 0 1.2em; }
+.roll-key .aff-key { margin: 0 4px 0 2px; }
+#roll-about { margin-top: 2.5em; }
+.pn-btn { font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: .03em; border: 1px solid var(--accent); color: var(--accent); background: transparent; border-radius: 3px; padding: 0 5px; margin-left: 4px; cursor: pointer; vertical-align: 1px; line-height: 1.5; }
+.pn-btn:hover, .pn-btn:focus-visible { background: var(--accent); color: var(--paper); }
+dialog.pn { max-width: 36em; width: calc(100% - 32px); max-height: calc(100% - 48px); border: 1px solid var(--rule); background: var(--panel); color: var(--ink); padding: 22px 24px 18px; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,.25); }
+dialog.pn::backdrop { background: rgba(20,25,23,.45); }
+.pn h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; margin: 0 2em 4px 0; }
+.pn .pn-meta { font-family: var(--font-mono); font-size: 12px; color: var(--muted); margin: 0 0 14px; letter-spacing: .02em; }
+.pn p { margin: 0 0 12px; line-height: 1.55; }
+.pn dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
+.pn dd { margin: 3px 0 0; }
+.pn ul { margin: 3px 0 0; padding-left: 1.1em; }
+.pn .pn-close { position: absolute; top: 10px; right: 12px; border: 0; background: transparent; font-size: 24px; line-height: 1; color: var(--muted); cursor: pointer; }
+.pn .pn-link { border: 0; background: none; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; font: inherit; }
+.pn .pn-foot { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); margin-top: 16px; padding-top: 10px; }
+.roll-paths { max-width: 44em; margin: 0 0 1.6em; }
+.roll-paths-head { font-size: 1.05rem; margin: 0 0 .5em; }
 .roll-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 18px 0 8px; }
 .roll-tools input { font: inherit; padding: 6px 10px; border: 1px solid var(--rule); background: var(--panel); min-width: 220px; }
 .roll-tools #roll-count { color: var(--muted); font-size: 14px; }
