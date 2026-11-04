@@ -139,7 +139,26 @@ h1, h2, h3 { text-wrap: balance; font-weight: 400; }
 section.series { border-top: 1px solid var(--rule); padding: 40px 0 44px; }
 .series-head { display: grid; grid-template-columns: 150px 1fr; gap: 8px 28px; align-items: baseline; margin-bottom: 22px; }
 .series-no { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
-.series-head h2 { font-family: var(--font-display); font-size: 36px; line-height: 1.1; margin: 0; }
+.series-head h2, .series-head h1 { font-family: var(--font-display); font-size: 36px; line-height: 1.1; margin: 0; }
+.series-head h1 { font-size: clamp(34px, 5vw, 44px); }
+.home-latest { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.home-latest li { display: grid; grid-template-columns: 90px 1fr; gap: 12px; }
+.home-latest .date { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); padding-top: 3px; }
+.home-begin { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
+.home-begin li { border: 1px solid var(--rule); border-radius: 4px; padding: 14px 16px; }
+.home-begin a { font-family: var(--font-display); font-size: 21px; }
+.home-begin p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+.person-chip { font-family: var(--font-mono); font-size: 11px; letter-spacing: .03em; border: 1px solid var(--ink); color: var(--ink); border-radius: 3px; padding: 0 5px; margin-left: 4px; text-decoration: none; white-space: nowrap; }
+.person-chip:hover, .person-chip:focus-visible { background: var(--ink); color: var(--paper); }
+.person-facts { display: grid; grid-template-columns: 170px 1fr; gap: 6px 20px; margin: 0 0 26px; max-width: 760px; }
+.person-facts dt { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.person-facts dd { margin: 0; }
+.person-body { max-width: 68ch; }
+.person-body h2 { font-family: var(--font-display); font-size: 26px; margin: 30px 0 10px; }
+.person-body .chron { margin-top: 6px; }
+.cite-box { border-left: 3px solid var(--accent); padding: 6px 0 6px 14px; color: var(--muted); font-size: 15px; }
+.page-meta { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); margin-top: 28px; }
+@media (max-width: 640px) { .person-facts { grid-template-columns: 1fr; gap: 2px; } .person-facts dd { margin-bottom: 10px; } .home-latest li { grid-template-columns: 1fr; gap: 0; } }
 .series-head p { grid-column: 2; margin: 0; color: var(--muted); max-width: 62ch; }
 .series-body { margin-left: 178px; }
 @media (max-width: 720px) {
@@ -335,16 +354,16 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <a class="mark" href="index.html">Morrisite.org</a>
     <nav class="util" aria-label="Site">
-      <a href="index.html#new">What&rsquo;s new</a>
-      <a href="index.html#share">Share records</a>
-      <a href="index.html#about">About</a>
+      <a href="whats-new.html">What&rsquo;s new</a>
+      <a href="about.html#share">Share records</a>
+      <a href="about.html">About</a>
     </nav>
     <nav class="main" aria-label="Sections">
       <a href="index.html#essentials">Start here</a>
-      <a href="index.html#chronology">History</a>
+      <a href="history.html">History</a>
       <a href="documents.html">Sources</a>
       <a href="roll.html">People</a>
-      <a href="images.html" aria-current="page">Images</a>
+      <a href="#top" aria-current="page">Images</a>
       <a href="questions.html">Questions</a>
     </nav>
   </div>
@@ -356,8 +375,8 @@ footer .wrap { display: grid; gap: 8px; }
   <section class="series" id="images" aria-labelledby="h-images">
     <div class="wrap">
       <div class="series-head">
-        <div class="series-no">Series 5</div>
-        <h2 id="h-images">Images</h2>
+        <div class="series-no">Images</div>
+        <h1 id="h-images">Images</h1>
         <p>Photographs of Morrisite sites, numbered for citation. Select an image to open the full-size file.</p>
       </div>
       <div class="series-body">
@@ -507,7 +526,7 @@ footer .wrap { display: grid; gap: 8px; }
           <li>A later portrait captioned as Mary Christoffersen Anderson, different from MO-IMG-062 (p. 119). The caption makes her seventeen when she was wounded; the birth date on her gravestone, July 26, 1847, makes her fourteen.</li>
           <li>George Thompson, with two unidentified women, in a pony cart (p. 120). The caption calls him one of the first to join the Morrisite army and a later successor to George Williams, the Prophet Cainan; Anderson&rsquo;s text dates his election as president of the church to May 1886.</li>
           <li>John R. Eardley, George Williams (the Prophet Cainan), and George Thompson, England, about 1873, during a Morrisite mission there under Williams (p. 121).</li>
-          <li>George Johnson and Andrew Hendrikson (spelled Henrikson in the caption), Danish immigrants who led the Montana church (p. 124). The caption&rsquo;s &ldquo;from 1866&rdquo; for Hendrikson&rsquo;s presidency is a misprint; Anderson&rsquo;s text gives 1886 to 1921. See <a href="index.html#chronology">Chronology</a>.</li>
+          <li>George Johnson and Andrew Hendrikson (spelled Henrikson in the caption), Danish immigrants who led the Montana church (p. 124). The caption&rsquo;s &ldquo;from 1866&rdquo; for Hendrikson&rsquo;s presidency is a misprint; Anderson&rsquo;s text gives 1886 to 1921. See <a href="history.html#chronology">Chronology</a>.</li>
         </ul>
         <div class="gallery">
           <figure id="mo-img-062"><a href="mo-img-062-mary-christoffersen-anderson.jpg" target="_blank" rel="noopener"><img src="mo-img-062-mary-christoffersen-anderson-800.jpg" alt="Oval studio portrait of an older woman in a dark high-collared dress; the lower part of her face shows the healed wound to her jaw." width="360" height="504" style="aspect-ratio:5 / 7" loading="lazy"></a><figcaption><span class="itemno">MO-IMG-062</span><span>Mary Christoffersen Anderson (1847&ndash;1928), whose jaw was shot away by a cannonball at Kington Fort in June 1862, when she was fourteen.</span><span class="meta">Family collection &middot; date not recorded</span></figcaption></figure>

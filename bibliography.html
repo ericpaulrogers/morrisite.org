@@ -139,7 +139,26 @@ h1, h2, h3 { text-wrap: balance; font-weight: 400; }
 section.series { border-top: 1px solid var(--rule); padding: 40px 0 44px; }
 .series-head { display: grid; grid-template-columns: 150px 1fr; gap: 8px 28px; align-items: baseline; margin-bottom: 22px; }
 .series-no { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
-.series-head h2 { font-family: var(--font-display); font-size: 36px; line-height: 1.1; margin: 0; }
+.series-head h2, .series-head h1 { font-family: var(--font-display); font-size: 36px; line-height: 1.1; margin: 0; }
+.series-head h1 { font-size: clamp(34px, 5vw, 44px); }
+.home-latest { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.home-latest li { display: grid; grid-template-columns: 90px 1fr; gap: 12px; }
+.home-latest .date { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); padding-top: 3px; }
+.home-begin { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
+.home-begin li { border: 1px solid var(--rule); border-radius: 4px; padding: 14px 16px; }
+.home-begin a { font-family: var(--font-display); font-size: 21px; }
+.home-begin p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+.person-chip { font-family: var(--font-mono); font-size: 11px; letter-spacing: .03em; border: 1px solid var(--ink); color: var(--ink); border-radius: 3px; padding: 0 5px; margin-left: 4px; text-decoration: none; white-space: nowrap; }
+.person-chip:hover, .person-chip:focus-visible { background: var(--ink); color: var(--paper); }
+.person-facts { display: grid; grid-template-columns: 170px 1fr; gap: 6px 20px; margin: 0 0 26px; max-width: 760px; }
+.person-facts dt { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.person-facts dd { margin: 0; }
+.person-body { max-width: 68ch; }
+.person-body h2 { font-family: var(--font-display); font-size: 26px; margin: 30px 0 10px; }
+.person-body .chron { margin-top: 6px; }
+.cite-box { border-left: 3px solid var(--accent); padding: 6px 0 6px 14px; color: var(--muted); font-size: 15px; }
+.page-meta { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); margin-top: 28px; }
+@media (max-width: 640px) { .person-facts { grid-template-columns: 1fr; gap: 2px; } .person-facts dd { margin-bottom: 10px; } .home-latest li { grid-template-columns: 1fr; gap: 0; } }
 .series-head p { grid-column: 2; margin: 0; color: var(--muted); max-width: 62ch; }
 .series-body { margin-left: 178px; }
 @media (max-width: 720px) {
@@ -335,13 +354,13 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <a class="mark" href="index.html">Morrisite.org</a>
     <nav class="util" aria-label="Site">
-      <a href="index.html#new">What&rsquo;s new</a>
-      <a href="index.html#share">Share records</a>
-      <a href="index.html#about">About</a>
+      <a href="whats-new.html">What&rsquo;s new</a>
+      <a href="about.html#share">Share records</a>
+      <a href="about.html">About</a>
     </nav>
     <nav class="main" aria-label="Sections">
       <a href="index.html#essentials">Start here</a>
-      <a href="index.html#chronology">History</a>
+      <a href="history.html">History</a>
       <a href="documents.html" aria-current="page">Sources</a>
       <a href="roll.html">People</a>
       <a href="images.html">Images</a>
@@ -352,13 +371,13 @@ footer .wrap { display: grid; gap: 8px; }
 
 <main id="top">
   <div class="wrap"><p class="crumb"><a href="index.html">Morrisite.org</a> &rsaquo; Bibliography</p></div>
-  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="documents.html">Documents</a><a href="bibliography.html" aria-current="page">Bibliography</a><a href="index.html#repositories">Repositories</a></nav></div>
+  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="documents.html">Documents</a><a href="#top" aria-current="page">Bibliography</a><a href="repositories.html">Repositories</a></nav></div>
 
   <section class="series" id="bibliography" aria-labelledby="h-biblio">
     <div class="wrap">
       <div class="series-head">
-        <div class="series-no">Series 4</div>
-        <h2 id="h-biblio">Bibliography</h2>
+        <div class="series-no">Sources</div>
+        <h1 id="h-biblio">Bibliography</h1>
         <p>Primary texts and scholarship, in Chicago style.</p>
       </div>
       <div class="series-body biblio">

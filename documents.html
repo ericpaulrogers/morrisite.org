@@ -139,7 +139,26 @@ h1, h2, h3 { text-wrap: balance; font-weight: 400; }
 section.series { border-top: 1px solid var(--rule); padding: 40px 0 44px; }
 .series-head { display: grid; grid-template-columns: 150px 1fr; gap: 8px 28px; align-items: baseline; margin-bottom: 22px; }
 .series-no { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
-.series-head h2 { font-family: var(--font-display); font-size: 36px; line-height: 1.1; margin: 0; }
+.series-head h2, .series-head h1 { font-family: var(--font-display); font-size: 36px; line-height: 1.1; margin: 0; }
+.series-head h1 { font-size: clamp(34px, 5vw, 44px); }
+.home-latest { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.home-latest li { display: grid; grid-template-columns: 90px 1fr; gap: 12px; }
+.home-latest .date { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); padding-top: 3px; }
+.home-begin { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
+.home-begin li { border: 1px solid var(--rule); border-radius: 4px; padding: 14px 16px; }
+.home-begin a { font-family: var(--font-display); font-size: 21px; }
+.home-begin p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+.person-chip { font-family: var(--font-mono); font-size: 11px; letter-spacing: .03em; border: 1px solid var(--ink); color: var(--ink); border-radius: 3px; padding: 0 5px; margin-left: 4px; text-decoration: none; white-space: nowrap; }
+.person-chip:hover, .person-chip:focus-visible { background: var(--ink); color: var(--paper); }
+.person-facts { display: grid; grid-template-columns: 170px 1fr; gap: 6px 20px; margin: 0 0 26px; max-width: 760px; }
+.person-facts dt { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.person-facts dd { margin: 0; }
+.person-body { max-width: 68ch; }
+.person-body h2 { font-family: var(--font-display); font-size: 26px; margin: 30px 0 10px; }
+.person-body .chron { margin-top: 6px; }
+.cite-box { border-left: 3px solid var(--accent); padding: 6px 0 6px 14px; color: var(--muted); font-size: 15px; }
+.page-meta { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); margin-top: 28px; }
+@media (max-width: 640px) { .person-facts { grid-template-columns: 1fr; gap: 2px; } .person-facts dd { margin-bottom: 10px; } .home-latest li { grid-template-columns: 1fr; gap: 0; } }
 .series-head p { grid-column: 2; margin: 0; color: var(--muted); max-width: 62ch; }
 .series-body { margin-left: 178px; }
 @media (max-width: 720px) {
@@ -335,14 +354,14 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <a class="mark" href="index.html">Morrisite.org</a>
     <nav class="util" aria-label="Site">
-      <a href="index.html#new">What&rsquo;s new</a>
-      <a href="index.html#share">Share records</a>
-      <a href="index.html#about">About</a>
+      <a href="whats-new.html">What&rsquo;s new</a>
+      <a href="about.html#share">Share records</a>
+      <a href="about.html">About</a>
     </nav>
     <nav class="main" aria-label="Sections">
       <a href="index.html#essentials">Start here</a>
-      <a href="index.html#chronology">History</a>
-      <a href="documents.html" aria-current="page">Sources</a>
+      <a href="history.html">History</a>
+      <a href="#top" aria-current="page">Sources</a>
       <a href="roll.html">People</a>
       <a href="images.html">Images</a>
       <a href="questions.html">Questions</a>
@@ -352,13 +371,13 @@ footer .wrap { display: grid; gap: 8px; }
 
 <main id="top">
   <div class="wrap"><p class="crumb"><a href="index.html">Morrisite.org</a> &rsaquo; Documents</p></div>
-  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="documents.html" aria-current="page">Documents</a><a href="bibliography.html">Bibliography</a><a href="index.html#repositories">Repositories</a></nav></div>
+  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="#top" aria-current="page">Documents</a><a href="bibliography.html">Bibliography</a><a href="repositories.html">Repositories</a></nav></div>
 
   <section class="series" id="documents" aria-labelledby="h-documents">
     <div class="wrap">
       <div class="series-head">
         <div class="series-no">Documents</div>
-        <h2 id="h-documents">Documents to read online</h2>
+        <h1 id="h-documents">Documents to read online</h1>
         <p>Primary documents of the Morrisite movement that can be read online, with links to the institutions that hold them. Short government records are transcribed here; the transcriptions are the editor&rsquo;s, and corrections are welcome. Page images belong to their repositories, and some need a free account.</p>
         <p>Have a scan of a Morrisite pamphlet, letter or record that is not listed? Write to <a href="mailto:contact@morrisite.org?subject=Morrisite.org%20documents">contact@morrisite.org</a>. Forscutt&rsquo;s &ldquo;Sketch of Joseph Morris&rdquo; is being edited separately and is not reproduced here.</p>
       </div>
@@ -443,7 +462,7 @@ footer .wrap { display: grid; gap: 8px; }
           </div>
           <dl><dt>What it is</dt><dd>The Salt Lake paper&rsquo;s first account of the siege, written the day after the prisoners reached the city. It traces the writs from Enoch M. King&rsquo;s complaint of May 22, served on the 24th by J. L. Stoddard, to the affidavits of H. O. Hanson and Philo Allen on June 10, and names Morris, Cook, Banks, Klemgaard and John Parsons as the men the writs were against. It reports two young men of the posse killed, &ldquo;Smith and Wahler&rdquo; (see <a href="questions.html#questions">Questions</a>), and Cook, Parsons, Klemgaard and some ninety others brought in as prisoners on June 17.</dd><dt>Read it</dt><dd><a href="https://newspapers.lib.utah.edu/" target="_blank" rel="noopener">Utah Digital Newspapers</a> (search the <i>Deseret News</i> for June 18, 1862)</dd></dl>
         </div>
-        <div class="repo">
+        <div class="repo" id="dn-1862-06-25">
           <div class="repo-top">
             <h3>&ldquo;The Davis County Bandits,&rdquo; June 25, 1862</h3>
             <span class="callno"><i>Deseret News</i>, p. 412</span>
@@ -467,12 +486,12 @@ footer .wrap { display: grid; gap: 8px; }
           </div>
           <dl><dt>What it is</dt><dd>Morris&rsquo;s letters to Brigham Young and manuscript revelations, 1858&ndash;1862, in the folders &ldquo;Revelations of Joseph Morris&rdquo; in Brigham Young&rsquo;s office files. Kirk Watson&rsquo;s edition, <i>The Morrisites: Writings and Revelations</i> (2026), prints the letters.</dd><dt>Find it</dt><dd>Search the <a href="https://catalog.churchofjesuschrist.org/" target="_blank" rel="noopener">Church History Catalog</a> for CR 1234 1; access may require a request to the library.</dd></dl>
         </div>
-        <div class="repo">
+        <div class="repo" id="rev-1860-01">
           <div class="repo-top">
             <h3>Two revelations to the First Presidency, January 14 and 16, 1860</h3>
             <span class="callno">Church History Library, CR 1234 1</span>
           </div>
-          <dl><dt>What it is</dt><dd>Two manuscript revelations, signed &ldquo;Jesus Christ&rdquo; and addressed to &ldquo;the first presidency of the Church of Jesus Christ of Later day saints and all so to the twelve apostles.&rdquo; Both demand that the leaders receive &ldquo;my servant Joseph.&rdquo; They are filed as anonymous letters among Brigham Young&rsquo;s incoming correspondence for 1860, outside the folders of Morris&rsquo;s revelations, and were identified by Kirk Watson in November 2026.</dd><dt>Why they matter</dt><dd>They are among the earliest dated revelations of Morris to survive in manuscript. <i>The Spirit Prevails</i> has only No. 2 (&ldquo;Winter of 1859&rdquo;) before them; its No. 3 is dated March 1860. Neither is printed there, but both are early forms of later texts. The January 14 revelation opens &ldquo;when you whas small in your own eyes i took you and rase you to the apostle ship,&rdquo; the same opening as No. 18, &ldquo;Revelation to President Brigham Young&rdquo; (October 2, 1860). Like No. 18, it charges Young with turning the Lord&rsquo;s servant away from his door and speaks of &ldquo;the throne of isreal.&rdquo; The January 16 revelation requires anyone with &ldquo;gould and silver and houses and lands and whives&rdquo; to &ldquo;lay them at the feet of my servant Joseph,&rdquo; the test Morris set out again in No. 185 (December 28, 1861).</dd><dt>How they were received</dt><dd>The office docket on the January 14 letter reads &ldquo;Jan 14 1860 / Balderdash / About revelations / Rec Jan 20 1860,&rdquo; and the same clerk wrote &ldquo;Balderdash&rdquo; above the heading of each revelation. The letter is addressed &ldquo;To president Brigham Young grait Sault Lake City.&rdquo; Whether the hand is Morris&rsquo;s own has not yet been checked against his signed letters.</dd><dt>Read it</dt><dd><a href="https://catalog.churchofjesuschrist.org/assets/60d67c41-c3b3-4caa-8d25-e4740388055b/0/0" target="_blank" rel="noopener">January 14, 1860</a> (5 images) &middot; <a href="https://catalog.churchofjesuschrist.org/assets/908b69ca-9b25-472f-a1bd-aa3ce3daa12f/0/0" target="_blank" rel="noopener">January 16, 1860</a> (2 images). Church History Catalog; Brigham Young office files, General Correspondence, Incoming, General Letters, A&ndash;Bi, 1860, &ldquo;Anonymous letter.&rdquo; A free Church Account may be required.</dd></dl>
+          <dl><dt>What it is</dt><dd>Two manuscript revelations, signed &ldquo;Jesus Christ&rdquo; and addressed to &ldquo;the first presidency of the Church of Jesus Christ of Later day saints and all so to the twelve apostles.&rdquo; Both demand that the leaders receive &ldquo;my servant Joseph.&rdquo; They are filed as anonymous letters among Brigham Young&rsquo;s incoming correspondence for 1860, outside the folders of Morris&rsquo;s revelations, and were identified by Kirk Watson in November 2026.</dd><dt>Why they matter</dt><dd>They are among the earliest dated revelations of Morris to survive in manuscript. <i>The Spirit Prevails</i> has only No. 2 (&ldquo;Winter of 1859&rdquo;) before them; its No. 3 is dated March 1860. Neither is printed there, but both are early forms of later texts. The January 14 revelation opens &ldquo;when you whas small in your own eyes i took you and i rose you to the apostle ship,&rdquo; the same opening as No. 18, &ldquo;Revelation to President Brigham Young&rdquo; (October 2, 1860). Like No. 18, it charges Young with turning the Lord&rsquo;s servant away from his door and speaks of &ldquo;the throne of isreal.&rdquo; The January 16 revelation requires anyone with &ldquo;gould and silver and houses and lands and whives&rdquo; to &ldquo;lay them at the feet of my servant Joseph,&rdquo; the test Morris set out again in No. 185 (December 28, 1861).</dd><dt>How they were received</dt><dd>The office docket on the January 14 letter reads &ldquo;Jan 14 1860 / Balderdash / About revelations / Rec Jan 20 1860,&rdquo; and the same clerk wrote &ldquo;Balderdash&rdquo; above the heading of each revelation. The letter is addressed &ldquo;To president Brigham Young grait Sault Lake City.&rdquo; Whether the hand is Morris&rsquo;s own has not yet been checked against his signed letters.</dd><dt>Read it</dt><dd><a href="https://catalog.churchofjesuschrist.org/assets/60d67c41-c3b3-4caa-8d25-e4740388055b/0/0" target="_blank" rel="noopener">January 14, 1860</a> (5 images) &middot; <a href="https://catalog.churchofjesuschrist.org/assets/908b69ca-9b25-472f-a1bd-aa3ce3daa12f/0/0" target="_blank" rel="noopener">January 16, 1860</a> (2 images). Church History Catalog; Brigham Young office files, General Correspondence, Incoming, General Letters, A&ndash;Bi, 1860, &ldquo;Anonymous letter.&rdquo; A free Church Account may be required.</dd></dl>
         </div>
       </div>
     </div>

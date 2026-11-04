@@ -146,7 +146,26 @@ h1, h2, h3 { text-wrap: balance; font-weight: 400; }
 section.series { border-top: 1px solid var(--rule); padding: 40px 0 44px; }
 .series-head { display: grid; grid-template-columns: 150px 1fr; gap: 8px 28px; align-items: baseline; margin-bottom: 22px; }
 .series-no { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
-.series-head h2 { font-family: var(--font-display); font-size: 36px; line-height: 1.1; margin: 0; }
+.series-head h2, .series-head h1 { font-family: var(--font-display); font-size: 36px; line-height: 1.1; margin: 0; }
+.series-head h1 { font-size: clamp(34px, 5vw, 44px); }
+.home-latest { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.home-latest li { display: grid; grid-template-columns: 90px 1fr; gap: 12px; }
+.home-latest .date { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); padding-top: 3px; }
+.home-begin { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
+.home-begin li { border: 1px solid var(--rule); border-radius: 4px; padding: 14px 16px; }
+.home-begin a { font-family: var(--font-display); font-size: 21px; }
+.home-begin p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+.person-chip { font-family: var(--font-mono); font-size: 11px; letter-spacing: .03em; border: 1px solid var(--ink); color: var(--ink); border-radius: 3px; padding: 0 5px; margin-left: 4px; text-decoration: none; white-space: nowrap; }
+.person-chip:hover, .person-chip:focus-visible { background: var(--ink); color: var(--paper); }
+.person-facts { display: grid; grid-template-columns: 170px 1fr; gap: 6px 20px; margin: 0 0 26px; max-width: 760px; }
+.person-facts dt { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.person-facts dd { margin: 0; }
+.person-body { max-width: 68ch; }
+.person-body h2 { font-family: var(--font-display); font-size: 26px; margin: 30px 0 10px; }
+.person-body .chron { margin-top: 6px; }
+.cite-box { border-left: 3px solid var(--accent); padding: 6px 0 6px 14px; color: var(--muted); font-size: 15px; }
+.page-meta { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); margin-top: 28px; }
+@media (max-width: 640px) { .person-facts { grid-template-columns: 1fr; gap: 2px; } .person-facts dd { margin-bottom: 10px; } .home-latest li { grid-template-columns: 1fr; gap: 0; } }
 .series-head p { grid-column: 2; margin: 0; color: var(--muted); max-width: 62ch; }
 .series-body { margin-left: 178px; }
 @media (max-width: 720px) {
@@ -342,13 +361,13 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <a class="mark" href="#top">Morrisite.org</a>
     <nav class="util" aria-label="Site">
-      <a href="#new">What&rsquo;s new</a>
-      <a href="#share">Share records</a>
-      <a href="#about">About</a>
+      <a href="whats-new.html">What&rsquo;s new</a>
+      <a href="about.html#share">Share records</a>
+      <a href="about.html">About</a>
     </nav>
     <nav class="main" aria-label="Sections">
       <a href="#essentials">Start here</a>
-      <a href="#chronology">History</a>
+      <a href="history.html">History</a>
       <a href="documents.html">Sources</a>
       <a href="roll.html">People</a>
       <a href="images.html">Images</a>
@@ -358,6 +377,7 @@ footer .wrap { display: grid; gap: 8px; }
 </header>
 
 <main id="top">
+<script>(function(){var m={"new": "whats-new.html", "h-new": "whats-new.html", "chronology": "history.html", "h-chron": "history.html", "lineage": "history.html", "lin-t": "history.html", "lin-d": "history.html", "places": "history.html", "h-places": "history.html", "repositories": "repositories.html", "h-repos": "repositories.html", "share": "about.html", "h-contrib": "about.html", "about": "about.html", "h-about": "about.html"},h=location.hash.slice(1);if(h&&m[h]&&!document.getElementById(h))location.replace(m[h]+"#"+h);})();</script>
 
   <div class="wrap">
     <div class="hero">
@@ -368,33 +388,38 @@ footer .wrap { display: grid; gap: 8px; }
     </div>
   </div>
 
-    <section class="series" id="new" aria-labelledby="h-new">
+  
+  <section class="series" id="begin" aria-labelledby="h-begin">
     <div class="wrap">
       <div class="series-head">
-        <div class="series-no">What&rsquo;s new</div>
-        <h2 id="h-new">Recent and upcoming</h2>
-        <p>New publications, programs, and additions to this guide.</p>
+        <div class="series-no">Where to begin</div>
+        <h2 id="h-begin">Four ways in</h2>
       </div>
       <div class="series-body">
-        <ol class="chron">
-          <li><span class="date">Nov 2026</span><span><b>Two early revelations of Morris.</b> Two revelations to the First Presidency and the Twelve, dated January 14 and 16, 1860, were found by Kirk Watson among anonymous letters in Brigham Young&rsquo;s office files, where a clerk docketed them &ldquo;Balderdash.&rdquo; They are early forms of revelations later printed in <i>The Spirit Prevails</i>. See <a href="documents.html#documents">Documents</a>.</span></li>
-          <li><span class="date">Nov 2026</span><span><b>The men taken at Kington Fort.</b> The <i>Deseret News</i> of June 25, 1862, printed the names of the ninety-eight men brought before Judge Kinney after the siege; the list is now on the <a href="documents.html#documents">Documents</a> page, checked against the roll. The posse lost two men, not one as most histories say: besides Jared Smith, Peter Wahler was killed on June 15. See <a href="questions.html#questions">Questions</a>.</span></li>
-          <li><span class="date">Nov 2026</span><span><b>Documents.</b> A new page gathers the primary documents that can be read online, from <i>The Spirit Prevails</i> to the 1862 order calling out the posse, with transcriptions of two militia records. <a href="documents.html#documents">See the page</a>.</span></li>
-          <li><span class="date">Nov 2026</span><span><b>The order that sent the posse.</b> Acting Governor Frank Fuller&rsquo;s order of June 11, 1862, calling out the militia to arrest Joseph Morris, found in the territorial militia records, is now in the <a href="#chronology">Chronology</a> and the <a href="bibliography.html#bibliography">Bibliography</a>.</span></li>
-          <li><span class="date">Nov 2026</span><span><b>Who they were.</b> A new page counts the people on the <a href="roll.html#roll">roll of membership</a>: women and men, Scandinavian and English-language names, and, for the members identified in FamilySearch, their ages in 1862, birthplaces, families, arrival in Utah, and where they died. It also reads 91 of them in the 1860 census: where they lived, their occupations, and what their households owned. <a href="people.html#people">See the page</a>.</span></li>
-          <li><span class="date">Nov 2026</span><span><b>Families on the roll.</b> More than 100 names on the <a href="roll.html#roll">roll of membership</a> now link to FamilySearch Family Tree, and a new list groups the people on the roll who were related by birth or marriage, such as the Christoffersen, Hanson and Anderson families of Soda Springs and Deer Lodge and the Park, McCue, Cowan and Bull families of the Carson Valley. A work in progress; corrections welcome.</span></li>
-          <li><span class="date">Nov 2026</span><span><b>Added to this guide.</b> Twenty photographs of the Racetrack church, inside and out, taken September 5, 1989: the earliest views in the condition record. Courtesy of Barbara B. Walden, Community of Christ Historic Sites Foundation. See <a href="images.html#images">Images</a>.</span></li>
-          <li><span class="date">Nov 2026</span><span><b>Person notes on the roll.</b> Names on the <a href="roll.html#roll">roll of membership</a> now have a notes button summarizing what Anderson, <i>The Spirit Prevails</i>, <i>Gems of Inspiration</i>, Watson and Forscutt&rsquo;s manuscript say about them, with page references. More to come.</span></li>
-          <li><span class="date">Nov 2026</span><span><b>Roll of membership checked</b> against the printed pamphlet: one name restored (David Thomas) and fourteen spellings corrected. The roll now has 430 names. See <a href="roll.html#roll">Roll of membership</a>.</span></li>
-          <li><span class="date">Nov 2026</span><span><b>Added to this guide.</b> The 1861&ndash;62 roll of membership, printed by George S. Dove &amp; Co. in 1886: 429 names, searchable. Draft transcription, to be checked against the pamphlet. See <a href="roll.html#roll">Roll of membership</a>.</span></li>
-          <li><span class="date">14 Nov 2026</span><span><b>Podcast.</b> &ldquo;Episode 113: Kirk Watson on Reincarnation in Early Mormonism,&rdquo; <i>Scriptural Mormonism</i> podcast, hosted by Robert Boylan. The conversation includes the Morrisites. Premieres live on YouTube November 14, 2026, at 10:00 a.m. Mountain. <a href="https://www.youtube.com/watch?v=Wi8ooinkCEA" target="_blank" rel="noopener">Watch on YouTube</a></span></li>
-          <li><span class="date">Oct 2026</span><span><b>New book.</b> Kirk Watson, ed., <i>The Morrisites: Writings and Revelations</i> (2026), collects writings of Joseph Morris, George Williams, William W. Davies, George S. Dove, and James Dove. See <a href="bibliography.html#bibliography">Bibliography</a>.</span></li>
-          <li><span class="date">Nov 2026</span><span><b>Added to this guide.</b> A dated photographic record of the Racetrack church, from before 2004 to 2018, along with views of South Weber, cannonballs from the siege, and an entry on the Morrisite scepters. See <a href="images.html#images">Images</a> and <a href="#repositories">Repositories</a>.</span></li>
-        </ol>
+        <ul class="home-begin">
+          <li><a href="history.html#chronology">History</a><p>A dated chronology from 1857 to the present, and the places of the movement from South Weber to Racetrack.</p></li>
+          <li><a href="documents.html#documents">Sources</a><p>Documents to read online, a bibliography, and the archives that hold Morrisite records.</p></li>
+          <li><a href="roll.html#roll">People</a><p>The 430 names on the 1861&ndash;62 roll of membership, with FamilySearch links, notes, and pages on individual members.</p></li>
+          <li><a href="questions.html#questions">Questions</a><p>What the record has not settled yet, for students, family historians, and researchers.</p></li>
+        </ul>
       </div>
     </div>
   </section>
 
+  <section class="series" id="latest" aria-labelledby="h-latest">
+    <div class="wrap">
+      <div class="series-head">
+        <div class="series-no">What&rsquo;s new</div>
+        <h2 id="h-latest">Latest additions</h2>
+      </div>
+      <div class="series-body">
+        <ol class="home-latest">
+          <li><span class="date">Nov 2026</span><span><b>Pages on people of the roll.</b> Ten members of the 1861&ndash;62 roll now have pages of their own, with what the sources say, their later paths and full citations, beginning with <a href="person/erik-eliasson.html">Erik Eliasson</a>, <a href="person/john-parson.html">John Parson</a> and <a href="person/john-banks.html">John Banks</a>; look for the <span class="person-chip">page</span> tag on the <a href="roll.html#roll">roll</a>. The <a href="questions.html#questions">Questions for research</a> are updated with three new questions of record.</span></li><li><span class="date">Nov 2026</span><span><b>Two early revelations of Morris.</b> Two revelations to the First Presidency and the Twelve, dated January 14 and 16, 1860, were found by Kirk Watson among anonymous letters in Brigham Young&rsquo;s office files, where a clerk docketed them &ldquo;Balderdash.&rdquo; They are early forms of revelations later printed in <i>The Spirit Prevails</i>. See <a href="documents.html#documents">Documents</a>.</span></li><li><span class="date">Nov 2026</span><span><b>The men taken at Kington Fort.</b> The <i>Deseret News</i> of June 25, 1862, printed the names of the ninety-eight men brought before Judge Kinney after the siege; the list is now on the <a href="documents.html#documents">Documents</a> page, checked against the roll. The posse lost two men, not one as most histories say: besides Jared Smith, Peter Wahler was killed on June 15. See <a href="questions.html#questions">Questions</a>.</span></li><li><span class="date">Nov 2026</span><span><b>Documents.</b> A new page gathers the primary documents that can be read online, from <i>The Spirit Prevails</i> to the 1862 order calling out the posse, with transcriptions of two militia records. <a href="documents.html#documents">See the page</a>.</span></li>
+        </ol>
+        <p style="margin-top:14px"><a href="whats-new.html#new">All updates and upcoming programs &rarr;</a></p>
+      </div>
+    </div>
+  </section>
   <section class="series" id="essentials" aria-labelledby="h-ess">
     <div class="wrap">
       <div class="series-head">
@@ -467,275 +492,6 @@ footer .wrap { display: grid; gap: 8px; }
     </div>
   </section>
 
-  <section class="series" id="chronology" aria-labelledby="h-chron">
-    <div class="wrap">
-      <div class="series-head">
-        <div class="series-no">Series 1</div>
-        <h2 id="h-chron">Chronology</h2>
-        <p>The main events, from Morris&rsquo;s revelations through the Montana congregations to later claimants and the present.</p>
-      </div>
-      <div class="series-body">
-        <figure class="lineage" id="lineage">
-          <h3>The movement at a glance</h3>
-          <p>How the Morrisite congregations descended from one another, where many members went, and the later groups that drew on the tradition without descending from it.</p>
-          <svg viewBox="0 0 1060 520" role="img" aria-labelledby="lin-t lin-d"><title id="lin-t">Lineage of the Morrisite movement</title><desc id="lin-d">Joseph Morris&#8217;s Church of the Firstborn (1861&#8211;62) scattered in 1863 to Soda Springs, Nevada and California, Omaha and Council Bluffs, and later the Deer Lodge Valley. William W. Davies led an offshoot at Walla Walla (1867&#8211;81). George Williams led the Montana church until 1882; it was then led by William James, George Thompson (elected president of the church in 1886), Andrew Hendrikson (1886&#8211;1921), and George Johnson (1921&#8211;1954), and disbanded in 1969, and George and James Dove led the California congregation after 1882, to an uncertain end. Some members returned to the Church of Jesus Christ of Latter-day Saints in Utah and elsewhere; others joined the RLDS Church, among them Mark H. Forscutt and John L. Bear, some soon after 1862 and some, such as Margaretta Cook and Lena Hanson, only after years in the Nevada and Montana groups. Later claimants who drew on the Morrisite tradition without descending from it were James Brighouse&#8217;s Order of Enoch (1884), whom Forscutt had baptized in 1880, and the Missoula sect of Leland Jensen and Neal Chase (1990).</desc><g class="nd "><rect x="410" y="10" width="240" height="58" rx="3"/><text class="t" x="420" y="29">Joseph Morris</text><text class="" x="420" y="47">Church of the Firstborn</text><text class="d" x="420" y="63">Kington Fort, 1861&#8211;62</text></g><g class="nd "><rect x="410" y="110" width="240" height="58" rx="3"/><text class="t" x="420" y="129">The scattering, 1863</text><text class="" x="420" y="147">Soda Springs &#183; Nevada &#183; California</text><text class="d" x="420" y="163">Omaha &#183; Council Bluffs</text></g><g class="nd end"><rect x="10" y="210" width="240" height="58" rx="3"/><text class="t" x="20" y="229">William W. Davies</text><text class="" x="20" y="247">Kingdom of Heaven</text><text class="d" x="20" y="263">Walla Walla, 1867&#8211;81</text></g><g class="nd "><rect x="270" y="210" width="240" height="58" rx="3"/><text class="t" x="280" y="229">George Williams, &#8220;Cainan&#8221;</text><text class="" x="280" y="247">Deer Lodge Valley, Montana</text><text class="d" x="280" y="263">1870s&#8211;1882</text></g><g class="nd "><rect x="550" y="210" width="240" height="58" rx="3"/><text class="t" x="560" y="229">To the RLDS Church</text><text class="" x="560" y="247">Forscutt, Bear, Cook, Hanson</text><text class="d" x="560" y="263">1860s&#8211;1890s</text></g><g class="nd "><rect x="810" y="210" width="240" height="58" rx="3"/><text class="t" x="820" y="229">Back to the LDS Church</text><text class="" x="820" y="247">Rejoined in Utah and elsewhere</text><text class="d" x="820" y="263">1860s onward</text></g><g class="nd end"><rect x="295" y="320" width="260" height="58" rx="3"/><text class="t" x="305" y="339">Saints of the Most High, Montana</text><text class="" x="305" y="357">James, Thompson, Hendrikson, Johnson</text><text class="d" x="305" y="373">1882&#8211;1969 (disbanded)</text></g><g class="nd end"><rect x="570" y="320" width="210" height="58" rx="3"/><text class="t" x="580" y="339">George and James Dove</text><text class="" x="580" y="357">Church of the Firstborn</text><text class="d" x="580" y="373">after 1882; end uncertain</text></g><g class="nd later"><rect x="20" y="450" width="290" height="58" rx="3"/><text class="t" x="30" y="469">Leland Jensen &amp; Neal Chase</text><text class="" x="30" y="487">Missoula sect (BUPC)</text><text class="d" x="30" y="503">1990; cited Williams&#8217;s prophecy</text></g><g class="nd later"><rect x="700" y="450" width="290" height="58" rx="3"/><text class="t" x="710" y="469">James Brighouse</text><text class="" x="710" y="487">Order of Enoch, Independence, MO</text><text class="d" x="710" y="503">1884; honored Morris</text></g><path class="ln " d="M530 68 V110"/><path class="ln " d="M530 168 V190"/><path class="ln " d="M130 210 V190 H930 V210"/><path class="ln " d="M390 190 V210"/><path class="ln " d="M670 190 V210"/><path class="ln " d="M390 268 V295 H675 V320"/><path class="ln " d="M425 295 V320"/><path class="ln later" d="M790 245 H800 V450"/><path class="ln later" d="M270 245 H260 V450"/><text class="d" x="794" y="425" text-anchor="end">Forscutt baptized Brighouse, 1880</text><text class="d" x="252" y="300" text-anchor="end">drew on Williams&#8217;s prophecy</text></svg>
-          <p class="lin-key">Solid line: organizational succession or movement of members. Dashed line: a later claimant drawing on the Morrisite tradition.</p>
-        </figure>
-                <ol class="chron">
-          <li><span class="date">1857&ndash;1862</span><span>Joseph Morris, an English convert to the Latter-day Saint church, records the revelations later gathered as <i>The Spirit Prevails</i>. He writes repeatedly to Brigham Young. No written reply is known; Anderson reports that the first letter, dated December 7, 1857, bears a penciled note on its margin, &ldquo;He&rsquo;s weak minded.&rdquo; The church&rsquo;s answer comes in February 1861, when Wilford Woodruff and another apostle visit South Weber and Morris and his followers are excommunicated.</span></li>
-          <li><span class="date">6 Apr 1861</span><span>Morris organizes the Church of the Firstborn and calls his followers to gather at Kington Fort, an abandoned 1853 settler fort at South Weber.</span></li>
-          <li><span class="date">1861&ndash;1862</span><span>The community holds its goods in common and awaits the Second Coming. As appointed days pass, some members grow discontented and try to leave.</span></li>
-          <li><span class="date">11 Jun 1862</span><span>Acting Governor Frank Fuller orders General Daniel H. Wells to furnish the territorial marshal, Henry W. Lawrence, and his deputies, Robert T. Burton and Theodore McKean, &ldquo;a sufficient military force&rdquo; to act as a posse in serving Third District Court writs for the arrest of &ldquo;Joseph Morris and others residing in the northern part of Davis County.&rdquo; The order survives in a copy Wells made in 1871 (Utah Territorial Militia Records, series 2210, document 1,215, Utah State Archives; <a href="https://www.familysearch.org/ark:/61903/3:1:33SQ-G5XQ-FQ1" target="_blank" rel="noopener">page image</a> on FamilySearch).</span></li>
-          <li><span class="date">13&ndash;15 Jun 1862</span><span>A territorial posse under Robert T. Burton besieges the fort. Morris and John Banks are killed during the surrender; eleven people die in all, including two young posse members, Jared Smith (June 13) and Peter Wahler (June 15).</span></li>
-          <li><span class="date">18&ndash;19 Jun 1862</span><span>Before Judge Kinney in Salt Lake City, Richard Cook is fined and jailed for contempt, Peter Klemgaard and Christian Neilson are held in prison, and ninety-five other men are bound over on $1,500 bail each for the March 1863 term (<a href="documents.html#documents"><i>Deseret News</i>, June 25, 1862</a>).</span></li>
-          <li><span class="date">Mar 1863</span><span>In Salt Lake City, seven Morrisites are convicted of second-degree murder and sixty-six of resisting arrest. The new territorial governor, Stephen S. Harding, pardons them all three days later.</span></li>
-          <li><span class="date">May 1863</span><span>Many Morrisites leave Utah under the protection of Patrick Edward Connor, commanding the District of Utah. On May 5 a party of 160 (53 families, seven single men, and four widows) sets out with a company of California Volunteers; it reaches Soda Springs on May 20, where Connor has a town site surveyed on the north bank of the Bear River beside a new military post, Camp Connor (established by order of May 23). The Morrisites call their town Morristown. Connor also gives 150 Morrisites passage to Carson City, Nevada, in an empty supply train. Others settle in California. (Connor&rsquo;s report, June 2, 1863, <i>Official Records</i>, ser. 1, vol. 50, pt. 1, 226&ndash;29.)</span></li>
-          <li><span class="date">1860s&ndash;</span><span>Some Morrisites return to the Church of Jesus Christ of Latter-day Saints, in Utah and elsewhere. The 2006 monument at South Weber notes that a few were rebaptized and remained there. Others find a home in the Reorganized Church (RLDS): the former Morrisite apostle Mark Hill Forscutt joins it in Salt Lake City in 1865, and John L. Bear (Johann Lebrecht B&auml;r, 1838&ndash;1919), a Swiss convert from Affoltern am Albis who emigrated from Z&uuml;rich in 1860 and lost his wife and child at Kington Fort, later serves as an RLDS missionary to Switzerland and Germany, dies in Independence, Missouri, and publishes his autobiography in the RLDS <i>Journal of History</i>. In 1865 RLDS missionaries at Malad, Idaho, baptize several people who appear on the roll. Others join only after years in the Morrisite groups: Erick and Caroline Eliason are baptized together at Soda Springs on June 9, 1870; Margaretta Cook leaves the Morrisites in Nevada in 1870 and is baptized RLDS in 1873; and Lena Hanson, at Soda Springs and then Deer Lodge, in 1895 (see the <a href="roll.html#roll">roll</a>).</span></li>
-          <li><span class="date">1867&ndash;1881</span><span>William W. Davies leads a Morrisite offshoot, the Kingdom of Heaven, on Mill Creek near Walla Walla, Washington. He declares his infant son Arthur to be Christ returned, the &ldquo;Walla Walla Jesus.&rdquo; Lawsuits by former members end the community.</span></li>
-          <li><span class="date">1869</span><span>Danish-language congregations keep membership and account books in Omaha, Nebraska, and Council Bluffs, Iowa.</span></li>
-          <li><span class="date">1870s</span><span>Many members regather in the Deer Lodge Valley, Montana, under George Williams, the &ldquo;Prophet Cainan,&rdquo; who claims to be Morris's successor. In 1874 the Montana church is divided into two stakes.</span></li>
-          <li><span class="date">1877</span><span>Montana Morrisites begin building a wood-frame church a mile or so below Racetrack, south of Deer Lodge.</span></li>
-          <li><span class="date">1879</span><span>Robert T. Burton, indicted in 1870 for the killing of Isabella Bowman during the surrender, is tried and acquitted.</span></li>
-          <li><span class="date">Jan 1879</span><span>George Williams prophesies that Deer Lodge County will be the site of the Second Coming.</span></li>
-          <li><span class="date">1880</span><span>In Chicago, Mark Hill Forscutt, a former Morrisite apostle now serving as an RLDS minister, baptizes James Brighouse (August 5) and confirms him (August 8), having baptized Mrs. Brighouse in July and preached the funeral of their infant child. In December Forscutt nominates Brighouse as a teacher in the branch. (Forscutt journal, 1880&ndash;1881, Vault MSS 811.) Four years later Brighouse founds the Order of Enoch.</span></li>
-          <li><span class="date">1882</span><span>Williams dies, and the movement splits among rival successors. In Montana, where the church is known as the Church of Jesus Christ of Saints of the Most High, William James, its local president under Williams, is sustained in May 1882 over opposition, with Andrew Hendrikson and John R. Eardley as counselors. (Eardley, later a stake president, leaves Montana about 1900.) George Dove leads the California congregation.</span></li>
-          <li><span class="date">1884</span><span><b>A later claimant.</b> James Brighouse, breaking from the RLDS Church, organizes the Order of Enoch in Independence, Missouri. The group rejects Brigham Young. Brighouse claims to be the &ldquo;One Mighty and Strong&rdquo; and a reincarnation of Christ and earlier prophets, a reincarnation teaching like that of the Davies group at Walla Walla. Wikipedia describes the Order as the one Morrisite-related body that survived 1969; its later activity has not been confirmed for this guide. Brighouse had been brought into the RLDS Church in 1880 by the former Morrisite apostle Mark Hill Forscutt (see 1880). One online account (<a href="https://www.lostmormonism.com/james-brighouse/" target="_blank" rel="noopener">Lost Mormonism</a>) says the Order honored Morris as a prophet and martyr, but the standard references do not: Shields&rsquo;s entry on the Order (<i>Divergent Paths</i>, 5th ed., &sect;5.4) and Kraut&rsquo;s note on Brighouse both omit Morris. Whether Brighouse drew on Morris, or Forscutt on Brighouse, remains open.</span></li>
-          <li><span class="date">1886</span><span>At a court meeting in the Lord&rsquo;s House at Race Track, Montana, on May 10, George Thompson of London is elected president of the church; eleven members who decline to sustain him are given thirty days to do so. Thompson is probably the last general president. Andrew Hendrikson, a Danish immigrant who was never a Latter-day Saint, presides over the Montana Morrisites from 1886 until his death on July 3, 1921.</span></li>
-          <li><span class="date">1886</span><span><i>The Spirit Prevails</i>, a collection of Morris's revelations, articles, and letters, is published by George S. Dove &amp; Company.</span></li>
-          <li><span class="date">1892</span><span>In San Francisco, James Dove publishes <i>A Few Items in the History of the Morrisites</i> for the California congregation.</span></li>
-          <li><span class="date">1921&ndash;1954</span><span>George Johnson, Hendrikson&rsquo;s associate of more than fifty years and likewise never a Latter-day Saint, presides at the Lord&rsquo;s House until shortly before his death on April 29, 1954, at ninety-eight. Anderson calls him the last official Morrisite leader.</span></li>
-          <li><span class="date">1969</span><span>The Church of Jesus Christ of the Saints of the Most High, the last organized Morrisite body in Montana, formally disbands. According to Anderson, August 6, 1969, was the last annual Morrisite gathering. Its records, its descendants, and the Racetrack church remain.</span></li>
-          <li><span class="date">1981&ndash;1988</span><span>C. LeRoy Anderson publishes <i>For Christ Will Come Tomorrow</i> (1981) and <i>Joseph Morris and the Saga of the Morrisites</i> (1988), the first book-length histories.</span></li>
-          <li><span class="date">1990</span><span><b>A later claimant.</b> Neal Chase, interpreter for Leland Jensen&rsquo;s Missoula-based sect, the Bah&aacute;&rsquo;&iacute;s Under the Provisions of the Covenant, publishes <i>Ezekiel&rsquo;s Temple in Montana</i>. Drawing on Anderson&rsquo;s book, he cites George Williams&rsquo;s prophecy that Christ would come in the Deer Lodge Valley, identifies the Montana State Prison at Deer Lodge (where Jensen was held from 1969) as Ezekiel&rsquo;s temple, and dates the fulfillment to August 9, 1969, Jensen&rsquo;s first full day in prison. Anderson rejected this reading, noting that Williams named no date. The sect was not Morrisite in origin; it adopted Morrisite prophecies as confirmation of its leader&rsquo;s mission.</span></li>
-          <li><span class="date">1996&ndash;2010</span><span>After Jensen&rsquo;s death in 1996 the sect divides over leadership, with Chase leading one faction; lawsuits continue to about 2010.</span></li>
-          <li><span class="date">2006</span><span>A monument to the Kington Fort&ndash;Morrisite War site is dedicated at South Weber.</span></li>
-          <li><span class="date">2010</span><span>Anderson&rsquo;s final edition, <i>Joseph Morris and the Saga of the Morrisites (Revisited)</i>, is published.</span></li>
-          <li><span class="date">July 2012</span><span>Descendants of Morrisite families hold a reunion in Deer Lodge; the property owners allow them to visit the Racetrack church.</span></li>
-          <li><span class="date">2026</span><span>Kirk Watson publishes <i>The Morrisites: Writings and Revelations</i>, collecting writings of Morris, Williams, Davies, and the Doves. The Racetrack church still stands, in declining condition (see the <a href="images.html#images">condition record</a> in Series 5).</span></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <section class="series" id="places" aria-labelledby="h-places">
-    <div class="wrap">
-      <div class="series-head">
-        <div class="series-no">Series 2</div>
-        <h2 id="h-places">Places</h2>
-        <p>Sites connected with the movement, and what can be seen at each today.</p>
-      </div>
-      <div class="series-body">
-        <div class="places">
-          <article class="place">
-            <figure><a href="images.html#mo-img-001"><img src="mo-img-001-kington-fort-monument-800.jpg" alt="Sandstone monument titled The Kington Fort-Morrisite War Site, with an engraved plan of the fort, standing in snow before bare trees." width="800" height="600" loading="lazy"></a><figcaption>MO-IMG-001 &middot; Monument, December 2008</figcaption></figure>
-            <h3>Kington Fort</h3>
-            <div class="where">South Weber, Utah</div>
-            <p>Built in 1853 and abandoned in 1858, then reoccupied by the Morrisites. Nothing of the fort survives; a monument to the Kington Fort&ndash;Morrisite War site was dedicated in 2006. The fort was named for Bishop Thomas Kington, and &ldquo;Kington&rdquo; is the correct spelling. The monument itself notes that the earliest sources (the notebook kept by Kington&rsquo;s wife, his gravestone, Wilford Woodruff&rsquo;s journals, and early church records) all spell it that way; recent scholarship such as Holley (2008) follows them. Many nineteenth- and twentieth-century accounts, and some modern references, including the <i>Utah History Encyclopedia</i> and Wikipedia, write &ldquo;Kingston Fort.&rdquo; Insiders used both: Forscutt, who lived in the fort, wrote &ldquo;Kingston&rsquo;s Fort&rdquo; and called it &ldquo;the proper name&rdquo; of the place (&ldquo;Sketch of Joseph Morris,&rdquo; CHL MS 702). Search under both spellings. A log cabin nearby, which local resident Ed Johnson believed was the building Morris used to hold the three departing members whose detention led to the siege, is shown in MO-IMG-046&ndash;049; the identification rests on local tradition. About 200 yards south, on the west side of the road, in the South Weber Pioneer Cemetery, a marker reads &ldquo;Joseph Werner, &lsquo;Morrisite,&rsquo; about 1870&rdquo; (MO-IMG-021). The name lingered locally. In the early 2000s, while the editor was going door to door in South Weber, a woman then in her sixties said that elementary-school classmates had called her &ldquo;Morrisite&rdquo; as a taunt because of where in South Weber she lived; she said her family had no Morrisite connection. (<a href="rogers-memorandum-south-weber-2026-11-01.pdf" target="_blank" rel="noopener">Editor&rsquo;s memorandum of recollection</a>, written November 1, 2026; the conversation was not recorded at the time.) A cannonball from the siege was kept by the family of Al Peek, together with a portrait of Mary Christoffersen Anderson (MO-IMG-051&ndash;053; the portrait is MO-IMG-062).</p>
-            <p class="access"><b>Visit</b>The monument is public. The Pioneer Cemetery appears to lie on private land but is reached by a public easement; stay on the access route. The cabin is on private property.</p>
-          </article>
-          <article class="place">
-            <figure><a href="images.html#mo-img-061"><img src="mo-img-061-anderson-gravestone-plaque-800.jpg" alt="Bronze plaque on the Anderson gravestone, densely inscribed with an account of the Morrisite siege." width="800" height="600" loading="lazy"></a><figcaption>MO-IMG-061 &middot; Anderson gravestone, October 2018</figcaption></figure>
-            <h3>Morristown</h3>
-            <div class="where">Soda Springs, Idaho</div>
-            <p>The Morrisites were among the founders of Soda Springs, one of the oldest towns in Idaho. Connor reported bringing 160 settlers (53 families, seven single men, and four widows), who arrived May 20, 1863, and were given building lots on a town site surveyed on the north bank of the Bear River, beside the military reservation of Camp Connor (Connor&rsquo;s report, June 2, 1863, <a href="https://ehistory.osu.edu/books/official-records/105/0226" target="_blank" rel="noopener">OR</a>). A later marker describes a 200-acre survey west of Soda Creek, lots of 25 by 130 feet, and one-room log homes with dirt floors. The Morrisite &ldquo;Lower Town&rdquo; stood below the military &ldquo;Upper Town&rdquo;; Soda Springs was the first seat of Oneida County, 1864&ndash;66. After the troops left in 1865, hard winters and failed crops thinned the settlement. Many Morrisites moved on, some north to the Blackfoot area, and others sold to miners and to Latter-day Saint settlers, whose new town site dates from Brigham Young&rsquo;s visit of 1870&ndash;71. Most of the old town now lies under Alexander Reservoir. Those who stayed, led by Niels Anderson, carried their quarrel with the Mormon hierarchy into territorial politics; the Niels Anderson Homestead marker credits his anti-polygamy campaign with helping deny Mormons the vote in Idaho. Accounts differ on some details: most give 160 settlers (one popular account says about 325), Camp Connor&rsquo;s founding is dated May 20 or May 23, and the National Park Service marker wrongly calls Morris Welsh-born. Markers stand in town, including the Park Service&rsquo;s Morrisite settlement marker in the parking lot of a Latter-day Saint meetinghouse (<a href="https://www.hmdb.org/m.asp?m=106709" target="_blank" rel="noopener">HMDB</a>), the state&rsquo;s Camp Connor marker (<a href="https://www.hmdb.org/m.asp?m=105972" target="_blank" rel="noopener">HMDB</a>), and &ldquo;Law &amp; Order on the Frontier&rdquo; on Camp Connor&rsquo;s probable site near the hospital (<a href="https://www.hmdb.org/m.asp?m=106710" target="_blank" rel="noopener">HMDB</a>). Descendants held a reunion in Soda Springs on August 3, 2013.</p>
-            <p> Niels and Mary Christoffersen Anderson, married at Morristown on July 20, 1863 (the date on their gravestone; some accounts give July 30), are buried in Fairview Cemetery at Soda Springs. Their gravestone carries a long bronze inscription giving a Morrisite account of the 1862 siege, in which Mary, then fourteen, lost her jaw to the first cannon shot fired into the fort. Forscutt, who was present, described her lower jaw &ldquo;hanging only by a narrow strip of skin,&rdquo; with two women dead beside her (&ldquo;Sketch of Joseph Morris,&rdquo; CHL MS 702; MO-IMG-061, with <a href="images.html#anderson-plaque">transcription</a>; MO-IMG-062; <a href="https://www.hmdb.org/m.asp?m=124649" target="_blank" rel="noopener">HMDB</a>; see also the <a href="https://www.hmdb.org/m.asp?m=106726" target="_blank" rel="noopener">Niels Anderson Homestead marker</a>).</p>
-            <p class="access"><b>Visit</b>The markers and the Anderson gravestone in Fairview Cemetery are publicly accessible. The townsite is largely under Alexander Reservoir.</p>
-          </article>
-          <article class="place">
-            <h3>Carson City &amp; California</h3>
-            <div class="where">Nevada &middot; California</div>
-            <p>The western congregations, where George Dove published <i>The Spirit Prevails</i> and led the California church after 1882. In May 1863 Connor gave 150 Morrisites passage to Carson City in an empty quartermaster&rsquo;s train bound there for stores (Connor&rsquo;s report, June 2, 1863, <a href="https://ehistory.osu.edu/books/official-records/105/0226" target="_blank" rel="noopener">OR</a>).</p>
-            <p class="access"><b>Visit</b>No surviving sites identified for this guide. Information welcome.</p>
-          </article>
-          <article class="place">
-            <h3>Omaha &amp; Council Bluffs</h3>
-            <div class="where">Nebraska &middot; Iowa</div>
-            <p>Danish-speaking congregations whose 1869 membership and account books survive in translation.</p>
-            <p class="access"><b>Visit</b>No sites identified; the record survives in documents only.</p>
-          </article>
-          <article class="place">
-            <figure><a href="images.html#mo-img-014"><img src="mo-img-014-racetrack-church-oblique-2018-800.jpg" alt="The weathered frame church in snow, its front siding largely gone to expose the framing, the painted gable end intact, a snowy peak behind." width="800" height="533" loading="lazy"></a><figcaption>MO-IMG-014 &middot; Racetrack church, November 2018</figcaption></figure>
-            <h3>Deer Lodge Valley</h3>
-            <div class="where">Deer Lodge County, Montana</div>
-            <p>The longest-lived center of the movement. The wood-frame Morrisite church, begun in 1877, stood on private land at Racetrack, visible from the west side of Interstate 90 south of Deer Lodge, when last photographed for this guide in November 2018. Called the Lord&rsquo;s House, as the panel over its doors reads, it was the church&rsquo;s meeting place: George Thompson was elected president of the church there in 1886, and Andrew Hendrikson (1886&ndash;1921) and George Johnson (1921&ndash;1954) presided over the Montana church from it. It is the only Morrisite church building known to survive, and its condition has worsened markedly since 2009. See the <a href="images.html#images">condition record</a> in Series 5.</p>
-            <p class="access"><b>View only</b>The church is on private land and unsafe. View it from the public road; do not enter or trespass.</p>
-          </article>
-          <article class="place">
-            <h3>Kingdom of Heaven</h3>
-            <div class="where">Walla Walla, Washington</div>
-            <p>William W. Davies's commune on Mill Creek, 1867&ndash;1881. A road called the Mormon Grade, an interpretive sign at Scenic Loop Road and Mormon Grade, and Davies's grave in Lyons Cemetery remain.</p>
-            <p class="access"><b>Visit</b>The interpretive sign and Lyons Cemetery are public.</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="series" id="repositories" aria-labelledby="h-repos">
-    <div class="wrap">
-      <div class="series-head">
-        <div class="series-no">Series 3</div>
-        <h2 id="h-repos">Repositories</h2>
-        <p>Where the original and copied records are held, with call numbers for requesting them.</p>
-      </div>
-      <div class="series-body">
-        <div class="repo">
-          <div class="repo-top">
-            <h3>Morrisite collection, 1865&ndash;1975</h3>
-            <span class="callno">USU CAINE COLL MSS 10</span>
-          </div>
-          <dl>
-            <dt>Held by</dt><dd>Special Collections &amp; Archives, Merrill-Cazier Library, Utah State University, Logan</dd>
-            <dt>Extent</dt><dd>3 linear feet</dd>
-            <dt>Contents</dt><dd>C. LeRoy Anderson's research files: oral histories, correspondence, tracts, copies of Morris's letters to Brigham Young, membership rolls, Court and Council minutes, letters of the Prophet Cainan, and a copy of Mark H. Forscutt's history of Joseph Morris.</dd>
-            <dt>Access</dt><dd>Open to research. Publication requires the curator's permission. <a href="https://archiveswest.orbiscascade.org/ark:80444/xv02597" target="_blank" rel="noopener">Finding aid</a></dd>
-          </dl>
-        </div>
-        <div class="repo">
-          <div class="repo-top">
-            <h3>Deer Lodge, Montana genealogy papers, 1860&ndash;1990</h3>
-            <span class="callno">USU COLL MSS 157</span>
-          </div>
-          <dl>
-            <dt>Held by</dt><dd>Special Collections &amp; Archives, Utah State University</dd>
-            <dt>Extent</dt><dd>2 boxes (1 linear foot)</dd>
-            <dt>Contents</dt><dd>Family genealogies from the Deer Lodge Valley, compiled by Joan Crum, with particular attention to Morrisite families.</dd>
-            <dt>Access</dt><dd>Open to research. <a href="https://archiveswest.orbiscascade.org/ark:80444/xv02322" target="_blank" rel="noopener">Finding aid</a></dd>
-          </dl>
-        </div>
-        <div class="repo">
-          <div class="repo-top">
-            <h3>Morrisite manuscripts, University of Utah</h3>
-            <span class="callno">U of U MS 0111 &middot; 0260 &middot; 0261</span>
-          </div>
-          <dl>
-            <dt>Held by</dt><dd>J. Willard Marriott Library Special Collections, University of Utah, Salt Lake City</dd>
-            <dt>Contents</dt><dd>Mark H. Forscutt's partial history of the Morrisite church (MS 0261); Danel W. Bachman's 1970 BYU paper &ldquo;Joseph Morris and the Morrisites&rdquo; (MS 0260); Jacob Miller papers (MS 0111); and Karl Banks's essay &ldquo;A Brief History of John Banks and the Morrisite Movement.&rdquo;</dd>
-          </dl>
-        </div>
-        <div class="repo">
-          <div class="repo-top">
-            <h3>Gordon M. Howard papers, 1716&ndash;1977</h3>
-            <span class="callno">USHS Mss B 279</span>
-          </div>
-          <dl>
-            <dt>Held by</dt><dd>Utah State Historical Society, Salt Lake City</dd>
-            <dt>Extent</dt><dd>3 boxes</dd>
-            <dt>Contents</dt><dd>Howard's research notes, correspondence, and draft chapters on Joseph Morris and the Morrisite War. Box 2 holds copies of court papers: <i>People v. Peter Klingard</i>, Third Judicial District, 1863 (folder 5), and a register of arrests of Morrisites, 1863 (folder 6).</dd>
-            <dt>Access</dt><dd><a href="https://history.utah.gov/finding-aids/data/B00279/B0279.xml" target="_blank" rel="noopener">Finding aid</a></dd>
-          </dl>
-        </div>
-        <div class="repo">
-          <div class="repo-top">
-            <h3>William W. Davies collection, 1929&ndash;1976</h3>
-            <span class="callno">WCMss124</span>
-          </div>
-          <dl>
-            <dt>Held by</dt><dd>Whitman College and Northwest Archives, Walla Walla, Washington</dd>
-            <dt>Contents</dt><dd>Clippings, copies of depositions, court testimony, and judgments, letters and articles by Davies, and an academic paper on the Kingdom of Heaven.</dd>
-            <dt>Access</dt><dd>Open. <a href="https://archiveswest.orbiscascade.org/ark:80444/xv72476" target="_blank" rel="noopener">Finding aid</a></dd>
-          </dl>
-        </div>
-        <div class="repo">
-          <div class="repo-top">
-            <h3>Diaries, letters, and federal records</h3>
-            <span class="callno">Several repositories</span>
-          </div>
-          <dl>
-            <dt>Church History Library</dt><dd>Brigham Young correspondence; Journal of Wilford Woodruff; Journal History of the Church; &ldquo;Niels Anderson matter, 1903&rdquo; (Joseph F. Smith stake correspondence, CR 1 191; <a href="https://catalog.churchofjesuschrist.org/assets/d114f781-fdd3-4220-8a88-a267c0c14221/0/0" target="_blank" rel="noopener">digitized</a>), letters of January&ndash;March 1903 from Niels Anderson, one also signed by Mary Christoffersen Anderson, asking the church&rsquo;s help for the injury Mary received in 1862, with a clerk&rsquo;s draft for the reply and the Bannock Stake president&rsquo;s report of May 19, 1903, on the First Presidency&rsquo;s inquiry; &ldquo;A Short Sketch of the Genealogy and History of George Morris,&rdquo; by Joseph Morris&rsquo;s brother.</dd>
-            <dt>University of Utah</dt><dd>Diary of Hans Olsen Magleby; journal of John L. Blyth, 1858&ndash;1863; pioneer journal of Jacob Miller; Timothy Kendell autobiography (MS 0041), recalling South Weber as briefly called Morristown.</dd>
-            <dt>Utah State Archives</dt><dd>Territorial militia records (series 2210; images and a name index on <a href="https://www.familysearch.org/search/collection/1462415" target="_blank" rel="noopener">FamilySearch, collection 1462415</a>): Acting Governor Fuller&rsquo;s order of June 11, 1862, calling out the posse (copied in document 1,215); a list of the South Weber company&rsquo;s officers, April 22, 1859; Weber District muster rolls of the 1857 call-up, which include Robert Farley and John Parson.</dd>
-            <dt>National Archives</dt><dd>Record Group 60, Department of Justice chronological files, Utah, box 683: Sumner Howard to Attorney General Charles Devens, July 28, 1877.</dd>
-            <dt>Weber State University</dt><dd>Oral history of Clayton Holt (OH10_046), a teacher who researched the Morrisites in South Weber.</dd>
-          </dl>
-        </div>
-        <div class="repo">
-          <div class="repo-top">
-            <h3>Joseph Morris letters and revelation manuscripts</h3>
-            <span class="callno">CR 1234 1 &middot; digitized</span>
-          </div>
-          <dl>
-            <dt>Held by</dt><dd>Church History Library, Salt Lake City</dd>
-            <dt>Contents</dt><dd>Morris&rsquo;s letters to Brigham Young (1857&ndash;1860), the originals of the copies in the USU collection, and manuscript revelations from 1859&ndash;1862, in Brigham Young&rsquo;s office files (President&rsquo;s Office Files, General Office Files: folders &ldquo;Revelations of Joseph Morris, 1858&ndash;1860&rdquo; and &ldquo;1861&ndash;1862&rdquo;). No letter from Young to Morris has been found. Item-by-item links are given in Kirk Watson&rsquo;s edition (see Bibliography).</dd>
-          </dl>
-        </div>
-        <div class="repo">
-          <div class="repo-top">
-            <h3>Morrisite scepters</h3>
-            <span class="callno">LDS 65-3058 &middot; 3059 &middot; 3060</span>
-          </div>
-          <dl>
-            <dt>Held by</dt><dd>Church History Museum collection, The Church of Jesus Christ of Latter-day Saints, Salt Lake City</dd>
-            <dt>Description</dt><dd>Three painted wooden staffs, each with a printed inscription mounted on the shaft. The editor saw them in the museum vault and transcribed the inscriptions. Photographs courtesy of the Church History Museum, of the three scepters together (p. 116) and of an inscription band close up (p. 117), were published with the editor&rsquo;s transcription of the inscriptions in Anderson, <i>Joseph Morris and the Saga of the Morrisites (Revisited)</i> (2010), 116&ndash;17. They are not reproduced here.</dd>
-            <dt>Inscriptions</dt><dd>Joseph Morris&rsquo;s scepter declares him sent &ldquo;to RULE over all ADAM&rsquo;S posterity&rdquo; and is signed &ldquo;Joseph Morris, PRESIDENT of the Melchisidec Priesthood.&rdquo; The other two belonged to Hugh Park (&ldquo;number five,&rdquo; his name written over an earlier one) and Daniel Smith (&ldquo;number seven&rdquo;), each presenting himself as a ruler &ldquo;over all Abraham&rsquo;s seed.&rdquo;</dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="series" id="share" aria-labelledby="h-contrib">
-    <div class="wrap">
-      <div class="series-head">
-        <div class="series-no">Series 6</div>
-        <h2 id="h-contrib">Share records and corrections</h2>
-        <p>Much of the record is still in private hands. This site is noncommercial and does not ask for or accept money.</p>
-        <p>Write to the editor at <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a>.</p>
-      </div>
-      <div class="series-body contrib">
-        <div>
-          <h3>Descendants</h3>
-          <p>If your family kept letters, diaries, photographs, or church papers, they can be described here, and digitized or placed in a repository if you wish. Nothing is published without your permission.</p>
-        </div>
-        <div>
-          <h3>Researchers</h3>
-          <p>Send citations, corrections, and new finds. Theses, conference papers, and local histories are especially welcome, since they are the hardest to locate.</p>
-        
-        </div>
-        <div>
-          <h3>Forscutt papers</h3>
-          <p>For the forthcoming edition of Forscutt&rsquo;s &ldquo;Sketch of Joseph Morris,&rdquo; the editor would be glad to learn of other writings by Mark H. Forscutt: letters, diaries, sermons, or the earlier Morrisite history he is said to have written, whether in repositories or in family hands.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="series" id="about" aria-labelledby="h-about">
-    <div class="wrap">
-      <div class="series-head">
-        <div class="series-no">About</div>
-        <h2 id="h-about">About this guide</h2>
-        <p>Where the material comes from, how it is checked, and how to cite it.</p>
-      </div>
-      <div class="series-body about">
-        <div>
-          <h3>How the guide was compiled</h3>
-          <p>The guide brings together work done over more than two decades. Its foundation is the research of C. LeRoy Anderson, whose files at Utah State University (Caine Coll. MSS 10) remain the largest body of Morrisite records. The editor assisted Anderson with the 2010 edition of his history and has studied the Morrisite apostle and later RLDS minister Mark Hill Forscutt since at least 2001, when his first article on Forscutt appeared, including transcribing Forscutt&rsquo;s journals. Photographs of the sites were taken by the editor from the early 2000s onward. Kirk Watson&rsquo;s 2026 edition of Morrisite writings, published scholarship, and records shared by descendants fill out the rest.</p>
-        </div>
-        <div>
-          <h3>Standards</h3>
-          <ul>
-            <li>Citations follow <i>The Chicago Manual of Style</i>. Every work in the bibliography has been examined by the editor in at least one edition; where a page reference comes from an edition not seen, the entry says so. A work known only from another source&rsquo;s citation will be marked <span class="tag">Not yet checked</span>.</li>
-            <li>Facts are drawn from published works with citations; their text is not reproduced. Videos and photographs by others are linked, not copied, unless they have been shared for this guide; those are credited.</li>
-            <li>Dates marked provisional, approximate, or &ldquo;ca.&rdquo; are flagged as such and revised when better evidence turns up.</li>
-            <li>Membership rolls and other records naming private individuals are cited but not republished, with one exception: the 1861&ndash;62 South Weber roll, printed in 1886 and naming only people baptized more than 160 years ago, is given in full on the <a href="roll.html#roll">Roll of membership</a> page.</li>
-            <li>Changes are listed under <a href="#new">What&rsquo;s new</a>.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Oral and field sources</h3>
-          <p>Records of the editor&rsquo;s own fieldwork, cited in this guide.</p>
-          <ul>
-            <li>Rogers, Eric Paul. &ldquo;Memorandum of Recollection: South Weber Door-to-Door Visit.&rdquo; Signed memorandum, November 1, 2026, recalling an unrecorded canvass of South Weber residents made before February 2004 in preparation for the editor&rsquo;s 2006 John Whitmer Historical Association paper. <a href="rogers-memorandum-south-weber-2026-11-01.pdf" target="_blank" rel="noopener">PDF</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>How to cite this guide</h3>
-          <p class="cite-this">Rogers, Eric Paul, ed. <i>Morrisite.org: A Research Guide to the Morrisites</i>. Accessed [date]. https://morrisite.org.</p>
-          <p>Photographs by the editor may not be reused without permission while a reuse license is being chosen. Please ask through the contact address below.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
