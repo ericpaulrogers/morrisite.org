@@ -307,6 +307,12 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .biblio h3:first-child { margin-top: 0; }
 ul.cites { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 ul.cites li { padding-left: 2em; text-indent: -2em; max-width: 68ch; }
+.np-key, .np-intro { max-width: 68ch; }
+.np-toc ul { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; }
+.np-sub { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted, #666); }
+ul.np-reprints { list-style: none; margin: 6px 0 0; padding: 0 0 0 1.2em; border-left: 2px solid var(--rule, #ddd); display: grid; gap: 4px; font-size: 0.95em; text-indent: 0; }
+ul.np-reprints li { padding-left: 1.5em; text-indent: -1.5em; }
+ul.np-reprints .np-rep-head { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); padding-left: 0; text-indent: 0; }
 .tag { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); border: 1px solid var(--accent); padding: 0 6px; margin-left: 6px; white-space: nowrap; text-indent: 0; display: inline-block; }
 
 
@@ -505,6 +511,7 @@ footer .wrap { display: grid; gap: 8px; }
         </div>
         <h3 style="font-family:var(--font-sc);font-size:18px;letter-spacing:.04em;color:var(--muted);margin:30px 0 4px">Added to this guide</h3>
         <ol class="chron" id="updates">
+          <li id="u-newspapers"><span class="date">7 Nov 2026</span><span><b>Newspapers.</b> A new <a href="newspapers.html#newspapers">Newspapers</a> page lists the press coverage by event, from the Sacramento dispatch of June 16, 1862, and its reprints as far as England and Australia, through the 1870 dispute over who commanded at Kington Fort, Burton&rsquo;s arrest in 1877 and the <i>Salt Lake Tribune</i> letters of 1891, to recent retellings. It also has tips for searching the newspapers.</span></li>
           <li id="u-where-they-went"><span class="date">6 Nov 2026</span><span><b>Where they went.</b> A new animated <a href="movements.html">map</a> follows the people on the 1861&ndash;62 roll from Kington Fort to Soda Springs, the Carson Valley, the Deer Lodge Valley, Walla Walla and beyond, year by year, as censuses, land patents, testimony and death records place them. Choose a family to follow it, or tap a dot for the person&rsquo;s sources.</span></li>
           <li id="u-zbaraschuk-on-davies-and-two-more-court-cases"><span class="date">6 Nov 2026</span><span><b>Zbaraschuk on Davies, and two more court cases.</b> Tony Zbaraschuk&rsquo;s 1989 Whitman College paper on William W. Davies is now in the <a href="bibliography.html">Bibliography</a>. Its notes point to two more suits against the Davieses (1882 and 1883), now listed with the Davies case files on <a href="repositories.html">Repositories</a>.</span></li>
           <li id="u-a-map-of-morristown"><span class="date">6 Nov 2026</span><span><b>A map of Morristown.</b> The <a href="place/morristown.html">Morristown</a> page now maps the 1863 settlement at Soda Springs: the Lower Town (mostly under Alexander Reservoir), the probable site of Camp Connor, the markers, the Andersons&rsquo; graves in Fairview Cemetery, and the land patents of the families who stayed. Hover over the markers on the <a href="places.html">Places</a> map to preview each place&rsquo;s site map.</span></li>

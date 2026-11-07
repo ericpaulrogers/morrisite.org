@@ -307,6 +307,12 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .biblio h3:first-child { margin-top: 0; }
 ul.cites { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 ul.cites li { padding-left: 2em; text-indent: -2em; max-width: 68ch; }
+.np-key, .np-intro { max-width: 68ch; }
+.np-toc ul { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; }
+.np-sub { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted, #666); }
+ul.np-reprints { list-style: none; margin: 6px 0 0; padding: 0 0 0 1.2em; border-left: 2px solid var(--rule, #ddd); display: grid; gap: 4px; font-size: 0.95em; text-indent: 0; }
+ul.np-reprints li { padding-left: 1.5em; text-indent: -1.5em; }
+ul.np-reprints .np-rep-head { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); padding-left: 0; text-indent: 0; }
 .tag { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); border: 1px solid var(--accent); padding: 0 6px; margin-left: 6px; white-space: nowrap; text-indent: 0; display: inline-block; }
 
 
@@ -463,7 +469,7 @@ footer .wrap { display: grid; gap: 8px; }
 
 <main id="top">
   <div class="wrap"><p class="crumb"><a href="index.html">Morrisite.org</a> &rsaquo; Bibliography</p></div>
-  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="documents.html">Documents</a><a href="#top" aria-current="page">Bibliography</a><a href="repositories.html">Repositories</a></nav></div>
+  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="documents.html">Documents</a><a href="#top" aria-current="page">Bibliography</a><a href="newspapers.html">Newspapers</a><a href="repositories.html">Repositories</a></nav></div>
 
   <section class="series" id="bibliography" aria-labelledby="h-biblio">
     <div class="wrap">
@@ -571,19 +577,7 @@ footer .wrap { display: grid; gap: 8px; }
           <li>Wheeler, Jerome. &ldquo;History of Slaterville.&rdquo; Unpublished manuscript, ca. 1963. Marriott-Slaterville City History Collection, MS 351, Special Collections, Stewart Library, Weber State University, Ogden, UT. <a href="https://digital.weber.edu/details?id=62771" target="_blank" rel="noopener">Digital copy</a></li>
         </ul>
         <h3 id="s-newspapers">Newspapers</h3>
-        <ul class="cites">
-          <li><i>Anaconda Standard</i>, July 26, 1891, p. 11. &ldquo;The Morrisite Tragedy: A Thrilling Incident in the History of Mormonism.&rdquo; An unsigned account sympathetic to the Morrisites, apparently one of a series of letters, from Morris&rsquo;s arrival at South Weber through the surrender. <span class="tag">New</span></li>
-          <li><i>Bonner County Daily Bee</i>, July 9, 2013. &ldquo;Descendants of Morrisites Sought,&rdquo; on a descendants&rsquo; reunion at Soda Springs, August 3, 2013. <a href="https://bonnercountydailybee.com/news/2013/jul/09/descendants-of-morrisites-sought-7/" target="_blank" rel="noopener">Website</a></li>
-          <li><i>Boston Herald</i>, July 27, 1863. &ldquo;From Washington,&rdquo; summarizing Connor&rsquo;s report of the Soda Springs expedition.</li>
-          <li><i>Brooklyn Eagle</i>, February 6, 1863.</li>
-          <li><i>Caribou County News</i> (Soda Springs, ID), December 18, 2025. &ldquo;The Morrisites and Founding of Morristown.&rdquo; <a href="https://www.cariboucountynews.com/2025/12/18/557152/the-morrisites-and-founding-of-morristown" target="_blank" rel="noopener">Website</a></li>
-          <li><i>Carson Valley News</i> (Genoa, NV), May 29, 1877, p. 3; June 15, 1877, p. 3; June 22, 1877, p. 3. A preacher calling himself the Prophet Daniel tells &ldquo;the Morrisites&rdquo; of Carson Valley of a Savior born at Walla Walla; R. J. Livingston sells out and leaves to join William W. Davies. Reprinted in the <i>Salt Lake Herald</i>, June 16, 1877, and other papers. <a href="https://douglascounty.advantage-preservation.com/" target="_blank" rel="noopener">Douglas County Public Library digital archive</a> <span class="tag">New</span></li>
-          <li><i>Deseret News</i>, June 18, 1862, 404; June 25, 1862; April 1, 1863.</li>
-          <li><i>Montana Standard</i> (Butte), July 2, 1989, pp. 69&ndash;71. Roger Kelley, &ldquo;From Morrisites to Marcus Daly,&rdquo; an interview with the Anaconda historian Alice Finnegan. She calls the Morrisites the area&rsquo;s first settlers, says they wintered at Gregson (now Fairmont Hot Springs) before homesteading, and names Morgan Evans, who bought the land for Daly&rsquo;s town and smelter, as a Morrisite. Morris&rsquo;s <i>Anaconda, Montana</i> (1997) describes Evans&rsquo;s arrival in 1866 without calling him one, and he is not on the 1861&ndash;62 roll; the claim is unconfirmed. <span class="tag">New</span></li>
-          <li><i>Montana Standard</i> (Butte), June 19, 1982, p. 5. &ldquo;Deer Lodge Once Thought to Be Site of Second Coming,&rdquo; with photographs, including the church. Brought to this guide&rsquo;s attention by Kris Pozega, a great-great-niece of George Johnson. Not yet read for this guide. <span class="tag">New</span></li>
-          <li><i>San Francisco Chronicle</i>, June 19, 1892.</li>
-          <li><i>Soda Springs Sun</i>, May 30, 1931 (memorial dedication); June 11, 1931.</li>
-        </ul>
+        <p>Newspaper coverage, from the first telegraphic reports of 1862 to recent retellings, now has its own page: <a href="newspapers.html#newspapers">Newspapers</a>.</p>
         <h3 id="s-reviews">Reviews</h3>
         <ul class="cites">
           <li>Holley, Val. Review of <i>Joseph Morris and the Saga of the Morrisites (Revisited)</i>, by C. LeRoy Anderson. <i>Utah Historical Quarterly</i> 79, no. 3 (2011): 284.</li>
