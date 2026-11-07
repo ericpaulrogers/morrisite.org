@@ -378,6 +378,20 @@ footer .wrap { display: grid; gap: 8px; }
 
 /* Place pages, map, glossary, filters, anchors, back to top (Nov 2026) */
 .pmap-wrap { margin: 0 0 10px; }
+.vmap-wrap { max-width: 500px; }
+.vmap-twp { fill: none; stroke: var(--rule); stroke-width: 1; stroke-dasharray: 3 3; }
+.vmap-tl { font-family: var(--font-mono); font-size: 9px; fill: var(--muted); opacity: .6; text-anchor: middle; }
+.vmap-ref { fill: var(--muted); opacity: .6; }
+.vmap-rl { font-size: 11px; fill: var(--muted); paint-order: stroke; stroke: var(--panel); stroke-width: 3px; }
+.vmap-tr { fill: var(--accent); opacity: .45; stroke: var(--accent); stroke-width: 1; }
+.pmap-pt.vmap-approx { fill: var(--panel); stroke: var(--accent); stroke-width: 2.5; }
+.vmap-pl { font-size: 12px; }
+.vmap-scale line { stroke: var(--ink); stroke-width: 2; } .vmap-scale text { font-size: 10px; fill: var(--muted); }
+.vmap-list li { margin-bottom: 12px; }
+.vmap-tracts { margin: 4px 0 2px 18px; font-size: .9em; }
+.vmap-badge { font-family: var(--font-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; border: 1px solid var(--rule); border-radius: 3px; padding: 0 4px; color: var(--muted); }
+.vmap-located { border-color: var(--accent); color: var(--accent); }
+.vmap-osm { font-size: .85em; }
 .pmap { width: 100%; height: auto; display: block; }
 .pmap-bg { fill: var(--panel); }
 .pmap-st { fill: var(--paper); stroke: var(--rule); stroke-width: 1; }
