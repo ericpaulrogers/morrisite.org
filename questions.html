@@ -381,10 +381,14 @@ footer .wrap { display: grid; gap: 8px; }
 .pinset { position: absolute; z-index: 5; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 6px 4px;
   box-shadow: 0 8px 24px rgba(0,0,0,.18); pointer-events: none; opacity: 0; visibility: hidden; transform: scale(.25);
   transition: opacity .22s ease, transform .28s cubic-bezier(.2,.8,.3,1.15), visibility .28s; }
-.pinset svg { width: 100%; height: 240px; display: block; }
+.pinset svg { width: 100%; height: auto; max-height: 300px; display: block; border-radius: 3px; }
+.pinset-grid line { stroke: var(--rule); stroke-width: 1; vector-effect: non-scaling-stroke; opacity: .55; }
+.pinset .vmap-twp { opacity: 0; }
+.pinset .vmap-pl { paint-order: stroke; stroke: var(--panel); stroke-width: 4px; stroke-linejoin: round; }
+.pinset .vmap-rl { opacity: .75; }
 .pinset .vmap-tl { display: none; }
 .pinset-h { font-family: var(--font-sc); font-size: 13px; color: var(--ink); margin: 0 2px 4px; }
-.pinset-f { font-family: var(--font-mono); font-size: 10px; letter-spacing: .05em; color: var(--muted); margin: 3px 2px 0; text-transform: uppercase; }
+.pinset-f { font-family: var(--font-mono); font-size: 10px; letter-spacing: .05em; color: var(--muted); margin: 4px 2px 0; text-transform: uppercase; display: flex; justify-content: space-between; }
 @media (prefers-reduced-motion: reduce) { .pinset { transition: opacity .15s; transform: none !important; } }
 @media (hover: none) { .pinset { display: none; } }
 .vmap-twp { fill: none; stroke: var(--rule); stroke-width: 1; stroke-dasharray: 3 3; }
