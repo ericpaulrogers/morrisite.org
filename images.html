@@ -333,7 +333,36 @@ ul.np-chart { list-style: none; margin: 0; padding: 0; }
 .np-tl-plot { position: relative; height: 190px; margin-top: 22px; display: flex; align-items: stretch; border-bottom: 1px solid var(--ink); }
 .np-yr { flex: 1 1 0; min-width: 0; display: block; background: linear-gradient(to top, var(--accent) 0, var(--accent) var(--r), var(--rule) var(--r), var(--rule) var(--a), transparent var(--a)); }
 .np-yr:hover, .np-yr:focus-visible { background: linear-gradient(to top, var(--ink) 0, var(--ink) var(--r), var(--muted) var(--r), var(--muted) var(--a), var(--panel) var(--a)); outline: none; }
-.np-tl-note { position: absolute; font-family: var(--font-mono); font-size: 11px; line-height: 1.2; color: var(--muted); white-space: nowrap; padding-left: 6px; border-left: 1px solid var(--muted); pointer-events: none; }
+.np-chart-sub { font-size: 14.5px; color: var(--muted); max-width: 68ch; margin: 0 0 10px; }
+.np-tl-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.np-tl-tog { font-family: var(--font-mono); font-size: 12px; padding: 6px 10px; border: 1px solid var(--accent); background: transparent; color: var(--accent); border-radius: 3px; cursor: pointer; }
+.np-tl-tog[aria-pressed="true"] { background: var(--accent); color: var(--paper); }
+.np-tl-read { font-family: var(--font-mono); font-size: 12.5px; color: var(--ink); margin: 0; min-height: 1.4em; flex: 1 1 18em; }
+.np-tl-plot { touch-action: pan-y; }
+.np-tl.rel .np-yr { background: linear-gradient(to top, var(--accent) 0, var(--accent) var(--r2), transparent var(--r2)); }
+.np-tl.rel .np-yr:hover, .np-tl.rel .np-yr:focus-visible { background: linear-gradient(to top, var(--ink) 0, var(--ink) var(--r2), var(--panel) var(--r2)); }
+.np-yr.np-sel { background: linear-gradient(to top, var(--ink) 0, var(--ink) var(--r), var(--muted) var(--r), var(--muted) var(--a), var(--panel) var(--a)); }
+.np-tl.rel .np-yr.np-sel { background: linear-gradient(to top, var(--ink) 0, var(--ink) var(--r2), var(--panel) var(--r2)); }
+.np-mk { display: inline-flex; align-items: center; justify-content: center; width: 17px; height: 17px; border-radius: 50%; background: var(--accent); color: var(--paper); font-family: var(--font-mono); font-size: 10.5px; line-height: 1; }
+.np-mk.np-mk-un { background: var(--paper); color: var(--muted); border: 1px solid var(--muted); }
+.np-tl-plot .np-mk { position: absolute; bottom: calc(var(--ba) + 4px); transform: translateX(-50%); pointer-events: none; }
+.np-tl.rel .np-tl-plot .np-mk { bottom: calc(var(--br) + 4px); }
+.np-tl.rel .np-tl-plot .np-mk-un, .np-tl.rel .np-mk-key .np-key-un, .np-tl.rel .np-key-only { display: none; }
+ol.np-mk-key { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 4px; font-size: 14px; }
+ol.np-mk-key li { display: flex; gap: 8px; align-items: baseline; }
+ol.np-mk-key .np-mk { flex: none; transform: translateY(3px); }
+.np-key-un { color: var(--muted); }
+.np-back { font-family: var(--font-mono); font-size: 12px; margin: 4px 0 18px; }
+.np-back a { color: var(--muted); }
+.biblio h3[id^="np-"]:target { animation: np-flash 2.4s ease-out; }
+@keyframes np-flash { 0%, 30% { background: color-mix(in srgb, var(--accent) 22%, transparent); } 100% { background: transparent; } }
+.np-table { margin-top: 14px; font-size: 14px; }
+.np-table summary { cursor: pointer; font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+.np-table table { border-collapse: collapse; margin: 10px 0 14px; width: 100%; max-width: 640px; }
+.np-table caption { text-align: left; font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); padding-bottom: 4px; }
+.np-table th, .np-table td { text-align: left; padding: 3px 8px; border-bottom: 1px solid var(--rule); font-weight: normal; }
+.np-table td { font-family: var(--font-mono); font-size: 12.5px; text-align: right; }
+.np-table thead th { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 .np-tl-ticks { position: relative; height: 18px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
 .np-tl-ticks span { position: absolute; top: 2px; transform: translateX(-50%); }
 .np-tl-ticks span:first-child { transform: none; }
@@ -348,8 +377,8 @@ ul.np-chart { list-style: none; margin: 0; padding: 0; }
 .np-key-a { background: var(--rule); }
 @media (max-width: 600px) {
   .np-tl-plot { height: 150px; }
-  .np-tl-note { display: none; }
-  .np-tl-ticks span:nth-child(even) { display: none; }
+    .np-tl-ticks span:nth-child(even) { display: none; }
+  .np-band span { font-size: 10px; padding: 6px 2px; }
 }
 .np-chart-note { font-size: 14px; color: var(--muted); max-width: 68ch; margin-top: 6px; }
 .np-key, .np-intro { max-width: 68ch; }
@@ -674,7 +703,7 @@ footer .wrap { display: grid; gap: 8px; }
         <div class="gallery">
           <figure id="mo-img-062"><a href="mo-img-062-mary-christoffersen-anderson.jpg" target="_blank" rel="noopener"><img src="mo-img-062-mary-christoffersen-anderson-800.jpg" alt="Oval studio portrait of an older woman in a dark high-collared dress; the lower part of her face shows the healed wound to her jaw." width="360" height="504" style="aspect-ratio:5 / 7" loading="lazy"></a><figcaption><span class="itemno">MO-IMG-062</span><span>Mary Christoffersen Anderson (1847&ndash;1928), whose jaw was shot away by a cannonball at Kington Fort in June 1862, when she was fourteen. In 1863 she married <a href="person/niels-anderson.html">Niels Anderson</a>, and they stayed at Soda Springs.</span><span class="meta">Family collection &middot; date not recorded</span></figcaption></figure>
           <figure id="mo-img-056"><a href="mo-img-056-stephen-harding.jpg" target="_blank" rel="noopener"><img src="mo-img-056-stephen-harding-800.jpg" alt="Engraved portrait of a man with dark hair in a high collar." width="444" height="590" style="aspect-ratio:3 / 4" loading="lazy"></a><figcaption><span class="itemno">MO-IMG-056</span><span>Stephen S. Harding, governor of Utah Territory, who pardoned the convicted Morrisites in March 1863. Anderson says his proclamation named the convicted men (<i>Revisited</i>, p. 145); see <a href="questions.html#questions">Questions</a>.</span><span class="meta">Source not recorded</span></figcaption></figure>
-          <figure id="mo-img-059"><a href="mo-img-059-robert-burton.jpg" target="_blank" rel="noopener"><img src="mo-img-059-robert-burton-800.jpg" alt="Portrait of a bearded man in a wide-brimmed black hat." width="482" height="686" style="aspect-ratio:3 / 4" loading="lazy"></a><figcaption><span class="itemno">MO-IMG-059</span><span>Robert T. Burton, who led the posse at Kington Fort in 1862. Indicted in 1870 for killing Isabella Bowman during the surrender, he was tried and acquitted in 1879 (see <a href="history.html#chronology">History</a>).</span><span class="meta">Source not recorded</span></figcaption></figure>
+          <figure id="mo-img-059"><a href="mo-img-059-robert-burton.jpg" target="_blank" rel="noopener"><img src="mo-img-059-robert-burton-800.jpg" alt="Portrait of a bearded man in a wide-brimmed black hat." width="482" height="686" style="aspect-ratio:3 / 4" loading="lazy"></a><figcaption><span class="itemno">MO-IMG-059</span><span>Robert T. Burton, who led the posse at Kington Fort in 1862. Indicted for killing Isabella Bowman during the surrender in 1870 (voided in 1872) and again in 1877, he was tried and acquitted in 1879 (see <a href="history.html#chronology">History</a>).</span><span class="meta">Source not recorded</span></figcaption></figure>
           <figure id="mo-img-057"><a href="mo-img-057-john-taylor.jpg" target="_blank" rel="noopener"><img src="mo-img-057-john-taylor-800.jpg" alt="Portrait of an elderly man with white hair in a dark coat." width="470" height="664" style="aspect-ratio:3 / 4" loading="lazy"></a><figcaption><span class="itemno">MO-IMG-057</span><span>John Taylor, LDS apostle, who on February 11, 1861, moved that sixteen of Morris&rsquo;s followers at South Weber be cut off from the church (Woodruff&rsquo;s journal; see <a href="history.html#chronology">History</a>).</span><span class="meta">Source not recorded</span></figcaption></figure>
           <figure id="mo-img-058"><a href="mo-img-058-wilford-woodruff.jpg" target="_blank" rel="noopener"><img src="mo-img-058-wilford-woodruff-800.jpg" alt="Portrait of an older man with a white beard and a bow tie." width="474" height="606" style="aspect-ratio:3 / 4" loading="lazy"></a><figcaption><span class="itemno">MO-IMG-058</span><span>Wilford Woodruff, LDS apostle, who seconded Taylor&rsquo;s motion of February 11, 1861, and whose journal records the Morrisite War, including the death of the posse member Peter Wahler on June 15, 1862.</span><span class="meta">Source not recorded</span></figcaption></figure>
           <figure id="mo-img-060"><a href="mo-img-060-morrisite-missionaries.jpg" target="_blank" rel="noopener"><img src="mo-img-060-morrisite-missionaries-800.jpg" alt="Three bearded men in nineteenth-century suits, one seated, two standing." width="424" height="600" style="aspect-ratio:3 / 4" loading="lazy"></a><figcaption><span class="itemno">MO-IMG-060</span><span>Morrisite missionaries; names not recorded.</span><span class="meta">Source not recorded</span></figcaption></figure>
