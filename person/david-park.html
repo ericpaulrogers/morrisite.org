@@ -6,6 +6,7 @@
 <meta name="description" content="David Park (1809–1884), Scottish convert on the 1861–62 Morrisite roll of membership: Kaysville, the Carson Valley land patent of 1864, William W. Davies’s Kingdom of Heaven at Walla Walla in 1880, and Mottsville, Nevada, with sources.">
 <meta name="author" content="Eric Paul Rogers">
 <link rel="canonical" href="https://morrisite.org/person/david-park.html">
+<link rel="alternate" type="application/rss+xml" title="Morrisite.org: What&rsquo;s new" href="../feed.xml">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -355,6 +356,61 @@ ul.cites li { padding-left: 2em; text-indent: -2em; max-width: 68ch; }
 
 footer { border-top: 1px solid var(--rule); padding: 28px 0 48px; color: var(--muted); font-size: 14.5px; }
 footer .wrap { display: grid; gap: 8px; }
+
+/* Site search, contents lists, name index (Nov 2026) */
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.site-search { position: relative; margin-left: auto; }
+.site-search input { font: inherit; font-size: 13px; width: 250px; max-width: 70vw; padding: 5px 10px; border: 1px solid var(--rule); border-radius: 3px; background: var(--panel, #fff); color: var(--ink); }
+.site-search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.site-results { position: absolute; right: 0; top: calc(100% + 4px); z-index: 50; width: min(560px, 92vw); max-height: 70vh; overflow-y: auto; background: var(--paper); border: 1px solid var(--rule); box-shadow: 0 6px 24px rgba(0,0,0,.18); padding: 6px 0; font-size: 14px; }
+.site-results a { display: block; padding: 7px 14px; text-decoration: none; color: var(--ink); border-left: 3px solid transparent; }
+.site-results a:hover, .site-results a[aria-selected="true"] { background: var(--panel, rgba(0,0,0,.04)); border-left-color: var(--accent); }
+.site-results .sr-kind { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-right: 6px; }
+.site-results .sr-title { font-weight: 600; }
+.site-results .sr-snip { display: block; color: var(--muted); font-size: 12.5px; line-height: 1.45; margin-top: 2px; }
+.site-results .sr-snip b { color: var(--ink); }
+.site-results .sr-none { padding: 8px 14px; color: var(--muted); }
+.site-results .sr-more { padding: 6px 14px 2px; color: var(--muted); font-size: 12px; }
+@media (max-width: 640px) { .site-search { flex-basis: 100%; } .site-search input { width: 100%; max-width: none; } .site-results { left: 0; right: auto; } }
+.toc { margin: 0 0 22px; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--panel, transparent); font-size: 14px; }
+.toc b { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: normal; margin-right: 8px; }
+.toc a { margin-right: 14px; white-space: nowrap; display: inline-block; }
+.ni-letters { font-family: var(--font-mono); font-size: 14px; margin: 0 0 14px; display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.ni-list { list-style: none; padding: 0; margin: 0 0 18px; columns: 2 300px; column-gap: 32px; }
+.ni-list li { break-inside: avoid; margin: 0 0 6px; line-height: 1.45; font-size: 14.5px; }
+.ni-list .ni-links { font-size: 12.5px; color: var(--muted); }
+.ni-list .ni-links a { margin-right: 6px; }
+.ancestor-steps { margin: 0; padding-left: 1.3em; }
+.ancestor-steps li { margin: 0 0 8px; }
+
+/* Place pages, map, glossary, filters, anchors, back to top (Nov 2026) */
+.pmap-wrap { margin: 0 0 10px; }
+.pmap { width: 100%; height: auto; display: block; }
+.pmap-bg { fill: var(--panel); }
+.pmap-st { fill: var(--paper); stroke: var(--rule); stroke-width: 1; }
+.pmap-sl { font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; fill: var(--muted); opacity: .7; text-anchor: middle; }
+.pmap-pt { fill: var(--accent); stroke: var(--paper); stroke-width: 2; }
+.pmap a:hover .pmap-pt, .pmap a:focus .pmap-pt { r: 9; }
+.pmap-pl { font-size: 14px; font-weight: 600; fill: var(--ink); paint-order: stroke; stroke: var(--paper); stroke-width: 4px; }
+.place-list li { margin-bottom: .9em; }
+.pthumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin: 6px 0 10px; }
+.pthumb { display: block; text-decoration: none; color: var(--muted); font-size: 12px; line-height: 1.35; }
+.pthumb img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; border: 1px solid var(--rule); margin-bottom: 4px; }
+.place-bib li { margin: 0 0 6px; font-size: 14.5px; }
+.place-people { line-height: 1.9; }
+.place-lead figure { margin: 0 0 14px; } .place-lead figure img { max-width: 100%; height: auto; }
+.place-lead .access b { margin-right: 8px; }
+.glossary dt { font-weight: 600; margin-top: 14px; }
+.glossary dd { margin: 2px 0 0; max-width: 68ch; }
+.anchor-link { opacity: 0; margin-left: 6px; font-family: var(--font-mono); font-size: .7em; text-decoration: none; color: var(--muted); }
+:hover > .anchor-link, .anchor-link:focus { opacity: 1; }
+.anchor-link.copied::after { content: " link copied"; font-size: 11px; }
+.to-top { position: fixed; right: 16px; bottom: 16px; z-index: 40; font-family: var(--font-mono); font-size: 12px; padding: 8px 12px; border: 1px solid var(--rule); background: var(--paper); color: var(--accent); text-decoration: none; border-radius: 3px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.filter-bar { margin: 0 0 16px; font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
+.filter-bar button { font: inherit; font-size: 13px; padding: 4px 10px; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); border-radius: 3px; cursor: pointer; }
+.filter-bar button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.yearbar { margin-top: 6px; }
+.page-cite { margin-top: 0; }
 </style>
 </head>
 <body>
@@ -367,6 +423,11 @@ footer .wrap { display: grid; gap: 8px; }
       <a href="../about.html#share">Share records</a>
       <a href="../about.html">About</a>
     </nav>
+    <form class="site-search" role="search" action="names.html" onsubmit="return false">
+      <label for="site-q" class="vh">Search this site</label>
+      <input type="search" id="site-q" name="q" placeholder="Search names, places, records" autocomplete="off" aria-controls="site-results" aria-expanded="false">
+      <div id="site-results" class="site-results" role="listbox" hidden></div>
+    </form>
     <nav class="main" aria-label="Sections">
       <a href="../index.html#essentials">Start here</a>
       <a href="../history.html">History</a>
@@ -380,7 +441,7 @@ footer .wrap { display: grid; gap: 8px; }
 
 <main id="top">
   <div class="wrap"><p class="crumb"><a href="../index.html">Morrisite.org</a> &rsaquo; <a href="../roll.html#roll">Roll of membership</a> &rsaquo; David Park</p></div>
-  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="../roll.html">Roll of membership</a><a href="../people.html">Who they were</a></nav></div>
+  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="../roll.html">Roll of membership</a><a href="../people.html">Who they were</a><a href="../names.html">Name index</a></nav></div>
 
   <section class="series" id="person" aria-labelledby="h-person">
     <div class="wrap">
@@ -420,5 +481,71 @@ footer .wrap { display: grid; gap: 8px; }
 window.addEventListener('hashchange',o);o();
 document.addEventListener('click',function(ev){var a=ev.target.closest('a[href^="#"]');if(!a)return;var e=document.getElementById(a.getAttribute('href').slice(1));if(e&&e.tagName==='DETAILS')e.open=true;});})();
 </script>
+<script>
+/* Site search: loads search-index.json on first use and searches names, headings and text. */
+(function(){
+var q=document.getElementById('site-q'),box=document.getElementById('site-results');if(!q||!box)return;
+var mk=document.querySelector('a.mark'),mh=mk?mk.getAttribute('href'):'',root=/index\.html$/.test(mh)?mh.replace(/index\.html$/,''):'';
+var idx=null,loading=false,sel=-1,timer=null;
+function norm(t){return (t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ø/g,'o').replace(/æ/g,'ae').replace(/å/g,'a').replace(/[^a-z0-9]+/g,' ');}
+function esc(t){return t.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function load(cb){if(idx)return cb();if(loading)return;loading=true;
+ fetch(root+'search-index.json').then(function(r){return r.json();}).then(function(d){
+  idx=d.map(function(e){e.nt=' '+norm(e.t)+' ';e.ns=' '+norm(e.s)+' ';return e;});cb();
+ }).catch(function(){loading=false;show('<div class="sr-none">Search is not available here. Try the <a href="../'+root+'names.html">name index</a>.</div>');});}
+function show(h){box.innerHTML=h;box.hidden=false;q.setAttribute('aria-expanded','true');}
+function hide(){box.hidden=true;q.setAttribute('aria-expanded','false');sel=-1;}
+function snippet(e,toks){var s=e.s||'';if(!s)return '';var low=s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''),p=-1;
+ for(var i=0;i<toks.length&&p<0;i++){var m=new RegExp('(^|[^a-z0-9])'+toks[i].replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).exec(low);p=m?m.index+m[1].length:-1;}
+ if(p<0)p=0;var a=Math.max(0,p-60),b=Math.min(s.length,p+140),t=(a>0?'…':'')+s.slice(a,b)+(b<s.length?'…':'');
+ t=esc(t);toks.forEach(function(k){if(k.length<2)return;t=t.replace(new RegExp('(^|[^A-Za-z0-9])('+k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'$1<b>$2</b>');});return t;}
+function run(){var raw=q.value.trim();if(raw.length<2){hide();return;}
+ load(function(){var toks=norm(raw).split(' ').filter(Boolean);if(!toks.length){hide();return;}
+  var phrase=' '+toks.join(' ');var res=[];
+  idx.forEach(function(e){var sc=0;for(var i=0;i<toks.length;i++){var k=toks[i];var inT=e.nt.indexOf(' '+k)>-1,inS=e.ns.indexOf(' '+k)>-1;if(!inT&&!inS)return;
+    sc+=inT?(e.nt.indexOf(' '+k+' ')>-1?7:5):(e.ns.indexOf(' '+k+' ')>-1?1.2:0.8);}
+   if(e.nt.indexOf(phrase)>-1)sc+=6;if(toks.length>1&&e.ns.indexOf(phrase)>-1)sc+=3;
+   res.push([sc+e.w,e]);});
+  res.sort(function(a,b){return b[0]-a[0];});
+  if(!res.length){show('<div class="sr-none">No matches. Try another spelling, or browse the <a href="../'+root+'names.html">name index</a>.</div>');return;}
+  var h=res.slice(0,25).map(function(r){var e=r[1];return '<a role="option" href="../'+root+e.u+'"><span class="sr-kind">'+esc(e.k)+'</span><span class="sr-title">'+esc(e.t)+'</span>'+(e.s?'<span class="sr-snip">'+snippet(e,toks)+'</span>':'')+'</a>';}).join('');
+  if(res.length>25)h+='<div class="sr-more">'+(res.length-25)+' more matches; add a word to narrow the search.</div>';
+  show(h);sel=-1;});}
+var gct=null;q.addEventListener('input',function(){clearTimeout(timer);timer=setTimeout(run,120);clearTimeout(gct);gct=setTimeout(function(){var v=q.value.trim().toLowerCase();if(v.length>2&&window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:'search: '+v,title:'Site search',event:true});},1500);});
+q.addEventListener('focus',function(){load(function(){});if(q.value.trim().length>1)run();});
+q.addEventListener('keydown',function(ev){var opts=box.querySelectorAll('a[role=option]');
+ if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){if(!opts.length)return;ev.preventDefault();sel=(sel+(ev.key==='ArrowDown'?1:-1)+opts.length)%opts.length;
+  opts.forEach(function(o,i){o.setAttribute('aria-selected',i===sel?'true':'false');});opts[sel].scrollIntoView({block:'nearest'});}
+ else if(ev.key==='Enter'){ev.preventDefault();var t=opts[sel>=0?sel:0];if(t)location.href=t.href;}
+ else if(ev.key==='Escape'){hide();}});
+document.addEventListener('click',function(ev){if(!ev.target.closest('.site-search'))hide();});
+})();
+</script>
+<script>
+/* Link icons beside entries, back-to-top button, and filters for Bibliography and Questions. */
+(function(){
+document.querySelectorAll('main h3[id], main dt[id], main .repo[id] > .repo-top h3, main article[id] > h3, main .ni-list li[id] > b, main .aff-who li[id] > b').forEach(function(h){
+ var host=h.id?h:h.closest('[id]');if(!host||!host.id||host.id==='top')return;
+ var a=document.createElement('a');a.className='anchor-link';a.href='#'+host.id;a.textContent='#';a.setAttribute('aria-label','Link to this entry');a.title='Copy a link to this entry';
+ a.addEventListener('click',function(e){var u=location.href.split('#')[0]+'#'+host.id;try{navigator.clipboard.writeText(u);a.classList.add('copied');setTimeout(function(){a.classList.remove('copied')},1500);}catch(x){}});
+ h.appendChild(a);});
+var t=document.createElement('a');t.href='#top';t.className='to-top';t.textContent='Top ↑';t.hidden=true;document.body.appendChild(t);
+window.addEventListener('scroll',function(){t.hidden=window.scrollY<1400;},{passive:true});
+var bib=document.querySelector('#bibliography .series-body');
+if(bib){var bar=document.createElement('div');bar.className='filter-bar';bar.innerHTML='<label><input type="checkbox" id="bib-online"> Show only works that can be read or watched online</label>';
+ var toc=bib.querySelector('.toc');(toc||bib.firstElementChild).insertAdjacentElement(toc?'afterend':'beforebegin',bar);
+ document.getElementById('bib-online').addEventListener('change',function(){var on=this.checked;
+  bib.querySelectorAll('li').forEach(function(li){li.hidden=on&&!li.querySelector('a[target="_blank"]');});
+  bib.querySelectorAll('ul,ol').forEach(function(l){var any=[].some.call(l.children,function(c){return !c.hidden;});var h=l.previousElementSibling;l.hidden=!any;if(h&&/^H[34]$/.test(h.tagName))h.hidden=!any;});});}
+var qs=document.querySelector('#questions .series-body');
+if(qs){var cards=qs.querySelectorAll('.repo');var bar2=document.createElement('div');bar2.className='filter-bar';
+ bar2.innerHTML='<span>Show:</span><button type="button" data-f="" aria-pressed="true">All</button><button type="button" data-f="open" aria-pressed="false">Open</button><button type="button" data-f="in progress" aria-pressed="false">In progress</button><button type="button" data-f="answered" aria-pressed="false">Answered</button>';
+ qs.insertBefore(bar2,qs.querySelector('.repo')?qs.querySelector('.repo').parentNode===qs?qs.querySelector('.repo'):qs.firstElementChild:qs.firstElementChild);
+ bar2.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var f=b.dataset.f;
+  bar2.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+  cards.forEach(function(c){var s=(c.querySelector('.callno')||{}).textContent||'';s=s.toLowerCase();c.hidden=!!f&&s.indexOf(f)!==0;});});}
+})();
+</script>
+<script data-goatcounter="https://morrisite.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
