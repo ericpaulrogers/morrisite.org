@@ -389,6 +389,32 @@ ol.np-mk-key .np-mk { flex: none; transform: translateY(3px); }
   .np-band span { font-size: 10px; padding: 6px 2px; }
 }
 .np-chart-note { font-size: 14px; color: var(--muted); max-width: 68ch; margin-top: 6px; }
+.ln-fig { margin: 28px 0 30px; }
+.ln-fig > p { max-width: 70ch; }
+.ln-read { font-family: var(--font-mono); font-size: 12.5px; min-height: 1.4em; margin: 6px 0; }
+.ln-wrap { overflow-x: auto; }
+.ln-svg { width: 100%; min-width: 760px; height: auto; display: block; }
+.ln-grid { stroke: var(--rule); stroke-width: 1; }
+.ln-tick { font-family: var(--font-mono); font-size: 11px; fill: var(--muted); }
+.ln-lab { font-family: var(--font-body); font-size: 14px; fill: var(--ink); }
+.ln-sub { font-family: var(--font-mono); font-size: 10px; fill: var(--muted); }
+.ln-hit { fill: transparent; }
+.ln-seg { fill: var(--accent); }
+.ln-apx { opacity: .45; }
+.ln-f0 { stop-color: var(--accent); stop-opacity: .45; }
+.ln-f1 { stop-color: var(--accent); stop-opacity: 0; }
+.ln-band { fill: var(--muted); opacity: .35; }
+.ln-segt { font-family: var(--font-mono); font-size: 10.5px; fill: var(--paper); pointer-events: none; }
+.ln-link { stroke: var(--ink); stroke-width: 1.2; fill: none; }
+.ln-arrh { fill: var(--ink); }
+.ln-cursor { stroke: var(--ink); stroke-dasharray: 3 3; display: none; pointer-events: none; }
+.ln-lane:hover .ln-hit, .ln-lane:focus-visible .ln-hit { fill: var(--panel); }
+.ln-lane:hover .ln-lab, .ln-lane:focus-visible .ln-lab { fill: var(--accent); text-decoration: underline; }
+.ln-lane:focus { outline: none; }
+.ln-list { margin-top: 10px; font-size: 14.5px; }
+.ln-list summary { cursor: pointer; font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+.ln-list ul { margin: 8px 0 0; padding-left: 1.1em; display: grid; gap: 6px; max-width: 72ch; }
+.ln-yrs { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
 .np-key, .np-intro { max-width: 68ch; }
 .np-toc ul { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; }
 .np-sub { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted, #666); }
