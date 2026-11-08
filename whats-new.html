@@ -381,6 +381,32 @@ ol.np-mk-key .np-mk { flex: none; transform: translateY(3px); }
   .np-band span { font-size: 10px; padding: 6px 2px; }
 }
 .np-chart-note { font-size: 14px; color: var(--muted); max-width: 68ch; margin-top: 6px; }
+.ln-fig { margin: 28px 0 30px; }
+.ln-fig > p { max-width: 70ch; }
+.ln-read { font-family: var(--font-mono); font-size: 12.5px; min-height: 1.4em; margin: 6px 0; }
+.ln-wrap { overflow-x: auto; }
+.ln-svg { width: 100%; min-width: 760px; height: auto; display: block; }
+.ln-grid { stroke: var(--rule); stroke-width: 1; }
+.ln-tick { font-family: var(--font-mono); font-size: 11px; fill: var(--muted); }
+.ln-lab { font-family: var(--font-body); font-size: 14px; fill: var(--ink); }
+.ln-sub { font-family: var(--font-mono); font-size: 10px; fill: var(--muted); }
+.ln-hit { fill: transparent; }
+.ln-seg { fill: var(--accent); }
+.ln-apx { opacity: .45; }
+.ln-f0 { stop-color: var(--accent); stop-opacity: .45; }
+.ln-f1 { stop-color: var(--accent); stop-opacity: 0; }
+.ln-band { fill: var(--muted); opacity: .35; }
+.ln-segt { font-family: var(--font-mono); font-size: 10.5px; fill: var(--paper); pointer-events: none; }
+.ln-link { stroke: var(--ink); stroke-width: 1.2; fill: none; }
+.ln-arrh { fill: var(--ink); }
+.ln-cursor { stroke: var(--ink); stroke-dasharray: 3 3; display: none; pointer-events: none; }
+.ln-lane:hover .ln-hit, .ln-lane:focus-visible .ln-hit { fill: var(--panel); }
+.ln-lane:hover .ln-lab, .ln-lane:focus-visible .ln-lab { fill: var(--accent); text-decoration: underline; }
+.ln-lane:focus { outline: none; }
+.ln-list { margin-top: 10px; font-size: 14.5px; }
+.ln-list summary { cursor: pointer; font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+.ln-list ul { margin: 8px 0 0; padding-left: 1.1em; display: grid; gap: 6px; max-width: 72ch; }
+.ln-yrs { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
 .np-key, .np-intro { max-width: 68ch; }
 .np-toc ul { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; }
 .np-sub { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted, #666); }
@@ -585,6 +611,8 @@ footer .wrap { display: grid; gap: 8px; }
         </div>
         <h3 style="font-family:var(--font-sc);font-size:18px;letter-spacing:.04em;color:var(--muted);margin:30px 0 4px">Added to this guide</h3>
         <ol class="chron" id="updates">
+          <li id="u-the-groups-over-time"><span class="date">7 Nov 2026</span><span><b>The groups over time.</b> A new timeline in the <a href="history.html#groups-timeline">History</a> chronology shows the Morrisite groups side by side on one time scale, from Morris&rsquo;s church through Soda Springs, Nevada, Cainan&rsquo;s claim, Omaha, the Montana church, Davies&rsquo;s Kingdom of Heaven, Parson&rsquo;s kingdom and the Doves&rsquo; Church of the Firstborn, with their leaders and the movements of members between them.</span></li>
+          <li id="u-witnesses-at-burton-s-trial"><span class="date">7 Nov 2026</span><span><b>Witnesses at Burton&rsquo;s trial.</b> Former Morrisites who testified at Burton&rsquo;s 1879 trial are now noted on the <a href="roll.html">roll</a>: Mary Christoffersen Anderson and Caroline (Karen) Eliason of Soda Springs, Philip Hewitt of Salt Lake City, Emma Thompson Just of the Snake River valley, and, less certainly, Abraham Taylor and Thomas Williams. Mary Anderson, Emma Just and Philip Hewitt now have an 1879 stop on <a href="movements.html">Where they went</a>.</span></li>
           <li id="u-fuller-s-order-for-the-posse"><span class="date">7 Nov 2026</span><span><b>Fuller&rsquo;s order for the posse.</b> The <a href="documents.html#dn-1870-10-29">Documents</a> page now has the Wells&ndash;Shaffer correspondence of October 1870, with the text of Acting Governor Frank Fuller&rsquo;s order of June 11, 1862, requiring Daniel H. Wells to furnish a military posse for the arrest of Joseph Morris.</span></li>
           <li id="u-isabella-and-james-bowman"><span class="date">7 Nov 2026</span><span><b>Isabella and James Bowman.</b> Isabella Bowman, killed at the surrender and the woman Burton was tried for killing in 1879, is now listed among the <a href="people.html">others named in the sources</a>, with her husband James, who testified at the trial. James was earlier taken to be the John Bowman of the roll; the sources show they were different men. The timeline now gives both of Burton&rsquo;s indictments: 1870, voided in 1872, and 1877.</span></li>
           <li id="u-newspapers"><span class="date">7 Nov 2026</span><span><b>Newspapers.</b> A new <a href="newspapers.html#newspapers">Newspapers</a> page lists the press coverage by event, from the Sacramento dispatch of June 16, 1862, and its reprints as far as England and Australia, through the 1870 dispute over who commanded at Kington Fort, Burton&rsquo;s arrest in 1877 and the <i>Salt Lake Tribune</i> letters of 1891, to recent retellings. It also has tips for searching the newspapers. A first pass through Utah Digital Newspapers added the <i>Salt Lake Herald</i>&rsquo;s daily reports of Burton&rsquo;s 1879 trial, where former Morrisites testified and gave their homes at the time, and a 1907 interview with Presto Burrell of Connor&rsquo;s command, who helped escort the colony to Soda Springs.</span></li>

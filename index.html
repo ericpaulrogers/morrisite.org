@@ -388,6 +388,32 @@ ol.np-mk-key .np-mk { flex: none; transform: translateY(3px); }
   .np-band span { font-size: 10px; padding: 6px 2px; }
 }
 .np-chart-note { font-size: 14px; color: var(--muted); max-width: 68ch; margin-top: 6px; }
+.ln-fig { margin: 28px 0 30px; }
+.ln-fig > p { max-width: 70ch; }
+.ln-read { font-family: var(--font-mono); font-size: 12.5px; min-height: 1.4em; margin: 6px 0; }
+.ln-wrap { overflow-x: auto; }
+.ln-svg { width: 100%; min-width: 760px; height: auto; display: block; }
+.ln-grid { stroke: var(--rule); stroke-width: 1; }
+.ln-tick { font-family: var(--font-mono); font-size: 11px; fill: var(--muted); }
+.ln-lab { font-family: var(--font-body); font-size: 14px; fill: var(--ink); }
+.ln-sub { font-family: var(--font-mono); font-size: 10px; fill: var(--muted); }
+.ln-hit { fill: transparent; }
+.ln-seg { fill: var(--accent); }
+.ln-apx { opacity: .45; }
+.ln-f0 { stop-color: var(--accent); stop-opacity: .45; }
+.ln-f1 { stop-color: var(--accent); stop-opacity: 0; }
+.ln-band { fill: var(--muted); opacity: .35; }
+.ln-segt { font-family: var(--font-mono); font-size: 10.5px; fill: var(--paper); pointer-events: none; }
+.ln-link { stroke: var(--ink); stroke-width: 1.2; fill: none; }
+.ln-arrh { fill: var(--ink); }
+.ln-cursor { stroke: var(--ink); stroke-dasharray: 3 3; display: none; pointer-events: none; }
+.ln-lane:hover .ln-hit, .ln-lane:focus-visible .ln-hit { fill: var(--panel); }
+.ln-lane:hover .ln-lab, .ln-lane:focus-visible .ln-lab { fill: var(--accent); text-decoration: underline; }
+.ln-lane:focus { outline: none; }
+.ln-list { margin-top: 10px; font-size: 14.5px; }
+.ln-list summary { cursor: pointer; font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+.ln-list ul { margin: 8px 0 0; padding-left: 1.1em; display: grid; gap: 6px; max-width: 72ch; }
+.ln-yrs { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
 .np-key, .np-intro { max-width: 68ch; }
 .np-toc ul { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; }
 .np-sub { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted, #666); }
@@ -549,7 +575,7 @@ footer .wrap { display: grid; gap: 8px; }
 </header>
 
 <main id="top">
-<script>(function(){var m={"new": "whats-new.html", "h-new": "whats-new.html", "new-watson": "whats-new.html", "new-pierce": "whats-new.html", "new-families": "whats-new.html", "new-community": "whats-new.html", "updates": "whats-new.html", "u-fuller-s-order-for-the-posse": "whats-new.html", "u-isabella-and-james-bowman": "whats-new.html", "u-newspapers": "whats-new.html", "u-where-they-went": "whats-new.html", "u-zbaraschuk-on-davies-and-two-more-court-cases": "whats-new.html", "u-a-map-of-morristown": "whats-new.html", "u-maps-of-kington-fort-and-the-kingdom-of-heaven": "whats-new.html", "u-places-in-the-deer-lodge-valley": "whats-new.html", "u-anaconda-and-willow-glen": "whats-new.html", "u-the-seventh-angel-before-morris": "whats-new.html", "u-the-walla-walla-court-files": "whats-new.html", "u-the-man-who-went-for-help": "whats-new.html", "u-a-1982-newspaper-story": "whats-new.html", "u-where-did-the-reincarnation-teaching-come-from": "whats-new.html", "u-what-became-of-them": "whats-new.html", "u-the-1880-census": "whats-new.html", "u-the-walla-walla-jesus-case": "whats-new.html", "u-land-records": "whats-new.html", "u-three-new-pages": "whats-new.html", "u-the-eliasons-and-the-christoffersens": "whats-new.html", "u-the-prisoners-and-the-trials": "whats-new.html", "u-paths-into-the-movement": "whats-new.html", "u-pages-on-people-of-the-roll": "whats-new.html", "u-documents-and-the-posse-order": "whats-new.html", "u-who-they-were": "whats-new.html", "u-the-racetrack-church-in-photographs": "whats-new.html", "u-the-roll-of-membership": "whats-new.html", "chronology": "history.html", "h-chron": "history.html", "lineage": "history.html", "lin-t": "history.html", "lin-d": "history.html", "places": "history.html", "h-places": "history.html", "repositories": "repositories.html", "h-repos": "repositories.html", "share": "about.html", "h-contrib": "about.html", "about": "about.html", "h-about": "about.html"},h=location.hash.slice(1);if(h&&m[h]&&!document.getElementById(h))location.replace(m[h]+"#"+h);})();</script>
+<script>(function(){var m={"new": "whats-new.html", "h-new": "whats-new.html", "new-watson": "whats-new.html", "new-pierce": "whats-new.html", "new-families": "whats-new.html", "new-community": "whats-new.html", "updates": "whats-new.html", "u-the-groups-over-time": "whats-new.html", "u-witnesses-at-burton-s-trial": "whats-new.html", "u-fuller-s-order-for-the-posse": "whats-new.html", "u-isabella-and-james-bowman": "whats-new.html", "u-newspapers": "whats-new.html", "u-where-they-went": "whats-new.html", "u-zbaraschuk-on-davies-and-two-more-court-cases": "whats-new.html", "u-a-map-of-morristown": "whats-new.html", "u-maps-of-kington-fort-and-the-kingdom-of-heaven": "whats-new.html", "u-places-in-the-deer-lodge-valley": "whats-new.html", "u-anaconda-and-willow-glen": "whats-new.html", "u-the-seventh-angel-before-morris": "whats-new.html", "u-the-walla-walla-court-files": "whats-new.html", "u-the-man-who-went-for-help": "whats-new.html", "u-a-1982-newspaper-story": "whats-new.html", "u-where-did-the-reincarnation-teaching-come-from": "whats-new.html", "u-what-became-of-them": "whats-new.html", "u-the-1880-census": "whats-new.html", "u-the-walla-walla-jesus-case": "whats-new.html", "u-land-records": "whats-new.html", "u-three-new-pages": "whats-new.html", "u-the-eliasons-and-the-christoffersens": "whats-new.html", "u-the-prisoners-and-the-trials": "whats-new.html", "u-paths-into-the-movement": "whats-new.html", "u-pages-on-people-of-the-roll": "whats-new.html", "u-documents-and-the-posse-order": "whats-new.html", "u-who-they-were": "whats-new.html", "u-the-racetrack-church-in-photographs": "whats-new.html", "u-the-roll-of-membership": "whats-new.html", "chronology": "history.html", "h-chron": "history.html", "lineage": "history.html", "lin-t": "history.html", "lin-d": "history.html", "groups-timeline": "history.html", "ln-read": "history.html", "ln-t": "history.html", "ln-d": "history.html", "ln-fadeg": "history.html", "ln-arr": "history.html", "ln-cur": "history.html", "places": "history.html", "h-places": "history.html", "repositories": "repositories.html", "h-repos": "repositories.html", "share": "about.html", "h-contrib": "about.html", "about": "about.html", "h-about": "about.html"},h=location.hash.slice(1);if(h&&m[h]&&!document.getElementById(h))location.replace(m[h]+"#"+h);})();</script>
 
   <div class="wrap">
     <div class="hero">
