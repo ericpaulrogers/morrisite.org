@@ -261,7 +261,7 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .aff-dot { display: inline-block; width: 18px; height: 18px; margin: 0 2px 0 -5px; padding: 0; border: 0; background: transparent; cursor: help; vertical-align: -3px; position: relative; }
 .aff-dot::before { content: ""; position: absolute; left: 5px; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
 .aff-dot:hover::before, .aff-dot:focus-visible::before { box-shadow: 0 0 0 2px var(--panel), 0 0 0 3px var(--c); }
-.aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: #fff; font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: var(--paper); font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 .aff-detail { margin-top: 8px; font-size: 14px; }
 .doc-text { margin: 4px 0; padding: 10px 14px; border-left: 3px solid var(--rule); background: var(--paper); font-size: 15px; line-height: 1.55; }
 .doc-text p { margin: 0 0 .6em; }
@@ -539,9 +539,11 @@ footer .wrap { display: grid; gap: 8px; }
 .filter-bar button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
 .yearbar { margin-top: 6px; }
 .page-cite { margin-top: 0; }
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--ink); color: var(--paper); padding: 8px 14px; font-family: var(--font-body); }
+.skip-link:focus { left: 8px; top: 8px; }
 </style>
 </head>
-<body>
+<body><a class="skip-link" href="#top">Skip to content</a>
 
 <header class="mast">
   <div class="wrap">
@@ -808,7 +810,7 @@ footer .wrap { display: grid; gap: 8px; }
           </div>
           <dl>
             <dt>Why it matters</dt><dd>The same errors turn up again and again (see <a href="bibliography.html#common-errors">Common errors in print</a>), and tracing them shows how the story has moved. Some begin in the press of 1862, when one telegraphic dispatch was copied across the country and changed as it went. Some come from the partisan retellings of the 1880s and 1890s, on both sides. Some come from family memory, which is often right about people and places and less sure about dates: Eliza Eardley Hardin remembered Willow Glen&rsquo;s founding in 1881, the newspapers first mention it in 1882. And some come from scholarship itself, as later works summarized earlier ones without returning to the records; even the federal gazetteer places the Willow Glen post office about a mile from where the 1882 paper put it. Who told the story, to whom, and why are questions for the history of memory as well as of the movement.</dd>
-            <dt>Where to start</dt><dd>The <a href="newspapers.html">Newspapers</a> page, which follows the 1862 dispatch through its reprints; the 1891 <i>Salt Lake Tribune</i> letters and Richard W. Young&rsquo;s &ldquo;The Morrisite War&rdquo; in the <i>Contributor</i> (1889&ndash;90); the theses and their sources (<a href="bibliography.html#bibliography">Bibliography</a>); oral histories such as the 1962 Hendrickson interview (<a href="repositories.html#repositories">Repositories</a>); the Hardin reminiscence (SC 788, Montana Historical Society); C. LeRoy Anderson&rsquo;s notes at USU, which show what he had in hand.</dd>
+            <dt>Where to start</dt><dd>The <a href="newspapers.html">Newspapers</a> page, which follows the 1862 dispatch through its reprints; the 1891 <i>Salt Lake Tribune</i> letters and Richard W. Young&rsquo;s &ldquo;The Morrisite War&rdquo; in the <i>Contributor</i> (1889&ndash;90); the theses and their sources (<a href="bibliography.html#bibliography">Bibliography</a>); oral histories such as the 1962 Hendrickson interview (<a href="repositories.html#repositories">Repositories</a>); the Hardin reminiscence (SC 788, Montana Historical Society Library &amp; Archives; see <a href="repositories.html#repositories">Repositories</a>); C. LeRoy Anderson&rsquo;s notes at USU, which show what he had in hand.</dd>
           </dl>
         </div>
         <div class="repo">

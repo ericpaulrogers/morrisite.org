@@ -261,7 +261,7 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .aff-dot { display: inline-block; width: 18px; height: 18px; margin: 0 2px 0 -5px; padding: 0; border: 0; background: transparent; cursor: help; vertical-align: -3px; position: relative; }
 .aff-dot::before { content: ""; position: absolute; left: 5px; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
 .aff-dot:hover::before, .aff-dot:focus-visible::before { box-shadow: 0 0 0 2px var(--panel), 0 0 0 3px var(--c); }
-.aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: #fff; font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: var(--paper); font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 .aff-detail { margin-top: 8px; font-size: 14px; }
 .doc-text { margin: 4px 0; padding: 10px 14px; border-left: 3px solid var(--rule); background: var(--paper); font-size: 15px; line-height: 1.55; }
 .doc-text p { margin: 0 0 .6em; }
@@ -539,9 +539,11 @@ footer .wrap { display: grid; gap: 8px; }
 .filter-bar button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
 .yearbar { margin-top: 6px; }
 .page-cite { margin-top: 0; }
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--ink); color: var(--paper); padding: 8px 14px; font-family: var(--font-body); }
+.skip-link:focus { left: 8px; top: 8px; }
 </style>
 </head>
-<body>
+<body><a class="skip-link" href="#top">Skip to content</a>
 
 <header class="mast">
   <div class="wrap">
@@ -652,7 +654,7 @@ footer .wrap { display: grid; gap: 8px; }
             <h3>Weber District muster roll, October 1857</h3>
             <span class="callno">Utah State Archives, series 2210</span>
           </div>
-          <dl><dt>What it is</dt><dd>Company B, 3rd Battalion, 5th Regiment of Infantry, Weber Military District, Capt. Thomas J. Osborn, mustered at Ogden City on October 20, 1857, during the Utah War. Robert Farley and John Parson, later called together to South Weber by revelation, are privates in the same platoon.</dd><dt>Page image</dt><dd><a href="https://www.familysearch.org/ark:/61903/3:1:33S7-95XQ-9WK6" target="_blank" rel="noopener">FamilySearch</a> (free account). The collection&rsquo;s name index is searchable <a href="https://www.familysearch.org/search/collection/1462415" target="_blank" rel="noopener">here</a>.</dd></dl>
+          <dl><dt>What it is</dt><dd>Company B, 3rd Battalion, 5th Regiment of Infantry, Weber Military District, Capt. Thomas J. Osborn, mustered at Ogden City on October 20, 1857, during the Utah War. Robert Farley and John Parson, later called together to South Weber by revelation, are privates in the same platoon.</dd><dt>Page image</dt><dd><a href="https://www.familysearch.org/ark:/61903/3:1:33S7-95XQ-9WK6" target="_blank" rel="noopener">FamilySearch</a> (free account). The collection&rsquo;s name index is searchable <a href="https://www.familysearch.org/search/collection/1462415" target="_blank" rel="noopener" aria-label="here: Page image">here</a>.</dd></dl>
         </div>
         <h3 class="gallery-head" id="s-newspapers">Newspapers</h3>
         <div class="repo">

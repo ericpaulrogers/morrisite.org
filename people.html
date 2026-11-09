@@ -261,7 +261,7 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .aff-dot { display: inline-block; width: 18px; height: 18px; margin: 0 2px 0 -5px; padding: 0; border: 0; background: transparent; cursor: help; vertical-align: -3px; position: relative; }
 .aff-dot::before { content: ""; position: absolute; left: 5px; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
 .aff-dot:hover::before, .aff-dot:focus-visible::before { box-shadow: 0 0 0 2px var(--panel), 0 0 0 3px var(--c); }
-.aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: #fff; font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: var(--paper); font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 .aff-detail { margin-top: 8px; font-size: 14px; }
 .doc-text { margin: 4px 0; padding: 10px 14px; border-left: 3px solid var(--rule); background: var(--paper); font-size: 15px; line-height: 1.55; }
 .doc-text p { margin: 0 0 .6em; }
@@ -539,9 +539,11 @@ footer .wrap { display: grid; gap: 8px; }
 .filter-bar button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
 .yearbar { margin-top: 6px; }
 .page-cite { margin-top: 0; }
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--ink); color: var(--paper); padding: 8px 14px; font-family: var(--font-body); }
+.skip-link:focus { left: 8px; top: 8px; }
 </style>
 </head>
-<body>
+<body><a class="skip-link" href="#top">Skip to content</a>
 
 <header class="mast">
   <div class="wrap">
@@ -642,7 +644,7 @@ footer .wrap { display: grid; gap: 8px; }
 <li id="o-jones-rachel-d"><b>Jones, Rachel D.</b> (born about 1833) <span class="bail-chip">Follower of Davies</span><br>Mrs. John E. Jones, born in Wales; a member from 1866, she came to Walla Walla with Davies in 1867. Her children were born in Utah and Montana. Her husband, sent out as a missionary in 1868 and later at Indian Valley, may be the roll&rsquo;s apostle John E. Jones; that is not settled. <span class="src">(Cilley et al. v. Davies, 1880&ndash;81; 1880 U.S. census)</span></li>
 <li id="o-kelley-michael-h"><b>Kelley, Michael H.</b> (born about 1843) <span class="bail-chip">Follower of Davies</span><br>A sailor, born in Ireland; first came to the camp in November 1868, having learned the doctrine at San Francisco. Testified for Davies in 1881. <span class="src">(Cilley et al. v. Davies, 1880&ndash;81; 1880 U.S. census)</span></li>
 <li id="o-lambert-v-d"><b>Lambert, V. D.</b> (at the camp 1868&ndash;70) <span class="bail-chip">Follower of Davies</span><br>A cooper and later a justice of the peace; Davies&rsquo;s missionary at San Francisco in 1869&ndash;70. He left the community and testified against Davies. Sarah Lambert also testified. <span class="src">(Cilley et al. v. Davies, 1880&ndash;81)</span></li>
-<li id="o-miller-s-ren"><b>Miller, S&oslash;ren</b> (born about 1817) <span class="bail-chip">Follower of Davies</span> <span class="bail-chip">Earlier a Morrisite</span> <span class="aff-prob">(probable)</span><br>&ldquo;Sorn Miller,&rdquo; born in Denmark, at the camp from July 1868 with his wife and children Christian J., John M. and Christina, who are all on Davies&rsquo;s 1881 list. Klemgaard&rsquo;s testimony implies that the elder Miller had been with him in Utah or at Soda Springs, that is, among the Morrisites. <span class="src">(Cilley et al. v. Davies, 1880&ndash;81; 1880 U.S. census)</span></li>
+<li id="o-miller-sren"><b>Miller, S&oslash;ren</b> (born about 1817) <span class="bail-chip">Follower of Davies</span> <span class="bail-chip">Earlier a Morrisite</span> <span class="aff-prob">(probable)</span><br>&ldquo;Sorn Miller,&rdquo; born in Denmark, at the camp from July 1868 with his wife and children Christian J., John M. and Christina, who are all on Davies&rsquo;s 1881 list. Klemgaard&rsquo;s testimony implies that the elder Miller had been with him in Utah or at Soda Springs, that is, among the Morrisites. <span class="src">(Cilley et al. v. Davies, 1880&ndash;81; 1880 U.S. census)</span></li>
 <li id="o-mortensen-james"><b>Mortensen, James</b> (born about 1825) <span class="bail-chip">Follower of Davies</span><br>&ldquo;J. Mortezen,&rdquo; a shoemaker born in Sweden, at the camp from July 1868 with his wife Maria; their daughter Maria and Oscar Olsen are on the 1881 list. Whether the family connects to the Mortensens on the roll is not known. <span class="src">(Cilley et al. v. Davies, 1880&ndash;81; 1880 U.S. census)</span></li>
 <li id="o-parker-mrs-e-s-j"><b>Parker, Mrs. E. S. J.</b> (born about 1824) <span class="bail-chip">Follower of Davies</span> <span class="aff-prob">(probable)</span><br>A widow, a member from 1868, at San Francisco. Probably the widow of Thomas Parker, Davies&rsquo;s missionary there; whether he is the Thomas Parker on the roll is not settled. <span class="src">(Cilley et al. v. Davies, 1880&ndash;81)</span></li>
 <li id="o-parker-mary-b"><b>Parker, Mary B.</b> <span class="bail-chip">Follower of Davies</span><br>&ldquo;Mrs. Parker of San Francisco,&rdquo; credited with gifts of $2,363.40, 1868&ndash;77. <span class="src">(Cilley et al. v. Davies, 1880&ndash;81, list of donations)</span></li>

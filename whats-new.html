@@ -261,7 +261,7 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .aff-dot { display: inline-block; width: 18px; height: 18px; margin: 0 2px 0 -5px; padding: 0; border: 0; background: transparent; cursor: help; vertical-align: -3px; position: relative; }
 .aff-dot::before { content: ""; position: absolute; left: 5px; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
 .aff-dot:hover::before, .aff-dot:focus-visible::before { box-shadow: 0 0 0 2px var(--panel), 0 0 0 3px var(--c); }
-.aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: #fff; font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: var(--paper); font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 .aff-detail { margin-top: 8px; font-size: 14px; }
 .doc-text { margin: 4px 0; padding: 10px 14px; border-left: 3px solid var(--rule); background: var(--paper); font-size: 15px; line-height: 1.55; }
 .doc-text p { margin: 0 0 .6em; }
@@ -539,9 +539,11 @@ footer .wrap { display: grid; gap: 8px; }
 .filter-bar button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
 .yearbar { margin-top: 6px; }
 .page-cite { margin-top: 0; }
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--ink); color: var(--paper); padding: 8px 14px; font-family: var(--font-body); }
+.skip-link:focus { left: 8px; top: 8px; }
 </style>
 </head>
-<body>
+<body><a class="skip-link" href="#top">Skip to content</a>
 
 <header class="mast">
   <div class="wrap">
@@ -591,6 +593,7 @@ footer .wrap { display: grid; gap: 8px; }
             <h3>Lee Pierce and the Walla Walla court files</h3>
             <p>For decades the story in Walla Walla was that the court records of the lawsuits against <a href="person/william-w-davies.html">William W. Davies</a> had gone missing. A researcher who asked for them at the county courthouse was told they had been checked out, and he never found them. They were safe all along in the Washington State Archives, whose Eastern Region Branch in Cheney holds the territorial court records for most of the state&rsquo;s eleven eastern counties.</p>
             <p>Lee Pierce, an archivist at the branch, answered the editor&rsquo;s request the next morning with page counts and costs for both files, and the same afternoon he scanned and sent the whole 1885 bank suit and most of the 292-page 1880 case. He also supplied the archives&rsquo; preferred citation, so the files can be cited properly. They hold sworn testimony from men and women who lived in Davies&rsquo;s community, printed tracts filed as exhibits, the lists of what members gave, the 1881 judgment and the sheriff&rsquo;s sales, much of it new to this guide. See <a href="repositories.html#repositories">Repositories</a>.</p>
+            <p>When the editor found a gap in the page numbers, Lee checked again: the whole file had been scanned and sent, and pages 133&ndash;157 seem to have been missing before it ever reached the archives. He suspects they went the way of pages 158&ndash;195, which turned up at Whitman College and were returned, and wonders whether this is what lay behind the clerk&rsquo;s report that the records had been &ldquo;checked out.&rdquo; As he points out, territorial court files are permanent records that should never have left the clerk&rsquo;s custody, so the missing pages may yet be found.</p>
             <p>Work like this rarely gets public credit, and guides like this one depend on it. Thank you, Lee.</p>
           </article>
           <article class="key" id="new-families">
@@ -611,6 +614,7 @@ footer .wrap { display: grid; gap: 8px; }
         </div>
         <h3 style="font-family:var(--font-sc);font-size:18px;letter-spacing:.04em;color:var(--muted);margin:30px 0 4px">Added to this guide</h3>
         <ol class="chron" id="updates">
+          <li id="u-the-missing-pages-of-the-davies-case"><span class="date">9 Nov 2026</span><span><b>The missing pages of the Davies case.</b> Pages 133&ndash;157 of the 1880 case against Davies are not in the file at the Washington State Archives: archivist Lee Pierce confirms the whole file was scanned and that those pages were missing before it reached the archives. They may have left the courthouse with pages 158&ndash;195, which Whitman College later found and returned. See <a href="repositories.html#repositories">Repositories</a>.</span></li>
           <li id="u-corrections"><span class="date">8 Nov 2026</span><span><b>Corrections.</b> A check of the guide against its sources led to several fixes. The chronology no longer gives a single death toll for the siege, and now says that John Banks died in custody on the evening of the surrender. The <a href="glossary.html#glossary">Glossary</a> explains that &ldquo;Church of the Firstborn&rdquo; was not the name of Morris&rsquo;s church in 1861: his revelations call it &ldquo;my Church,&rdquo; and Anderson gives the Church of Jesus Christ of Saints of the Most High. The roll no longer lists Joseph Morris&rsquo;s wives as Mary and Karen: his wife Mary Olsen is probably the roll&rsquo;s Mary Morris, and Karen Morris is not identified. Notes on Anne Bar now record that the sources disagree on whether her baby died. Citations of <i>The Spirit Prevails</i> have been checked against the 1886 text; the account of the surrender, the trials and the pardons is on its p. 8, not p. 7, and it names the second woman shot at the surrender &ldquo;Mrs. O&rsquo;Hagg&rdquo; (see <a href="questions.html#q-who-died">Who died at Kington Fort?</a>). The counts on <a href="people.html#people">Who they were</a> now include all 178 people linked to Family Tree.</span></li>
           <li id="u-reading-the-sources"><span class="date">7 Nov 2026</span><span><b>Reading the sources.</b> The <a href="bibliography.html#bibliography">Bibliography</a> now opens with a note on using the secondary literature and a list of <a href="bibliography.html#common-errors">common errors in print</a>, from the siege placed at &ldquo;Manti&rdquo; to the street burial, with what the records show. A new question on the <a href="questions.html#questions">Questions</a> page asks how the story has been passed down and where those errors come from.</span></li>
           <li id="u-two-montana-sources"><span class="date">7 Nov 2026</span><span><b>Two Montana sources.</b> Henry Hendrickson&rsquo;s 1962 interview on the Deer Lodge Valley Morrisites, now online from the University of Montana, is listed under <a href="repositories.html#repositories">Repositories</a>, and Julie A. Wright&rsquo;s 2004 thesis &ldquo;Mormon Movement to Montana&rdquo; under <a href="bibliography.html#bibliography">Bibliography</a>.</span></li>
