@@ -348,6 +348,22 @@ table.xt td.num, table.xt th.num { text-align: right; font-family: var(--font-mo
 table.xt tfoot td, table.xt tfoot th { border-top: 2px solid var(--rule); color: var(--muted); }
 .xt-note { font-size: 13.5px; color: var(--muted); }
 
+.r-anchor { visibility: hidden; margin-left: 4px; color: var(--muted); text-decoration: none; font-size: .85em; }
+.roll-list li:hover .r-anchor, .r-anchor:focus { visibility: visible; }
+.roll-list li:target { background: color-mix(in srgb, var(--accent) 16%, transparent); outline: 2px solid var(--accent); outline-offset: 1px; scroll-margin-top: 90px; }
+.place-pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 2em 0 0; padding-top: 1em; border-top: 1px solid var(--rule); font-size: 15px; }
+/* Print: drop navigation and controls; show link targets for outside sources */
+@media print {
+  header, nav, .subnav, .crumb, .skip, .site-search, #site-results, .toc, .dt-controls, .dt-status, button, .r-anchor, .aff-tip, footer .wrap span:not(:last-child), .place-pn { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  a { color: #000 !important; text-decoration: none; }
+  main a[href^="http"]::after { content: " <" attr(href) ">"; font-size: 8.5pt; word-break: break-all; }
+  .series, .repo, figure, tr, .roll-list li { break-inside: avoid; }
+  .dt-wrap, .heat-wrap { max-height: none !important; overflow: visible !important; border: 0; }
+  .roll-list { columns: 3; }
+  details { display: block; } details > * { display: block !important; }
+  .page-cite, .cite-box { border: 0; font-size: 9.5pt; }
+}
 /* Bibliography */
 .biblio h3 { font-family: var(--font-sc); font-size: 18px; letter-spacing: 0.04em; color: var(--muted); margin: 26px 0 8px; }
 .biblio h3:first-child { margin-top: 0; }
@@ -589,6 +605,13 @@ footer .wrap { display: grid; gap: 8px; }
 .skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--ink); color: var(--paper); padding: 8px 14px; font-family: var(--font-body); }
 .skip-link:focus { left: 8px; top: 8px; }
 </style>
+<meta name="citation_title" content="Sven Olasson Hägg (1832–after 1882), Morrisite Roll of Membership">
+<meta name="citation_author" content="Rogers, Eric Paul">
+<meta name="citation_date" content="2026/11/06">
+<meta name="citation_publisher" content="Morrisite.org">
+<meta name="citation_public_url" content="https://morrisite.org/person/sven-hagg.html">
+<meta name="DC.rights" content="CC BY 4.0, except images and quoted material owned by others">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
 </head>
 <body><a class="skip-link" href="#top">Skip to content</a>
 
@@ -649,7 +672,7 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <span>Morrisite.org is edited by <a href="https://www.ericpaulrogers.com" target="_blank" rel="noopener">Eric Paul Rogers</a>, historian of Latter Day Saint movements.</span>
     <span>The editor provided insights and helped acquire photographs for C. LeRoy Anderson&rsquo;s final edition of <i>Joseph Morris and the Saga of the Morrisites (Revisited)</i> (2010). Anderson&rsquo;s research files at Utah State University anchor this guide.</span>
-    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a></span>
+    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a> &middot; Text and data: <a href="../about.html#license">CC BY 4.0</a> &middot; <a href="../about.html#accessibility">Accessibility</a> &middot; <a href="../about.html#corrections">Corrections</a></span>
   </div>
 </footer>
 

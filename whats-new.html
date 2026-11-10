@@ -37,7 +37,8 @@
     "@type": "Person",
     "name": "Eric Paul Rogers",
     "url": "https://www.ericpaulrogers.com"
-  }
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/"
 }
 </script>
 <title>What&rsquo;s New on Morrisite.org: Recent Additions and Publications | Morrisite.org</title>
@@ -340,6 +341,22 @@ table.xt td.num, table.xt th.num { text-align: right; font-family: var(--font-mo
 table.xt tfoot td, table.xt tfoot th { border-top: 2px solid var(--rule); color: var(--muted); }
 .xt-note { font-size: 13.5px; color: var(--muted); }
 
+.r-anchor { visibility: hidden; margin-left: 4px; color: var(--muted); text-decoration: none; font-size: .85em; }
+.roll-list li:hover .r-anchor, .r-anchor:focus { visibility: visible; }
+.roll-list li:target { background: color-mix(in srgb, var(--accent) 16%, transparent); outline: 2px solid var(--accent); outline-offset: 1px; scroll-margin-top: 90px; }
+.place-pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 2em 0 0; padding-top: 1em; border-top: 1px solid var(--rule); font-size: 15px; }
+/* Print: drop navigation and controls; show link targets for outside sources */
+@media print {
+  header, nav, .subnav, .crumb, .skip, .site-search, #site-results, .toc, .dt-controls, .dt-status, button, .r-anchor, .aff-tip, footer .wrap span:not(:last-child), .place-pn { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  a { color: #000 !important; text-decoration: none; }
+  main a[href^="http"]::after { content: " <" attr(href) ">"; font-size: 8.5pt; word-break: break-all; }
+  .series, .repo, figure, tr, .roll-list li { break-inside: avoid; }
+  .dt-wrap, .heat-wrap { max-height: none !important; overflow: visible !important; border: 0; }
+  .roll-list { columns: 3; }
+  details { display: block; } details > * { display: block !important; }
+  .page-cite, .cite-box { border: 0; font-size: 9.5pt; }
+}
 /* Bibliography */
 .biblio h3 { font-family: var(--font-sc); font-size: 18px; letter-spacing: 0.04em; color: var(--muted); margin: 26px 0 8px; }
 .biblio h3:first-child { margin-top: 0; }
@@ -581,6 +598,13 @@ footer .wrap { display: grid; gap: 8px; }
 .skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--ink); color: var(--paper); padding: 8px 14px; font-family: var(--font-body); }
 .skip-link:focus { left: 8px; top: 8px; }
 </style>
+<meta name="citation_title" content="What&rsquo;s New on Morrisite.org: Recent Additions and Publications">
+<meta name="citation_author" content="Rogers, Eric Paul">
+<meta name="citation_date" content="2026">
+<meta name="citation_publisher" content="Morrisite.org">
+<meta name="citation_public_url" content="https://morrisite.org/whats-new.html">
+<meta name="DC.rights" content="CC BY 4.0, except images and quoted material owned by others">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
 </head>
 <body><a class="skip-link" href="#top">Skip to content</a>
 
@@ -653,6 +677,7 @@ footer .wrap { display: grid; gap: 8px; }
         </div>
         <h3 style="font-family:var(--font-sc);font-size:18px;letter-spacing:.04em;color:var(--muted);margin:30px 0 4px">Added to this guide</h3>
         <ol class="chron" id="updates">
+          <li id="u-free-to-reuse-with-credit"><span class="date">10 Nov 2026</span><span><b>Free to reuse, with credit.</b> The guide&rsquo;s own text and data are now licensed under <a href="about.html#license">CC BY 4.0</a>, and the data files carry a release number and a list of changes, so a figure can be traced to the version it came from. Every name on the <a href="roll.html#roll">roll</a> now has its own link (hover over a name and click #), pages can be saved to Zotero with one click, and pages print without menus and buttons. The <a href="about.html#about">About</a> page now explains how <a href="about.html#corrections">corrections</a> are made and what the guide does for <a href="about.html#accessibility">accessibility</a>.</span></li>
           <li id="u-the-guide-s-data-to-download"><span class="date">9 Nov 2026</span><span><b>The guide&rsquo;s data, to download.</b> A new <a href="data.html">Data</a> page offers the lists behind the roll, the person pages and the Where they went map as CSV files: the 1861&ndash;62 roll with FamilySearch matches, birthplaces, emigrating companies and later affiliations; documented whereabouts after 1862; family ties on the roll; and others named as Morrisites. Each comes with a description of its columns and their limits, and all four can be downloaded together. The page also shows how much is known so far about the people on the roll, where they were decade by decade, a table of the roll that can be sorted, filtered, shared by link and downloaded, and a tool for counting the roll by any two characteristics, with the unknowns shown.</span></li>
           <li id="u-birthright-by-phrenology"><span class="date">9 Nov 2026</span><span><b>Birthright by phrenology?</b> A fragment of a letter in the Morrisite collection at USU says that a prophet in hiding at Cottonwood felt men&rsquo;s heads &ldquo;Phrenologically&rdquo; to tell them their priesthood, and that no descendant of Cain would enter the Church. Kirk Watson, who found it, identifies the prophet as the Prophet Cainan. The page also names a Niel Beck. See the new <a href="questions.html#questions">question of interpretation</a>.</span></li>
           <li id="u-the-racetrack-church-in-2020"><span class="date">9 Nov 2026</span><span><b>The Racetrack church in 2020.</b> Ten photographs taken inside and outside the Lord&rsquo;s House on August 16, 2020, contributed by a reader, extend the condition record between 2018 and the videos of 2026. They show the pulpit, benches and table still in place, and the hymnals and a 1931 Reorganized Church lesson quarterly left in the building. See <a href="images.html#images">Images</a>. The <a href="bibliography.html#bibliography">Bibliography</a> adds <i>In the Shadow of Mount Haggin</i> (1975), on the Evans family at Gwendale, and an <i>Anaconda Standard</i> article of 1935 that Patrick F. Morris cites.</span></li>
@@ -703,7 +728,7 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <span>Morrisite.org is edited by <a href="https://www.ericpaulrogers.com" target="_blank" rel="noopener">Eric Paul Rogers</a>, historian of Latter Day Saint movements.</span>
     <span>The editor provided insights and helped acquire photographs for C. LeRoy Anderson&rsquo;s final edition of <i>Joseph Morris and the Saga of the Morrisites (Revisited)</i> (2010). Anderson&rsquo;s research files at Utah State University anchor this guide.</span>
-    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a></span>
+    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a> &middot; Text and data: <a href="about.html#license">CC BY 4.0</a> &middot; <a href="about.html#accessibility">Accessibility</a> &middot; <a href="about.html#corrections">Corrections</a></span>
   </div>
 </footer>
 

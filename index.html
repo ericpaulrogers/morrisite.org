@@ -347,6 +347,22 @@ table.xt td.num, table.xt th.num { text-align: right; font-family: var(--font-mo
 table.xt tfoot td, table.xt tfoot th { border-top: 2px solid var(--rule); color: var(--muted); }
 .xt-note { font-size: 13.5px; color: var(--muted); }
 
+.r-anchor { visibility: hidden; margin-left: 4px; color: var(--muted); text-decoration: none; font-size: .85em; }
+.roll-list li:hover .r-anchor, .r-anchor:focus { visibility: visible; }
+.roll-list li:target { background: color-mix(in srgb, var(--accent) 16%, transparent); outline: 2px solid var(--accent); outline-offset: 1px; scroll-margin-top: 90px; }
+.place-pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 2em 0 0; padding-top: 1em; border-top: 1px solid var(--rule); font-size: 15px; }
+/* Print: drop navigation and controls; show link targets for outside sources */
+@media print {
+  header, nav, .subnav, .crumb, .skip, .site-search, #site-results, .toc, .dt-controls, .dt-status, button, .r-anchor, .aff-tip, footer .wrap span:not(:last-child), .place-pn { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  a { color: #000 !important; text-decoration: none; }
+  main a[href^="http"]::after { content: " <" attr(href) ">"; font-size: 8.5pt; word-break: break-all; }
+  .series, .repo, figure, tr, .roll-list li { break-inside: avoid; }
+  .dt-wrap, .heat-wrap { max-height: none !important; overflow: visible !important; border: 0; }
+  .roll-list { columns: 3; }
+  details { display: block; } details > * { display: block !important; }
+  .page-cite, .cite-box { border: 0; font-size: 9.5pt; }
+}
 /* Bibliography */
 .biblio h3 { font-family: var(--font-sc); font-size: 18px; letter-spacing: 0.04em; color: var(--muted); margin: 26px 0 8px; }
 .biblio h3:first-child { margin-top: 0; }
@@ -588,6 +604,13 @@ footer .wrap { display: grid; gap: 8px; }
 .skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--ink); color: var(--paper); padding: 8px 14px; font-family: var(--font-body); }
 .skip-link:focus { left: 8px; top: 8px; }
 </style>
+<meta name="citation_title" content="The Morrisites and Their Records: A Research Guide">
+<meta name="citation_author" content="Rogers, Eric Paul">
+<meta name="citation_date" content="2026">
+<meta name="citation_publisher" content="Morrisite.org">
+<meta name="citation_public_url" content="https://morrisite.org/">
+<meta name="DC.rights" content="CC BY 4.0, except images and quoted material owned by others">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
 </head>
 <body><a class="skip-link" href="#top">Skip to content</a>
 
@@ -616,7 +639,7 @@ footer .wrap { display: grid; gap: 8px; }
 </header>
 
 <main id="top">
-<script>(function(){var m={"new": "whats-new.html", "h-new": "whats-new.html", "new-watson": "whats-new.html", "new-pierce": "whats-new.html", "new-families": "whats-new.html", "new-community": "whats-new.html", "updates": "whats-new.html", "u-the-guide-s-data-to-download": "whats-new.html", "u-birthright-by-phrenology": "whats-new.html", "u-the-racetrack-church-in-2020": "whats-new.html", "u-the-missing-pages-of-the-davies-case": "whats-new.html", "u-corrections": "whats-new.html", "u-reading-the-sources": "whats-new.html", "u-two-montana-sources": "whats-new.html", "u-where-gwendale-was": "whats-new.html", "u-the-deer-lodge-paper": "whats-new.html", "u-the-groups-over-time": "whats-new.html", "u-witnesses-at-burton-s-trial": "whats-new.html", "u-fuller-s-order-for-the-posse": "whats-new.html", "u-isabella-and-james-bowman": "whats-new.html", "u-newspapers": "whats-new.html", "u-where-they-went": "whats-new.html", "u-zbaraschuk-on-davies-and-two-more-court-cases": "whats-new.html", "u-a-map-of-morristown": "whats-new.html", "u-maps-of-kington-fort-and-the-kingdom-of-heaven": "whats-new.html", "u-places-in-the-deer-lodge-valley": "whats-new.html", "u-anaconda-and-willow-glen": "whats-new.html", "u-the-seventh-angel-before-morris": "whats-new.html", "u-the-walla-walla-court-files": "whats-new.html", "u-the-man-who-went-for-help": "whats-new.html", "u-a-1982-newspaper-story": "whats-new.html", "u-where-did-the-reincarnation-teaching-come-from": "whats-new.html", "u-what-became-of-them": "whats-new.html", "u-the-1880-census": "whats-new.html", "u-the-walla-walla-jesus-case": "whats-new.html", "u-land-records": "whats-new.html", "u-three-new-pages": "whats-new.html", "u-the-eliasons-and-the-christoffersens": "whats-new.html", "u-the-prisoners-and-the-trials": "whats-new.html", "u-paths-into-the-movement": "whats-new.html", "u-pages-on-people-of-the-roll": "whats-new.html", "u-documents-and-the-posse-order": "whats-new.html", "u-who-they-were": "whats-new.html", "u-the-racetrack-church-in-photographs": "whats-new.html", "u-the-roll-of-membership": "whats-new.html", "chronology": "history.html", "h-chron": "history.html", "lineage": "history.html", "lin-t": "history.html", "lin-d": "history.html", "groups-timeline": "history.html", "ln-read": "history.html", "ln-t": "history.html", "ln-d": "history.html", "ln-fadeg": "history.html", "ln-arr": "history.html", "ln-cur": "history.html", "places": "history.html", "h-places": "history.html", "repositories": "repositories.html", "h-repos": "repositories.html", "share": "about.html", "h-contrib": "about.html", "about": "about.html", "h-about": "about.html"},h=location.hash.slice(1);if(h&&m[h]&&!document.getElementById(h))location.replace(m[h]+"#"+h);})();</script>
+<script>(function(){var m={"new": "whats-new.html", "h-new": "whats-new.html", "new-watson": "whats-new.html", "new-pierce": "whats-new.html", "new-families": "whats-new.html", "new-community": "whats-new.html", "updates": "whats-new.html", "u-free-to-reuse-with-credit": "whats-new.html", "u-the-guide-s-data-to-download": "whats-new.html", "u-birthright-by-phrenology": "whats-new.html", "u-the-racetrack-church-in-2020": "whats-new.html", "u-the-missing-pages-of-the-davies-case": "whats-new.html", "u-corrections": "whats-new.html", "u-reading-the-sources": "whats-new.html", "u-two-montana-sources": "whats-new.html", "u-where-gwendale-was": "whats-new.html", "u-the-deer-lodge-paper": "whats-new.html", "u-the-groups-over-time": "whats-new.html", "u-witnesses-at-burton-s-trial": "whats-new.html", "u-fuller-s-order-for-the-posse": "whats-new.html", "u-isabella-and-james-bowman": "whats-new.html", "u-newspapers": "whats-new.html", "u-where-they-went": "whats-new.html", "u-zbaraschuk-on-davies-and-two-more-court-cases": "whats-new.html", "u-a-map-of-morristown": "whats-new.html", "u-maps-of-kington-fort-and-the-kingdom-of-heaven": "whats-new.html", "u-places-in-the-deer-lodge-valley": "whats-new.html", "u-anaconda-and-willow-glen": "whats-new.html", "u-the-seventh-angel-before-morris": "whats-new.html", "u-the-walla-walla-court-files": "whats-new.html", "u-the-man-who-went-for-help": "whats-new.html", "u-a-1982-newspaper-story": "whats-new.html", "u-where-did-the-reincarnation-teaching-come-from": "whats-new.html", "u-what-became-of-them": "whats-new.html", "u-the-1880-census": "whats-new.html", "u-the-walla-walla-jesus-case": "whats-new.html", "u-land-records": "whats-new.html", "u-three-new-pages": "whats-new.html", "u-the-eliasons-and-the-christoffersens": "whats-new.html", "u-the-prisoners-and-the-trials": "whats-new.html", "u-paths-into-the-movement": "whats-new.html", "u-pages-on-people-of-the-roll": "whats-new.html", "u-documents-and-the-posse-order": "whats-new.html", "u-who-they-were": "whats-new.html", "u-the-racetrack-church-in-photographs": "whats-new.html", "u-the-roll-of-membership": "whats-new.html", "chronology": "history.html", "h-chron": "history.html", "lineage": "history.html", "lin-t": "history.html", "lin-d": "history.html", "groups-timeline": "history.html", "ln-read": "history.html", "ln-t": "history.html", "ln-d": "history.html", "ln-fadeg": "history.html", "ln-arr": "history.html", "ln-cur": "history.html", "places": "history.html", "h-places": "history.html", "repositories": "repositories.html", "h-repos": "repositories.html", "share": "about.html", "h-contrib": "about.html", "about": "about.html", "h-about": "about.html", "license": "about.html", "corrections": "about.html", "accessibility": "about.html"},h=location.hash.slice(1);if(h&&m[h]&&!document.getElementById(h))location.replace(m[h]+"#"+h);})();</script>
 
   <div class="wrap">
     <div class="hero">
@@ -684,7 +707,7 @@ footer .wrap { display: grid; gap: 8px; }
       </div>
       <div class="series-body">
         <ol class="home-latest">
-          <li><span class="date">14 Nov 2026</span><span><b>Kirk Watson</b>, editor of the new <i>The Morrisites: Writings and Revelations</i>, on the <i>Scriptural Mormonism</i> podcast; and his find of two Morris revelations of 1860. <a href="whats-new.html#new-watson" aria-label="More: 14 Nov 2026 Kirk Watson , editor of the new The Morrisites: Writings and Revelations , on…">More</a></span></li><li><span class="date">Families</span><span><b>How a descendant filled in the Eliason story</b>, and how your family can help. <a href="whats-new.html#new-families" aria-label="More: Families How a descendant filled in the Eliason story , and how your family can help">More</a></span></li><li><span class="date">Community</span><span><b>What local history groups added</b>: replies from Deer Lodge and Walla Walla that are already changing this guide. <a href="whats-new.html#new-community" aria-label="More: Community What local history groups added : replies from Deer Lodge and Walla Walla that…">More</a></span></li>
+          <li><span class="date">14 Nov 2026</span><span><b>Kirk Watson</b>, editor of the new <i>The Morrisites: Writings and Revelations</i>, on the <i>Scriptural Mormonism</i> podcast; and his find of two Morris revelations of 1860. <a href="whats-new.html#new-watson" aria-label="More: 14 Nov 2026 Kirk Watson , editor of the new The Morrisites: Writings and Revelations , on…">More</a></span></li><li><span class="date">10 Nov 2026</span><span><b>Free to reuse, with credit</b>. <a href="whats-new.html#u-free-to-reuse-with-credit" aria-label="More: 10 Nov 2026 Free to reuse, with credit">More</a></span></li><li><span class="date">9 Nov 2026</span><span><b>The guide&rsquo;s data, to download</b>. <a href="whats-new.html#u-the-guide-s-data-to-download" aria-label="More: 9 Nov 2026 The guide’s data, to download">More</a></span></li><li><span class="date">9 Nov 2026</span><span><b>Birthright by phrenology?</b> <a href="whats-new.html#u-birthright-by-phrenology" aria-label="More: 9 Nov 2026 Birthright by phrenology?">More</a></span></li>
         </ol>
         <p style="margin-top:14px"><a href="whats-new.html#new">All updates and upcoming programs &rarr;</a></p>
       </div>
@@ -768,7 +791,7 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <span>Morrisite.org is edited by <a href="https://www.ericpaulrogers.com" target="_blank" rel="noopener">Eric Paul Rogers</a>, historian of Latter Day Saint movements.</span>
     <span>The editor provided insights and helped acquire photographs for C. LeRoy Anderson&rsquo;s final edition of <i>Joseph Morris and the Saga of the Morrisites (Revisited)</i> (2010). Anderson&rsquo;s research files at Utah State University anchor this guide.</span>
-    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a></span>
+    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a> &middot; Text and data: <a href="about.html#license">CC BY 4.0</a> &middot; <a href="about.html#accessibility">Accessibility</a> &middot; <a href="about.html#corrections">Corrections</a></span>
   </div>
 </footer>
 

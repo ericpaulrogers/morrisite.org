@@ -37,7 +37,8 @@
     "@type": "Person",
     "name": "Eric Paul Rogers",
     "url": "https://www.ericpaulrogers.com"
-  }
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/"
 }
 </script>
 <title>Morristown (Soda Springs, Idaho): Morrisite Places | Morrisite.org</title>
@@ -340,6 +341,22 @@ table.xt td.num, table.xt th.num { text-align: right; font-family: var(--font-mo
 table.xt tfoot td, table.xt tfoot th { border-top: 2px solid var(--rule); color: var(--muted); }
 .xt-note { font-size: 13.5px; color: var(--muted); }
 
+.r-anchor { visibility: hidden; margin-left: 4px; color: var(--muted); text-decoration: none; font-size: .85em; }
+.roll-list li:hover .r-anchor, .r-anchor:focus { visibility: visible; }
+.roll-list li:target { background: color-mix(in srgb, var(--accent) 16%, transparent); outline: 2px solid var(--accent); outline-offset: 1px; scroll-margin-top: 90px; }
+.place-pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 2em 0 0; padding-top: 1em; border-top: 1px solid var(--rule); font-size: 15px; }
+/* Print: drop navigation and controls; show link targets for outside sources */
+@media print {
+  header, nav, .subnav, .crumb, .skip, .site-search, #site-results, .toc, .dt-controls, .dt-status, button, .r-anchor, .aff-tip, footer .wrap span:not(:last-child), .place-pn { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  a { color: #000 !important; text-decoration: none; }
+  main a[href^="http"]::after { content: " <" attr(href) ">"; font-size: 8.5pt; word-break: break-all; }
+  .series, .repo, figure, tr, .roll-list li { break-inside: avoid; }
+  .dt-wrap, .heat-wrap { max-height: none !important; overflow: visible !important; border: 0; }
+  .roll-list { columns: 3; }
+  details { display: block; } details > * { display: block !important; }
+  .page-cite, .cite-box { border: 0; font-size: 9.5pt; }
+}
 /* Bibliography */
 .biblio h3 { font-family: var(--font-sc); font-size: 18px; letter-spacing: 0.04em; color: var(--muted); margin: 26px 0 8px; }
 .biblio h3:first-child { margin-top: 0; }
@@ -581,6 +598,13 @@ footer .wrap { display: grid; gap: 8px; }
 .skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--ink); color: var(--paper); padding: 8px 14px; font-family: var(--font-body); }
 .skip-link:focus { left: 8px; top: 8px; }
 </style>
+<meta name="citation_title" content="Morristown (Soda Springs, Idaho): Morrisite Places">
+<meta name="citation_author" content="Rogers, Eric Paul">
+<meta name="citation_date" content="2026">
+<meta name="citation_publisher" content="Morrisite.org">
+<meta name="citation_public_url" content="https://morrisite.org/place/morristown.html">
+<meta name="DC.rights" content="CC BY 4.0, except images and quoted material owned by others">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
 </head>
 <body><a class="skip-link" href="#top">Skip to content</a>
 
@@ -636,6 +660,7 @@ footer .wrap { display: grid; gap: 8px; }
 <h2>In the bibliography <span class="dem-note">(12)</span></h2><ul class="place-bib"><li>Connor, P. Edward. Report to Lt. Col. R. C. Drum, June 2, 1863, on the expedition from Camp Douglas to Soda Springs, May 5&ndash;30, 1863. In <i>The War of the Rebellion: A Compilation of the Official Records of the Union and Confederate Armies</i>, ser. 1, vol. 50, pt. 1, 226&ndash;29. Washington, DC: Government Printing Office, 1897. The founding of Morristown and the removal of Morrisites to Carson City. <a href="https://ehistory.osu.edu/books/official-records/105/0226" target="_blank" rel="noopener">OSU eHistory</a></li><li>Smith, Joseph, III. <i>Joseph Smith III and the Restoration.</i> Edited by Mary Audentia Smith Anderson; condensed by Bertha Audentia Anderson Hulmes. Independence, MO: Herald House, 1952. Pages 432&ndash;33 describe his visit to the site of the Morrisite camp with John Parson on July 29, 1889; p. 437, Morrisite families at Soda Springs.</li><li>Frazer, Robert W. <i>Forts of the West: Military Forts and Presidios and Posts Commonly Called Forts West of the Mississippi River to 1898.</i> Norman: University of Oklahoma Press, 1965. Camp Connor.</li><li>Reid, Agnes Just. <i>Letters of Long Ago.</i> Tanner Trust Fund ed. Introduction by Brigham D. Madsen, xi&ndash;xviii. Salt Lake City: University of Utah Library, 1973. Letters of Emma Thompson Just, a Morrisite and original settler of Soda Springs.</li><li>Barnard, Lula, Faundy Bybee, and Lola Walker. <i>Tosoiba.</i> Soda Springs, ID: Daughters of Utah Pioneers, Camp Meads, 1958. Soda Springs and Morristown.</li><li>Carney, Ellen. <i>Historic Soda Springs: Oasis on the Oregon Trail.</i> Wayan, ID: Traildust Publishing, 1998.</li><li>Christensen, K. C. &ldquo;Early Soda Springs History.&rdquo; Joel R. Ricks seminar paper 23, Utah State University, 1940.</li><li>Shupe, Verna Irene. <i>Caribou County Chronology.</i> Colorado Springs, CO: Print Craft Press, [1930]. Soda Springs from 1863, with an early list of the Morrisite families who came with Connor (p. 13). <a href="https://hdl.handle.net/2027/uc1.b4839033" target="_blank" rel="noopener">HathiTrust</a> (full view)</li><li>Bear River Heritage Area. &ldquo;Camp Connor Site.&rdquo; <a href="https://bearriverheritage.com/item/camp-connor-site/" target="_blank" rel="noopener" aria-label="Website: Bear River Heritage Area. “Camp Connor Site.”">Website</a></li><li>Historical Marker Database. &ldquo;Camp Connor&rdquo; (Idaho state marker) and &ldquo;Law &amp; Order on the Frontier: Camp Connor,&rdquo; Soda Springs. <a href="https://www.hmdb.org/m.asp?m=105972" target="_blank" rel="noopener">Camp Connor</a> &middot; <a href="https://www.hmdb.org/m.asp?m=106710" target="_blank" rel="noopener">Law &amp; Order</a></li><li>Idaho State University. &ldquo;Rocks, Rails, and Trails: Soda Springs Area.&rdquo; <i>Digital Atlas of Idaho.</i> Includes Emma Thompson Just&rsquo;s account of the 1863 journey. <a href="https://www.isu.edu/digitalatlas/geography/rocks-rails-and-trails/" target="_blank" rel="noopener" aria-label="Website: Idaho State University. “Rocks, Rails, and Trails: Soda Springs Area.” Digital Atlas of…">Website</a></li><li>Posey, John. &ldquo;Morrisite Graves of Soda Springs.&rdquo; April 19, 2022. YouTube video, 11:13. <a href="https://www.youtube.com/watch?v=lwfwkuEeI2E" target="_blank" rel="noopener" aria-label="Watch: Posey, John. “Morrisite Graves of Soda Springs.” April 19, 2022. YouTube video, 11:13">Watch</a></li></ul>
 <h2>People</h2><p class="dem-note">People on the 1861&ndash;62 roll whose notes or pages mention this place (22). Each name links to the name index.</p><p class="place-people"><a href="../names.html#n-anderson-abelone">Anderson, Abelone</a>; <a href="../names.html#n-anderson-niels">Anderson, Niels</a> <a class="person-chip" href="../person/niels-anderson.html">page</a>; <a href="../names.html#n-bar-labrach">Bar, Labrach</a>; <a href="../names.html#n-beck-niels-r">Beck, Niels R.</a> <a class="person-chip" href="../person/niels-r-beck.html">page</a>; <a href="../names.html#n-bowman-john">Bowman, John</a>; <a href="../names.html#n-christoffersen-christian">Christoffersen, Christian</a>; <a href="../names.html#n-christoffersen-peter">Christoffersen, Peter</a>; <a href="../names.html#n-christofferson-andrus">Christofferson, Andrus</a>; <a href="../names.html#n-christofferson-ida">Christofferson, Ida</a>; <a href="../names.html#n-christofferson-maria">Christofferson, Maria</a>; <a href="../names.html#n-christofferson-matilda">Christofferson, Matilda</a>; <a href="../names.html#n-dow-alexander-sr">Dow, Alexander Sr.</a>; <a href="../names.html#n-eliason-erick">Eliason, Erick</a> <a class="person-chip" href="../person/erik-eliasson.html">page</a>; <a href="../names.html#n-eliason-karen">Eliason, Karen</a> <a class="person-chip" href="../person/karin-eliasson.html">page</a>; <a href="../names.html#n-garrett-john">Garrett, John</a> <a class="person-chip" href="../person/john-garrett.html">page</a>; <a href="../names.html#n-hanson-hans">Hanson, Hans</a>; <a href="../names.html#n-hanson-lars">Hanson, Lars</a>; <a href="../names.html#n-higham-charles">Higham, Charles</a> <a class="person-chip" href="../person/charles-higham.html">page</a>; <a href="../names.html#n-klemgard-peter-c">Klemgard, Peter C.</a> <a class="person-chip" href="../person/peter-c-klemgard.html">page</a>; <a href="../names.html#n-rasmussen-hans-c">Rasmussen, Hans C.</a>; <a href="../names.html#n-thomas-william-w">Thomas, William W.</a>; <a href="../names.html#n-thompson-emma">Thompson, Emma</a></p>
 <p class="dem-note">This page gathers entries from across the guide by the place&rsquo;s names, so a few may mention it only in passing. Corrections and additions: <a href="mailto:contact@morrisite.org?subject=Morrisite.org%20places">contact@morrisite.org</a>.</p>
+<nav class="place-pn" aria-label="Other places"><a href="../place/kington-fort.html" rel="prev">&larr; Kington Fort</a><a href="../place/carson-city-california.html" rel="next">Carson City &amp; California &rarr;</a></nav>
           <p class="cite-box">Rogers, Eric Paul, ed. &ldquo;Morristown.&rdquo; <i>Morrisite.org.</i> https://morrisite.org/place/morristown.html. Add the date you consulted it.</p>
           <p class="page-meta">Other places: <a href="../place/kington-fort.html">Kington Fort</a>; <a href="../place/carson-city-california.html">Carson City &amp; California</a>; <a href="../place/omaha-council-bluffs.html">Omaha &amp; Council Bluffs</a>; <a href="../place/deer-lodge-valley.html">Deer Lodge Valley</a>; <a href="../place/kingdom-of-heaven.html">Kingdom of Heaven</a>. <a href="../places.html#placemap">Map of all places</a>.</p>
         </div>
@@ -648,7 +673,7 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <span>Morrisite.org is edited by <a href="https://www.ericpaulrogers.com" target="_blank" rel="noopener">Eric Paul Rogers</a>, historian of Latter Day Saint movements.</span>
     <span>The editor provided insights and helped acquire photographs for C. LeRoy Anderson&rsquo;s final edition of <i>Joseph Morris and the Saga of the Morrisites (Revisited)</i> (2010). Anderson&rsquo;s research files at Utah State University anchor this guide.</span>
-    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a></span>
+    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a> &middot; Text and data: <a href="../about.html#license">CC BY 4.0</a> &middot; <a href="../about.html#accessibility">Accessibility</a> &middot; <a href="../about.html#corrections">Corrections</a></span>
   </div>
 </footer>
 
