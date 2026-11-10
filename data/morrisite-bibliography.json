@@ -523,6 +523,28 @@
   }
  },
  {
+  "id": "blankenship1942there",
+  "type": "book",
+  "note": "Blankenship, Russell. And There Were Men. New York: Alfred A. Knopf, 1942. Includes William W. Davies, whom the Church History Library’s catalog describes there as a former Morrisite who claimed a revelation to inaugurate the millennium and set up headquarters at Walla Walla (copy at 979.5 B642t 1942). New",
+  "keyword": "Books",
+  "author": [
+   {
+    "family": "Blankenship",
+    "given": "Russell"
+   }
+  ],
+  "title": "And There Were Men",
+  "publisher": "Alfred A. Knopf",
+  "publisher-place": "New York",
+  "issued": {
+   "date-parts": [
+    [
+     1942
+    ]
+   ]
+  }
+ },
+ {
   "id": "bringhurst2007scattering",
   "type": "book",
   "note": "Bringhurst, Newell G., and John C. Hamer, eds. Scattering of the Saints: Schism within Mormonism. Independence, MO: John Whitmer Books, 2007.",
@@ -946,6 +968,26 @@
   }
  },
  {
+  "id": "blankenship1929mill",
+  "type": "manuscript",
+  "note": "Blankenship, Russell. “The Mill Creek Messiah.” 1929. On William W. Davies. The Church History Library holds a copy (M294.8 B642m 1929); where it was first published is not yet known. New",
+  "keyword": "Articles and papers",
+  "author": [
+   {
+    "family": "Blankenship",
+    "given": "Russell"
+   }
+  ],
+  "title": "The Mill Creek Messiah",
+  "issued": {
+   "date-parts": [
+    [
+     1929
+    ]
+   ]
+  }
+ },
+ {
   "id": "bryant2009reviving",
   "type": "article-journal",
   "note": "Bryant, Seth L. “Reviving the Millennial Kingdom: Mormons, Morrisites, and Massacre.” John Whitmer Historical Association Journal 29 (2009): 115–39.",
@@ -1160,6 +1202,14 @@
     ]
    ]
   }
+ },
+ {
+  "id": "millennialndmillennial",
+  "type": "manuscript",
+  "note": "“The Millennial Era, as Taught by William W. Davies.” Typescript, 6 leaves, undated; author unknown. A summary of Davies’s teachings, held by the Church History Library (M294.8 M646) in its “History of the Pacific Coast” collection. New",
+  "keyword": "Articles and papers",
+  "title": "The Millennial Era, as Taught by William W. Davies",
+  "publisher": "Church History Library (M294.8 M646)"
  },
  {
   "id": "quinnndwhom",
@@ -1531,7 +1581,7 @@
  {
   "id": "zbaraschuk1989fall",
   "type": "manuscript",
-  "note": "Zbaraschuk, Tony. “The Fall of the Standard: William W. Davies and the ‘Walla Walla Jesus.’” BA paper, Whitman College, May 23, 1989. 39 pp. Draws on the county’s microfilm of the 1880 case (no. 2373), Walla Walla newspapers of 1878–82 and Irma Miller’s typescript history of Davies (1982); its appendixes include Miller’s list of the people associated with the camp. Its annotated bibliography also describes two more suits against the Davieses, cases 3093 (1882) and 3260 (1883). PDF (Walla Walla 2020) New",
+  "note": "Zbaraschuk, Tony. “The Fall of the Standard: William W. Davies and the ‘Walla Walla Jesus.’” BA paper, Walla Walla College, May 23, 1989. 39 pp. The author thanks his thesis advisor, Dr. Terrell Gottschall of Walla Walla College; the Church History Library holds a copy (M294.8 Z39f 1989). Draws on the county’s microfilm of the 1880 case (no. 2373), Walla Walla newspapers of 1878–82 and Irma Miller’s typescript history of Davies (1982); its appendixes include Miller’s list of the people associated with the camp. Its annotated bibliography also describes two more suits against the Davieses, cases 3093 (1882) and 3260 (1883). PDF (Walla Walla 2020) New",
   "keyword": "Theses",
   "author": [
    {
@@ -1540,7 +1590,7 @@
    }
   ],
   "title": "The Fall of the Standard: William W. Davies and the ‘Walla Walla Jesus’",
-  "publisher": "Whitman College",
+  "publisher": "Walla Walla College",
   "URL": "https://ww2020.net/wp-content/uploads/W.W.-Davies-Zbarashuk.pdf",
   "issued": {
    "date-parts": [
