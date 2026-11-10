@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Download the data behind Morrisite.org as CSV files: the 1861–62 roll of membership with FamilySearch matches, birthplaces and later affiliations, documented whereabouts after 1862, family ties, and others named as Morrisites. With a sortable, filterable table of the roll.">
+<meta name="author" content="Eric Paul Rogers">
+<link rel="canonical" href="https://morrisite.org/data.html">
+<link rel="alternate" type="application/rss+xml" title="Morrisite.org: What&rsquo;s new" href="feed.xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Morrisite.org">
+<meta property="og:title" content="Data: The Morrisites and Their Records">
+<meta property="og:description" content="Download the data behind Morrisite.org as CSV files: the 1861–62 roll of membership with FamilySearch matches, birthplaces and later affiliations, documented whereabouts after 1862, family ties, and others named as Morrisites. With a sortable, filterable table of the roll.">
+<meta property="og:url" content="https://morrisite.org/data.html">
+<meta property="og:image" content="https://morrisite.org/mo-img-001-kington-fort-monument-800.jpg">
+<meta property="og:image:alt" content="The Kington Fort–Morrisite War Site monument in South Weber, Utah.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://morrisite.org/data.html#page",
+  "url": "https://morrisite.org/data.html",
+  "name": "Data: The Morrisites and Their Records",
+  "description": "Download the data behind Morrisite.org as CSV files: the 1861–62 roll of membership with FamilySearch matches, birthplaces and later affiliations, documented whereabouts after 1862, family ties, and others named as Morrisites. With a sortable, filterable table of the roll.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://morrisite.org/#website",
+    "url": "https://morrisite.org/",
+    "name": "Morrisite.org"
+  },
+  "editor": {
+    "@type": "Person",
+    "name": "Eric Paul Rogers",
+    "url": "https://www.ericpaulrogers.com"
+  }
+}
+</script>
+<title>Morrisite Data: Download the Roll, Whereabouts and Family Ties as CSV | Morrisite.org</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout: a finding aid. The site is arranged in numbered series, like an archival collection guide. */
+  --paper: #eceee8;
+  --panel: #f6f7f3;
+  --ink: #1c2320;
+  --muted: #59645e;
+  --rule: #c5cbc2;
+  --accent: #2c5a70;
+  --font-display: "IM Fell English", "Iowan Old Style", Georgia, serif;
+  --font-sc: "IM Fell English SC", "IM Fell English", Georgia, serif;
+  --font-body: "Literata", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #131917;
+    --panel: #1a2220;
+    --ink: #e2e6df;
+    --muted: #9aa69f;
+    --rule: #34403b;
+    --accent: #8db6c9;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #131917;
+  --panel: #1a2220;
+  --ink: #e2e6df;
+  --muted: #9aa69f;
+  --rule: #34403b;
+  --accent: #8db6c9;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { text-wrap: balance; font-weight: 400; }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* Masthead */
+.mast {
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 0;
+}
+.mast .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; justify-content: space-between; }
+.mast .mark { font-family: var(--font-sc); font-size: 20px; letter-spacing: 0.04em; color: var(--ink); text-decoration: none; }
+.mast nav { display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; }
+.mast nav.util { font-size: 11px; gap: 4px 14px; }
+.mast nav.main { flex-basis: 100%; font-size: 13.5px; gap: 6px 26px; padding-top: 6px; }
+.subnav { display: flex; flex-wrap: wrap; gap: 4px 6px; margin: -6px 0 8px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; }
+.subnav a { color: var(--muted); text-decoration: none; padding: 6px 12px 8px; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.subnav a:hover { color: var(--accent); }
+.subnav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
+.mast nav a { color: var(--muted); text-decoration: none; }
+.mast nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero { padding: 56px 0 40px; display: grid; gap: 20px; }
+.hero .label {
+  font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 7vw, 76px);
+  line-height: 1.02;
+  margin: 0;
+  max-width: 14ch;
+}
+.hero h1 em { color: var(--accent); }
+.hero .lede { max-width: 62ch; font-size: 19px; margin: 0; }
+.notice {
+  max-width: 62ch;
+  border-left: 3px solid var(--accent);
+  padding: 6px 0 6px 14px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Series sections */
+section.series { border-top: 1px solid var(--rule); padding: 40px 0 44px; }
+.series-head { display: grid; grid-template-columns: 150px 1fr; gap: 8px 28px; align-items: baseline; margin-bottom: 22px; }
+.series-no { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.series-head h2, .series-head h1 { font-family: var(--font-display); font-size: 36px; line-height: 1.1; margin: 0; }
+.series-head h1 { font-size: clamp(34px, 5vw, 44px); }
+.home-latest { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.home-latest li { display: grid; grid-template-columns: 90px 1fr; gap: 12px; }
+.home-latest .date { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); padding-top: 3px; }
+.home-begin { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
+.home-begin li { border: 1px solid var(--rule); border-radius: 4px; padding: 14px 16px; }
+.home-begin a { font-family: var(--font-display); font-size: 21px; }
+.home-begin p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+.person-chip { font-family: var(--font-mono); font-size: 11px; letter-spacing: .03em; border: 1px solid var(--ink); color: var(--ink); border-radius: 3px; padding: 0 5px; margin-left: 4px; text-decoration: none; white-space: nowrap; }
+.person-chip:hover, .person-chip:focus-visible { background: var(--ink); color: var(--paper); }
+.person-facts { display: grid; grid-template-columns: 170px 1fr; gap: 6px 20px; margin: 0 0 26px; max-width: 760px; }
+.person-facts dt { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.person-facts dd { margin: 0; }
+.person-body { max-width: 68ch; }
+.person-body h2 { font-family: var(--font-display); font-size: 26px; margin: 30px 0 10px; }
+.person-body .chron { margin-top: 6px; }
+.cite-box { border-left: 3px solid var(--accent); padding: 6px 0 6px 14px; color: var(--muted); font-size: 15px; }
+.page-meta { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); margin-top: 28px; }
+@media (max-width: 640px) { .person-facts { grid-template-columns: 1fr; gap: 2px; } .person-facts dd { margin-bottom: 10px; } .home-latest li { grid-template-columns: 1fr; gap: 0; } }
+.series-head p { grid-column: 2; margin: 0; color: var(--muted); max-width: 62ch; }
+.series-body { margin-left: 178px; }
+@media (max-width: 720px) {
+  .series-head { grid-template-columns: 1fr; }
+  .series-head p { grid-column: 1; }
+  .series-body { margin-left: 0; }
+}
+
+/* Chronology */
+ol.chron { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+ol.chron li { display: grid; grid-template-columns: 112px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px dotted var(--rule); }
+ol.chron li:last-child { border-bottom: 0; }
+.date { font-family: var(--font-mono); font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 3px; }
+@media (max-width: 460px) { ol.chron li { grid-template-columns: 1fr; gap: 2px; } }
+
+/* Places */
+.places { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.place { background: var(--panel); border: 1px solid var(--rule); padding: 16px 18px; display: grid; gap: 6px; align-content: start; }
+.place h3 { font-family: var(--font-display); font-size: 22px; margin: 0; line-height: 1.2; }
+.place .where { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); letter-spacing: 0.03em; }
+.place p { margin: 0; font-size: 15.5px; }
+
+
+/* Lineage diagram */
+.lineage { margin: 0 0 28px; background: var(--panel); border: 1px solid var(--rule); padding: 16px 18px 12px; }
+.lineage h3 { font-family: var(--font-display); font-size: 22px; margin: 0 0 4px; }
+.lineage > p { margin: 0 0 10px; color: var(--muted); font-size: 15px; max-width: 62ch; }
+.lineage { overflow-x: auto; }
+.lineage svg { width: 100%; height: auto; display: block; }
+@media (max-width: 640px) { .lineage svg { min-width: 620px; } }
+.lineage .nd rect { fill: var(--paper); stroke: var(--ink); stroke-width: 1.2; }
+.lineage .nd.later rect { stroke: var(--accent); stroke-dasharray: 5 4; }
+.lineage .nd.end rect { stroke: var(--muted); }
+.lineage text { fill: var(--ink); font-family: var(--font-body); font-size: 13px; }
+.lineage text.t { font-weight: 600; font-size: 13.5px; }
+.lineage text.d { font-family: var(--font-mono); font-size: 11px; fill: var(--muted); }
+.lineage .ln { stroke: var(--ink); stroke-width: 1.2; fill: none; }
+.lineage .ln.later { stroke: var(--accent); stroke-dasharray: 5 4; }
+.lineage .lin-key { font-family: var(--font-mono); font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+/* Place access */
+.place .access { font-size: 14.5px; border-top: 1px dotted var(--rule); padding-top: 6px; margin-top: 2px; }
+.place .access b { font-family: var(--font-mono); font-size: 11.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); margin-right: 4px; }
+/* About */
+.about { display: grid; gap: 18px; max-width: 70ch; }
+.about h3 { font-family: var(--font-display); font-size: 22px; margin: 0 0 4px; }
+.about p { margin: 0 0 8px; }
+.about ul { margin: 0; padding-left: 1.2em; }
+.about li { margin-bottom: 6px; }
+.about .cite-this { font-family: var(--font-body); background: var(--panel); border: 1px solid var(--rule); padding: 10px 14px; }
+
+
+/* Transcriptions */
+.transcript { margin: 4px 0 26px; border: 1px solid var(--rule); background: var(--panel); }
+.transcript summary { cursor: pointer; padding: 12px 16px; font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.03em; color: var(--accent); }
+.transcript .tx { padding: 4px 18px 6px; font-family: var(--font-body); font-size: 14.5px; letter-spacing: 0.02em; line-height: 1.6; max-width: 78ch; }
+.transcript .tx p { margin: 0 0 10px; text-indent: 2em; }
+.transcript .tx p.tx-head, .transcript .tx p.tx-names { text-indent: 0; text-align: center; font-weight: 600; }
+.transcript .tx-note { margin: 0; padding: 10px 18px 14px; color: var(--muted); font-size: 14px; border-top: 1px dotted var(--rule); }
+
+/* Repositories: styled like finding-aid entries */
+.aff-who { list-style: none; padding: 0; margin: .5em 0; } .aff-who li { margin: 0 0 .6em; line-height: 1.6; } .aff-name { background: none; border: 0; padding: 0; font: inherit; color: var(--accent); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; } .aff-prob { font-size: .85em; color: var(--muted, #666); } .aff-who-note { font-size: .85em; margin: 0; } .roll-families { max-width: 44em; margin: -0.8em 0 1.6em; } .fam-places { font-size: .85em; color: var(--muted, #666); } .fam-list li { margin-bottom: .9em; }
+.roll-status { border-left: 3px solid var(--accent); padding-left: 10px; }
+.roll-key { max-width: 60em; margin: 0 0 1.2em; }
+.roll-key .aff-key { margin: 0 4px 0 2px; }
+#roll-about { margin-top: 2.5em; }
+.pn-btn { font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: .03em; border: 1px solid var(--accent); color: var(--accent); background: transparent; border-radius: 3px; padding: 0 5px; margin-left: 4px; cursor: pointer; vertical-align: 1px; line-height: 1.5; }
+.pn-btn:hover, .pn-btn:focus-visible { background: var(--accent); color: var(--paper); }
+dialog.pn { max-width: 36em; width: calc(100% - 32px); max-height: calc(100% - 48px); border: 1px solid var(--rule); background: var(--panel); color: var(--ink); padding: 22px 24px 18px; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,.25); }
+dialog.pn::backdrop { background: rgba(20,25,23,.45); }
+.pn h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; margin: 0 2em 4px 0; }
+.pn .pn-meta { font-family: var(--font-mono); font-size: 12px; color: var(--muted); margin: 0 0 14px; letter-spacing: .02em; }
+.pn p { margin: 0 0 12px; line-height: 1.55; }
+.pn dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
+.pn dd { margin: 3px 0 0; }
+.pn ul { margin: 3px 0 0; padding-left: 1.1em; }
+.pn .pn-close { position: absolute; top: 10px; right: 12px; border: 0; background: transparent; font-size: 24px; line-height: 1; color: var(--muted); cursor: pointer; }
+.pn .pn-link { border: 0; background: none; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; font: inherit; }
+.pn .pn-foot { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); margin-top: 16px; padding-top: 10px; }
+.roll-paths { max-width: 44em; margin: 0 0 1.6em; }
+.roll-paths-head { font-size: 1.05rem; margin: 0 0 .5em; }
+.roll-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 18px 0 8px; }
+.roll-tools input { font: inherit; padding: 6px 10px; border: 1px solid var(--rule); background: var(--panel); min-width: 220px; }
+.roll-tools #roll-count { color: var(--muted); font-size: 14px; }
+.roll-letters { font-family: var(--font-sc); letter-spacing: .04em; word-spacing: .35em; }
+.roll-letter { font-family: var(--font-display); font-size: 22px; margin: 18px 0 6px; border-bottom: 1px solid var(--rule); }
+.roll-list { columns: 3 13em; column-gap: 24px; list-style: none; padding: 0; margin: 0 0 8px; }
+.roll-list li { break-inside: avoid; padding: 1px 0; }
+.bail-chip { font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: .02em; white-space: nowrap; padding: 0 5px; border: 1px solid var(--rule); border-radius: 3px; color: inherit; text-decoration: none; }
+.held-chip { font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: .02em; white-space: nowrap; padding: 0 5px; border: 1px dashed var(--accent); border-radius: 3px; color: var(--accent); text-decoration: none; }
+.fs-link { font-family: var(--font-mono, monospace); font-size: 12px; letter-spacing: .02em; white-space: nowrap; }
+.fs-probable { color: var(--muted); }
+.aff { margin: 6px 0 4px; }
+.aff-row { display: grid; grid-template-columns: 13em 1fr; gap: 10px; align-items: center; margin: 8px 0; }
+.aff-rowlab { font-size: 14px; color: var(--muted); }
+.aff-bar { display: flex; gap: 2px; height: 22px; }
+.aff-seg { border-radius: 4px; min-width: 6px; border: 0; padding: 0; cursor: help; }
+.aff-legend { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.aff-key { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: 0; }
+.aff-dot { display: inline-block; width: 18px; height: 18px; margin: 0 2px 0 -5px; padding: 0; border: 0; background: transparent; cursor: help; vertical-align: -3px; position: relative; }
+.aff-dot::before { content: ""; position: absolute; left: 5px; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+.aff-dot:hover::before, .aff-dot:focus-visible::before { box-shadow: 0 0 0 2px var(--panel), 0 0 0 3px var(--c); }
+.aff-tip { position: absolute; z-index: 50; max-width: 320px; padding: 8px 10px; background: var(--ink); color: var(--paper); font-size: 13px; line-height: 1.4; border-radius: 4px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.aff-detail { margin-top: 8px; font-size: 14px; }
+.doc-text { margin: 4px 0; padding: 10px 14px; border-left: 3px solid var(--rule); background: var(--paper); font-size: 15px; line-height: 1.55; }
+.doc-text p { margin: 0 0 .6em; }
+.doc-text p:last-child { margin-bottom: 0; }
+.dem-grid { display: block; }
+.dem-set[hidden] { display: none; }
+.dem-set { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px 32px; }
+.dem-block { margin: 6px 0 14px; }
+.dem-block h4 { font-family: var(--font-display); font-size: 18px; margin: 0 0 8px; font-weight: normal; }
+.dem-note { font-size: 13px; color: var(--muted); margin: 6px 0 0; line-height: 1.45; }
+.dem-cov { font-size: 15px; color: var(--ink); background: var(--panel); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 0 0 12px; }
+.dem-toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; margin: 0 0 14px; cursor: pointer; }
+.dem-row { display: grid; grid-template-columns: 11em 1fr; gap: 10px; align-items: center; margin: 5px 0; font-size: 14px; }
+.dem-lab { color: var(--ink); }
+.dem-track { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.dem-bar { display: inline-block; height: 16px; min-width: 3px; border-radius: 0 4px 4px 0; cursor: help; }
+.dem-n { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pyr-row { display: grid; grid-template-columns: 1fr 3.6em 1fr; gap: 6px; align-items: center; margin: 3px 0; font-size: 13px; }
+.pyr-head { color: var(--muted); margin-bottom: 6px; }
+.pyr-lab { text-align: center; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pyr-side { display: flex; align-items: center; gap: 6px; }
+.pyr-l { justify-content: flex-end; }
+.pyr-l .dem-bar { border-radius: 4px 0 0 4px; }
+.dem-tablewrap { overflow-x: auto; }
+.dem-table { border-collapse: collapse; font-size: 13px; margin-top: 8px; min-width: 640px; }
+.dem-table th, .dem-table td { text-align: left; padding: 3px 10px 3px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.dem-table th { font-weight: 600; color: var(--muted); }
+@media (max-width: 600px) { .dem-row { grid-template-columns: 8em 1fr; } }
+@media (max-width: 600px) { .aff-row { grid-template-columns: 1fr; gap: 4px; } }
+
+.roll-notes li, .roll-officers li { font-size: 15px; }
+.repo { border: 1px solid var(--rule); background: var(--panel); margin-bottom: 14px; }
+.repo-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding: 14px 18px; border-bottom: 1px solid var(--rule); }
+.repo-top h3 { font-family: var(--font-display); font-size: 22px; margin: 0; line-height: 1.2; }
+.callno { font-family: var(--font-mono); font-size: 12.5px; color: var(--accent); align-self: center; }
+.repo dl { margin: 0; padding: 12px 18px 16px; display: grid; grid-template-columns: 110px 1fr; gap: 6px 16px; font-size: 15.5px; }
+.repo dt { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); padding-top: 3px; }
+.repo dd { margin: 0; }
+@media (max-width: 460px) { .repo dl { grid-template-columns: 1fr; gap: 0 0; } .repo dd { margin-bottom: 8px; } }
+
+/* Data page */
+.data-cols { display: grid; grid-template-columns: minmax(120px, max-content) 1fr; gap: 4px 14px; margin: 0; padding: 0 !important; font-size: 14.5px !important; }
+.data-cols dt { text-transform: none !important; letter-spacing: 0 !important; padding-top: 1px; }
+.data-cols code { font-family: var(--font-mono); font-size: 12.5px; color: var(--ink); }
+@media (max-width: 460px) { .data-cols { grid-template-columns: 1fr; } }
+.dt-controls { display: flex; flex-wrap: wrap; gap: 10px 16px; margin: 0 0 10px; }
+.dt-controls label { display: flex; flex-direction: column; gap: 3px; font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.dt-controls input, .dt-controls select { font: inherit; font-family: var(--font-body); font-size: 15px; text-transform: none; letter-spacing: 0; color: var(--ink); background: var(--panel); border: 1px solid var(--rule); padding: 5px 8px; min-height: 36px; }
+.dt-status { font-size: 14.5px; display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.dt-status button { font: inherit; font-size: 14px; color: var(--accent); background: var(--panel); border: 1px solid var(--rule); padding: 4px 10px; cursor: pointer; min-height: 32px; }
+.dt-wrap { overflow-x: auto; max-height: 75vh; border: 1px solid var(--rule); background: var(--panel); }
+table.dt { border-collapse: collapse; width: 100%; font-size: 14px; }
+table.dt th, table.dt td { padding: 5px 10px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+table.dt tbody th { font-weight: normal; white-space: nowrap; }
+table.dt thead th { position: sticky; top: 0; background: var(--panel); z-index: 1; border-bottom: 2px solid var(--rule); padding: 0; }
+table.dt thead button { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); background: none; border: 0; padding: 8px 10px; cursor: pointer; text-align: left; width: 100%; white-space: nowrap; }
+table.dt th[aria-sort="ascending"] button::after { content: " \25B2"; }
+table.dt th[aria-sort="descending"] button::after { content: " \25BC"; }
+
+/* Bibliography */
+.biblio h3 { font-family: var(--font-sc); font-size: 18px; letter-spacing: 0.04em; color: var(--muted); margin: 26px 0 8px; }
+.biblio h3:first-child { margin-top: 0; }
+ul.cites { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+ul.cites li { padding-left: 2em; text-indent: -2em; max-width: 68ch; }
+.np-fig { margin: 18px 0 26px; max-width: 760px; }
+.np-chart-h { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 8px; }
+ul.np-chart { list-style: none; margin: 0; padding: 0; }
+.np-row { display: grid; grid-template-columns: 250px 1fr; align-items: center; gap: 12px; padding: 5px 6px; text-decoration: none; color: var(--ink); border-radius: 3px; }
+.np-row:hover, .np-row:focus-visible { background: var(--panel); }
+.np-row:hover .np-lab, .np-row:focus-visible .np-lab { color: var(--accent); text-decoration: underline; }
+.np-lab { font-size: 15px; line-height: 1.25; }
+.np-per, .np-n { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); }
+.np-per { display: block; }
+.np-track { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.np-fill { display: block; height: 20px; min-width: 2px; background: var(--accent); border-radius: 2px; flex: none; }
+.np-val { font-family: var(--font-mono); font-size: 13px; white-space: nowrap; }
+.np-n { white-space: nowrap; }
+.np-val + .np-n::before { content: "\00b7  "; }
+@media (max-width: 600px) {
+  .np-row { grid-template-columns: 1fr; gap: 3px; }
+  .np-per { display: inline; margin-left: 4px; }
+  .np-track { flex-wrap: wrap; row-gap: 2px; }
+  .np-n { flex-basis: 100%; }
+  .np-val + .np-n::before { content: none; }
+}
+.np-chart-h2 { margin-top: 26px; }
+.np-tl { margin-top: 6px; }
+.np-tl-plot { position: relative; height: 190px; margin-top: 22px; display: flex; align-items: stretch; border-bottom: 1px solid var(--ink); }
+.np-yr { flex: 1 1 0; min-width: 0; display: block; background: linear-gradient(to top, var(--accent) 0, var(--accent) var(--r), var(--rule) var(--r), var(--rule) var(--a), transparent var(--a)); }
+.np-yr:hover, .np-yr:focus-visible { background: linear-gradient(to top, var(--ink) 0, var(--ink) var(--r), var(--muted) var(--r), var(--muted) var(--a), var(--panel) var(--a)); outline: none; }
+.np-chart-sub { font-size: 14.5px; color: var(--muted); max-width: 68ch; margin: 0 0 10px; }
+.np-tl-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.np-tl-tog { font-family: var(--font-mono); font-size: 12px; padding: 6px 10px; border: 1px solid var(--accent); background: transparent; color: var(--accent); border-radius: 3px; cursor: pointer; }
+.np-tl-tog[aria-pressed="true"] { background: var(--accent); color: var(--paper); }
+.np-tl-read { font-family: var(--font-mono); font-size: 12.5px; color: var(--ink); margin: 0; min-height: 1.4em; flex: 1 1 18em; }
+.np-tl-plot { touch-action: pan-y; }
+.np-tl.rel .np-yr { background: linear-gradient(to top, var(--accent) 0, var(--accent) var(--r2), transparent var(--r2)); }
+.np-tl.rel .np-yr:hover, .np-tl.rel .np-yr:focus-visible { background: linear-gradient(to top, var(--ink) 0, var(--ink) var(--r2), var(--panel) var(--r2)); }
+.np-yr.np-sel { background: linear-gradient(to top, var(--ink) 0, var(--ink) var(--r), var(--muted) var(--r), var(--muted) var(--a), var(--panel) var(--a)); }
+.np-tl.rel .np-yr.np-sel { background: linear-gradient(to top, var(--ink) 0, var(--ink) var(--r2), var(--panel) var(--r2)); }
+.np-mk { display: inline-flex; align-items: center; justify-content: center; width: 17px; height: 17px; border-radius: 50%; background: var(--accent); color: var(--paper); font-family: var(--font-mono); font-size: 10.5px; line-height: 1; }
+.np-mk.np-mk-un { background: var(--paper); color: var(--muted); border: 1px solid var(--muted); }
+.np-tl-plot .np-mk { position: absolute; bottom: calc(var(--ba) + 4px); transform: translateX(-50%); pointer-events: none; }
+.np-tl.rel .np-tl-plot .np-mk { bottom: calc(var(--br) + 4px); }
+.np-tl.rel .np-tl-plot .np-mk-un, .np-tl.rel .np-mk-key .np-key-un, .np-tl.rel .np-key-only { display: none; }
+ol.np-mk-key { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 4px; font-size: 14px; }
+ol.np-mk-key li { display: flex; gap: 8px; align-items: baseline; }
+ol.np-mk-key .np-mk { flex: none; transform: translateY(3px); }
+.np-key-un { color: var(--muted); }
+.np-back { font-family: var(--font-mono); font-size: 12px; margin: 4px 0 18px; }
+.np-back a { color: var(--muted); }
+.biblio h3[id^="np-"]:target { animation: np-flash 2.4s ease-out; }
+@keyframes np-flash { 0%, 30% { background: color-mix(in srgb, var(--accent) 22%, transparent); } 100% { background: transparent; } }
+.np-table { margin-top: 14px; font-size: 14px; }
+.np-table summary { cursor: pointer; font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+.np-table table { border-collapse: collapse; margin: 10px 0 14px; width: 100%; max-width: 640px; }
+.np-table caption { text-align: left; font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); padding-bottom: 4px; }
+.np-table th, .np-table td { text-align: left; padding: 3px 8px; border-bottom: 1px solid var(--rule); font-weight: normal; }
+.np-table td { font-family: var(--font-mono); font-size: 12.5px; text-align: right; }
+.np-table thead th { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+.np-tl-ticks { position: relative; height: 18px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+.np-tl-ticks span { position: absolute; top: 2px; transform: translateX(-50%); }
+.np-tl-ticks span:first-child { transform: none; }
+.np-tl-bands { display: flex; margin-top: 4px; }
+.np-band { display: block; height: 26px; border-left: 1px solid var(--paper); background: var(--panel); color: var(--muted); font-family: var(--font-mono); font-size: 11px; text-decoration: none; overflow: hidden; }
+.np-band:nth-child(even) { background: var(--rule); }
+.np-band span { display: block; padding: 5px 4px; white-space: nowrap; overflow: hidden; }
+.np-band:hover, .np-band:focus-visible { background: var(--accent); color: var(--paper); }
+.np-tl-key { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); margin: 8px 0 0; }
+.np-key-r, .np-key-a { display: inline-block; width: 12px; height: 12px; vertical-align: -1px; margin-right: 4px; }
+.np-key-r { background: var(--accent); }
+.np-key-a { background: var(--rule); }
+@media (max-width: 600px) {
+  .np-tl-plot { height: 150px; }
+    .np-tl-ticks span:nth-child(even) { display: none; }
+  .np-band span { font-size: 10px; padding: 6px 2px; }
+}
+.np-chart-note { font-size: 14px; color: var(--muted); max-width: 68ch; margin-top: 6px; }
+.ln-fig { margin: 28px 0 30px; }
+.ln-fig > p { max-width: 70ch; }
+.ln-read { font-family: var(--font-mono); font-size: 12.5px; min-height: 1.4em; margin: 6px 0; }
+.ln-wrap { overflow-x: auto; }
+.ln-svg { width: 100%; min-width: 760px; height: auto; display: block; }
+.ln-grid { stroke: var(--rule); stroke-width: 1; }
+.ln-tick { font-family: var(--font-mono); font-size: 11px; fill: var(--muted); }
+.ln-lab { font-family: var(--font-body); font-size: 14px; fill: var(--ink); }
+.ln-sub { font-family: var(--font-mono); font-size: 10px; fill: var(--muted); }
+.ln-hit { fill: transparent; }
+.ln-seg { fill: var(--accent); }
+.ln-apx { opacity: .45; }
+.ln-f0 { stop-color: var(--accent); stop-opacity: .45; }
+.ln-f1 { stop-color: var(--accent); stop-opacity: 0; }
+.ln-band { fill: var(--muted); opacity: .35; }
+.ln-segt { font-family: var(--font-mono); font-size: 10.5px; fill: var(--paper); pointer-events: none; }
+.ln-link { stroke: var(--ink); stroke-width: 1.2; fill: none; }
+.ln-arrh { fill: var(--ink); }
+.ln-cursor { stroke: var(--ink); stroke-dasharray: 3 3; display: none; pointer-events: none; }
+.ln-lane:hover .ln-hit, .ln-lane:focus-visible .ln-hit { fill: var(--panel); }
+.ln-lane:hover .ln-lab, .ln-lane:focus-visible .ln-lab { fill: var(--accent); text-decoration: underline; }
+.ln-lane:focus { outline: none; }
+.ln-list { margin-top: 10px; font-size: 14.5px; }
+.ln-list summary { cursor: pointer; font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+.ln-list ul { margin: 8px 0 0; padding-left: 1.1em; display: grid; gap: 6px; max-width: 72ch; }
+.ln-yrs { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.np-key, .np-intro { max-width: 68ch; }
+.np-toc ul { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; }
+.np-sub { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted, #666); }
+ul.np-reprints { list-style: none; margin: 6px 0 0; padding: 0 0 0 1.2em; border-left: 2px solid var(--rule, #ddd); display: grid; gap: 4px; font-size: 0.95em; text-indent: 0; }
+ul.np-reprints li { padding-left: 1.5em; text-indent: -1.5em; }
+ul.np-reprints .np-rep-head { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); padding-left: 0; text-indent: 0; }
+.tag { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); border: 1px solid var(--accent); padding: 0 6px; margin-left: 6px; white-space: nowrap; text-indent: 0; display: inline-block; }
+
+
+/* Essential works */
+.essentials { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+.key { background: var(--panel); border: 1px solid var(--rule); border-top: 4px solid var(--accent); padding: 20px 22px; display: grid; gap: 10px; align-content: start; }
+.key .kind { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+.key h3 { font-family: var(--font-display); font-size: 28px; line-height: 1.1; margin: 0; }
+.key p { margin: 0; font-size: 15.5px; }
+.key ol { margin: 0; padding-left: 1.2em; font-size: 15.5px; display: grid; gap: 4px; }
+.key .yr { font-family: var(--font-mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Contribute */
+.contrib { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.contrib h3 { font-family: var(--font-display); font-size: 22px; margin: 0 0 6px; }
+.contrib p { margin: 0; }
+
+/* Photographs */
+.place figure { margin: -16px -18px 6px; }
+.place figure img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-bottom: 1px solid var(--rule); }
+.place figcaption { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); padding: 6px 18px 0; letter-spacing: 0.02em; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
+.gallery figure { margin: 0; background: var(--panel); border: 1px solid var(--rule); display: grid; align-content: start; }
+.gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.gallery figcaption { padding: 10px 12px 12px; font-size: 14.5px; line-height: 1.45; display: grid; gap: 4px; }
+.gallery .itemno { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.06em; color: var(--accent); }
+.gallery .meta { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); }
+.gallery-head { font-family: var(--font-sc); font-size: 18px; letter-spacing: 0.04em; color: var(--muted); margin: 30px 0 4px; }
+.gallery-sub { margin: 0 0 14px; max-width: 62ch; font-size: 15px; color: var(--muted); }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 30px 0 6px; }
+.compare figure { margin: 0; }
+.compare img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--rule); }
+.compare figcaption { font-family: var(--font-mono); font-size: 12px; color: var(--muted); padding-top: 6px; }
+@media (max-width: 460px) { .compare { grid-template-columns: 1fr; } }
+.photo-note { margin: 18px 0 0; max-width: 62ch; color: var(--muted); font-size: 15px; }
+.crumb { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.03em; color: var(--muted); margin: 26px 0 18px; }
+.crumb a { color: inherit; }
+.mast nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+
+footer { border-top: 1px solid var(--rule); padding: 28px 0 48px; color: var(--muted); font-size: 14.5px; }
+footer .wrap { display: grid; gap: 8px; }
+
+/* Site search, contents lists, name index (Nov 2026) */
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.site-search { position: relative; margin-left: auto; }
+.site-search input { font: inherit; font-size: 13px; width: 250px; max-width: 70vw; padding: 5px 10px; border: 1px solid var(--rule); border-radius: 3px; background: var(--panel, #fff); color: var(--ink); }
+.site-search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.site-results { position: absolute; right: 0; top: calc(100% + 4px); z-index: 50; width: min(560px, 92vw); max-height: 70vh; overflow-y: auto; background: var(--paper); border: 1px solid var(--rule); box-shadow: 0 6px 24px rgba(0,0,0,.18); padding: 6px 0; font-size: 14px; }
+.site-results a { display: block; padding: 7px 14px; text-decoration: none; color: var(--ink); border-left: 3px solid transparent; }
+.site-results a:hover, .site-results a[aria-selected="true"] { background: var(--panel, rgba(0,0,0,.04)); border-left-color: var(--accent); }
+.site-results .sr-kind { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-right: 6px; }
+.site-results .sr-title { font-weight: 600; }
+.site-results .sr-snip { display: block; color: var(--muted); font-size: 12.5px; line-height: 1.45; margin-top: 2px; }
+.site-results .sr-snip b { color: var(--ink); }
+.site-results .sr-none { padding: 8px 14px; color: var(--muted); }
+.site-results .sr-more { padding: 6px 14px 2px; color: var(--muted); font-size: 12px; }
+@media (max-width: 640px) { .site-search { flex-basis: 100%; } .site-search input { width: 100%; max-width: none; } .site-results { left: 0; right: auto; } }
+.toc { margin: 0 0 22px; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--panel, transparent); font-size: 14px; }
+.toc b { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: normal; margin-right: 8px; }
+.toc a { margin-right: 14px; white-space: nowrap; display: inline-block; }
+@media (max-width: 520px) { .toc a { white-space: normal; } }
+.ni-letters { font-family: var(--font-mono); font-size: 14px; margin: 0 0 14px; display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.ni-list { list-style: none; padding: 0; margin: 0 0 18px; columns: 2 300px; column-gap: 32px; }
+.ni-list li { break-inside: avoid; margin: 0 0 6px; line-height: 1.45; font-size: 14.5px; }
+.ni-list .ni-links { font-size: 12.5px; color: var(--muted); }
+.ni-list .ni-links a { margin-right: 6px; }
+.ancestor-steps { margin: 0; padding-left: 1.3em; }
+.ancestor-steps li { margin: 0 0 8px; }
+
+/* Place pages, map, glossary, filters, anchors, back to top (Nov 2026) */
+.pmap-wrap { margin: 0 0 10px; }
+.pmap-hasinsets { position: relative; }
+.pinset { position: absolute; z-index: 5; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 6px 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18); pointer-events: none; opacity: 0; visibility: hidden; transform: scale(.25);
+  transition: opacity .22s ease, transform .28s cubic-bezier(.2,.8,.3,1.15), visibility .28s; }
+.pinset svg { width: 100%; height: auto; max-height: 300px; display: block; border-radius: 3px; }
+.pinset-grid line { stroke: var(--rule); stroke-width: 1; vector-effect: non-scaling-stroke; opacity: .55; }
+.pinset .vmap-twp { opacity: 0; }
+.pinset .vmap-pl { paint-order: stroke; stroke: var(--panel); stroke-width: 4px; stroke-linejoin: round; }
+.pinset .vmap-rl { opacity: .75; }
+.pinset .vmap-tl { display: none; }
+.pinset-h { font-family: var(--font-sc); font-size: 13px; color: var(--ink); margin: 0 2px 4px; }
+.pinset-f { font-family: var(--font-mono); font-size: 10px; letter-spacing: .05em; color: var(--muted); margin: 4px 2px 0; text-transform: uppercase; display: flex; justify-content: space-between; }
+@media (prefers-reduced-motion: reduce) { .pinset { transition: opacity .15s; transform: none !important; } }
+@media (hover: none) { .pinset { display: none; } }
+.vmap-twp { fill: none; stroke: var(--rule); stroke-width: 1; stroke-dasharray: 3 3; }
+.vmap-tl { font-family: var(--font-mono); font-size: 9px; fill: var(--muted); opacity: .6; text-anchor: middle; }
+.vmap-ref { fill: var(--muted); opacity: .6; }
+.vmap-rl { font-size: 11px; fill: var(--muted); paint-order: stroke; stroke: var(--panel); stroke-width: 3px; }
+.vmap-tr { fill: var(--accent); opacity: .45; stroke: var(--accent); stroke-width: 1; }
+.vmap-road { stroke: var(--rule); stroke-width: 6; stroke-linecap: round; }
+.vmap-fort { fill: none; stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 6 4; }
+.vmap-tract { fill: var(--accent); fill-opacity: .25; stroke: var(--accent); stroke-width: 1.5; }
+.pmap-pt.vmap-approx { fill: var(--panel); stroke: var(--accent); stroke-width: 2.5; }
+.vmap-pl { font-size: 12px; }
+.vmap-scale line { stroke: var(--ink); stroke-width: 2; } .vmap-scale text { font-size: 10px; fill: var(--muted); }
+.vmap-list li { margin-bottom: 12px; }
+.vmap-tracts { margin: 4px 0 2px 18px; font-size: .9em; }
+.vmap-badge { font-family: var(--font-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; border: 1px solid var(--rule); border-radius: 3px; padding: 0 4px; color: var(--muted); }
+.vmap-located { border-color: var(--accent); color: var(--accent); }
+.vmap-osm { font-size: .85em; }
+.pmap { width: 100%; height: auto; display: block; }
+.pmap-bg { fill: var(--panel); }
+.pmap-st { fill: var(--paper); stroke: var(--rule); stroke-width: 1; }
+.pmap-sl { font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; fill: var(--muted); opacity: .7; text-anchor: middle; }
+.pmap-pt { fill: var(--accent); stroke: var(--paper); stroke-width: 2; }
+.pmap a:hover .pmap-pt, .pmap a:focus .pmap-pt { r: 9; }
+.pmap-pl { font-size: 14px; font-weight: 600; fill: var(--ink); paint-order: stroke; stroke: var(--paper); stroke-width: 4px; }
+.place-list li { margin-bottom: .9em; }
+.pthumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin: 6px 0 10px; }
+.pthumb { display: block; text-decoration: none; color: var(--muted); font-size: 12px; line-height: 1.35; }
+.pthumb img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; border: 1px solid var(--rule); margin-bottom: 4px; }
+.place-bib li { margin: 0 0 6px; font-size: 14.5px; }
+.place-people { line-height: 1.9; }
+.place-lead figure { margin: 0 0 14px; } .place-lead figure img { max-width: 100%; height: auto; }
+.place-lead .access b { margin-right: 8px; }
+.glossary dt { font-weight: 600; margin-top: 14px; }
+.glossary dd { margin: 2px 0 0; max-width: 68ch; }
+.anchor-link { opacity: 0; margin-left: 6px; font-family: var(--font-mono); font-size: .7em; text-decoration: none; color: var(--muted); }
+:hover > .anchor-link, .anchor-link:focus { opacity: 1; }
+.anchor-link.copied::after { content: " link copied"; font-size: 11px; }
+.to-top { position: fixed; right: 16px; bottom: 16px; z-index: 40; font-family: var(--font-mono); font-size: 12px; padding: 8px 12px; border: 1px solid var(--rule); background: var(--paper); color: var(--accent); text-decoration: none; border-radius: 3px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.filter-bar { margin: 0 0 16px; font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
+.filter-bar button { font: inherit; font-size: 13px; padding: 4px 10px; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); border-radius: 3px; cursor: pointer; }
+.filter-bar button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.yearbar { margin-top: 6px; }
+.page-cite { margin-top: 0; }
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--ink); color: var(--paper); padding: 8px 14px; font-family: var(--font-body); }
+.skip-link:focus { left: 8px; top: 8px; }
+</style>
+</head>
+<body><a class="skip-link" href="#top">Skip to content</a>
+
+<header class="mast">
+  <div class="wrap">
+    <a class="mark" href="index.html">Morrisite.org</a>
+    <nav class="util" aria-label="Site">
+      <a href="whats-new.html">What&rsquo;s new</a>
+      <a href="about.html#share">Share records</a>
+      <a href="about.html">About</a>
+    </nav>
+    <form class="site-search" role="search" action="names.html" onsubmit="return false">
+      <label for="site-q" class="vh">Search this site</label>
+      <input type="search" id="site-q" name="q" placeholder="Search names, places, records" autocomplete="off" aria-controls="site-results" aria-expanded="false">
+      <div id="site-results" class="site-results" role="listbox" hidden></div>
+    </form>
+    <nav class="main" aria-label="Sections">
+      <a href="index.html#brief">Start here</a>
+      <a href="history.html">History</a>
+      <a href="documents.html">Sources</a>
+      <a href="roll.html" aria-current="page">People</a>
+      <a href="images.html">Images</a>
+      <a href="questions.html">Questions</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap"><p class="crumb"><a href="index.html">Morrisite.org</a> &rsaquo; Data</p></div>
+  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="roll.html">Roll of membership</a><a href="people.html">Who they were</a><a href="names.html">Name index</a><a href="#top" aria-current="page">Data</a></nav></div>
+
+  <section class="series" id="data" aria-labelledby="h-data">
+    <div class="wrap">
+      <div class="series-head">
+        <div class="series-no">Data</div>
+        <h1 id="h-data">The guide&rsquo;s data</h1>
+        <p>The lists behind the roll, the person pages and the <a href="movements.html">Where they went</a> map, as files you can download and analyze yourself, and a table of the roll you can sort and filter here. For charts the guide has already drawn, see <a href="people.html#people">Who they were</a> and <a href="movements.html">Where they went</a>.</p>
+        <p><b>Before you count.</b> The roll is not a full list of members: its compiler wrote that many baptized were never recorded. Sex and name origin are judged from names alone. Family Tree matches are confident unless marked <i>probable</i>, and the facts drawn from Family Tree come from a shared, editable tree. A blank means &ldquo;not yet found,&rdquo; not &ldquo;none.&rdquo; Small numbers can mislead; say how a figure was reached when you use one.</p>
+        <p><b>Citing.</b> Morrisite.org, &ldquo;[file name],&rdquo; downloaded [date], https://morrisite.org/data.html. Corrections are welcome at <a href="mailto:contact@morrisite.org?subject=Morrisite.org%20data">contact@morrisite.org</a>.</p>
+      </div>
+      <div class="series-body">
+<h3 class="gallery-head" style="margin-top:0" id="downloads">Download the data</h3>
+<p>Each file is a plain CSV (comma-separated, UTF-8) that opens in Excel, Google Sheets, R or Python. The files are rebuilt with the site, so they always match what the pages say.</p>
+<div class="repo"><div class="repo-top"><h3>The roll of membership, 1861–62</h3><span class="callno">430 rows &middot; 35 KB</span></div><dl><dt>What it is</dt><dd>One row for each of the 430 names on the roll printed by George S. Dove &amp; Co. in 1886, with what the guide has added.</dd><dt>Download</dt><dd><a href="data/morrisite-roll-1861-62.csv" download>morrisite-roll-1861-62.csv</a></dd><dt>Columns</dt><dd><dl class="data-cols"><dt><code>roll_name</code></dt><dd>The name as printed on the roll. A repeated name takes its order on the roll in brackets, e.g. <i>Hanson, Rasmus [1]</i>.</dd><dt><code>sex_from_name</code></dt><dd>F or M, judged from the given name alone; blank if unclear.</dd><dt><code>name_origin</code></dt><dd>Scandinavian, English-language, German or Swiss, or Unclear, judged from the name alone. Not evidence of birthplace.</dd><dt><code>familysearch_id</code></dt><dd>The FamilySearch Family Tree person matched to this name, where a match has been made. Blank does not mean no match exists.</dd><dt><code>familytree_name</code></dt><dd>The name and dates in Family Tree.</dd><dt><code>born, birthplace, died, death_place</code></dt><dd>From Family Tree, as pulled on November 3, 2026. Family Tree is a shared, editable tree; check the sources attached there.</dd><dt><code>company, company_year</code></dt><dd>The pioneer company the person crossed the plains with, from the records attached in Family Tree.</dd><dt><code>later_affiliation</code></dt><dd>Where the person is known to have gone in religion after 1862. Blank means not yet known.</dd><dt><code>person_page</code></dt><dd>The guide&rsquo;s page for the person, if there is one.</dd></dl></dd></dl></div>
+<div class="repo"><div class="repo-top"><h3>Where they went</h3><span class="callno">324 rows &middot; 39 KB</span></div><dl><dt>What it is</dt><dd>Documented whereabouts of people on the roll after 1862: the data behind the <a href="movements.html">Where they went</a> map.</dd><dt>Download</dt><dd><a href="data/morrisite-whereabouts.csv" download>morrisite-whereabouts.csv</a></dd><dt>Columns</dt><dd><dl class="data-cols"><dt><code>roll_name</code></dt><dd>As on the roll.</dd><dt><code>year</code></dt><dd>The year of the record.</dd><dt><code>place</code></dt><dd>The place, as named on the map.</dd><dt><code>latitude, longitude</code></dt><dd>The map point for the place (approximate for towns and valleys).</dd><dt><code>certainty</code></dt><dd><i>sure</i>, or <i>probable</i> when the identification of the person is likely but not proven.</dd><dt><code>kind</code></dt><dd>census, list, testimony, patent, death or note.</dd><dt><code>source</code></dt><dd>Where the record is.</dd></dl></dd></dl></div>
+<div class="repo"><div class="repo-top"><h3>Family ties on the roll</h3><span class="callno">237 rows &middot; 29 KB</span></div><dl><dt>What it is</dt><dd>Parent, spouse and sibling relationships between people on the roll, mostly from Family Tree.</dd><dt>Download</dt><dd><a href="data/morrisite-relationships.csv" download>morrisite-relationships.csv</a></dd><dt>Columns</dt><dd><dl class="data-cols"><dt><code>person, relationship, other_person</code></dt><dd>Read as a sentence: <i>A</i> is the parent of / spouse of / sibling of <i>B</i>.</dd><dt><code>familysearch_id, other_familysearch_id</code></dt><dd>The Family Tree IDs of the two people.</dd><dt><code>source</code></dt><dd>Where the relationship comes from.</dd><dt><code>certainty</code></dt><dd><i>probable</i> if either person is a probable match.</dd><dt><code>note</code></dt><dd>Any qualification.</dd></dl></dd></dl></div>
+<div class="repo"><div class="repo-top"><h3>Others named as Morrisites</h3><span class="callno">41 rows &middot; 10 KB</span></div><dl><dt>What it is</dt><dd>People the sources name as Morrisites, or as followers of a later offshoot, who are not on the printed roll. Deceased people only.</dd><dt>Download</dt><dd><a href="data/morrisite-others-named.csv" download>morrisite-others-named.csv</a></dd><dt>Columns</dt><dd><dl class="data-cols"><dt><code>name</code></dt><dd>Surname first.</dd><dt><code>group</code></dt><dd>morris (Morris&rsquo;s church), kington (held or tried after the siege), montana (the Deer Lodge church), or davies (the Walla Walla community).</dd><dt><code>earlier</code></dt><dd><i>earlier</i> if known or said to have been with the Morrisites before joining Davies.</dd><dt><code>dates</code></dt><dd>As known.</dd><dt><code>what_the_sources_say</code></dt><dd>The guide&rsquo;s summary.</dd><dt><code>source</code></dt><dd>The citation.</dd><dt><code>certainty</code></dt><dd><i>probable</i> when the identification or membership is uncertain.</dd></dl></dd></dl></div>
+<h3 class="gallery-head" id="explore">Explore the roll</h3><p>Sort by any column, or narrow the list with the filters. Each name links to its place on the roll, or to the person&rsquo;s own page where there is one. The rows you see can be downloaded as a CSV.</p>
+<div class="dt-controls"><label>Name or place <input type="search" id="dt-q" placeholder="e.g. Hanson, Denmark, Soda"></label><label>Name origin <select id="dt-origin"><option value="">All</option><option>Scandinavian</option><option>English-language</option><option>German or Swiss</option></select></label><label>Sex (from name) <select id="dt-sex"><option value="">All</option><option>F</option><option>M</option></select></label><label>FamilySearch <select id="dt-fs"><option value="">All</option><option value="y">Matched</option><option value="n">Not yet matched</option></select></label><label>Later affiliation <select id="dt-aff"><option value="">All</option><option>Joined the RLDS Church</option><option>Killed at Kington Fort, June 1862</option><option>Stayed Morrisite, later joined the RLDS Church</option><option>Stayed with a Morrisite group</option><option value="?">Not yet known</option></select></label></div><p class="dt-status"><span id="dt-n" aria-live="polite"></span> <button type="button" id="dt-dl">Download these rows</button> <button type="button" id="dt-reset">Clear filters</button></p><div class="dt-wrap"><table class="dt" id="dt"><thead><tr><th scope="col"><button type="button" data-k="0">Name on the roll</button></th><th scope="col"><button type="button" data-k="1">Sex</button></th><th scope="col"><button type="button" data-k="2">Name origin</button></th><th scope="col"><button type="button" data-k="3">FamilySearch</button></th><th scope="col"><button type="button" data-k="4">Born</button></th><th scope="col"><button type="button" data-k="5">Birthplace</button></th><th scope="col"><button type="button" data-k="6">Died</button></th><th scope="col"><button type="button" data-k="7">Death place</button></th><th scope="col"><button type="button" data-k="8">Company</button></th><th scope="col"><button type="button" data-k="9">Year</button></th><th scope="col"><button type="button" data-k="10">Later affiliation</button></th></tr></thead><tbody></tbody></table></div>
+<script id="dt-data" type="application/json">[["Adams, William", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Alvy, Richard D.", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Alvy, Sarah", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Anderson, Andrew", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Anderson, Ann", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Anderson, Niels", "M", "Scandinavian", "LC37-Q71", "1835-10", "Denmark", "1926", "Idaho", "", "", "Stayed with a Morrisite group", "niels-anderson"], ["Anderson, Mary", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Anderson, Matilda", "F", "Scandinavian", "", "", "", "", "", "", "", "Stayed with a Morrisite group", ""], ["Anderson, Christian", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Anderson, Jorgen", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Anderson, Maren", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Anderson, Abelone", "F", "Scandinavian", "KWVH-NZM", "1816-02", "Denmark", "1884", "Idaho", "", "", "", ""], ["Anson, Mary", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Armstrong, Anne C.", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Astel, Joseph", "M", "English-language", "K27Y-ZFV", "1829-10", "England", "1862", "Montana", "Henry W. Miller Company", "1852", "", "joseph-astle"], ["Astel, Esther", "F", "English-language", "KDMD-WDN", "1829-09", "England", "1887", "Montana", "Henry W. Miller Company", "1852", "", "esther-astle"], ["Babbington, Thomas", "M", "English-language", "LHDG-13K", "1801-05", "England", "1866", "Utah", "Robert L. Campbell Company", "1854", "", "thomas-bebbington"], ["Baker, Mary Ann", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Banks, John", "M", "English-language", "KWJC-XYW", "1806-02", "England", "1862", "Utah", "Justus Morse Company", "1850", "Killed at Kington Fort, June 1862", "john-banks"], ["Bar, Labrach", "M", "German or Swiss", "KWJV-XN6", "1838-09", "Switzerland", "1919", "Missouri", "James Darling Ross Company", "1860", "Joined the RLDS Church", ""], ["Bar, Anne", "F", "German or Swiss", "KZC5-RPZ", "1832-12", "Switzerland", "1862", "Utah", "", "", "Killed at Kington Fort, June 1862", ""], ["Baxter, Agnes", "F", "English-language", "KWJN-LY8", "1841-05", "Scotland", "1912", "Utah", "", "", "", ""], ["Baxter, Henry", "M", "English-language", "KWJJ-G92", "1806-11", "Scotland", "1865", "Utah", "John A. Hunt Company", "1856", "", "henry-baxter"], ["Beck, Niels R.", "M", "Scandinavian", "KWJ4-LNP", "1823-02", "Denmark", "1888", "Montana", "Jacob F. Secrist/Noah T. Guymon Company", "1855", "Stayed with a Morrisite group", "niels-r-beck"], ["Bevington, Elizabeth", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Bowen, James", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Bowen, John", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Bowman, John", "M", "English-language", "KWJN-MJF", "1824-06", "Scotland", "1898", "Utah", "David Wilkin Company", "1853", "Stayed with a Morrisite group", ""], ["Bowman, Agnes", "F", "English-language", "LHFY-WFT", "1825-09", "Scotland", "1890", "Utah", "David Wilkin Company", "1853", "", ""], ["Brett, Richard H.", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Bright, Ann", "F", "English-language", "KCGS-NHY", "1815-11", "England", "1906", "Utah", "", "", "", ""], ["Bright, John", "M", "English-language", "KWVC-KYX", "1811-10", "England", "1881", "Utah", "", "", "", ""], ["Bright, Benjamin", "M", "English-language", "KGKV-MXW", "1850-11", "Iowa", "1927", "Utah", "", "", "", ""], ["Brooks, Nathan", "M", "English-language", "KWJH-PH6", "1793-12", "England", "1881", "Utah", "Edward Martin Company", "1856", "", ""], ["Brooks, Elizabeth", "F", "English-language", "MQN6-1S3", "1803-03", "England", "1876", "Utah", "Edward Martin Company", "1856", "", ""], ["Brown, Alonzo", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Brown, Anne", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Bryne, Moses", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Bryne, Catherine", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Bryne, Ann", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Bull, Agnes", "F", "English-language", "2737-DGN", "1839-12", "Scotland", "1920", "Nevada", "Moses Clawson Company", "1853", "", ""], ["Bull, William F.", "M", "English-language", "KWJN-719", "1819-07", "England", "1896", "Nevada", "Joseph W. Young Company", "1853", "", ""], ["Bull, Mary Ann", "F", "English-language", "LHX5-SJH", "1825-10", "", "1868", "Nevada", "", "", "", ""], ["Callon, Mary E.F.", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Carlton, Margaret F.", "F", "English-language", "KWJW-7JT", "1843-02", "England", "1927", "Utah", "", "", "", ""], ["Chamberlain, Mary", "F", "English-language", "KWVG-HR2", "1815-01", "England", "1900", "Utah", "Edward Stevenson Company", "1859", "", ""], ["Chamberlain, Ann", "F", "English-language", "L526-QNM", "1846-06", "South Africa", "1894", "Utah", "", "", "", ""], ["Chamberlain, Emma", "F", "English-language", "LZGD-ZBJ", "1850-02", "South Africa", "1885", "Utah", "Edward Stevenson Company", "1859", "", ""], ["Chamberlain, James", "M", "English-language", "KWCY-SXF", "1848-03", "South Africa", "1925", "Utah", "Edward Stevenson Company", "1859", "", ""], ["Chamberlain, William", "M", "English-language", "M76F-ZLB", "1815-10", "England", "1868", "England", "", "", "", ""], ["Chappel, Elijah L.", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Chase, Mahlon", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Christiansen, Laritz", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Christiansen, Mikkel C.", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Christiansen, Lese", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Christiansen, Charles M.", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Christiansen, M.M.", "", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Christiansen, Jens", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Christiansen, Johanna", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Christiansen, Johanna M.", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Christiansen, Maria", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Christofferson, Matilda", "F", "Scandinavian", "LHFM-68F", "1840-02", "Denmark", "1908", "Canada", "Robert F. Neslen Company", "1859", "Stayed with a Morrisite group", ""], ["Christofferson, Andrus", "M", "Scandinavian", "L2XW-JS2", "1841-10", "Denmark", "1921", "Montana", "Robert F. Neslen Company", "1859", "Stayed with a Morrisite group", ""], ["Christofferson, Maria", "F", "Scandinavian", "KWJN-1KY", "1847-07", "Denmark", "1928", "Idaho", "", "", "", ""], ["Christofferson, Maria 2", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Christofferson, Ida", "F", "Scandinavian", "L75M-CRD", "1850-05", "Denmark", "1924", "Washington", "Robert F. Neslen Company", "1859", "Stayed with a Morrisite group", ""], ["Christoffersen, Peter", "M", "Scandinavian", "KWVH-NCY", "1810-05", "Denmark", "1891", "Idaho", "Robert F. Neslen Company", "1859", "Stayed with a Morrisite group", ""], ["Christofferson, Gertrine", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Christoffersen, Christian", "M", "Scandinavian", "KWJN-123", "1845-11", "Denmark", "1895", "Idaho", "", "", "Stayed with a Morrisite group", ""], ["Clark, Catherine", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Clifford, Elijah", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Clifford, Matha C.", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Cornish, Hannah", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Cook, John", "M", "English-language", "KWJX-GMH", "1818-09", "England", "1910", "Utah", "", "", "", "john-cook"], ["Cook, Richard", "M", "English-language", "K27B-RHG", "1822-12", "England", "1874", "Nevada", "Milo Andrus Company", "1850", "Stayed with a Morrisite group", "richard-cook"], ["Cook, Sarah", "F", "English-language", "KWJ4-74G", "1823-03", "England", "1893", "Utah", "", "", "", ""], ["Cook, Mary", "F", "English-language", "LCCP-6HT", "1841-08", "England", "1904", "Washington", "", "", "", ""], ["Cook, Margaret", "F", "English-language", "LHV7-2NX", "1828-01", "England", "1888", "Nevada", "", "", "Stayed Morrisite, later joined the RLDS Church", ""], ["Cook, Ellen", "F", "English-language", "LCCJ-LS7", "1820-03", "England", "", "", "", "", "", ""], ["Cook, Hannah", "F", "English-language", "LZW3-1Q2", "1814", "England", "1895", "Nevada", "Robert L. Campbell Company", "1854", "", ""], ["Cordon, John", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Cowan, James", "M", "English-language", "KWV5-3D9", "1808-12", "Scotland", "1884", "Utah", "Moses Clawson Company", "1853", "", ""], ["Cowan, Janet", "F", "English-language", "KWV5-3D3", "1804-04", "Scotland", "1881", "Utah", "Moses Clawson Company", "1853", "", ""], ["Cowan, James Jr.", "M", "English-language", "KWC4-JQV", "1833-01", "Scotland", "1895", "Utah", "", "", "", ""], ["Cowan, Robert", "M", "English-language", "L7G5-LP8", "1847-02", "Scotland", "1915", "Utah", "Moses Clawson Company", "1853", "", ""], ["Croston, Mrs.", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Davies, William", "M", "English-language", "LRMD-8L5", "1833-08", "Wales", "1906", "Washington", "Charles A. Harper Company", "1855", "Stayed with a Morrisite group", "william-w-davies"], ["Davies, Anne Elizabeth", "F", "English-language", "LRMD-NG6", "1836", "Wales", "1879", "Washington", "", "", "", ""], ["Davies, Hugh", "M", "English-language", "", "", "", "", "", "", "", "Stayed with a Morrisite group", ""], ["Deithelm, John", "M", "German or Swiss", "KWJJ-KN7", "1826-06", "Switzerland", "", "", "William Budge Company", "1860", "", ""], ["Deithelm, George", "M", "German or Swiss", "KWJJ-KFD", "1828-12", "Switzerland", "1901", "Utah", "Jesse Murphy Company", "1860", "", ""], ["Deithelm, Barbara", "F", "German or Swiss", "LZK5-XNG", "1797-11", "Switzerland", "1862", "Utah", "William Budge Company", "1860", "Killed at Kington Fort, June 1862", ""], ["Deithelm, Barbara 2", "F", "German or Swiss", "LZKF-X44", "1835-01", "Switzerland", "1878", "Missouri", "", "", "", ""], ["Dove, James", "M", "English-language", "KWJ2-9ZL", "1819-03", "England", "1898", "California", "William B. Hodgetts Company", "1856", "Stayed with a Morrisite group", ""], ["Dove, Alice", "F", "English-language", "MB29-39N", "1816", "England", "1900", "California", "William B. Hodgetts Company", "1856", "", ""], ["Dove, George S.", "M", "English-language", "KWJ6-JPJ", "1842-05", "England", "1915", "California", "William B. Hodgetts Company", "1856", "Stayed with a Morrisite group", ""], ["Dove, Sarah", "F", "English-language", "LDBY-NKL", "1840-07", "England", "1901", "England", "", "", "", ""], ["Dove, Joseph", "M", "English-language", "L4HC-2BF", "1827-05", "England", "1895", "Nebraska", "", "", "Stayed Morrisite, later joined the RLDS Church", ""], ["Dow, Alexander Sr.", "M", "English-language", "M7QN-7DG", "1796", "Scotland", "", "", "", "", "Stayed with a Morrisite group", ""], ["Dow, Margaret", "F", "English-language", "M7QN-7XH", "1815", "Scotland", "", "", "", "", "", ""], ["Dow, Alexander Jr.", "M", "English-language", "9J1P-PQB", "1853", "Missouri", "", "", "", "", "", ""], ["Dow, Fanny", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Eames, John", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Eames, Emma", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Eames, Emma 2", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Eardley, John R.", "M", "English-language", "LCTH-65L", "1837-02", "England", "1906", "California", "William Budge Company", "1860", "Stayed with a Morrisite group", ""], ["Eardley, Sarah J.", "F", "English-language", "MDWQ-J6S", "1838-11", "England", "1920", "Washington", "", "", "", ""], ["Eliason, Karen", "F", "Scandinavian", "LHN8-4C5", "1830-03", "Sweden", "1902", "Idaho", "William Budge Company", "1860", "Stayed Morrisite, later joined the RLDS Church", "karin-eliasson"], ["Eliason, Erick", "M", "Scandinavian", "MVRH-QQ6", "1817-05", "Sweden", "1893", "Montana", "William Budge Company", "1860", "Stayed Morrisite, later joined the RLDS Church", "erik-eliasson"], ["Farley, Robert E.", "M", "English-language", "KWJK-LL7", "1816-01", "England", "1908", "Nebraska", "John Banks Company", "1856", "Joined the RLDS Church", "robert-e-farley"], ["Farley, Mary Ann", "F", "English-language", "L874-H6H", "1819-03", "England", "1910", "Nebraska", "", "", "", ""], ["Farley, Eliza", "F", "English-language", "KLFD-HQJ", "1851-02", "England", "1894", "Nebraska", "", "", "", ""], ["Farley, Mary", "F", "English-language", "", "", "", "", "", "", "", "Joined the RLDS Church", ""], ["Finn, Mr.", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Firth, Authur", "M", "English-language", "KWJC-5Q4", "1849-01", "England", "1911", "Utah", "Cyrus H. Wheelock Company", "1853", "", ""], ["Firth, John", "M", "English-language", "KWVG-KDB", "1823-02", "England", "", "", "Cyrus H. Wheelock Company", "1853", "", ""], ["Firth, William H.", "M", "English-language", "L7GB-1SK", "1846-06", "England", "1932", "Utah", "Cyrus H. Wheelock Company", "1853", "", ""], ["Forscutt, Mark Hill", "M", "English-language", "KWJH-KQX", "1834-06", "England", "1903", "Nebraska", "Daniel Robison Company", "1860", "Joined the RLDS Church", "mark-hill-forscutt"], ["Forscutt, Elizabeth", "F", "English-language", "L7NR-6JW", "1835-12", "England", "1903", "Nebraska", "Daniel Robison Company", "1860", "", ""], ["Foster, Margaret", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Frances, Elizabeth", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Garrett, John", "M", "English-language", "K2W8-44D", "1815-06", "England", "1899", "Idaho", "Joseph W. Young Company", "1853", "", "john-garrett"], ["Garrett, Thurza", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Garrett, Fenetta E.", "F", "English-language", "K2W8-4G8", "1848-06", "England", "1932", "Idaho", "", "", "", ""], ["Garrett, Hennage", "M", "English-language", "LWFJ-F6L", "1851-02", "England", "1934", "Idaho", "Joseph W. Young Company", "1853", "", ""], ["Garrett, Richard W.", "M", "English-language", "LZD7-CXH", "1846-05", "England", "1874", "Idaho", "Joseph W. Young Company", "1853", "", ""], ["Garrett, Jane", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Geertsen, Lars Christian", "M", "Scandinavian", "LHN8-BJ8", "1832-05", "Denmark", "1925", "Idaho", "", "", "", "lars-christian-geertsen"], ["Gray, John", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Gray, Elizabeth", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Gudmundson, Gudmund", "M", "Scandinavian", "KWV3-QD1", "1825", "Iceland", "1883", "Utah", "Matthias Cowley Company", "1857", "Stayed with a Morrisite group", ""], ["Gudmundson, Mary", "F", "Scandinavian", "LLQX-C92", "1820-12", "Denmark", "1908", "Utah", "Matthias Cowley Company", "1857", "", ""], ["Gudmundson, Christian", "M", "Scandinavian", "KWDS-VMD", "1848-02", "Denmark", "1927", "Utah", "", "", "", ""], ["Gudmundsen, Lawritz", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Guhl, Soren Peter", "M", "Scandinavian", "KWJ8-9RQ", "1821-08", "Denmark", "1883", "Iowa", "Robert F. Neslen Company", "1859", "Stayed with a Morrisite group", "soren-peter-guhl"], ["Guhl, Maren", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Guhl, Marian", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Hanson, Lars Christian", "M", "Scandinavian", "KC44-FBW", "1832-05", "Denmark", "1889", "Montana", "", "", "Stayed with a Morrisite group", ""], ["Hanson, Lars", "M", "Scandinavian", "LY9T-Z79", "1842-09", "Denmark", "1911", "Canada", "Robert F. Neslen Company", "1859", "", ""], ["Hanson, Rasmus [1]", "M", "Scandinavian", "L82T-W49", "1809-06", "Denmark", "1890", "Montana", "Robert F. Neslen Company", "1859", "Stayed with a Morrisite group", ""], ["Hanson, Lena", "F", "Scandinavian", "LDFR-NT2", "1809-02", "Denmark", "1896", "Montana", "Robert F. Neslen Company", "1859", "Stayed Morrisite, later joined the RLDS Church", ""], ["Hanson, Christian", "M", "Scandinavian", "MG21-P6Q", "1846-12", "Denmark", "1927", "Montana", "", "", "Stayed with a Morrisite group", ""], ["Hanson, Christian 2", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Hanson, Bertie", "F", "Scandinavian", "LHKR-J64", "1849-02", "Denmark", "1927", "Idaho", "", "", "", ""], ["Hanson, Hans", "M", "Scandinavian", "KF11-1MK", "1838-08", "Denmark", "1911", "Idaho", "Robert F. Neslen Company", "1859", "Stayed with a Morrisite group", ""], ["Hanson, Rasmus [2]", "M", "Scandinavian", "", "", "", "", "", "", "", "Stayed Morrisite, later joined the RLDS Church", ""], ["Hanson, Andrus", "M", "Scandinavian", "2Z8Q-CHW", "1844-10", "Denmark", "1926", "Montana", "Robert F. Neslen Company", "1859", "", ""], ["Hanson, Andrus Jr.", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Hanson, Niels", "M", "Scandinavian", "KFK2-MSL", "1851-06", "Denmark", "1938", "Montana", "", "", "", ""], ["Hanson, Martha Lena", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Hanson, Mattie", "F", "Scandinavian", "LYV6-TPP", "1830", "Denmark", "1897", "Montana", "", "", "Stayed with a Morrisite group", ""], ["Harris, William", "M", "English-language", "KWJ6-24X", "1831-10", "Wales", "1906", "Nevada", "", "", "", ""], ["Harris, Sarah", "F", "English-language", "KWJ4-FTQ", "1838-12", "England", "1919", "Nevada", "Charles A. Harper Company", "1855", "", ""], ["Hartle, Isabella", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Hastings, Mary Ann", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Hastings, Winter", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Hegg, Ann", "F", "Scandinavian", "KZFZ-N5P", "1833-10", "Sweden", "1862", "", "", "", "", ""], ["Hegg, Svend", "M", "Scandinavian", "KWJF-86P", "1832-10", "Sweden", "1882", "", "Robert F. Neslen Company", "1859", "", "sven-hagg"], ["Hewitt, Philip", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Higham, Charles", "M", "English-language", "LV14-G51", "1823-11", "England", "1891", "Idaho", "Robert L. Campbell Company", "1854", "", "charles-higham"], ["Higham, Jane", "F", "English-language", "K2VD-7R9", "1824", "England", "1894", "Idaho", "Robert L. Campbell Company", "1854", "", "jane-higham"], ["Hill, William", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Hill, Ann", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Hill, Ann 2", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Hill, Eleazar", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Hill, William H.", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Hodgkiss, Thomas", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Holt, Eliza", "F", "English-language", "L8W8-29C", "1848-01", "England", "1931", "Utah", "John Brown Company", "1851", "", ""], ["Holt, Alice", "F", "English-language", "KLBF-P5D", "1849-03", "England", "1901", "California", "John Brown Company", "1851", "", ""], ["Holt, James", "M", "English-language", "K2WV-BCB", "1851-11", "Utah", "1886", "Idaho", "", "", "", ""], ["Holt, Mary Jane", "F", "English-language", "LLQM-W4J", "1853-05", "Utah", "1927", "Utah", "", "", "", ""], ["Jacobson, Niels", "M", "Scandinavian", "GJQ3-LG5", "1834-06", "Denmark", "", "", "", "", "", ""], ["Jacobson, Caroline", "F", "Scandinavian", "LHBY-NJV", "1836-01", "Denmark", "", "", "", "", "", ""], ["James, Reuben", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["James, William", "M", "English-language", "", "", "", "", "", "", "", "Stayed with a Morrisite group", ""], ["Jensen, Lese", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Jorgen", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Karen Kristine", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Hans", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Andrea J.", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Andrus", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Marian", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Christian", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Jacob", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Else Maria", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Jens Christian", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Else", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Stine", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jensen, Christen", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Jones, William", "M", "English-language", "LWFK-BKP", "1803", "England", "", "", "", "", "", "william-jones-1803"], ["Jones, Rhoda", "F", "English-language", "KWJQ-PBL", "1811-08", "England", "1890", "Nevada", "Charles A. Harper Company", "1855", "", "rhoda-white-jones"], ["Jones, William J.", "M", "English-language", "K2W1-SRR", "1825-03", "Wales", "1909", "Utah", "Charles A. Harper Company", "1855", "", "william-j-jones"], ["Jones, Ann", "F", "English-language", "L433-4XD", "1823-10", "Wales", "1901", "Utah", "", "", "", ""], ["Jones, Margaret", "F", "English-language", "KWVC-3WX", "1797-07", "Wales", "1879", "Utah", "", "", "Joined the RLDS Church", ""], ["Jones, John E.", "M", "English-language", "", "", "", "", "", "", "", "Stayed with a Morrisite group", ""], ["Jones, Grace", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Jones, Edmund", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Joramsen, Niels", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Kendell, William", "M", "English-language", "KWN2-QTQ", "1828-06", "England", "1883", "Utah", "Robert L. Campbell Company", "1854", "", ""], ["Kendell, Johanna", "F", "English-language", "KWN2-QT3", "1827-04", "England", "1900", "Utah", "Robert L. Campbell Company", "1854", "", ""], ["Klemgard, Peter C.", "M", "Scandinavian", "", "", "", "", "", "", "", "", "peter-c-klemgard"], ["Klemgard, Kirsten M.", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Klemgard, Lena", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Kundson, Hans", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Klingbeck, Solsan F.", "", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Klingbeck, Jacob C.", "M", "Scandinavian", "L4SL-HCW", "1812-09", "Denmark", "1897", "Idaho", "Robert F. Neslen Company", "1859", "", "jacob-carl-klingbech"], ["Klingbeck, Karen M.", "F", "Scandinavian", "L4SL-HXF", "1824-01", "Denmark", "1898", "", "Robert F. Neslen Company", "1859", "", "karen-marie-klingbech"], ["Klingbeck, Karen", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Klingbeck, Frederick V.", "M", "Scandinavian", "MNJV-Z9R", "1850-06", "Denmark", "1931", "", "Robert F. Neslen Company", "1859", "", ""], ["Kragskaw, Maren Jensen", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Kragskaw, Peter X. S.", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Kragskaw, Maren K.", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Kragskaw, Christiana M.", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Kruberg, Saren Jensen", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Laird, James", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Laird, Catherine", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Laird, Mary", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Larsen, Lars Christian", "M", "Scandinavian", "L41L-SWK", "1833-08", "Denmark", "1909", "Montana", "", "", "", ""], ["Larsen, Lars", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Larsen, Hannah", "F", "Scandinavian", "KC6H-KK1", "1839-09", "Sweden", "1918", "Montana", "", "", "", ""], ["Larsen, Maren", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Larsen, Niel", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Lee, Andrew", "M", "English-language", "2ZS4-6YS", "1818-09", "England", "1863", "Utah", "", "", "", ""], ["Lee, Charlotte", "F", "English-language", "L5F4-44L", "1822-11", "England", "1865", "Utah", "", "", "", ""], ["Lee, George", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["LeBaron, Alonzo", "M", "English-language", "LZBL-RHP", "1818-05", "New York", "1891", "Utah", "Philip De La Mare Company", "1852", "", ""], ["LeBaron, Sarah", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Ledgeway, John", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Ledgeway, Jane", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Livingstone, R. J.", "", "English-language", "L4RB-P1W", "1828-03", "England", "1892", "Washington", "", "", "Stayed with a Morrisite group", ""], ["Livingstone, Isabella", "F", "English-language", "L41L-NPL", "1818-09", "Scotland", "1895", "Washington", "", "", "", ""], ["Lloyd, Edward", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Lloyd, Margaret", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Loasle, John C.", "M", "English-language", "KWNF-BGT", "1831-10", "Switzerland", "1901", "Utah", "James Darling Ross Company", "1860", "", "hans-kasper-loosli"], ["Loasle, Anne Elizabeth", "F", "English-language", "KWNF-BGR", "1835-08", "Switzerland", "1923", "Utah", "James Darling Ross Company", "1860", "", ""], ["Lorensen, John Peter", "M", "Scandinavian", "KLVC-XHL", "1817-05", "Denmark", "1870", "Nevada", "", "", "", ""], ["Lorentzen, Charles", "M", "Scandinavian", "KWJX-DLW", "1847-03", "Denmark", "1935", "California", "", "", "", ""], ["Lorentzen, Josephine E.", "F", "Scandinavian", "KWJJ-DC2", "1851-08", "Denmark", "1910", "California", "", "", "", ""], ["Lundgreen, Christian", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Madson, Karen", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Magee, William", "M", "English-language", "KWJD-PC3", "1826-03", "Scotland", "1890", "Nevada", "", "", "", ""], ["Magee, Sarah", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Magee, Sarah 2", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Magee, Ellen", "F", "English-language", "KVGW-RKR", "1854-06", "Utah", "1928", "Nevada", "", "", "", ""], ["Mallan, Stephen", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Mallan, John", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Marsh, Joseph", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Marsh, Mrs.", "F", "English-language", "", "", "", "", "", "", "", "Killed at Kington Fort, June 1862", ""], ["Mason, Andrew", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Mason, Rebecca Ann", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Mather, James", "M", "English-language", "KWJJ-BBK", "1826-07", "Scotland", "1898", "Iowa", "", "", "", ""], ["Mather, John O.", "M", "English-language", "KWJD-2KP", "1822-09", "Scotland", "1910", "Utah", "Milo Andrus Company", "1855", "", "john-ogilvie-mather"], ["Mather, Mary", "F", "English-language", "M1VV-GHK", "1822-11", "Scotland", "1888", "Utah", "Milo Andrus Company", "1855", "", "mary-magee-mather"], ["Mather, Margaret", "F", "English-language", "KWJ4-8ZW", "1832-05", "England", "1906", "Iowa", "", "", "", ""], ["Mather, Ellen", "F", "English-language", "KWJD-LSY", "1851-01", "Scotland", "1919", "Utah", "Milo Andrus Company", "1855", "", ""], ["McCue, Peter L.", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["McCue, Mary", "F", "English-language", "LTLB-38R", "1849", "Utah", "", "", "", "", "", ""], ["McCue, Peter", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["McCue, Mary Ann", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["McCue, Unity", "F", "English-language", "L44W-H1J", "1852-08", "Utah", "1940", "Nevada", "", "", "", ""], ["McKune, Emma", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["McLean, Caroline", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Meilheden, Peter P.", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Meilheden, Anne", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Merrick, John", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Michaelson, James", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Michaelson, Laritz", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Michaelson, Maria", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Mikkleson, Anne", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Miller, August", "M", "German or Swiss", "", "", "", "", "", "", "", "", ""], ["Miller, Henry", "M", "German or Swiss", "", "", "", "", "", "", "", "", ""], ["Miller, Regina", "F", "German or Swiss", "", "", "", "", "", "", "", "", ""], ["Miller, Henry Jr.", "M", "German or Swiss", "", "", "", "", "", "", "", "", ""], ["Miller, Pauline", "F", "German or Swiss", "", "", "", "", "", "", "", "", ""], ["Moller, Saren", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Morris, Karen", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Morris, Mary", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Morrison, Niels", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Moss, Joseph", "M", "English-language", "KWJW-H3T", "1806-09", "England", "1878", "Nevada", "Edward Martin Company", "1856", "", ""], ["Moss, Peter", "M", "English-language", "KWJC-HWG", "1837-09", "England", "1883", "Idaho", "Edward Martin Company", "1856", "", ""], ["Moss, Joseph Jr.", "M", "English-language", "KWJC-HF3", "1841-01", "England", "1895", "Nevada", "Edward Martin Company", "1856", "", ""], ["Moss, Mary", "F", "English-language", "KWJ4-JBY", "1810", "England", "1883", "Nevada", "Edward Martin Company", "1856", "", ""], ["Moss, Edward", "M", "English-language", "KWJW-H35", "1835-07", "England", "1889", "Nevada", "Edward Martin Company", "1856", "", ""], ["Moss, James", "M", "English-language", "KWVP-QWL", "1844-01", "England", "1915", "Idaho", "Edward Martin Company", "1856", "", ""], ["Moss, Elizabeth", "F", "English-language", "GTPQ-6VD", "1844-03", "Ohio", "1908", "California", "", "", "", ""], ["Moss, Hiram R.", "M", "English-language", "K2Q6-9BH", "1848-03", "England", "1908", "Idaho", "Edward Martin Company", "1856", "", ""], ["Moss, Alice", "F", "English-language", "KWJ4-VSV", "1846-05", "England", "1888", "California", "Edward Martin Company", "1856", "", ""], ["Mortensen, Jorgen", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Mortensen, Olive", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Mortensen, Niels", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Moxon, James", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Mudd, Matthew", "M", "English-language", "", "", "", "", "", "", "", "Stayed with a Morrisite group", ""], ["Nash, George", "M", "English-language", "KWJW-263", "1820-06", "England", "", "", "Daniel Robison Company", "1860", "", "george-nash"], ["Nash, Maria", "F", "English-language", "KH9K-H9F", "1817-04", "England", "", "", "Daniel Robison Company", "1860", "", "maria-nash"], ["Nielson, John", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Nielson, Christine", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Nielson, Christian", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Nuttor, William", "M", "English-language", "KWJW-4FB", "1830-01", "England", "1906", "Nebraska", "John Smith Company", "1860", "", "william-nutter"], ["Nuttor, Dinah", "F", "English-language", "KWJ4-VQY", "1834-06", "England", "1918", "Nebraska", "John Smith Company", "1860", "", "dinah-nutter"], ["Olsen, Rignald O.", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Olsen, Michael", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Olsen, Rasmus", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Olsen, Anne", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Olsen, Ole", "M", "Scandinavian", "KHLF-L26", "1810-11", "Denmark", "1888", "Montana", "", "", "Stayed with a Morrisite group", ""], ["Olsen, Lars", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Olsen, Anne Maria", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Orsted, Sophia", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Park, David Sr.", "M", "English-language", "LLQF-CF6", "1809-06", "Scotland", "1884", "Nevada", "Smith Humphrey Company", "1850", "", "david-park"], ["Park, Caroline", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Park, Ann", "F", "English-language", "KWJ5-6FF", "1811-05", "Scotland", "1889", "Nevada", "Smith Humphrey Company", "1850", "", ""], ["Park, Martha", "F", "English-language", "M5C3-3CC", "1845-02", "Canada", "1920", "", "Smith Humphrey Company", "1850", "", ""], ["Park, Ellen", "F", "English-language", "L44W-XBB", "1852-03", "Utah", "1925", "California", "", "", "", ""], ["Park, David Jr.", "M", "English-language", "L7FG-CS4", "1839-12", "Canada", "1908", "Nevada", "Smith Humphrey Company", "1850", "", ""], ["Park, Hugh", "M", "English-language", "21JN-FZW", "1843-02", "Canada", "1924", "California", "", "", "", ""], ["Park, Joseph Hyrum", "M", "English-language", "LCZK-NVP", "1849-12", "Missouri", "1929", "Nevada", "", "", "", ""], ["Parker, Thomas", "M", "English-language", "K2H3-5N6", "1826-01", "England", "1877", "Oregon", "John A. Hunt Company", "1856", "", ""], ["Parson, John", "M", "English-language", "L7YM-D5Y", "1829-01", "England", "1892", "Montana", "John Hindley Company", "1855", "Stayed Morrisite, later joined the RLDS Church", "john-parson"], ["Parson, Elizabeth", "F", "English-language", "LC8C-4L5", "1826", "England", "", "Nevada", "", "", "", ""], ["Peacock, James", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Peterson, Peter", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Peterson, Soren", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Peterson, Hans Peter", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Peterson, Anne", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Peterson, Anne C.", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Peterson, Ludwig", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Peterson, Metta A.", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Petersen, Hans", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Peterson, Kershon", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Peterson, Neils", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Peterson, Jens", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Petrie, John", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Petrie, Mary", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Poulsen, Jens", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Poulson, Anne Christian", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Price, Josiah", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Rasmusson, Rasmus", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Rasmussen, Hans C.", "M", "Scandinavian", "L6NP-CJX", "1816", "Denmark", "", "", "", "", "Stayed with a Morrisite group", ""], ["Rasmussen, Peter F.C.", "M", "Scandinavian", "G4PW-RR7", "1846-03", "Denmark", "", "", "", "", "", ""], ["Rasmussen, Caroline H.", "F", "Scandinavian", "MVC9-941", "1824-08", "Denmark", "", "", "", "", "Stayed with a Morrisite group", ""], ["Rasmussen, Chas. C. F.", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Rasmussen, George T.", "M", "Scandinavian", "G4PW-GL6", "1848-04", "Denmark", "1916", "Oregon", "", "", "Stayed with a Morrisite group", ""], ["Reed, Joseph", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Reeves, Robert", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Reeves, Elizabeth", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Richie, James", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Richards, William", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Richards, David", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Richardson, James [1]", "M", "English-language", "GMQL-V7P", "1810", "Scotland", "", "", "", "", "Stayed with a Morrisite group", ""], ["Richardson, Jane", "F", "English-language", "GNP1-NDS", "1815", "Scotland", "", "", "", "", "Stayed with a Morrisite group", ""], ["Richardson, George", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Richardson, James [2]", "M", "English-language", "GNP1-ZYN", "1834", "Scotland", "", "", "", "", "Stayed with a Morrisite group", ""], ["Richardson, William", "M", "English-language", "GNP1-C87", "1838", "Scotland", "", "", "", "", "Stayed with a Morrisite group", ""], ["Richardson, Aerilous", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Robertson, Sophia", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Rodgers, William Sr.", "M", "English-language", "GKCC-CHZ", "1815", "Illinois", "", "", "James Darling Ross Company", "1860", "", ""], ["Rodgers, William Jr.", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Rodgers, Frederick J.", "M", "English-language", "GKCZ-STW", "1846", "Illinois", "", "", "James Darling Ross Company", "1860", "", ""], ["Rosinblad, Olaff Olafson", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Rosser, Jenkins", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Rothwell, Amelia", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Roydes, Robert", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Schweiber, Anne", "F", "German or Swiss", "", "", "", "", "", "", "", "", ""], ["Smith, John", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Martin", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Daniel", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Maria E.", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Elizabeth Jane [1]", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Susannah", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Heber", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Henry", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Mary", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Elizabeth Jane [2]", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Emily R. Melly", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Matthew", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Smith, Anders Christian", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Smith, Hans Peter", "M", "Scandinavian", "KJP1-Y7Z", "1811-03", "Denmark", "1868", "", "Canute Peterson Company", "1856", "Stayed with a Morrisite group", ""], ["Sorenson, Peter", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Sorenson, Kar M.", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Sorenson, Anders", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Sorenson, Christine", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Sorensen, Sine", "F", "Scandinavian", "KWJF-GY2", "1847-09", "Sweden", "1874", "Wyoming", "", "", "", ""], ["Sorenson, Anne M.", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Sorenson, Hannah", "F", "Scandinavian", "LWVL-C6D", "1820-06", "Sweden", "1909", "Utah", "", "", "", ""], ["Sorenson, Celia", "F", "Scandinavian", "L5X3-RSV", "1849-06", "Sweden", "1927", "Utah", "", "", "", ""], ["Sorenson, Brooer", "M", "Scandinavian", "L56J-MC2", "1807-08", "Sweden", "1902", "Washington", "Robert F. Neslen Company", "1859", "", ""], ["Sorenson, Olaff", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Sorenson, I. C.", "", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Sorenson, Marian", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Sorenson, Anne", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Sorenson, Christianna", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Svenson, Peter", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Svenson, Ellen", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Svenson, Bekka", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Taylor, Abraham", "M", "English-language", "KWV3-NPF", "1818-05", "England", "1893", "Utah", "", "", "", ""], ["Taylor, Ann", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Taylor, Emma", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Taylor, Joseph", "M", "English-language", "", "", "", "", "", "", "", "Stayed with a Morrisite group", ""], ["Thomas, W. P.", "", "English-language", "", "", "", "", "", "", "", "Stayed with a Morrisite group", ""], ["Thomas, David", "M", "English-language", "", "", "", "", "", "", "", "Stayed with a Morrisite group", ""], ["Thomas, Griffith", "M", "English-language", "", "", "", "", "", "", "", "Joined the RLDS Church", ""], ["Thomas, William W.", "M", "English-language", "", "", "", "", "", "", "", "Joined the RLDS Church", ""], ["Thomas, Elizabeth", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Thompson, Soren", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Thompson, George", "M", "English-language", "K2JF-6VH", "", "England", "1894", "Idaho", "", "", "Stayed with a Morrisite group", ""], ["Thompson, Francis", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Thompson, Emma", "F", "English-language", "LLM2-9ZF", "1850-01", "England", "1923", "Idaho", "Robert L. Campbell Company", "1854", "", ""], ["Thompson, Niels", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Thompson, Hannah", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Thompson, Margaret", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Thommussen, Anne C.", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Trahern, John", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Trolsen, John", "M", "Scandinavian", "LCRZ-RQ8", "1820-12", "Norway", "1898", "Washington", "Jacob F. Secrist/Noah T. Guymon Company", "1855", "", ""], ["Trolsen, Anton", "M", "Scandinavian", "KWJF-98Y", "1850-04", "Norway", "1929", "Nevada", "Jacob F. Secrist/Noah T. Guymon Company", "1855", "", ""], ["Trolsen, Etta Elizabeth", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Walker, William", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Walker, Mary Ann", "F", "English-language", "", "", "", "", "", "", "", "", ""], ["Warner, Joseph", "M", "English-language", "", "", "", "", "", "", "", "Stayed with a Morrisite group", ""], ["Warrander, Alexander", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Werner, Ingray", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["White, William", "M", "English-language", "LCCL-MLL", "1841-03", "England", "1917", "Washington", "Charles A. Harper Company", "1855", "", "william-j-white"], ["White, Hannah", "F", "English-language", "KWJW-43K", "1844-11", "England", "1868", "Nevada", "Charles A. Harper Company", "1855", "", "hannah-white"], ["White, Fountain A.", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Willadson, Soren", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Willadson, Anne M.", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Willadson, Else Maria", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Willadson, Maren", "F", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Willadson, Christian", "M", "Scandinavian", "", "", "", "", "", "", "", "", ""], ["Wilcox, James Sheppard", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Williams, Thomas", "M", "English-language", "", "", "", "", "", "", "", "", ""], ["Winn, Mr.", "M", "English-language", "", "", "", "", "", "", "", "", ""]]</script>
+<script>
+(function(){var D=JSON.parse(document.getElementById('dt-data').textContent),tb=document.querySelector('#dt tbody'),q=document.getElementById('dt-q'),so=document.getElementById('dt-origin'),ss=document.getElementById('dt-sex'),sf=document.getElementById('dt-fs'),sa=document.getElementById('dt-aff'),n=document.getElementById('dt-n'),key=0,dir=1,cur=[];
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function cell(r,i){var v=r[i];if(i===0){var h=r[11]?'person/'+r[11]+'.html':'roll.html?find='+encodeURIComponent(v.replace(/ \[\d+\]$/,''))+'#roll';return '<a href="'+h+'">'+esc(v)+'</a>'}if(i===3&&v)return '<a href="https://ancestors.familysearch.org/en/'+esc(v)+'" target="_blank" rel="noopener">'+esc(v)+'</a>';return esc(v)}
+function draw(){var t=q.value.trim().toLowerCase();cur=D.filter(function(r){if(so.value&&r[2]!==so.value)return false;if(ss.value&&r[1]!==ss.value)return false;if(sf.value==='y'&&!r[3])return false;if(sf.value==='n'&&r[3])return false;if(sa.value==='?'&&r[10])return false;if(sa.value&&sa.value!=='?'&&r[10]!==sa.value)return false;return !t||r.slice(0,11).join(' ').toLowerCase().indexOf(t)>=0});
+cur.sort(function(a,b){var x=a[key],y=b[key];if(!x&&y)return 1;if(x&&!y)return -1;return x.localeCompare(y,undefined,{numeric:true})*dir});
+tb.innerHTML=cur.map(function(r){var s='<tr>';for(var i=0;i<11;i++)s+=(i===0?'<th scope="row">':'<td>')+cell(r,i)+(i===0?'</th>':'</td>');return s+'</tr>'}).join('');
+n.textContent=cur.length+' of '+D.length+' names';
+document.querySelectorAll('#dt th button').forEach(function(b){var th=b.parentNode;th.setAttribute('aria-sort',+b.dataset.k===key?(dir>0?'ascending':'descending'):'none')})}
+document.querySelectorAll('#dt th button').forEach(function(b){b.addEventListener('click',function(){var k=+b.dataset.k;dir=(k===key)?-dir:1;key=k;draw()})});
+[q,so,ss,sf,sa].forEach(function(el){el.addEventListener('input',draw)});
+document.getElementById('dt-reset').addEventListener('click',function(){q.value='';[so,ss,sf,sa].forEach(function(s){s.value=''});key=0;dir=1;draw()});
+document.getElementById('dt-dl').addEventListener('click',function(){var H=['roll_name','sex_from_name','name_origin','familysearch_id','born','birthplace','died','death_place','company','company_year','later_affiliation','person_page'];
+var c=function(v){v=String(v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};var L=[H.join(',')].concat(cur.map(function(r){return r.slice(0,11).concat(r[11]?'https://morrisite.org/person/'+r[11]+'.html':'').map(c).join(',')}));
+var a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['﻿'+L.join('\n')],{type:'text/csv'}));a.download='morrisite-roll-selection.csv';document.body.appendChild(a);a.click();a.remove()});
+draw()})();
+</script>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><p class="cite-box page-cite">Cite this page: Rogers, Eric Paul, ed. &ldquo;Data.&rdquo; <i>Morrisite.org.</i> https://morrisite.org/data.html. Add the date you consulted it.</p></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Morrisite.org is edited by <a href="https://www.ericpaulrogers.com" target="_blank" rel="noopener">Eric Paul Rogers</a>, historian of Latter Day Saint movements.</span>
+    <span>The editor provided insights and helped acquire photographs for C. LeRoy Anderson&rsquo;s final edition of <i>Joseph Morris and the Saga of the Morrisites (Revisited)</i> (2010). Anderson&rsquo;s research files at Utah State University anchor this guide.</span>
+    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){function o(){var h=location.hash.slice(1);if(!h)return;var e=document.getElementById(h);if(e&&e.tagName==='DETAILS'){e.open=true;}}
+window.addEventListener('hashchange',o);o();
+document.addEventListener('click',function(ev){var a=ev.target.closest('a[href^="#"]');if(!a)return;var e=document.getElementById(a.getAttribute('href').slice(1));if(e&&e.tagName==='DETAILS')e.open=true;});})();
+</script>
+<script>
+/* Site search: loads search-index.json on first use and searches names, headings and text. */
+(function(){
+var q=document.getElementById('site-q'),box=document.getElementById('site-results');if(!q||!box)return;
+var mk=document.querySelector('a.mark'),mh=mk?mk.getAttribute('href'):'',root=/index\.html$/.test(mh)?mh.replace(/index\.html$/,''):'';
+var idx=null,loading=false,sel=-1,timer=null;
+function norm(t){return (t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ø/g,'o').replace(/æ/g,'ae').replace(/å/g,'a').replace(/[^a-z0-9]+/g,' ');}
+function esc(t){return t.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function load(cb){if(idx)return cb();if(loading)return;loading=true;
+ fetch(root+'search-index.json').then(function(r){return r.json();}).then(function(d){
+  idx=d.map(function(e){e.nt=' '+norm(e.t)+' ';e.ns=' '+norm(e.s)+' ';return e;});cb();
+ }).catch(function(){loading=false;show('<div class="sr-none">Search is not available here. Try the <a href="'+root+'names.html">name index</a>.</div>');});}
+function show(h){box.innerHTML=h;box.hidden=false;q.setAttribute('aria-expanded','true');}
+function hide(){box.hidden=true;q.setAttribute('aria-expanded','false');sel=-1;}
+function snippet(e,toks){var s=e.s||'';if(!s)return '';var low=s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''),p=-1;
+ for(var i=0;i<toks.length&&p<0;i++){var m=new RegExp('(^|[^a-z0-9])'+toks[i].replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).exec(low);p=m?m.index+m[1].length:-1;}
+ if(p<0)p=0;var a=Math.max(0,p-60),b=Math.min(s.length,p+140),t=(a>0?'…':'')+s.slice(a,b)+(b<s.length?'…':'');
+ t=esc(t);toks.forEach(function(k){if(k.length<2)return;t=t.replace(new RegExp('(^|[^A-Za-z0-9])('+k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'$1<b>$2</b>');});return t;}
+function run(){var raw=q.value.trim();if(raw.length<2){hide();return;}
+ load(function(){var toks=norm(raw).split(' ').filter(Boolean);if(!toks.length){hide();return;}
+  var phrase=' '+toks.join(' ');var res=[];
+  idx.forEach(function(e){var sc=0;for(var i=0;i<toks.length;i++){var k=toks[i];var inT=e.nt.indexOf(' '+k)>-1,inS=e.ns.indexOf(' '+k)>-1;if(!inT&&!inS)return;
+    sc+=inT?(e.nt.indexOf(' '+k+' ')>-1?7:5):(e.ns.indexOf(' '+k+' ')>-1?1.2:0.8);}
+   if(e.nt.indexOf(phrase)>-1)sc+=6;if(toks.length>1&&e.ns.indexOf(phrase)>-1)sc+=3;
+   res.push([sc+e.w,e]);});
+  res.sort(function(a,b){return b[0]-a[0];});
+  if(!res.length){show('<div class="sr-none">No matches. Try another spelling, or browse the <a href="'+root+'names.html">name index</a>.</div>');return;}
+  var h=res.slice(0,25).map(function(r){var e=r[1];return '<a role="option" href="'+root+e.u+'"><span class="sr-kind">'+esc(e.k)+'</span><span class="sr-title">'+esc(e.t)+'</span>'+(e.s?'<span class="sr-snip">'+snippet(e,toks)+'</span>':'')+'</a>';}).join('');
+  if(res.length>25)h+='<div class="sr-more">'+(res.length-25)+' more matches; add a word to narrow the search.</div>';
+  show(h);sel=-1;});}
+var gct=null;q.addEventListener('input',function(){clearTimeout(timer);timer=setTimeout(run,120);clearTimeout(gct);gct=setTimeout(function(){var v=q.value.trim().toLowerCase();if(v.length>2&&window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:'search: '+v,title:'Site search',event:true});},1500);});
+q.addEventListener('focus',function(){load(function(){});if(q.value.trim().length>1)run();});
+q.addEventListener('keydown',function(ev){var opts=box.querySelectorAll('a[role=option]');
+ if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){if(!opts.length)return;ev.preventDefault();sel=(sel+(ev.key==='ArrowDown'?1:-1)+opts.length)%opts.length;
+  opts.forEach(function(o,i){o.setAttribute('aria-selected',i===sel?'true':'false');});opts[sel].scrollIntoView({block:'nearest'});}
+ else if(ev.key==='Enter'){ev.preventDefault();var t=opts[sel>=0?sel:0];if(t)location.href=t.href;}
+ else if(ev.key==='Escape'){hide();}});
+document.addEventListener('click',function(ev){if(!ev.target.closest('.site-search'))hide();});
+})();
+</script>
+<script>
+/* Link icons beside entries, back-to-top button, and filters for Bibliography and Questions. */
+(function(){
+document.querySelectorAll('main h3[id], main dt[id], main .repo[id] > .repo-top h3, main article[id] > h3, main .ni-list li[id] > b, main .aff-who li[id] > b').forEach(function(h){
+ var host=h.id?h:h.closest('[id]');if(!host||!host.id||host.id==='top')return;
+ var a=document.createElement('a');a.className='anchor-link';a.href='#'+host.id;a.textContent='#';a.setAttribute('aria-label','Link to this entry');a.title='Copy a link to this entry';
+ a.addEventListener('click',function(e){var u=location.href.split('#')[0]+'#'+host.id;try{navigator.clipboard.writeText(u);a.classList.add('copied');setTimeout(function(){a.classList.remove('copied')},1500);}catch(x){}});
+ h.appendChild(a);});
+var t=document.createElement('a');t.href='#top';t.className='to-top';t.textContent='Top ↑';t.hidden=true;document.body.appendChild(t);
+window.addEventListener('scroll',function(){t.hidden=window.scrollY<1400;},{passive:true});
+var bib=document.querySelector('#bibliography .series-body');
+if(bib){var bar=document.createElement('div');bar.className='filter-bar';bar.innerHTML='<label><input type="checkbox" id="bib-online"> Show only works that can be read or watched online</label>';
+ var toc=bib.querySelector('.toc');(toc||bib.firstElementChild).insertAdjacentElement(toc?'afterend':'beforebegin',bar);
+ document.getElementById('bib-online').addEventListener('change',function(){var on=this.checked;
+  bib.querySelectorAll('li').forEach(function(li){li.hidden=on&&!li.querySelector('a[target="_blank"]');});
+  bib.querySelectorAll('ul,ol').forEach(function(l){var any=[].some.call(l.children,function(c){return !c.hidden;});var h=l.previousElementSibling;l.hidden=!any;if(h&&/^H[34]$/.test(h.tagName))h.hidden=!any;});});}
+var qs=document.querySelector('#questions .series-body');
+if(qs){var cards=qs.querySelectorAll('.repo');var bar2=document.createElement('div');bar2.className='filter-bar';
+ bar2.innerHTML='<span>Show:</span><button type="button" data-f="" aria-pressed="true">All</button><button type="button" data-f="open" aria-pressed="false">Open</button><button type="button" data-f="in progress" aria-pressed="false">In progress</button><button type="button" data-f="answered" aria-pressed="false">Answered</button>';
+ qs.insertBefore(bar2,qs.querySelector('.repo')?qs.querySelector('.repo').parentNode===qs?qs.querySelector('.repo'):qs.firstElementChild:qs.firstElementChild);
+ bar2.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var f=b.dataset.f;
+  bar2.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+  cards.forEach(function(c){var s=(c.querySelector('.callno')||{}).textContent||'';s=s.toLowerCase();c.hidden=!!f&&s.indexOf(f)!==0;});});}
+})();
+</script>
+<script data-goatcounter="https://morrisite.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

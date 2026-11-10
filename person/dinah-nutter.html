@@ -310,6 +310,25 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .repo dd { margin: 0; }
 @media (max-width: 460px) { .repo dl { grid-template-columns: 1fr; gap: 0 0; } .repo dd { margin-bottom: 8px; } }
 
+/* Data page */
+.data-cols { display: grid; grid-template-columns: minmax(120px, max-content) 1fr; gap: 4px 14px; margin: 0; padding: 0 !important; font-size: 14.5px !important; }
+.data-cols dt { text-transform: none !important; letter-spacing: 0 !important; padding-top: 1px; }
+.data-cols code { font-family: var(--font-mono); font-size: 12.5px; color: var(--ink); }
+@media (max-width: 460px) { .data-cols { grid-template-columns: 1fr; } }
+.dt-controls { display: flex; flex-wrap: wrap; gap: 10px 16px; margin: 0 0 10px; }
+.dt-controls label { display: flex; flex-direction: column; gap: 3px; font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.dt-controls input, .dt-controls select { font: inherit; font-family: var(--font-body); font-size: 15px; text-transform: none; letter-spacing: 0; color: var(--ink); background: var(--panel); border: 1px solid var(--rule); padding: 5px 8px; min-height: 36px; }
+.dt-status { font-size: 14.5px; display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.dt-status button { font: inherit; font-size: 14px; color: var(--accent); background: var(--panel); border: 1px solid var(--rule); padding: 4px 10px; cursor: pointer; min-height: 32px; }
+.dt-wrap { overflow-x: auto; max-height: 75vh; border: 1px solid var(--rule); background: var(--panel); }
+table.dt { border-collapse: collapse; width: 100%; font-size: 14px; }
+table.dt th, table.dt td { padding: 5px 10px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+table.dt tbody th { font-weight: normal; white-space: nowrap; }
+table.dt thead th { position: sticky; top: 0; background: var(--panel); z-index: 1; border-bottom: 2px solid var(--rule); padding: 0; }
+table.dt thead button { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); background: none; border: 0; padding: 8px 10px; cursor: pointer; text-align: left; width: 100%; white-space: nowrap; }
+table.dt th[aria-sort="ascending"] button::after { content: " \25B2"; }
+table.dt th[aria-sort="descending"] button::after { content: " \25BC"; }
+
 /* Bibliography */
 .biblio h3 { font-family: var(--font-sc); font-size: 18px; letter-spacing: 0.04em; color: var(--muted); margin: 26px 0 8px; }
 .biblio h3:first-child { margin-top: 0; }
@@ -580,7 +599,7 @@ footer .wrap { display: grid; gap: 8px; }
 
 <main id="top">
   <div class="wrap"><p class="crumb"><a href="../index.html">Morrisite.org</a> &rsaquo; <a href="../roll.html#roll">Roll of membership</a> &rsaquo; Dinah Ingham Nutter</p></div>
-  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="../roll.html">Roll of membership</a><a href="../people.html">Who they were</a><a href="../names.html">Name index</a></nav></div>
+  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="../roll.html">Roll of membership</a><a href="../people.html">Who they were</a><a href="../names.html">Name index</a><a href="../data.html">Data</a></nav></div>
 
   <section class="series" id="person" aria-labelledby="h-person">
     <div class="wrap">
