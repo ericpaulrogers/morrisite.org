@@ -320,6 +320,25 @@ table.dt thead th { position: sticky; top: 0; background: var(--panel); z-index:
 table.dt thead button { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); background: none; border: 0; padding: 8px 10px; cursor: pointer; text-align: left; width: 100%; white-space: nowrap; }
 table.dt th[aria-sort="ascending"] button::after { content: " \25B2"; }
 table.dt th[aria-sort="descending"] button::after { content: " \25BC"; }
+.cov { margin: 0 0 1.6em; }
+.cov-row { display: grid; grid-template-columns: minmax(14em, 22em) 1fr 6.5em; gap: 4px 12px; align-items: center; margin: 7px 0; }
+.cov-lab { font-size: 14.5px; line-height: 1.3; }
+.cov-note { display: block; font-size: 12.5px; color: var(--muted); }
+.cov-bar { height: 16px; background: var(--rule); border-radius: 3px; overflow: hidden; }
+.cov-bar span { display: block; height: 100%; background: var(--accent); }
+.cov-n { font-family: var(--font-mono); font-size: 13px; }
+.cov-pct { color: var(--muted); }
+@media (max-width: 600px) { .cov-row { grid-template-columns: 1fr 5.5em; } .cov-lab { grid-column: 1 / -1; } }
+table.heat { border-collapse: collapse; width: 100%; font-size: 14px; }
+table.heat th, table.heat td { padding: 6px 10px; border-bottom: 1px solid var(--rule); text-align: right; white-space: nowrap; }
+table.heat th[scope="row"], table.heat thead th:first-child { text-align: left; font-weight: normal; }
+table.heat thead th { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); font-weight: normal; }
+table.heat tbody td { background: color-mix(in srgb, var(--accent) calc(var(--a) * 100%), transparent); font-family: var(--font-mono); }
+table.heat tfoot td, table.heat tfoot th { font-family: var(--font-mono); font-size: 13px; color: var(--muted); border-top: 2px solid var(--rule); }
+.heat-wrap { max-height: none; margin-bottom: 1.6em; }
+table.xt td.num, table.xt th.num { text-align: right; font-family: var(--font-mono); }
+table.xt tfoot td, table.xt tfoot th { border-top: 2px solid var(--rule); color: var(--muted); }
+.xt-note { font-size: 13.5px; color: var(--muted); }
 
 /* Bibliography */
 .biblio h3 { font-family: var(--font-sc); font-size: 18px; letter-spacing: 0.04em; color: var(--muted); margin: 26px 0 8px; }
@@ -599,7 +618,7 @@ footer .wrap { display: grid; gap: 8px; }
         <div class="series-no">Who they were</div>
         <h1 id="h-people">The people on the roll</h1>
         <p>Who joined Joseph Morris? This page counts what can be said of the 430 people on the <a href="roll.html#roll">1861&ndash;62 roll of membership</a>. Some figures cover everyone on the roll, judged from their names. The rest come from the people identified so far in FamilySearch Family Tree, and hold only for them.</p>
-        <p>The roll is not a full list of members. Its compiler wrote that &ldquo;many persons baptized&rdquo; were never recorded. Corrections and new identifications are welcome at <a href="mailto:contact@morrisite.org?subject=Morrisite.org%20roll">contact@morrisite.org</a>.</p>
+        <p>The roll is not a full list of members. Its compiler wrote that &ldquo;many persons baptized&rdquo; were never recorded. The lists behind these figures can be downloaded, and counted in other ways, on the <a href="data.html">Data</a> page. Corrections and new identifications are welcome at <a href="mailto:contact@morrisite.org?subject=Morrisite.org%20roll">contact@morrisite.org</a>.</p>
       </div>
       <div class="series-body">
         <nav class="toc" aria-label="On this page"><b>On this page</b><a href="#s-everyone-on-the-roll">Everyone on the roll</a><a href="#s-the-people-identified-in-family-tree">The people identified in Family Tree</a><a href="#census1860">In the 1860 census</a><a href="#paths">Paths into the movement</a><a href="#became">What became of them</a><a href="#others">Others named in the sources</a></nav>

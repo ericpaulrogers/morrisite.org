@@ -320,6 +320,25 @@ table.dt thead th { position: sticky; top: 0; background: var(--panel); z-index:
 table.dt thead button { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); background: none; border: 0; padding: 8px 10px; cursor: pointer; text-align: left; width: 100%; white-space: nowrap; }
 table.dt th[aria-sort="ascending"] button::after { content: " \25B2"; }
 table.dt th[aria-sort="descending"] button::after { content: " \25BC"; }
+.cov { margin: 0 0 1.6em; }
+.cov-row { display: grid; grid-template-columns: minmax(14em, 22em) 1fr 6.5em; gap: 4px 12px; align-items: center; margin: 7px 0; }
+.cov-lab { font-size: 14.5px; line-height: 1.3; }
+.cov-note { display: block; font-size: 12.5px; color: var(--muted); }
+.cov-bar { height: 16px; background: var(--rule); border-radius: 3px; overflow: hidden; }
+.cov-bar span { display: block; height: 100%; background: var(--accent); }
+.cov-n { font-family: var(--font-mono); font-size: 13px; }
+.cov-pct { color: var(--muted); }
+@media (max-width: 600px) { .cov-row { grid-template-columns: 1fr 5.5em; } .cov-lab { grid-column: 1 / -1; } }
+table.heat { border-collapse: collapse; width: 100%; font-size: 14px; }
+table.heat th, table.heat td { padding: 6px 10px; border-bottom: 1px solid var(--rule); text-align: right; white-space: nowrap; }
+table.heat th[scope="row"], table.heat thead th:first-child { text-align: left; font-weight: normal; }
+table.heat thead th { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); font-weight: normal; }
+table.heat tbody td { background: color-mix(in srgb, var(--accent) calc(var(--a) * 100%), transparent); font-family: var(--font-mono); }
+table.heat tfoot td, table.heat tfoot th { font-family: var(--font-mono); font-size: 13px; color: var(--muted); border-top: 2px solid var(--rule); }
+.heat-wrap { max-height: none; margin-bottom: 1.6em; }
+table.xt td.num, table.xt th.num { text-align: right; font-family: var(--font-mono); }
+table.xt tfoot td, table.xt tfoot th { border-top: 2px solid var(--rule); color: var(--muted); }
+.xt-note { font-size: 13.5px; color: var(--muted); }
 
 /* Bibliography */
 .biblio h3 { font-family: var(--font-sc); font-size: 18px; letter-spacing: 0.04em; color: var(--muted); margin: 26px 0 8px; }
@@ -634,7 +653,7 @@ footer .wrap { display: grid; gap: 8px; }
         </div>
         <h3 style="font-family:var(--font-sc);font-size:18px;letter-spacing:.04em;color:var(--muted);margin:30px 0 4px">Added to this guide</h3>
         <ol class="chron" id="updates">
-          <li id="u-the-guide-s-data-to-download"><span class="date">9 Nov 2026</span><span><b>The guide&rsquo;s data, to download.</b> A new <a href="data.html">Data</a> page offers the lists behind the roll, the person pages and the Where they went map as CSV files: the 1861&ndash;62 roll with FamilySearch matches, birthplaces, emigrating companies and later affiliations; documented whereabouts after 1862; family ties on the roll; and others named as Morrisites. Each comes with a description of its columns and their limits. The page also has a table of the roll that can be sorted, filtered and downloaded.</span></li>
+          <li id="u-the-guide-s-data-to-download"><span class="date">9 Nov 2026</span><span><b>The guide&rsquo;s data, to download.</b> A new <a href="data.html">Data</a> page offers the lists behind the roll, the person pages and the Where they went map as CSV files: the 1861&ndash;62 roll with FamilySearch matches, birthplaces, emigrating companies and later affiliations; documented whereabouts after 1862; family ties on the roll; and others named as Morrisites. Each comes with a description of its columns and their limits, and all four can be downloaded together. The page also shows how much is known so far about the people on the roll, where they were decade by decade, a table of the roll that can be sorted, filtered, shared by link and downloaded, and a tool for counting the roll by any two characteristics, with the unknowns shown.</span></li>
           <li id="u-birthright-by-phrenology"><span class="date">9 Nov 2026</span><span><b>Birthright by phrenology?</b> A fragment of a letter in the Morrisite collection at USU says that a prophet in hiding at Cottonwood felt men&rsquo;s heads &ldquo;Phrenologically&rdquo; to tell them their priesthood, and that no descendant of Cain would enter the Church. Kirk Watson, who found it, identifies the prophet as the Prophet Cainan. The page also names a Niel Beck. See the new <a href="questions.html#questions">question of interpretation</a>.</span></li>
           <li id="u-the-racetrack-church-in-2020"><span class="date">9 Nov 2026</span><span><b>The Racetrack church in 2020.</b> Ten photographs taken inside and outside the Lord&rsquo;s House on August 16, 2020, contributed by a reader, extend the condition record between 2018 and the videos of 2026. They show the pulpit, benches and table still in place, and the hymnals and a 1931 Reorganized Church lesson quarterly left in the building. See <a href="images.html#images">Images</a>. The <a href="bibliography.html#bibliography">Bibliography</a> adds <i>In the Shadow of Mount Haggin</i> (1975), on the Evans family at Gwendale, and an <i>Anaconda Standard</i> article of 1935 that Patrick F. Morris cites.</span></li>
           <li id="u-the-missing-pages-of-the-davies-case"><span class="date">9 Nov 2026</span><span><b>The missing pages of the Davies case.</b> Pages 133&ndash;157 of the 1880 case against Davies are not in the file at the Washington State Archives: archivist Lee Pierce confirms the whole file was scanned and that those pages were missing before it reached the archives. They may have left the courthouse with pages 158&ndash;195, which Whitman College later found and returned. See <a href="repositories.html#repositories">Repositories</a>.</span></li>
