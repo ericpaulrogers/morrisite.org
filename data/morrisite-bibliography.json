@@ -162,6 +162,26 @@
   }
  },
  {
+  "id": "dove1892treatise",
+  "type": "book",
+  "note": "Dove, James. A Treatise on Re-Incarnation or Re-Embodiment. San Francisco, 1892. Reprinted in Kirk Watson, ed., The Morrisites: Writings and Revelations (2026), pp. 208–64. New",
+  "keyword": "Primary texts",
+  "author": [
+   {
+    "family": "Dove",
+    "given": "James"
+   }
+  ],
+  "title": "A Treatise on Re-Incarnation or Re-Embodiment",
+  "issued": {
+   "date-parts": [
+    [
+     1892
+    ]
+   ]
+  }
+ },
+ {
   "id": "eardley1899gems",
   "type": "book",
   "note": "Eardley, John R. Gems of Inspiration: A Collection of Sublime Thoughts by Modern Prophets. San Francisco: Joseph A. Dove, printer, 1899. Internet Archive",
