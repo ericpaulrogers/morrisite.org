@@ -863,7 +863,7 @@
  {
   "id": "anderson1974mormons",
   "type": "article-journal",
-  "note": "Anderson, C. LeRoy, and Larry J. Halford. “The Mormons and the Morrisite War.” Montana: The Magazine of Western History 24 (October 1974): 42–53.",
+  "note": "Anderson, C. LeRoy, and Larry J. Halford. “The Mormons and the Morrisite War.” Montana: The Magazine of Western History 24, no. 4 (Autumn 1974): 42–53.",
   "keyword": "Articles and papers",
   "author": [
    {
@@ -878,6 +878,7 @@
   "title": "The Mormons and the Morrisite War",
   "container-title": "Montana: The Magazine of Western History",
   "volume": "24",
+  "issue": "4",
   "page": "42–53",
   "issued": {
    "date-parts": [

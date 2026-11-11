@@ -1252,6 +1252,26 @@
   "URL": "https://www.newspapers.com/image/959307774/"
  },
  {
+  "id": "montanastandard19580326",
+  "type": "article-newspaper",
+  "title": "Mary Ann Goldie Called by Death",
+  "note": "Montana Standard (Butte), March 26, 1958, p. 7. “Mary Ann Goldie Called by Death.” The same obituary, two days earlier. Reported alongside: Silver State Post (Deer Lodge, Mont.), March 28, 1958, p. 12. Obituary of Mary Ann Goldie (1873–1958), daughter of Andrew Hendrickson. Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1954",
+  "keyword": "The end of the Montana church, 1954–1962",
+  "container-title": "Montana Standard",
+  "publisher-place": "Butte",
+  "issued": {
+   "date-parts": [
+    [
+     1958,
+     3,
+     26
+    ]
+   ]
+  },
+  "page": "7",
+  "URL": "https://www.newspapers.com/image/355513658/"
+ },
+ {
   "id": "silverstatepost19620727",
   "type": "article-newspaper",
   "title": "Early Day Records Sought By Valley Historical Society",
