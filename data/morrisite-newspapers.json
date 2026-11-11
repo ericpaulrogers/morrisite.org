@@ -1172,6 +1172,106 @@
   }
  },
  {
+  "id": "silverstatepost19540115",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Silver State Post",
+  "note": "Silver State Post (Deer Lodge, Mont.), January 15, 1954, p. 2. A feature on George Johnson, then 97. Johnson’s own story as the paper told it: born near Copenhagen in 1856, he came to Council Bluffs at fifteen, became a Morrisite minister, crossed to Montana by wagon train with Andrew Hendrickson, reaching it “early in 1874,” and preached in family homes as Hendrickson’s assistant before he was ordained and the two led in building the church. His obituary and a 1956 article give 1873 for the journey. Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1954",
+  "keyword": "The end of the Montana church, 1954–1962",
+  "container-title": "Silver State Post",
+  "publisher-place": "Deer Lodge, Mont.",
+  "issued": {
+   "date-parts": [
+    [
+     1954,
+     1,
+     15
+    ]
+   ]
+  },
+  "page": "2",
+  "URL": "https://www.newspapers.com/image/959304184/"
+ },
+ {
+  "id": "silverstatepost19540507",
+  "type": "article-newspaper",
+  "title": "George Johnson Sr’s Last Rites Sunday, Burial in Hillcrest",
+  "note": "Silver State Post (Deer Lodge, Mont.), May 7, 1954, p. 7. “George Johnson Sr’s Last Rites Sunday, Burial in Hillcrest.” Johnson died on the morning of Thursday, April 29, 1954, at ninety-eight. An Episcopal priest conducted the funeral, quoting the words Johnson had used at funerals “as a minister of the Morrisite faith,” and he was buried in Hillcrest cemetery beside his wife, who died in 1907. The paper calls the Morrisite church “almost extinct these days.” Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1954",
+  "keyword": "The end of the Montana church, 1954–1962",
+  "container-title": "Silver State Post",
+  "publisher-place": "Deer Lodge, Mont.",
+  "issued": {
+   "date-parts": [
+    [
+     1954,
+     5,
+     7
+    ]
+   ]
+  },
+  "page": "7",
+  "URL": "https://www.newspapers.com/image/959304852/"
+ },
+ {
+  "id": "silverstatepost19560810",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Silver State Post",
+  "note": "Silver State Post (Deer Lodge, Mont.), August 10, 1956, p. 7. An article on Johnson’s surrey and buggy, recalling him as a Morrisite minister who with Andrew Hendrickson built the little white church west of U.S. Highway 10. Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1954",
+  "keyword": "The end of the Montana church, 1954–1962",
+  "container-title": "Silver State Post",
+  "publisher-place": "Deer Lodge, Mont.",
+  "issued": {
+   "date-parts": [
+    [
+     1956,
+     8,
+     10
+    ]
+   ]
+  },
+  "page": "7",
+  "URL": "https://www.newspapers.com/image/959298525/"
+ },
+ {
+  "id": "silverstatepost19580328",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Silver State Post",
+  "note": "Silver State Post (Deer Lodge, Mont.), March 28, 1958, p. 12. Obituary of Mary Ann Goldie (1873–1958), daughter of Andrew Hendrickson. It describes the Hendricksons as members of the Morrisite denomination “known as the House of the Lord Church, which is no longer active here.” Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1954",
+  "keyword": "The end of the Montana church, 1954–1962",
+  "container-title": "Silver State Post",
+  "publisher-place": "Deer Lodge, Mont.",
+  "issued": {
+   "date-parts": [
+    [
+     1958,
+     3,
+     28
+    ]
+   ]
+  },
+  "page": "12",
+  "URL": "https://www.newspapers.com/image/959307774/"
+ },
+ {
+  "id": "silverstatepost19620727",
+  "type": "article-newspaper",
+  "title": "Early Day Records Sought By Valley Historical Society",
+  "note": "Silver State Post (Deer Lodge, Mont.), July 27, 1962, p. 7. “Early Day Records Sought By Valley Historical Society.” At the new Deer Lodge Valley Historical Society’s organizing meeting, interest focused on “the Morrisite church which was located at one time” in the south valley. Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1954",
+  "keyword": "The end of the Montana church, 1954–1962",
+  "container-title": "Silver State Post",
+  "publisher-place": "Deer Lodge, Mont.",
+  "issued": {
+   "date-parts": [
+    [
+     1962,
+     7,
+     27
+    ]
+   ]
+  },
+  "page": "7",
+  "URL": "https://www.newspapers.com/image/959717300/"
+ },
+ {
   "id": "ogdenstandardexamine19750629",
   "type": "article-newspaper",
   "title": "Morrisite War Touche[d] …",
