@@ -847,10 +847,29 @@
   "URL": "https://www.loc.gov/resource/sn84038125/1886-09-03/ed-1/?sp=3"
  },
  {
+  "id": "saltlaketribune18910705",
+  "type": "article-newspaper",
+  "title": "Charity for the Mormons",
+  "note": "Salt Lake Tribune, May 31 to July 5, 1891. “Charity for the Mormons,” letters 1–6 of “The Elder”: May 31, p. 10 (“Charity for the Mormons”); June 7, p. 16 (“Church of God and Kingdom of God”); June 14, p. 17 (“The Apostles Ancient and Modern”); June 21, p. 3 (“The Priesthood Mistake”); June 28, p. 20 (“A Church That Is Fallen”); July 5, p. 3 (“Are the Mormons Sincere?”). The first six letters, on the Latter-day Saint church: the first is signed “an Elder of the Old-time Church, and a friend to the Mormon people,” and calls 1891 “a year of expectancy of great things.” The second argues that the kingdom of God is yet to come (the letter John R. Eardley described as Parson’s, on “the difference existing between a church and a kingdom”). The third calls Joseph Morris “a reforming prophet,” “one of the most innocent, meek, and inoffensive men that ever lived,” who went to Brigham Young and each of the apostles. The fourth teaches priesthood by birthright, to be shown by a prophet with the Urim and Thummim. The sixth urges that Joseph Smith III be invited to lead a united church and says the first Morrisites were cut off for refusing to testify that Brigham Young was a prophet. Other links: June 7: https://newspapers.lib.utah.edu/details?id=12468328; June 14: https://newspapers.lib.utah.edu/details?id=12469486; June 21: https://newspapers.lib.utah.edu/details?id=12470422; June 28: https://newspapers.lib.utah.edu/details?id=12471745; July 5: https://newspapers.lib.utah.edu/details?id=12472799 Listed on https://morrisite.org/newspapers.html#np-1891",
+  "keyword": "1880–1900 and the 1891 letters",
+  "container-title": "Salt Lake Tribune",
+  "issued": {
+   "date-parts": [
+    [
+     1891,
+     7,
+     5
+    ]
+   ]
+  },
+  "page": "10",
+  "URL": "https://newspapers.lib.utah.edu/details?id=12467161"
+ },
+ {
   "id": "saltlaketribune18910712",
   "type": "article-newspaper",
   "title": "The Morrisite Movement. Motives That Led the Brighamites to Crush It in Blood",
-  "note": "Salt Lake Tribune, July 12, 1891, p. 3. “The Morrisite Movement. Motives That Led the Brighamites to Crush It in Blood.” Signed “The Elder.” The companies that marched on the camp and Howard Egan’s attack and withdrawal. Also the writer’s own sight of Morrisite families being carried west to Nevada in 1863, and where the Morrisites settled: Soda Springs, the Deer Lodge Valley, Walla Walla and Salt Lake County. Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1891",
+  "note": "Salt Lake Tribune, July 12, 1891, p. 3. “The Morrisite Movement. Motives That Led the Brighamites to Crush It in Blood.” Signed “The Elder.” Letter 7. The companies that marched on the camp, and Howard Egan’s attack and withdrawal in his own words as the writer heard them at Deep Creek in 1863, where Egan entertained Morrisite families carried west in Connor’s army wagons. Also Lot Smith as sheriff at Farmington, and where the Morrisites settled: Soda Springs, the Deer Lodge Valley, Walla Walla and Salt Lake County. Newspapers.com links need a subscription. Other links: Newspapers.com: https://www.newspapers.com/image/12030117/ Listed on https://morrisite.org/newspapers.html#np-1891",
   "keyword": "1880–1900 and the 1891 letters",
   "container-title": "Salt Lake Tribune",
   "issued": {
@@ -863,13 +882,32 @@
    ]
   },
   "page": "3",
-  "URL": "https://www.newspapers.com/image/12030117/"
+  "URL": "https://newspapers.lib.utah.edu/details?id=12473832"
+ },
+ {
+  "id": "saltlaketribune18910719",
+  "type": "article-newspaper",
+  "title": "The Morrisite Tragedy. Joseph Morris’s Word to Brigham and How It Was Received. The Fine for Failure to Muster",
+  "note": "Salt Lake Tribune, July 19, 1891, p. 3. “The Morrisite Tragedy. Joseph Morris’s Word to Brigham and How It Was Received. The Fine for Failure to Muster.” Letter 8 of “The Elder.” Morris turned away by Brigham Young and the apostles until Bishop Richard Cook took him in at South Weber in October 1860; the meeting of February 11, 1861, with John Taylor, Wilford Woodruff and Lot Smith; the drill fines; the notice carried in by a cowherd and the first cannon ball. Listed on https://morrisite.org/newspapers.html#np-1891",
+  "keyword": "1880–1900 and the 1891 letters",
+  "container-title": "Salt Lake Tribune",
+  "issued": {
+   "date-parts": [
+    [
+     1891,
+     7,
+     19
+    ]
+   ]
+  },
+  "page": "3",
+  "URL": "https://newspapers.lib.utah.edu/details?id=12914791"
  },
  {
   "id": "saltlaketribune18910726",
   "type": "article-newspaper",
   "title": "Massacre of Morrisites. The Inside History of That Dreadful Deed",
-  "note": "Salt Lake Tribune, July 26, 1891, p. 3. “Massacre of Morrisites. The Inside History of That Dreadful Deed.” The ninth letter. The surrender and the deaths of Morris and Banks, and the seven sentenced and pardoned. Also where some survivors went: Soda Springs, Reese River and Carson Valley. Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1891",
+  "note": "Salt Lake Tribune, July 26, 1891, p. 3. “Massacre of Morrisites. The Inside History of That Dreadful Deed.” The ninth letter. Letter 9. Parson’s surrender to Judson Stoddard, the deaths of Morris, Banks and two women, the eleven Morrisite dead, and the seven sentenced and pardoned (the list does not agree with the court report). Also where some survivors went: Soda Springs, Reese River and Carson Valley, where the writer knew “Bishop Cook, Parson, Eardly and many others.” Newspapers.com links need a subscription. Other links: Newspapers.com: https://www.newspapers.com/image/12202725/ Listed on https://morrisite.org/newspapers.html#np-1891",
   "keyword": "1880–1900 and the 1891 letters",
   "container-title": "Salt Lake Tribune",
   "issued": {
@@ -882,7 +920,7 @@
    ]
   },
   "page": "3",
-  "URL": "https://www.newspapers.com/image/12202725/"
+  "URL": "https://newspapers.lib.utah.edu/details?id=12908086"
  },
  {
   "id": "anacondastandard18910726",
@@ -902,6 +940,63 @@
   },
   "page": "11",
   "URL": "https://www.newspapers.com/image/354700419/"
+ },
+ {
+  "id": "saltlaketribune18910730",
+  "type": "article-newspaper",
+  "title": "The Morrisite History",
+  "note": "Salt Lake Tribune, July 30, 1891, p. 4. “The Morrisite History.” An editorial praising the letters of “The Elder” as “a full, true, and calm history of the Morrisite movement,” written by “a sincere and pious man” who believed in the church “as it was first organized.” It does not name him. Listed on https://morrisite.org/newspapers.html#np-1891",
+  "keyword": "1880–1900 and the 1891 letters",
+  "container-title": "Salt Lake Tribune",
+  "issued": {
+   "date-parts": [
+    [
+     1891,
+     7,
+     30
+    ]
+   ]
+  },
+  "page": "4",
+  "URL": "https://newspapers.lib.utah.edu/details?id=12908730"
+ },
+ {
+  "id": "saltlakeherald18910731",
+  "type": "article-newspaper",
+  "title": "Local News",
+  "note": "Salt Lake Herald, July 31, 1891, p. 4. “Local News.” The Herald’s reply: the Tribune’s Morrisite history is “a bungling falsehood,” printed to win votes for disfranchising the Mormons. Listed on https://morrisite.org/newspapers.html#np-1891",
+  "keyword": "1880–1900 and the 1891 letters",
+  "container-title": "Salt Lake Herald",
+  "issued": {
+   "date-parts": [
+    [
+     1891,
+     7,
+     31
+    ]
+   ]
+  },
+  "page": "4",
+  "URL": "https://newspapers.lib.utah.edu/details?id=11013016"
+ },
+ {
+  "id": "saltlaketribune18910802",
+  "type": "article-newspaper",
+  "title": "What Is Mormonism Now?",
+  "note": "Salt Lake Tribune, August 2, 1891, p. 3. “What Is Mormonism Now?” Letter 10 of “The Elder.” The last letter of the series, on the failure to build the temple in Jackson County. No Morrisite content. Listed on https://morrisite.org/newspapers.html#np-1891",
+  "keyword": "1880–1900 and the 1891 letters",
+  "container-title": "Salt Lake Tribune",
+  "issued": {
+   "date-parts": [
+    [
+     1891,
+     8,
+     2
+    ]
+   ]
+  },
+  "page": "3",
+  "URL": "https://newspapers.lib.utah.edu/details?id=12909164"
  },
  {
   "id": "sanfranciscochronicl18920619",
