@@ -381,7 +381,7 @@ PY  - 1879
 DA  - 1879/02/21/
 UR  - https://newspapers.lib.utah.edu/details?id=11621391
 KW  - Burton’s arrest and trial, 1877–1879
-N1  - Salt Lake Herald, February 21 – March 6, 1879. “The Burton Trial,” daily reports of Burton’s trial for the murder of Isabella Bowman. The fullest account in the free archives. Former Morrisites testified for the prosecution and gave their homes in 1879. Among them were James Bowman (of Soda Springs since 1863), Mrs. Mary Anderson (of Soda Springs), Caroline Eliason, Mrs. Emma Just (of the Snake River valley, Oneida County, Idaho), Jacob Johnson, Thomas Williams (of Ogden since 1865), Philip Hewitt (Salt Lake City) and a man from Hyrum whose name the scan garbles. Men of the posse also took the stand, among them Christopher Sproat, William H. Hunt and Dan Camomile. The defense called Thomas Abbott of Farmington, Robert W. Burton of Kaysville, John C. Thompson of Riverdale and Burton himself. Abraham Taylor, one of the seven convicted in 1863, testified near the close (reported March 4). The text of these scans is poor, and the names are as read from it. Other links: Feb. 22: https://newspapers.lib.utah.edu/details?id=11617087; Feb. 25: https://newspapers.lib.utah.edu/details?id=11624304; Feb. 26: https://newspapers.lib.utah.edu/details?id=11641815; Feb. 27: https://newspapers.lib.utah.edu/details?id=11631853; Feb. 28: https://newspapers.lib.utah.edu/details?id=11617056; Mar. 1: https://newspapers.lib.utah.edu/details?id=11620191; Mar. 2: https://newspapers.lib.utah.edu/details?id=11629072; Mar. 4: https://newspapers.lib.utah.edu/details?id=11625418; Mar. 6: https://newspapers.lib.utah.edu/details?id=11636567 Listed on https://morrisite.org/newspapers.html#np-1877
+N1  - Salt Lake Herald, February 21 – March 6, 1879. “The Burton Trial,” daily reports of Burton’s trial for the murder of Isabella Bowman. The fullest account in the free archives. Former Morrisites testified for the prosecution and gave their homes in 1879. Among them were James Bowman (of Soda Springs since 1863), Mrs. Mary Anderson (of Soda Springs), Caroline Eliason, Mrs. Emma Just (of the Snake River valley, Oneida County, Idaho), Jacob Johnson, Thomas Williams (of Ogden since 1865), Philip Hewitt (Salt Lake City) and a man from Hyrum whose name the scan garbles. Men of the posse also took the stand, among them Christopher Sproat, William H. Hunt and Dan Camomile. The defense called Thomas Abbott of Farmington, Robert W. Burton of Kaysville, John C. Thompson of Riverdale and Burton himself. Abraham Taylor, one of the seven convicted in 1863, testified near the close (reported March 4). The Ogden Junction of February 22 names another prosecution witness, Joseph Warner, born in Germany, who told the court of a vision of Joseph Smith at Providence that had got him cut off from the Latter-day Saint church, read a sermon of his own and recited a revelation. The text of these scans is poor, and the names are as read from it. Other links: Feb. 22: https://newspapers.lib.utah.edu/details?id=11617087; Feb. 25: https://newspapers.lib.utah.edu/details?id=11624304; Feb. 26: https://newspapers.lib.utah.edu/details?id=11641815; Feb. 27: https://newspapers.lib.utah.edu/details?id=11631853; Feb. 28: https://newspapers.lib.utah.edu/details?id=11617056; Mar. 1: https://newspapers.lib.utah.edu/details?id=11620191; Mar. 2: https://newspapers.lib.utah.edu/details?id=11629072; Mar. 4: https://newspapers.lib.utah.edu/details?id=11625418; Mar. 6: https://newspapers.lib.utah.edu/details?id=11636567 Listed on https://morrisite.org/newspapers.html#np-1877
 ID  - saltlakeherald18790221
 ER  - 
 
@@ -390,10 +390,10 @@ TI  - Daily reports of the Burton trial
 T2  - Deseret Evening News; Ogden Junction; Salt Lake Weekly Tribune
 PY  - 1879
 DA  - 1879/02//
-UR  - https://newspapers.lib.utah.edu/search?q=morrisites&year_start=1879&year_end=1879
+UR  - https://newspapers.lib.utah.edu/details?id=23765840
 KW  - Burton’s arrest and trial, 1877–1879
 KW  - reprint
-N1  - The Deseret Evening News and the Ogden Junction (daily reports); the Salt Lake Weekly Tribune, March 1, 1879, pp. 1–5. Reported alongside: Salt Lake Herald, February 21 – March 6, 1879. “The Burton Trial,” daily reports of Burton’s trial for the murder of Isabella Bowman. Listed on https://morrisite.org/newspapers.html#np-1877
+N1  - The Deseret Evening News and the Ogden Junction (daily reports); the Salt Lake Weekly Tribune, March 1, 1879, pp. 1–5. Reported alongside: Salt Lake Herald, February 21 – March 6, 1879. “The Burton Trial,” daily reports of Burton’s trial for the murder of Isabella Bowman. Other links: Search Utah Digital Newspapers: https://newspapers.lib.utah.edu/search?q=morrisites&year_start=1879&year_end=1879 Listed on https://morrisite.org/newspapers.html#np-1877
 ID  - desereteveningnews187902
 ER  - 
 
@@ -455,6 +455,18 @@ UR  - https://newspapers.lib.utah.edu/details?id=10789274
 KW  - 1880–1900 and the 1891 letters
 N1  - Salt Lake Herald, January 27, 1889, p. 7. “In Undimmed Glory,” with a letter from Boise headed “Morrisite Bugaboo.” The Herald’s Boise correspondent on the Morrisite affair being raised in Idaho’s territorial legislature. Listed on https://morrisite.org/newspapers.html#np-1891
 ID  - saltlakeherald18890127
+ER  - 
+
+TY  - NEWS
+TI  - Farmington Fractions
+T2  - Davis County Clipper
+PY  - 1893
+DA  - 1893/11/02/
+SP  - 1
+UR  - https://newspapers.lib.utah.edu/details?id=1114366
+KW  - 1880–1900 and the 1891 letters
+N1  - Davis County Clipper, November 2, 1893, p. 1. “Farmington Fractions” (county court notes). The county had buried “the late Joseph Warner,” the Morrisite of South Weber, and sold his effects, “except some manuscript,” which its agent was told to dispose of if he could. Listed on https://morrisite.org/newspapers.html#np-1891
+ID  - daviscountyclipper18931102
 ER  - 
 
 TY  - NEWS
