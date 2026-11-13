@@ -565,6 +565,10 @@ footer .wrap { display: grid; gap: 8px; }
 .vmap-tract { fill: var(--accent); fill-opacity: .25; stroke: var(--accent); stroke-width: 1.5; }
 .pmap-pt.vmap-approx { fill: var(--panel); stroke: var(--accent); stroke-width: 2.5; }
 .vmap-pl { font-size: 12px; }
+.vmap-tip { position: absolute; z-index: 6; max-width: 280px; background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 9px; font-size: 13px; line-height: 1.4; box-shadow: 0 4px 14px rgba(0,0,0,.14); pointer-events: none; }
+.vmap-tip span { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); }
+.vmap-coord { font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-align: right; margin-top: 2px; min-height: 1.3em; }
+@media (hover: none) { .vmap-coord { display: none; } }
 .vmap-scale line { stroke: var(--ink); stroke-width: 2; } .vmap-scale text { font-size: 10px; fill: var(--muted); }
 .vmap-list li { margin-bottom: 12px; }
 .vmap-tracts { margin: 4px 0 2px 18px; font-size: .9em; }
@@ -683,6 +687,7 @@ footer .wrap { display: grid; gap: 8px; }
         </div>
         <h3 style="font-family:var(--font-sc);font-size:18px;letter-spacing:.04em;color:var(--muted);margin:30px 0 4px">Added to this guide</h3>
         <ol class="chron" id="updates">
+          <li id="u-coordinates-on-the-site-maps"><span class="date">13 Nov 2026</span><span><b>Coordinates on the site maps.</b> On each place page&rsquo;s site map, pointing at a marker or a land tract now shows its name, dates and coordinates (for tracts, the legal description too), and a readout under the map gives the latitude and longitude under the cursor.</span></li>
           <li id="u-clearer-site-maps"><span class="date">13 Nov 2026</span><span><b>Clearer site maps.</b> On the <a href="places.html">Places</a> map, the site-map previews and the maps on each place page no longer let place names overlap: each label now moves to the nearest clear spot beside its marker, and in the small previews minor labels give way to the places themselves.</span></li>
           <li id="u-williams-and-morris-on-plural-marriage"><span class="date">13 Nov 2026</span><span><b>Williams and Morris on plural marriage.</b> <a href="teachings.html#t-morris">Teachings</a> and the <a href="questions.html#q-marriage">marriage question</a> now note that George Williams departed from Morris&rsquo;s rule of one wife for eternity: he kept the household he had formed as a Latter-day Saint and in 1871 taught plurality in the eternities.</span></li>
           <li id="u-a-clearer-animated-map"><span class="date">13 Nov 2026</span><span><b>A clearer animated map.</b> On the <a href="movements.html">Where they went</a> map, place names no longer crowd or overlap: long names are shortened, places a few miles apart share one label (the Kington Fort area now takes in South Weber and Slaterville, and Austin the rest of Lander County), and each label is set clear of the dots, the state names and the other labels. A list under the map gives every place shown in the chosen year.</span></li>

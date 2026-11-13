@@ -572,6 +572,10 @@ footer .wrap { display: grid; gap: 8px; }
 .vmap-tract { fill: var(--accent); fill-opacity: .25; stroke: var(--accent); stroke-width: 1.5; }
 .pmap-pt.vmap-approx { fill: var(--panel); stroke: var(--accent); stroke-width: 2.5; }
 .vmap-pl { font-size: 12px; }
+.vmap-tip { position: absolute; z-index: 6; max-width: 280px; background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 9px; font-size: 13px; line-height: 1.4; box-shadow: 0 4px 14px rgba(0,0,0,.14); pointer-events: none; }
+.vmap-tip span { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); }
+.vmap-coord { font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-align: right; margin-top: 2px; min-height: 1.3em; }
+@media (hover: none) { .vmap-coord { display: none; } }
 .vmap-scale line { stroke: var(--ink); stroke-width: 2; } .vmap-scale text { font-size: 10px; fill: var(--muted); }
 .vmap-list li { margin-bottom: 12px; }
 .vmap-tracts { margin: 4px 0 2px 18px; font-size: .9em; }
