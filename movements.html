@@ -175,6 +175,16 @@ ol.chron li { display: grid; grid-template-columns: 112px 1fr; gap: 16px; paddin
 ol.chron li:last-child { border-bottom: 0; }
 .date { font-family: var(--font-mono); font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 3px; }
 @media (max-width: 460px) { ol.chron li { grid-template-columns: 1fr; gap: 2px; } }
+ol.chron .new-heads { margin: 0; padding-left: 1.1em; }
+ol.chron .new-heads li { display: list-item; grid-template-columns: none; padding: 1px 0; border: 0; }
+ol.chron .new-det { margin-top: 6px; }
+ol.chron .new-det > summary, .new-archive > summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+ol.chron .new-items li:last-child { border-bottom: 0; }
+.new-archive { margin-top: 14px; }
+.new-archive > summary { font-family: var(--font-sc); font-size: 16px; letter-spacing: .04em; padding: 8px 0; }
+.new-h { font-family: var(--font-sc); font-size: 18px; letter-spacing: .04em; color: var(--muted); margin: 30px 0 4px; }
+.new-note { font-size: 14px; color: var(--muted); margin: 0 0 6px; }
+ol.chron#corrections li { padding: 5px 0; }
 
 /* Places */
 .places { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
@@ -865,7 +875,7 @@ layout();
   <div class="wrap">
     <span>Morrisite.org is edited by <a href="https://www.ericpaulrogers.com" target="_blank" rel="noopener">Eric Paul Rogers</a>, historian of Latter Day Saint movements.</span>
     <span>The editor provided insights and helped acquire photographs for C. LeRoy Anderson&rsquo;s final edition of <i>Joseph Morris and the Saga of the Morrisites (Revisited)</i> (2010). Anderson&rsquo;s research files at Utah State University anchor this guide.</span>
-    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a> &middot; Text, data and the editor&rsquo;s photographs: <a href="about.html#license">CC BY 4.0</a> &middot; <a href="about.html#accessibility">Accessibility</a> &middot; <a href="about.html#corrections">Corrections</a></span>
+    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a> &middot; Text, data and the editor&rsquo;s photographs: <a href="about.html#license">CC BY 4.0</a> &middot; <a href="about.html#accessibility">Accessibility</a> &middot; <a href="whats-new.html#corrections">Corrections</a></span>
   </div>
 </footer>
 
