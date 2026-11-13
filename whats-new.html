@@ -565,6 +565,21 @@ footer .wrap { display: grid; gap: 8px; }
 .vmap-tract { fill: var(--accent); fill-opacity: .25; stroke: var(--accent); stroke-width: 1.5; }
 .pmap-pt.vmap-approx { fill: var(--panel); stroke: var(--accent); stroke-width: 2.5; }
 .vmap-pl { font-size: 12px; }
+.glance-wrap { overflow-x: auto; margin: 6px 0 8px; }
+.glance { border-collapse: collapse; width: 100%; font-size: 13.5px; line-height: 1.4; }
+.glance th, .glance td { border: 1px solid var(--rule); padding: 6px 8px; vertical-align: top; text-align: left; }
+.glance thead th { background: var(--panel); font-family: var(--font-sc); font-weight: 600; font-size: 12.5px; }
+.glance tbody th { background: var(--panel); font-weight: 600; width: 11%; }
+.glance td:nth-child(4), .glance td:nth-child(5), .glance thead th:nth-child(4), .glance thead th:nth-child(5) { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+@media (max-width: 760px) {
+  .glance, .glance tbody, .glance tr, .glance td, .glance tbody th { display: block; width: auto; }
+  .glance thead { display: none; }
+  .glance tr { border: 1px solid var(--rule); border-radius: 4px; margin: 0 0 12px; }
+  .glance tbody th { border: 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  .glance td { border: 0; border-bottom: 1px solid var(--rule); }
+  .glance td:last-child { border-bottom: 0; }
+  .glance td::before { content: attr(data-l); display: block; font-family: var(--font-sc); font-size: 11.5px; color: var(--muted); }
+}
 .vmap-tip { position: absolute; z-index: 6; max-width: 280px; background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 9px; font-size: 13px; line-height: 1.4; box-shadow: 0 4px 14px rgba(0,0,0,.14); pointer-events: none; }
 .vmap-tip span { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); }
 .vmap-coord { font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-align: right; margin-top: 2px; min-height: 1.3em; }
@@ -687,6 +702,7 @@ footer .wrap { display: grid; gap: 8px; }
         </div>
         <h3 style="font-family:var(--font-sc);font-size:18px;letter-spacing:.04em;color:var(--muted);margin:30px 0 4px">Added to this guide</h3>
         <ol class="chron" id="updates">
+          <li id="u-teachings-at-a-glance"><span class="date">13 Nov 2026</span><span><b>Teachings at a glance.</b> The <a href="teachings.html#t-glance">Teachings</a> page now opens with a table setting what Joseph Smith, Brigham Young, Joseph Morris, George Williams and Joseph Smith III taught or did on nine topics, from succession and the gathering place to plural marriage, women and the spiritual gifts. The Morrisite entries link to their sources on the page; on phones the table shows as cards.</span></li>
           <li id="u-what-williams-kept-and-changed"><span class="date">13 Nov 2026</span><span><b>What Williams kept and changed.</b> <a href="teachings.html#t-williams">Teachings</a> now opens George Williams&rsquo;s section with a comparison to Morris: what he kept (the order of sevens, birthrights, the diagram, the robe), and what he changed (the gathering moved from &ldquo;the land of promise&rdquo; to Montana, temple ordinances brought into the present, no more dates for Christ&rsquo;s coming, salvation for nearly all, tongues restricted). The note on the Adam&ndash;God teaching now traces part of it to Morris&rsquo;s own catechism on Genesis.</span></li>
           <li id="u-coordinates-on-the-site-maps"><span class="date">13 Nov 2026</span><span><b>Coordinates on the site maps.</b> On each place page&rsquo;s site map, pointing at a marker or a land tract now shows its name, dates and coordinates (for tracts, the legal description too), and a readout under the map gives the latitude and longitude under the cursor.</span></li>
           <li id="u-clearer-site-maps"><span class="date">13 Nov 2026</span><span><b>Clearer site maps.</b> On the <a href="places.html">Places</a> map, the site-map previews and the maps on each place page no longer let place names overlap: each label now moves to the nearest clear spot beside its marker, and in the small previews minor labels give way to the places themselves.</span></li>

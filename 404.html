@@ -566,6 +566,21 @@ footer .wrap { display: grid; gap: 8px; }
 .vmap-tract { fill: var(--accent); fill-opacity: .25; stroke: var(--accent); stroke-width: 1.5; }
 .pmap-pt.vmap-approx { fill: var(--panel); stroke: var(--accent); stroke-width: 2.5; }
 .vmap-pl { font-size: 12px; }
+.glance-wrap { overflow-x: auto; margin: 6px 0 8px; }
+.glance { border-collapse: collapse; width: 100%; font-size: 13.5px; line-height: 1.4; }
+.glance th, .glance td { border: 1px solid var(--rule); padding: 6px 8px; vertical-align: top; text-align: left; }
+.glance thead th { background: var(--panel); font-family: var(--font-sc); font-weight: 600; font-size: 12.5px; }
+.glance tbody th { background: var(--panel); font-weight: 600; width: 11%; }
+.glance td:nth-child(4), .glance td:nth-child(5), .glance thead th:nth-child(4), .glance thead th:nth-child(5) { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+@media (max-width: 760px) {
+  .glance, .glance tbody, .glance tr, .glance td, .glance tbody th { display: block; width: auto; }
+  .glance thead { display: none; }
+  .glance tr { border: 1px solid var(--rule); border-radius: 4px; margin: 0 0 12px; }
+  .glance tbody th { border: 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  .glance td { border: 0; border-bottom: 1px solid var(--rule); }
+  .glance td:last-child { border-bottom: 0; }
+  .glance td::before { content: attr(data-l); display: block; font-family: var(--font-sc); font-size: 11.5px; color: var(--muted); }
+}
 .vmap-tip { position: absolute; z-index: 6; max-width: 280px; background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 9px; font-size: 13px; line-height: 1.4; box-shadow: 0 4px 14px rgba(0,0,0,.14); pointer-events: none; }
 .vmap-tip span { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); }
 .vmap-coord { font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-align: right; margin-top: 2px; min-height: 1.3em; }
