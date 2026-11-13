@@ -657,6 +657,44 @@
   "URL": "https://www.loc.gov/resource/sn84038125/1878-06-07/ed-1/?sp=3"
  },
  {
+  "id": "saltlakeweeklytribun18790301",
+  "type": "article-newspaper",
+  "title": "The Burton Case. Damaging Evidence of Hewitt for the Prosecution",
+  "note": "Salt Lake Weekly Tribune, March 1, 1879, p. 1. “The Burton Case. Damaging Evidence of Hewitt for the Prosecution.” The Tribune’s report of Philip Hewitt’s testimony: as Morris fell, Mrs. Swanee cried, “is this going to be another Mountain Meadows Massacre,” and was shot; Hewitt adds, “I expected it would be another Mountain Meadows massacre.” The Deseret Evening News report of the same testimony (February 24, p. 3) has neither line. Listed on https://morrisite.org/newspapers.html#np-1877",
+  "keyword": "Burton’s arrest and trial, 1877–1879",
+  "container-title": "Salt Lake Weekly Tribune",
+  "issued": {
+   "date-parts": [
+    [
+     1879,
+     3,
+     1
+    ]
+   ]
+  },
+  "page": "1",
+  "URL": "https://newspapers.lib.utah.edu/details?id=31006485"
+ },
+ {
+  "id": "desereteveningnews18790305",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Deseret Evening News",
+  "note": "Deseret Evening News, March 5, 1879, p. 1. Closing arguments in the Burton trial. District Attorney P. T. Van Zile tells the jury he believes the Morrisites feared “another Mountain Meadow massacre” and that “every man, woman and child expected to be killed.” Listed on https://morrisite.org/newspapers.html#np-1877",
+  "keyword": "Burton’s arrest and trial, 1877–1879",
+  "container-title": "Deseret Evening News",
+  "issued": {
+   "date-parts": [
+    [
+     1879,
+     3,
+     5
+    ]
+   ]
+  },
+  "page": "1",
+  "URL": "https://newspapers.lib.utah.edu/details?id=23169844"
+ },
+ {
   "id": "sanfranciscochronicl18790227",
   "type": "article-newspaper",
   "title": "The Morrisite Massacre. Burton, the Mormon Assassin, on the Witness Stand",

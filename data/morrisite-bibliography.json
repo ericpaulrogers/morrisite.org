@@ -88,6 +88,29 @@
   }
  },
  {
+  "id": "codman1874mormon",
+  "type": "book",
+  "note": "Codman, John. The Mormon Country: A Summer with the “Latter-Day Saints.” New York: United States Publishing Company, 1874. Chapter 16, “The Mountain Meadow Massacre.—The Battle with the Morrisites,” pp. 155–58, an early example of pairing the two events. Transcription",
+  "keyword": "Primary texts",
+  "author": [
+   {
+    "family": "Codman",
+    "given": "John"
+   }
+  ],
+  "title": "The Mormon Country: A Summer with the “Latter-Day Saints.”",
+  "publisher": "United States Publishing Company",
+  "publisher-place": "New York",
+  "URL": "https://mountainmeadows.unl.edu/archive/mmm.anti.codman.1874.html",
+  "issued": {
+   "date-parts": [
+    [
+     1874
+    ]
+   ]
+  }
+ },
+ {
   "id": "connor1897report",
   "type": "chapter",
   "note": "Connor, P. Edward. Report to Lt. Col. R. C. Drum, June 2, 1863, on the expedition from Camp Douglas to Soda Springs, May 5–30, 1863. In The War of the Rebellion: A Compilation of the Official Records of the Union and Confederate Armies, ser. 1, vol. 50, pt. 1, 226–29. Washington, DC: Government Printing Office, 1897. The founding of Morristown and the removal of Morrisites to Carson City. OSU eHistory",
