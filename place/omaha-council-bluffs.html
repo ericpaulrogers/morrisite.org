@@ -668,7 +668,7 @@ footer .wrap { display: grid; gap: 8px; }
 
 <main id="top">
   <div class="wrap"><p class="crumb"><a href="../index.html">Morrisite.org</a> &rsaquo; <a href="../places.html#placemap">Places</a> &rsaquo; Omaha &amp; Council Bluffs</p></div>
-  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="../history.html">Chronology and places</a><a href="../places.html">Place pages and map</a><a href="../movements.html">Where they went</a><a href="../teachings.html">Teachings</a><a href="../glossary.html">Glossary</a></nav></div>
+  <div class="wrap"><nav class="subnav" aria-label="In this section"><a href="../history.html">Chronology and places</a><a href="../places.html">Place pages and map</a><a href="../morrisite-war.html">The Morrisite War</a><a href="../movements.html">Where they went</a><a href="../teachings.html">Teachings</a><a href="../glossary.html">Glossary</a></nav></div>
 
   <section class="series" id="place" aria-labelledby="h-place">
     <div class="wrap">
@@ -791,8 +791,15 @@ function snippet(e,toks){var s=e.s||'';if(!s)return '';var low=s.toLowerCase().n
  for(var i=0;i<toks.length&&p<0;i++){var m=new RegExp('(^|[^a-z0-9])'+toks[i].replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).exec(low);p=m?m.index+m[1].length:-1;}
  if(p<0)p=0;var a=Math.max(0,p-60),b=Math.min(s.length,p+140),t=(a>0?'…':'')+s.slice(a,b)+(b<s.length?'…':'');
  t=esc(t);toks.forEach(function(k){if(k.length<2)return;t=t.replace(new RegExp('(^|[^A-Za-z0-9])('+k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'$1<b>$2</b>');});return t;}
+var vocab=null;
+function lev(a,b){if(Math.abs(a.length-b.length)>2)return 9;var p=[],i,j;for(j=0;j<=b.length;j++)p[j]=j;for(i=1;i<=a.length;i++){var c=[i];for(j=1;j<=b.length;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c;}return p[b.length];}
+function fix(toks){if(!vocab){vocab={};idx.forEach(function(e){e.nt.split(' ').forEach(function(w){if(w.length>3)vocab[w]=(vocab[w]||0)+1;});});}
+ var out=[],changed=false;toks.forEach(function(k){if(k.length<4||vocab[k]||idx.some(function(e){return e.ns.indexOf(' '+k)>-1||e.nt.indexOf(' '+k)>-1;})){out.push(k);return;}
+  var best=null,bd=9,lim=k.length>=7?2:1;Object.keys(vocab).forEach(function(w){if(w.indexOf(k)===0){if(bd>0){best=null;bd=0;}return;}var d=lev(k,w);if(d<bd||(d===bd&&best&&vocab[w]>vocab[best])){bd=d;best=w;}});
+  if(best&&bd>0&&bd<=lim){out.push(best);changed=true;}else out.push(k);});return changed?out:null;}
 function run(){var raw=q.value.trim();if(raw.length<2){hide();return;}
  load(function(){var toks=norm(raw).split(' ').filter(Boolean);if(!toks.length){hide();return;}
+  var alt=fix(toks),note='';if(alt){toks=alt;note='<div class="sr-none">Showing results for <b>'+esc(alt.join(' '))+'</b>.</div>';}
   var phrase=' '+toks.join(' ');var res=[];
   idx.forEach(function(e){var sc=0;for(var i=0;i<toks.length;i++){var k=toks[i];var inT=e.nt.indexOf(' '+k)>-1,inS=e.ns.indexOf(' '+k)>-1;if(!inT&&!inS)return;
     sc+=inT?(e.nt.indexOf(' '+k+' ')>-1?7:5):(e.ns.indexOf(' '+k+' ')>-1?1.2:0.8);}
@@ -800,7 +807,7 @@ function run(){var raw=q.value.trim();if(raw.length<2){hide();return;}
    res.push([sc+e.w,e]);});
   res.sort(function(a,b){return b[0]-a[0];});
   if(!res.length){show('<div class="sr-none">No matches. Try another spelling, or browse the <a href="../'+root+'names.html">name index</a>.</div>');return;}
-  var h=res.slice(0,25).map(function(r){var e=r[1];return '<a role="option" href="../'+root+e.u+'"><span class="sr-kind">'+esc(e.k)+'</span><span class="sr-title">'+esc(e.t)+'</span>'+(e.s?'<span class="sr-snip">'+snippet(e,toks)+'</span>':'')+'</a>';}).join('');
+  var h=note+res.slice(0,25).map(function(r){var e=r[1];return '<a role="option" href="../'+root+e.u+'"><span class="sr-kind">'+esc(e.k)+'</span><span class="sr-title">'+esc(e.t)+'</span>'+(e.s?'<span class="sr-snip">'+snippet(e,toks)+'</span>':'')+'</a>';}).join('');
   if(res.length>25)h+='<div class="sr-more">'+(res.length-25)+' more matches; add a word to narrow the search.</div>';
   show(h);sel=-1;});}
 var gct=null;q.addEventListener('input',function(){clearTimeout(timer);timer=setTimeout(run,120);clearTimeout(gct);gct=setTimeout(function(){var v=q.value.trim().toLowerCase();if(v.length>2&&window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:'search: '+v,title:'Site search',event:true});},1500);});
