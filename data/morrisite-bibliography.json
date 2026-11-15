@@ -1032,29 +1032,6 @@
   }
  },
  {
-  "id": "bryant2009reviving",
-  "type": "article-journal",
-  "note": "Bryant, Seth L. “Reviving the Millennial Kingdom: Mormons, Morrisites, and Massacre.” John Whitmer Historical Association Journal 29 (2009): 115–39.",
-  "keyword": "Articles and papers",
-  "author": [
-   {
-    "family": "Bryant",
-    "given": "Seth L."
-   }
-  ],
-  "title": "Reviving the Millennial Kingdom: Mormons, Morrisites, and Massacre",
-  "container-title": "John Whitmer Historical Association Journal",
-  "volume": "29",
-  "page": "115–39",
-  "issued": {
-   "date-parts": [
-    [
-     2009
-    ]
-   ]
-  }
- },
- {
   "id": "blythe2014would",
   "type": "article-journal",
   "note": "Blythe, Christopher James. “‘Would to God, Brethren, I Could Tell You Who I Am!’ Nineteenth-Century Mormonisms and the Apotheosis of Joseph Smith.” Nova Religio 18, no. 2 (2014): 5–27. On how Latter Day Saint movements reimagined Joseph Smith after 1844, including W. W. Phelps’s funeral sermon and the Seventh Angel (pp. 18–19). New",
@@ -1079,6 +1056,50 @@
   }
  },
  {
+  "id": "bourgeous1997can",
+  "type": "paper-conference",
+  "note": "Bourgeous, Virginia. “Can a Belief in Reincarnation Be Reconciled with Mormon Doctrine?” Paper presented at the Sunstone Symposium, 1997 (year as given in Sunstone’s archive). Audio recording SL97223. Background on reincarnation among Latter-day Saints; not about the Morrisites. Listen New",
+  "keyword": "Articles and papers",
+  "author": [
+   {
+    "family": "Bourgeous",
+    "given": "Virginia"
+   }
+  ],
+  "title": "Can a Belief in Reincarnation Be Reconciled with Mormon Doctrine?",
+  "URL": "https://sunstone.org/can-a-belief-in-reincarnation-be-reconciled-with-mormon-doctrine/",
+  "issued": {
+   "date-parts": [
+    [
+     1997
+    ]
+   ]
+  }
+ },
+ {
+  "id": "bryant2009reviving",
+  "type": "article-journal",
+  "note": "Bryant, Seth L. “Reviving the Millennial Kingdom: Mormons, Morrisites, and Massacre.” John Whitmer Historical Association Journal 29 (2009): 115–39.",
+  "keyword": "Articles and papers",
+  "author": [
+   {
+    "family": "Bryant",
+    "given": "Seth L."
+   }
+  ],
+  "title": "Reviving the Millennial Kingdom: Mormons, Morrisites, and Massacre",
+  "container-title": "John Whitmer Historical Association Journal",
+  "volume": "29",
+  "page": "115–39",
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  }
+ },
+ {
   "id": "cannon1970morrisite",
   "type": "article-journal",
   "note": "Cannon, M. Hamlin. “The Morrisite War.” The American West 7 (November 1970): 4–9, 62–63.",
@@ -1097,6 +1118,82 @@
    "date-parts": [
     [
      1970
+    ]
+   ]
+  }
+ },
+ {
+  "id": "criddle2024joseph",
+  "type": "article-journal",
+  "note": "Criddle, Alex. “Joseph Smith, Mormonism, and Reincarnation.” Alex’s Thoughts and Curiosities (Substack), March 20, 2024. Part of a draft written with Robert Beckstead, on whether Joseph Smith taught reincarnation; it does not mention the Morrisites. Read New",
+  "keyword": "Articles and papers",
+  "author": [
+   {
+    "family": "Criddle",
+    "given": "Alex"
+   }
+  ],
+  "title": "Joseph Smith, Mormonism, and Reincarnation",
+  "container-title": "Alex’s Thoughts and Curiosities",
+  "URL": "https://alexcriddle.substack.com/p/joseph-smith-mormonism-and-reincarnation",
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  }
+ },
+ {
+  "id": "daughtrey2011further",
+  "type": "paper-conference",
+  "note": "Daughtrey, Doe. “Further Light and Knowledge.” Paper presented at the Sunstone Symposium, 2011 (year as given in Sunstone’s archive). Audio recording SL11115. On Latter-day Saint women and twenty-first-century “New Spirituality,” including reincarnation; not about the Morrisites. Listen New",
+  "keyword": "Articles and papers",
+  "author": [
+   {
+    "family": "Daughtrey",
+    "given": "Doe"
+   }
+  ],
+  "title": "Further Light and Knowledge",
+  "URL": "https://sunstone.org/further-light-and-knowledge/",
+  "issued": {
+   "date-parts": [
+    [
+     2011
+    ]
+   ]
+  }
+ },
+ {
+  "id": "daughtrey2016persistence",
+  "type": "article-journal",
+  "note": "Daughtrey, Doe, Bill Hansen, Lisa Hansen, and Dan Wotherspoon. “The Persistence of Ideas about Reincarnation in Today’s Mormonism.” Panel at the Sunstone Symposium, 2016 (year as given in Sunstone’s archive). Audio recording SL16355. On present-day Latter-day Saints who believe in past lives; not about the Morrisites. Listen New",
+  "keyword": "Articles and papers",
+  "author": [
+   {
+    "family": "Daughtrey",
+    "given": "Doe"
+   },
+   {
+    "family": "Hansen",
+    "given": "Bill"
+   },
+   {
+    "family": "Hansen",
+    "given": "Lisa"
+   },
+   {
+    "family": "Wotherspoon",
+    "given": "Dan"
+   }
+  ],
+  "title": "The Persistence of Ideas about Reincarnation in Today’s Mormonism",
+  "URL": "https://sunstone.org/the-persistence-of-ideas-about-reincarnation-in-today-s-mormonism/",
+  "issued": {
+   "date-parts": [
+    [
+     2016
     ]
    ]
   }
@@ -1438,6 +1535,31 @@
    "date-parts": [
     [
      2024
+    ]
+   ]
+  }
+ },
+ {
+  "id": "watson2006reincarnation",
+  "type": "paper-conference",
+  "note": "Watson, Kirk, and Robert Beckstead. “Reincarnation in Mormonism.” Paper presented at the Sunstone Symposium, 2006 (year as given in Sunstone’s archive). Audio recording SL06355. A history of reincarnation belief among Latter-day Saints; the abstract does not mention the Morrisites, and the recording has not been reviewed for this guide. Listen New",
+  "keyword": "Articles and papers",
+  "author": [
+   {
+    "family": "Watson",
+    "given": "Kirk"
+   },
+   {
+    "family": "Beckstead",
+    "given": "Robert"
+   }
+  ],
+  "title": "Reincarnation in Mormonism",
+  "URL": "https://sunstone.org/reincarnation-in-mormonism/",
+  "issued": {
+   "date-parts": [
+    [
+     2006
     ]
    ]
   }
