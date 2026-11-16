@@ -1699,6 +1699,26 @@
   "genre": "PhD dissertation"
  },
  {
+  "id": "hansen1969morrisite",
+  "type": "thesis",
+  "note": "Hansen, Johnny Wade. “The Morrisite Affair.” Seminar paper, History 400 (Richard D. Poll), Brigham Young University, August 4, 1969. 22 pp. Copy at South Weber City. Cites Thomas Peek’s diary, then owned by Richard O. Tucker, and the South Weber resident Leonard Bowman, and reports that the Anderson children at Soda Springs were Presbyterians.",
+  "keyword": "Theses",
+  "author": [
+   {
+    "family": "Hansen",
+    "given": "Johnny Wade"
+   }
+  ],
+  "title": "The Morrisite Affair",
+  "issued": {
+   "date-parts": [
+    [
+     1969
+    ]
+   ]
+  }
+ },
+ {
   "id": "holley1966history",
   "type": "thesis",
   "note": "Holley, Henry Orvil. “The History and Effect of Apostasy on a Small Mormon Community.” Master’s thesis, Brigham Young University, 1966. On Slaterville, Weber County, and the Morrisites. Online",
@@ -1762,6 +1782,26 @@
    "date-parts": [
     [
      1989
+    ]
+   ]
+  }
+ },
+ {
+  "id": "allred2004south",
+  "type": "book",
+  "note": "Allred, Norma Earl, comp. South Weber Homes and Families, 1852–1952. Given to South Weber City, 2004. Lists Joseph Warner at South Weber in 1880.",
+  "keyword": "Local and county histories",
+  "editor": [
+   {
+    "family": "Allred",
+    "given": "Norma Earl"
+   }
+  ],
+  "title": "South Weber Homes and Families, 1852–1952",
+  "issued": {
+   "date-parts": [
+    [
+     2004
     ]
    ]
   }
@@ -2055,6 +2095,26 @@
   }
  },
  {
+  "id": "peek1963early",
+  "type": "book",
+  "note": "Peek, Thomas. “Early Settlement of South Weber.” Manuscript, cited (pp. 4–5) in the 1963 talk below. Not yet located.",
+  "keyword": "Local and county histories",
+  "author": [
+   {
+    "family": "Peek",
+    "given": "Thomas"
+   }
+  ],
+  "title": "Early Settlement of South Weber",
+  "issued": {
+   "date-parts": [
+    [
+     1963
+    ]
+   ]
+  }
+ },
+ {
   "id": "shupe1930caribou",
   "type": "book",
   "note": "Shupe, Verna Irene. Caribou County Chronology. Colorado Springs, CO: Print Craft Press, [1930]. Soda Springs from 1863, with an early list of the Morrisite families who came with Connor (p. 13). HathiTrust (full view)",
@@ -2089,6 +2149,33 @@
   ],
   "title": "The History of South Weber City",
   "URL": "https://southwebercity.gov/city-history/"
+ },
+ {
+  "id": "anon1998",
+  "type": "webpage",
+  "note": "South Weber City. Pioneer Cemetery records: burial records, Mattie G. Ray’s compiled list (typed February 5, 1998), plot map (2002–05) and notes on the cemetery’s history. South Weber City offices. See Repositories.",
+  "keyword": "Local and county histories",
+  "URL": "#south-weber-city",
+  "issued": {
+   "date-parts": [
+    [
+     1998
+    ]
+   ]
+  }
+ },
+ {
+  "id": "anon1963",
+  "type": "book",
+  "note": "[Speaker not identified.] Notes for a talk on the Morrisite War, June 14, 1963, apparently given to the Sons of Utah Pioneers. Manuscript, South Weber City. Draws on the speaker’s letters from Peter W. Anderson of Soda Springs and on Thomas Peek’s “Early Settlement”; names William Kendell, John Firth and Moses Byrne among the six first baptized.",
+  "keyword": "Local and county histories",
+  "issued": {
+   "date-parts": [
+    [
+     1963
+    ]
+   ]
+  }
  },
  {
   "id": "wheeler1963history",

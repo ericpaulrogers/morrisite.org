@@ -714,6 +714,15 @@
   "URL": "https://www.newspapers.com/image/1236106884/"
  },
  {
+  "id": "saltlakeheraldnd",
+  "type": "article-newspaper",
+  "title": "On Trial for His Reason",
+  "note": "Salt Lake Herald (semi-weekly), March 8, year not shown (1890s?). “On Trial for His Reason.” William Jones of Davis County, in his eightieth year, called the man “who caused the Morrisite War,” faces his daughters’ petition for a guardian; the report recalls that he was held prisoner by the Morrisites and testified at Burton’s trial. The year is still to be found. Clipping at South Weber City. Listed on https://morrisite.org/newspapers.html#np-1891",
+  "keyword": "1880–1900 and the 1891 letters",
+  "container-title": "Salt Lake Herald",
+  "publisher-place": "semi-weekly"
+ },
+ {
   "id": "saltlakedemocrat18851124",
   "type": "article-newspaper",
   "title": "Their Destiny",
@@ -1466,7 +1475,7 @@
   "id": "saltlaketribune19810226",
   "type": "article-newspaper",
   "title": "‘Morrisite War’ Disappears in H[istory] …",
-  "note": "Salt Lake Tribune, February 26, 1981, pp. D-1–D-2. “‘Morrisite War’ Disappears in H[istory] …” (headline only partly read). Local memory of the siege at South Weber. Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1951",
+  "note": "Salt Lake Tribune, February 26, 1981, pp. D-1–D-2. “‘Morrisite War’ Disappears in H[istory] …” (headline only partly read). Local memory of the siege at South Weber, with the foundation of the fort’s schoolhouse on Brent Winchester’s land and the recollections of Mattie Ray. South Weber City holds a clipping. Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1951",
   "keyword": "Recent retellings, 1951 to the present",
   "container-title": "Salt Lake Tribune",
   "issued": {
@@ -1549,6 +1558,38 @@
    ]
   },
   "page": "69–71"
+ },
+ {
+  "id": "standardexaminer20061102",
+  "type": "article-newspaper",
+  "title": "Three-day war focus of new monument",
+  "note": "Standard-Examiner (Ogden), November 2, 2006. Ruth Malan, “Three-day war focus of new monument.” On the dedication of the Kington Fort–Morrisite War monument. The local historian Ed Cooper counts eleven dead and says he cannot find where Morris was buried. Copy at South Weber City. Listed on https://morrisite.org/newspapers.html#np-1951",
+  "keyword": "Recent retellings, 1951 to the present",
+  "container-title": "Standard-Examiner",
+  "publisher-place": "Ogden",
+  "issued": {
+   "date-parts": [
+    [
+     2006,
+     11,
+     2
+    ]
+   ]
+  }
+ },
+ {
+  "id": "newsnd",
+  "type": "article-newspaper",
+  "title": "Morrisite Followers Strong in Beliefs",
+  "note": "Don Baker, “Morrisite Followers Strong in Beliefs.” Paper and date not yet identified. A retelling for Weber County readers. Clipping at South Weber City. Listed on https://morrisite.org/newspapers.html#np-1951",
+  "keyword": "Recent retellings, 1951 to the present"
+ },
+ {
+  "id": "newsndb",
+  "type": "article-newspaper",
+  "title": "Morrisites Didn’t Accept Polygamy",
+  "note": "“Morrisites Didn’t Accept Polygamy.” Paper and date not yet identified. It repeats the claim that Morris broke with the church over plural marriage, which his own writings do not bear out (see Teachings). Clipping at South Weber City. Listed on https://morrisite.org/newspapers.html#np-1951",
+  "keyword": "Recent retellings, 1951 to the present"
  },
  {
   "id": "bonnercountydailybee20130709",
