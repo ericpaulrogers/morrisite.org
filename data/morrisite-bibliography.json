@@ -2117,9 +2117,9 @@
   }
  },
  {
-  "id": "peek1963early",
-  "type": "book",
-  "note": "Peek, Thomas. “Early Settlement of South Weber.” Manuscript, cited (pp. 4–5) in the 1963 talk below. Not yet located.",
+  "id": "peek1900early",
+  "type": "manuscript",
+  "note": "Peek, Thomas (Thomas Henry, 1839–1911). “The Early Settlement of South Weber.” Written about 1900. Four typewritten transcriptions, MSS 983, L. Tom Perry Special Collections, Harold B. Lee Library, Brigham Young University. A short history of South Weber by a settler who came in 1855, with brief accounts of the Utah War and the Morrisite War. Cited (pp. 4–5) in the 1963 talk below. Not yet read for this guide. Finding aid",
   "keyword": "Local and county histories",
   "author": [
    {
@@ -2127,11 +2127,13 @@
     "given": "Thomas"
    }
   ],
-  "title": "Early Settlement of South Weber",
+  "title": "The Early Settlement of South Weber",
+  "publisher": "L. Tom Perry Special Collections, Brigham Young University (MSS 983)",
+  "URL": "https://archives.lib.byu.edu/repositories/14/resources/6608",
   "issued": {
    "date-parts": [
     [
-     1963
+     1900
     ]
    ]
   }
