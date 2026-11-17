@@ -1798,6 +1798,26 @@
   "page": "69–71"
  },
  {
+  "id": "standardexaminer19890911",
+  "type": "article-newspaper",
+  "title": "Farmington Cannon Stays despite Claim",
+  "note": "Standard-Examiner (Ogden), September 11, 1989, p. 15. Valerie Phillips (Lakeside Review), “Farmington Cannon Stays despite Claim.” The Daughters of Utah Pioneers’ 1947 marker by the old cannon at Farmington says it was used at Nauvoo, brought west in 1847 and used in the “Morrisite battle at Uintah in 1862.” The cannon collector James H. Ambrose of Vernal identified it as a Civil War gun cast by the Joseph Reid Anderson company of Richmond, Virginia, in 1864, so it cannot have been at the siege. Listed on https://morrisite.org/newspapers.html#np-1951",
+  "keyword": "Recent retellings, 1951 to the present",
+  "container-title": "Standard-Examiner",
+  "publisher-place": "Ogden",
+  "issued": {
+   "date-parts": [
+    [
+     1989,
+     9,
+     11
+    ]
+   ]
+  },
+  "page": "15",
+  "URL": "https://newspapers.lib.utah.edu/details?id=31321143"
+ },
+ {
   "id": "lakesidereview19900522",
   "type": "article-newspaper",
   "title": "[Untitled item], Lakeside Review",
