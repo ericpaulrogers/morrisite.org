@@ -67,4 +67,6 @@ jobs:
         if: env.READY == 'true' && github.event_name == 'workflow_dispatch' && inputs.run_tests
         env:
           TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
-        run: node _ask/live_tests.mjs "${{ steps.deploy.outputs.deployment-url }}" >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          set -o pipefail
+          node _ask/live_tests.mjs "${{ steps.deploy.outputs.deployment-url }}" | tee -a "$GITHUB_STEP_SUMMARY"

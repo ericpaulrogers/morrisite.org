@@ -23,7 +23,7 @@ for (const t of [...tests, ...extra]) {
   const cites = (j.paragraphs || []).flatMap(p => (p.cites || []).map(c => c.url));
   const text = (j.paragraphs || []).map(p => p.text).join(" ");
   let verdict;
-  if (j.error) verdict = "FAIL (error)";
+  if (j.error) verdict = `FAIL (HTTP ${st}: ${j.error})`;
   else if (t.expect.startsWith("trap:model-must-refuse-premise")) verdict = "REVIEW BY HAND";
   else if (t.expect.startsWith("trap")) verdict = j.status === "not_found" ? "pass" : "FAIL (answered a trap)";
   else {
