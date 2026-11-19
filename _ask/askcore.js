@@ -240,7 +240,7 @@ export function verify(raw, hits) {
   const link = x => ({ url: hits[x - 1].p.url, label: `${hits[x - 1].p.page} › ${hits[x - 1].p.head}` });
   const answer = problems.length ? null : {
     status: a.status, level: a.level,
-    paragraphs: paras.map(p => ({ text: p.text.replace(/\s*\[\d+\](?:\s*\[\d+\])*/g, "").replace(/\s+([.,;:])/g, "$1").trim(), cites: (p.cites || []).map(link) })),
+    paragraphs: paras.map(p => ({ text: p.text.replace(/\s*\[\d+\](?:\s*\[\d+\])*/g, "").replace(/\s*\((\d{1,2})(?:,\s*\d{1,2})*\)/g, (m, d) => (+d <= n ? "" : m)).replace(/\s+([.,;:])/g, "$1").trim(), cites: (p.cites || []).map(link) })),
     quotes: (a.quotes || []).map(q => ({ text: q.text, ...link(q.n) })),
     see_also: [...new Set([...(a.see_also || [])])].map(link),
   };
