@@ -242,7 +242,13 @@ export function verify(raw, hits) {
     status: a.status, level: a.level,
     paragraphs: paras.map(p => ({ text: p.text.replace(/\s*\[\d+\](?:\s*\[\d+\])*/g, "").replace(/\s*\((\d{1,2})(?:,\s*\d{1,2})*\)/g, (m, d) => (+d <= n ? "" : m)).replace(/\s+([.,;:])/g, "$1").trim(), cites: (p.cites || []).map(link) })),
     quotes: (a.quotes || []).map(q => ({ text: q.text, ...link(q.n) })),
-    see_also: [...new Set([...(a.see_also || [])])].map(link),
+    // one entry per page, and none that is already a source
+    see_also: (() => {
+      const cited = new Set(paras.flatMap(p => (p.cites || []).map(c => link(c).url)));
+      const seen = new Set(), out = [];
+      for (const x of a.see_also || []) { const l = link(x); if (cited.has(l.url) || seen.has(l.url)) continue; seen.add(l.url); out.push(l); }
+      return out;
+    })(),
   };
   return { ok: !problems.length, problems, answer };
 }
