@@ -577,6 +577,9 @@ footer .wrap { display: grid; gap: 8px; }
 .site-results .sr-snip { display: block; color: var(--muted); font-size: 12.5px; line-height: 1.45; margin-top: 2px; }
 .site-results .sr-snip b { color: var(--ink); }
 .site-results .sr-none { padding: 8px 14px; color: var(--muted); }
+.site-results a.sr-ask { border-bottom: 1px solid var(--rule); background: var(--panel, rgba(0,0,0,.03)); }
+.site-results a.sr-ask .sr-kind { color: #8a5a00; }
+.site-results a.sr-ask .sr-title { font-style: italic; }
 .site-results .sr-more { padding: 6px 14px 2px; color: var(--muted); font-size: 12px; }
 @media (max-width: 640px) { .site-search { flex-basis: 100%; } .site-search input { width: 100%; max-width: none; } .site-results { left: 0; right: auto; } }
 .toc { margin: 0 0 22px; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--panel, transparent); font-size: 14px; }
@@ -818,6 +821,13 @@ var mk=document.querySelector('a.mark'),mh=mk?mk.getAttribute('href'):'',root=/i
 var idx=null,loading=false,sel=-1,timer=null;
 function norm(t){return (t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ø/g,'o').replace(/æ/g,'ae').replace(/å/g,'a').replace(/[^a-z0-9]+/g,' ');}
 function esc(t){return t.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+/* Questions ("Who was...?", "Why did...") also get a line that opens "Ask the guide". */
+function isQ(t){t=t.trim().toLowerCase();var n=t.split(/\s+/).length;return (/\?$/.test(t)&&n>=2)||(n>=3&&/^(who|whom|whose|what|what's|whats|when|where|why|how|did|does|do|was|were|is|are|can|could|which|tell me)\b/.test(t));}
+var askLib=null,askRev=null,askBusy=false;
+function loadAsk(cb){if(askRev||askLib===false)return cb();if(askBusy)return;askBusy=true;
+ try{import(new URL(root+'ask/askcore.js',location.href).href).then(function(m){askLib=m;return fetch(root+'ask/reviewed.json');}).then(function(r){return r.json();}).then(function(d){askRev=d;cb();}).catch(function(){askLib=false;cb();});}catch(e){askLib=false;cb();}}
+function askRow(raw){var r=askLib&&askRev?askLib.matchReviewed(askRev,raw):null;
+ return '<a role="option" class="sr-ask" href="'+root+'ask.html?q='+encodeURIComponent(raw)+'"><span class="sr-kind">Ask the guide</span><span class="sr-title">'+esc(raw)+'</span><span class="sr-snip">'+(r?'The editor has a reviewed answer: <b>'+esc(r.q)+'</b>':'An answer drawn only from this guide&rsquo;s pages, with its sources. Press Enter.')+'</span></a>';}
 function load(cb){if(idx)return cb();if(loading)return;loading=true;
  fetch(root+'search-index.json').then(function(r){return r.json();}).then(function(d){
   idx=d.map(function(e){e.nt=' '+norm(e.t)+' ';e.ns=' '+norm(e.s)+' ';return e;});cb();
@@ -835,7 +845,9 @@ function fix(toks){if(!vocab){vocab={};idx.forEach(function(e){e.nt.split(' ').f
   var best=null,bd=9,lim=k.length>=7?2:1;Object.keys(vocab).forEach(function(w){if(w.indexOf(k)===0){if(bd>0){best=null;bd=0;}return;}var d=lev(k,w);if(d<bd||(d===bd&&best&&vocab[w]>vocab[best])){bd=d;best=w;}});
   if(best&&bd>0&&bd<=lim){out.push(best);changed=true;}else out.push(k);});return changed?out:null;}
 function run(){var raw=q.value.trim();if(raw.length<2){hide();return;}
- load(function(){var toks=norm(raw).split(' ').filter(Boolean);if(!toks.length){hide();return;}
+ load(function(){var toks=norm(raw).split(' ').filter(Boolean);
+  if(isQ(raw)){var QW=' who whom whose what whats when where why how did does do was were is are can could which tell me the a an of in on at to for and or with about from by any there their his her its it that this be been have has had s ';var kt=toks.filter(function(k){return QW.indexOf(' '+k+' ')<0;});if(kt.length)toks=kt;}
+  if(!toks.length){hide();return;}
   var alt=fix(toks),note='';if(alt){toks=alt;note='<div class="sr-none">Showing results for <b>'+esc(alt.join(' '))+'</b>.</div>';}
   var phrase=' '+toks.join(' ');var res=[];
   idx.forEach(function(e){var sc=0;for(var i=0;i<toks.length;i++){var k=toks[i];var inT=e.nt.indexOf(' '+k)>-1,inS=e.ns.indexOf(' '+k)>-1;if(!inT&&!inS)return;
@@ -843,11 +855,14 @@ function run(){var raw=q.value.trim();if(raw.length<2){hide();return;}
    if(e.nt.indexOf(phrase)>-1)sc+=6;if(toks.length>1&&e.ns.indexOf(phrase)>-1)sc+=3;
    res.push([sc+e.w,e]);});
   res.sort(function(a,b){return b[0]-a[0];});
-  if(!res.length){show('<div class="sr-none">No matches. Try another spelling, or browse the <a href="'+root+'names.html">name index</a>.</div>');return;}
-  var h=note+res.slice(0,25).map(function(r){var e=r[1];return '<a role="option" href="'+root+e.u+'"><span class="sr-kind">'+esc(e.k)+'</span><span class="sr-title">'+esc(e.t)+'</span>'+(e.s?'<span class="sr-snip">'+snippet(e,toks)+'</span>':'')+'</a>';}).join('');
+  var ask=isQ(raw);
+  if(ask&&!askRev&&askLib!==false){loadAsk(run);}
+  var top=ask?askRow(raw):'';
+  if(!res.length){show(top+(ask?'':'<div class="sr-none">No matches. Try another spelling, or browse the <a href="'+root+'names.html">name index</a>.</div>'));sel=-1;return;}
+  var h=top+note+res.slice(0,25).map(function(r){var e=r[1];return '<a role="option" href="'+root+e.u+'"><span class="sr-kind">'+esc(e.k)+'</span><span class="sr-title">'+esc(e.t)+'</span>'+(e.s?'<span class="sr-snip">'+snippet(e,toks)+'</span>':'')+'</a>';}).join('');
   if(res.length>25)h+='<div class="sr-more">'+(res.length-25)+' more matches; add a word to narrow the search.</div>';
   show(h);sel=-1;});}
-var gct=null;q.addEventListener('input',function(){clearTimeout(timer);timer=setTimeout(run,120);clearTimeout(gct);gct=setTimeout(function(){var v=q.value.trim().toLowerCase();if(v.length>2&&window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:'search: '+v,title:'Site search',event:true});},1500);});
+var gct=null;q.addEventListener('input',function(){clearTimeout(timer);timer=setTimeout(run,120);clearTimeout(gct);gct=setTimeout(function(){var v=q.value.trim().toLowerCase();if(v.length>2&&window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:isQ(v)?'search: (a question)':'search: '+v,title:'Site search',event:true});},1500);});
 q.addEventListener('focus',function(){load(function(){});if(q.value.trim().length>1)run();});
 q.addEventListener('keydown',function(ev){var opts=box.querySelectorAll('a[role=option]');
  if(ev.key==='ArrowDown'||ev.key==='ArrowUp'){if(!opts.length)return;ev.preventDefault();sel=(sel+(ev.key==='ArrowDown'?1:-1)+opts.length)%opts.length;

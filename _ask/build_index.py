@@ -7,7 +7,7 @@ import json, os, re, sys, glob, html as _h, unicodedata
 from bs4 import BeautifulSoup, NavigableString, Tag
 
 SITE, OUT = sys.argv[1], sys.argv[2]
-SKIP_PAGES = {"404.html", "data.html"}
+SKIP_PAGES = {"404.html", "data.html", "ask.html"}
 SKIP_TAGS = {"script", "style", "nav", "button", "svg", "select", "input", "noscript", "form"}
 MAXLEN, MINLEN = 1100, 30
 
