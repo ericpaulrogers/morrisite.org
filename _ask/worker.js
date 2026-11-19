@@ -70,15 +70,18 @@ async function sha(s) {
   return [...new Uint8Array(d)].slice(0, 12).map(x => x.toString(16).padStart(2, "0")).join("");
 }
 
+let LAST = ""; // why the last reply stopped (shown to the test job only)
 async function callClaude(env, messages) {
   const r = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-    body: JSON.stringify({ model: env.MODEL || "claude-haiku-5-5", max_tokens: 900, system: A.SYSTEM_PROMPT, messages }),
+    body: JSON.stringify({ model: env.MODEL || "claude-haiku-5-5", max_tokens: 2000, system: A.SYSTEM_PROMPT, messages }),
   });
   if (!r.ok) throw new Error(`API ${r.status}: ${(await r.text()).slice(0, 300)}`);
   const j = await r.json();
-  return (j.content || []).filter(c => c.type === "text").map(c => c.text).join("");
+  const text = (j.content || []).filter(c => c.type === "text").map(c => c.text).join("");
+  LAST = `stop=${j.stop_reason}; blocks=${(j.content || []).map(c => c.type).join(",")}; out=${j.usage?.output_tokens}`;
+  return text;
 }
 
 function notFound(q, hits, reason) {
@@ -116,7 +119,7 @@ export default {
         raw = await callClaude(env, msgs);
         v = A.verify(raw, hits);
       }
-      if (!v.ok) return cors(env, { ...notFound(q, hits, "failed-checks"), ...(testing ? { detail: v.problems.join(" ") + " RAW: " + String(raw).slice(0, 700) } : {}) });
+      if (!v.ok) return cors(env, { ...notFound(q, hits, "failed-checks"), ...(testing ? { detail: v.problems.join(" ") + " [" + LAST + "] RAW: " + String(raw).slice(0, 700) } : {}) });
       if (v.answer.status === "not_found") return cors(env, notFound(q, hits, "model-not-found"));
       return cors(env, { kind: "generated", ...v.answer, mailto: A.mailto(q, v.answer.paragraphs.map(p => p.text).join(" ").slice(0, 400)), version: VERSION });
     } catch (e) {

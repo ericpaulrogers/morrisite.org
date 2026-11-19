@@ -28,7 +28,7 @@ for (const t of [...tests, ...extra]) {
   else if (t.expect.startsWith("trap")) verdict = j.status === "not_found" ? "pass" : "FAIL (answered a trap)";
   else {
     const want = t.expect.slice(8);
-    verdict = j.status !== "answered" ? "FAIL (no answer)" : (!want || cites.some(c => c.startsWith(want.split("#")[0]))) ? "pass" : "FAIL (cited other pages)";
+    verdict = !["answered", "partial"].includes(j.status) ? "FAIL (no answer)" : (!want || cites.some(c => c.startsWith(want.split("#")[0]))) ? "pass" : "FAIL (cited other pages)";
   }
   if (verdict === "pass") pass++; else if (verdict.startsWith("REVIEW")) review++; else fail++;
   rows.push(`| ${esc(t.q)} | ${verdict} | ${esc(j.status || st)} / ${esc(j.level || "")}${j.reason ? " (" + esc(j.reason) + ")" : ""}${j.detail && !j.error ? " DETAIL: " + esc(j.detail) : ""} | ${esc(text).slice(0, 400)} | ${esc([...new Set(cites)].join(", "))} |`);

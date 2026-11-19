@@ -196,7 +196,7 @@ Reply with JSON only, in this form:
  "paragraphs":[{"text":"...","cites":[3,5]}],
  "quotes":[{"n":3,"text":"exact words copied from passage 3"}],
  "see_also":[7,8]}
-"partial" means the passages answer part of the question. Use at most 3 paragraphs and at most 2 quotes.`;
+"partial" means the passages answer part of the question. Use at most 3 paragraphs of at most 60 words each (about 150 words in all) and at most 2 quotes. Put citations only in "cites", not as [1] in the text.`;
 
 export function userMessage(q, hits) {
   const ps = hits.map((h, i) => `[${i + 1}] (${h.p.page} › ${h.p.head})\n${h.p.text}`).join("\n\n");
@@ -211,7 +211,10 @@ export function verify(raw, hits) {
   const problems = [];
   let a;
   try {
-    a = typeof raw === "string" ? JSON.parse(raw.replace(/^```(?:json)?\s*|\s*```$/g, "")) : raw;
+    if (typeof raw === "string") {
+      const t = raw.replace(/^```(?:json)?\s*|\s*```$/g, ""), i = t.indexOf("{"), j = t.lastIndexOf("}");
+      a = JSON.parse(i >= 0 && j > i ? t.slice(i, j + 1) : t);
+    } else a = raw;
   } catch (e) {
     return { ok: false, problems: ["The reply was not valid JSON."] };
   }
@@ -237,7 +240,7 @@ export function verify(raw, hits) {
   const link = x => ({ url: hits[x - 1].p.url, label: `${hits[x - 1].p.page} › ${hits[x - 1].p.head}` });
   const answer = problems.length ? null : {
     status: a.status, level: a.level,
-    paragraphs: paras.map(p => ({ text: p.text, cites: (p.cites || []).map(link) })),
+    paragraphs: paras.map(p => ({ text: p.text.replace(/\s*\[\d+\](?:\s*\[\d+\])*/g, "").replace(/\s+([.,;:])/g, "$1").trim(), cites: (p.cites || []).map(link) })),
     quotes: (a.quotes || []).map(q => ({ text: q.text, ...link(q.n) })),
     see_also: [...new Set([...(a.see_also || [])])].map(link),
   };
