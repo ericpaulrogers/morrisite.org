@@ -116,7 +116,7 @@ export default {
         raw = await callClaude(env, msgs);
         v = A.verify(raw, hits);
       }
-      if (!v.ok) return cors(env, notFound(q, hits, "failed-checks"));
+      if (!v.ok) return cors(env, { ...notFound(q, hits, "failed-checks"), ...(testing ? { detail: v.problems.join(" ") + " RAW: " + String(raw).slice(0, 700) } : {}) });
       if (v.answer.status === "not_found") return cors(env, notFound(q, hits, "model-not-found"));
       return cors(env, { kind: "generated", ...v.answer, mailto: A.mailto(q, v.answer.paragraphs.map(p => p.text).join(" ").slice(0, 400)), version: VERSION });
     } catch (e) {

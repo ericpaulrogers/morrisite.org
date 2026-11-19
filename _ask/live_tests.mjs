@@ -31,7 +31,7 @@ for (const t of [...tests, ...extra]) {
     verdict = j.status !== "answered" ? "FAIL (no answer)" : (!want || cites.some(c => c.startsWith(want.split("#")[0]))) ? "pass" : "FAIL (cited other pages)";
   }
   if (verdict === "pass") pass++; else if (verdict.startsWith("REVIEW")) review++; else fail++;
-  rows.push(`| ${esc(t.q)} | ${verdict} | ${esc(j.status || st)} / ${esc(j.level || "")}${j.reason ? " (" + esc(j.reason) + ")" : ""} | ${esc(text).slice(0, 400)} | ${esc([...new Set(cites)].join(", "))} |`);
+  rows.push(`| ${esc(t.q)} | ${verdict} | ${esc(j.status || st)} / ${esc(j.level || "")}${j.reason ? " (" + esc(j.reason) + ")" : ""}${j.detail && !j.error ? " DETAIL: " + esc(j.detail) : ""} | ${esc(text).slice(0, 400)} | ${esc([...new Set(cites)].join(", "))} |`);
 }
 console.log(`## Ask the guide: live tests\n\n${pass} passed, ${fail} failed, ${review} to review by hand. Worker: ${URL_}\n`);
 console.log("| Question | Result | Status / level | Answer | Cites |\n|---|---|---|---|---|\n" + rows.join("\n"));
