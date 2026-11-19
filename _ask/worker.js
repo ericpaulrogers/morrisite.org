@@ -76,7 +76,7 @@ async function callClaude(env, messages) {
     headers: { "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
     body: JSON.stringify({ model: env.MODEL || "claude-haiku-5-5", max_tokens: 900, temperature: 0, system: A.SYSTEM_PROMPT, messages }),
   });
-  if (!r.ok) throw new Error(`API ${r.status}`);
+  if (!r.ok) throw new Error(`API ${r.status}: ${(await r.text()).slice(0, 300)}`);
   const j = await r.json();
   return (j.content || []).filter(c => c.type === "text").map(c => c.text).join("");
 }
@@ -120,7 +120,7 @@ export default {
       if (v.answer.status === "not_found") return cors(env, notFound(q, hits, "model-not-found"));
       return cors(env, { kind: "generated", ...v.answer, mailto: A.mailto(q, v.answer.paragraphs.map(p => p.text).join(" ").slice(0, 400)), version: VERSION });
     } catch (e) {
-      return cors(env, { error: "The answer service is not available just now. The pages below may help.", see_also: hits.slice(0, 4).map(h => ({ url: h.p.url, label: `${h.p.page} › ${h.p.head}` })) }, 503);
+      return cors(env, { error: "The answer service is not available just now. The pages below may help.", ...(testing ? { detail: String(e.message || e) } : {}), see_also: hits.slice(0, 4).map(h => ({ url: h.p.url, label: `${h.p.page} › ${h.p.head}` })) }, 503);
     }
   },
 };
