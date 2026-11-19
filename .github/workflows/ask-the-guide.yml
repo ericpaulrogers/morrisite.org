@@ -36,7 +36,7 @@ jobs:
       - name: Build the passage index from the published pages
         if: env.READY == 'true'
         run: |
-          pip install -q beautifulsoup4
+          pip install -q beautifulsoup4 lxml
           PASSAGES_ONLY=1 python _ask/build_index.py . _ask .
           cd _ask && node pack_index.mjs
       - name: Add rate-limit storage
