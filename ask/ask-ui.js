@@ -78,7 +78,11 @@ function renderGenerated(a, q) {
   const num = c => { let i = order.findIndex(o => o.url === c.url); if (i < 0) { order.push(c); i = order.length - 1; } return i + 1; };
   const paras = a.paragraphs.map(p => `<p>${esc(p.text)} ${p.cites.map(c => `<sup><a href="${esc(BASE + c.url)}">[${num(c)}]</a></sup>`).join("")}</p>`).join("");
   const quotes = (a.quotes || []).map(x => `<blockquote>&ldquo;${esc(x.text)}&rdquo; <cite>${link(x.url, x.label)}</cite></blockquote>`).join("");
-  return `<article class="ask-answer"><p class="ask-tags"><span class="ask-kind ask-ai">Unreviewed: written by AI from the guide</span> ${badge(a.level)}${a.status === "partial" ? ' <span class="ask-level">Partial answer</span>' : ""}</p>
+  // A partial answer gets one label, not "Not in the guide" beside an answer that says what the guide does have.
+  const tags = a.status === "partial"
+    ? `<span class="ask-level ask-partial" title="The guide answers part of this question; the answer says which part it does not.">Partly answered</span>${a.level && a.level !== "not_in_guide" ? " " + badge(a.level) : ""}`
+    : badge(a.level);
+  return `<article class="ask-answer ask-generated"><p class="ask-tags"><span class="ask-kind ask-ai">Unreviewed: written by AI from the guide</span> ${tags}</p>
     ${paras}${quotes ? `<h3>Evidence</h3>${quotes}` : ""}<h3>Sources</h3><ol class="ask-sources">${order.map(c => `<li>${link(c.url, c.label)}</li>`).join("")}</ol>
     ${a.see_also?.length ? `<h3>See also</h3><ol class="ask-sources">${a.see_also.map(s => `<li>${link(s.url, s.label)}</li>`).join("")}</ol>` : ""}
     <p class="ask-note">This answer was written by AI from the passages cited and checked against them before it was shown, but it can still be wrong. Check the cited pages. Guide version ${esc(a.version?.commit || "")}.</p>
@@ -106,7 +110,7 @@ function humanCheck() {
     if (!CFG.sitekey) return resolve("");
     const go = () => {
       const box = $("#ask-ts");
-      box.innerHTML = '<p class="ask-note">A quick check that you are a person (by Cloudflare Turnstile):</p><div id="ask-ts-w"></div>';
+      box.innerHTML = '<p class="ask-note">A quick check that you are a person, by Cloudflare Turnstile. <b>If a box appears below, tick it to continue.</b></p><div id="ask-ts-w"></div>';
       TS_ID = window.turnstile.render("#ask-ts-w", { sitekey: CFG.sitekey, size: "flexible", callback: resolve, "error-callback": () => reject(new Error("check")), "expired-callback": () => reject(new Error("check")) });
     };
     if (window.turnstile) go();

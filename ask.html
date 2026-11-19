@@ -699,7 +699,7 @@ footer .wrap { display: grid; gap: 8px; }
 .ask-tags { margin: 0 0 8px; display:flex; flex-wrap: wrap; gap: 6px; }
 .ask-kind, .ask-level { font-family: var(--font-mono); font-size: 11.5px; padding: 2px 8px; border: 1px solid var(--rule); background: var(--paper); }
 .ask-reviewed { color: #2b6a3a; } .ask-ai { color: #8a5a00; } .ask-lists { color: var(--accent); }
-.ask-documented { color: #2b6a3a; } .ask-probable { color: #7a5b00; } .ask-disputed { color: #8a2f2f; } .ask-not_in_guide { color: var(--muted); }
+.ask-partial { color: #7a5b00; } .ask-documented { color: #2b6a3a; } .ask-probable { color: #7a5b00; } .ask-disputed { color: #8a2f2f; } .ask-not_in_guide { color: var(--muted); }
 .ask-sources { font-size: 14px; padding-left: 1.4em; } .ask-sources li { margin: 3px 0; }
 .ask-snip, .ask-note { font-size: 13.5px; color: var(--muted); }
 .ask-person ul { padding-left: 1.1em; font-size: 14.5px; } .ask-src { font-family: var(--font-mono); font-size: 11.5px; color: var(--accent); }
@@ -719,12 +719,13 @@ footer .wrap { display: grid; gap: 8px; }
     <a class="mark" href="index.html">Morrisite.org</a>
     <nav class="util" aria-label="Site">
       <a href="whats-new.html">What&rsquo;s new</a>
-      <a href="#share" aria-current="page">Share records</a>
-      <a href="#top" aria-current="page">About</a>
+      <a href="ask.html" aria-current="page">Ask the guide</a>
+      <a href="about.html#share">Share records</a>
+      <a href="about.html">About</a>
     </nav>
     <form class="site-search" role="search" action="names.html" onsubmit="return false">
       <label for="site-q" class="vh">Search this site</label>
-      <input type="search" id="site-q" name="q" placeholder="Search names, places, records" autocomplete="off" aria-controls="site-results" aria-expanded="false">
+      <input type="search" id="site-q" name="q" placeholder="Search, or ask a question" autocomplete="off" aria-controls="site-results" aria-expanded="false">
       <div id="site-results" class="site-results" role="listbox" hidden></div>
     </form>
     <nav class="main" aria-label="Sections">
@@ -765,7 +766,7 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <span>Morrisite.org is edited by <a href="https://www.ericpaulrogers.com" target="_blank" rel="noopener">Eric Paul Rogers</a>, historian of Latter Day Saint movements.</span>
     <span>The editor provided insights and helped acquire photographs for C. LeRoy Anderson&rsquo;s final edition of <i>Joseph Morris and the Saga of the Morrisites (Revisited)</i> (2010). Anderson&rsquo;s research files at Utah State University anchor this guide.</span>
-    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a> &middot; Text, data and the editor&rsquo;s photographs: <a href="#license">CC BY 4.0</a> &middot; <a href="#accessibility">Accessibility</a> &middot; <a href="whats-new.html#corrections">Corrections</a></span>
+    <span>Contact: <a href="mailto:contact@morrisite.org?subject=Morrisite.org">contact@morrisite.org</a> &middot; Text, data and the editor&rsquo;s photographs: <a href="about.html#license">CC BY 4.0</a> &middot; <a href="about.html#accessibility">Accessibility</a> &middot; <a href="whats-new.html#corrections">Corrections</a></span>
   </div>
 </footer>
 
