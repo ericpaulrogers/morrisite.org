@@ -74,7 +74,7 @@ async function callClaude(env, messages) {
   const r = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-    body: JSON.stringify({ model: env.MODEL || "claude-haiku-5-5", max_tokens: 900, temperature: 0, system: A.SYSTEM_PROMPT, messages }),
+    body: JSON.stringify({ model: env.MODEL || "claude-haiku-5-5", max_tokens: 900, system: A.SYSTEM_PROMPT, messages }),
   });
   if (!r.ok) throw new Error(`API ${r.status}: ${(await r.text()).slice(0, 300)}`);
   const j = await r.json();
