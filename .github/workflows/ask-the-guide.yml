@@ -1,0 +1,70 @@
+# Deploys the "Ask the guide" Worker (folder _ask) to Cloudflare whenever the site's pages change,
+# so its passages always match the published site. Does nothing until the secrets are set.
+name: Ask the guide
+on:
+  push:
+    branches: [main]
+    paths: ["**.html", "_ask/**", ".github/workflows/ask-the-guide.yml"]
+  workflow_dispatch:
+    inputs:
+      run_tests:
+        description: "Run the live tests after deploying (about 20 questions, about a cent)"
+        type: boolean
+        default: true
+concurrency: ask-the-guide
+permissions:
+  contents: read
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      READY: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' && secrets.ANTHROPIC_API_KEY != '' && secrets.TURNSTILE_SECRET != '' && secrets.TEST_TOKEN != '' }}
+    steps:
+      - name: Check setup
+        if: env.READY != 'true'
+        run: echo "Ask the guide is not set up yet (one or more repository secrets missing). Nothing was deployed." | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/checkout@v4
+        if: env.READY == 'true'
+      - uses: actions/setup-python@v5
+        if: env.READY == 'true'
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        if: env.READY == 'true'
+        with:
+          node-version: "22"
+      - name: Build the passage index from the published pages
+        if: env.READY == 'true'
+        run: |
+          pip install -q beautifulsoup4
+          PASSAGES_ONLY=1 python _ask/build_index.py . _ask .
+          cd _ask && node pack_index.mjs
+      - name: Add rate-limit storage
+        if: env.READY == 'true' && vars.RATE_KV_ID != ''
+        env:
+          RATE_KV_ID: ${{ vars.RATE_KV_ID }}
+        run: printf '\n[[kv_namespaces]]\nbinding = "RATE"\nid = "%s"\n' "$RATE_KV_ID" >> _ask/wrangler.toml
+      - name: Deploy to Cloudflare
+        id: deploy
+        if: env.READY == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: _ask
+          secrets: |
+            ANTHROPIC_API_KEY
+            TURNSTILE_SECRET
+            TEST_TOKEN
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TURNSTILE_SECRET: ${{ secrets.TURNSTILE_SECRET }}
+          TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
+      - name: Report
+        if: env.READY == 'true'
+        run: echo "Deployed. Worker URL ${{ steps.deploy.outputs.deployment-url }}" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Live tests with the real model
+        if: env.READY == 'true' && github.event_name == 'workflow_dispatch' && inputs.run_tests
+        env:
+          TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
+        run: node _ask/live_tests.mjs "${{ steps.deploy.outputs.deployment-url }}" >> "$GITHUB_STEP_SUMMARY"

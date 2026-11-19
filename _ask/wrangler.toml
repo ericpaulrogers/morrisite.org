@@ -1,0 +1,17 @@
+# Cloudflare Worker for "Ask the guide". Deployed automatically by the GitHub job
+# .github/workflows/ask-the-guide.yml whenever the site's pages change.
+# passages.json, index.json and version.json are generated in that job from the published pages.
+name = "morrisite-ask"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[vars]
+MODEL = "claude-haiku-5-5"
+ALLOWED_ORIGIN = "https://morrisite.org"
+HOURLY_PER_IP = "15"
+DAILY_TOTAL = "500"
+
+# Secrets (set from the repository's GitHub secrets by the job; never committed):
+#   ANTHROPIC_API_KEY, TURNSTILE_SECRET, TEST_TOKEN
+# Rate-limit storage: the job adds the [[kv_namespaces]] block when the repository variable RATE_KV_ID is set.
