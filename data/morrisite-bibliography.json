@@ -459,6 +459,29 @@
   }
  },
  {
+  "id": "whitney1893history",
+  "type": "book",
+  "note": "Whitney, Orson F. History of Utah. Vol. 2. Salt Lake City: George Q. Cannon & Sons, 1893. Pages 48–57 cover the Morrisite War and pp. 99–101 the trials, the pardons of “the whole seventy-six” and the grand jury; the account follows Richard W. Young (1890) and adds a later recollection by Wilford Woodruff (p. 50 n.; see the Chronology under February 11, 1861). Internet Archive New",
+  "keyword": "Primary texts",
+  "author": [
+   {
+    "family": "Whitney",
+    "given": "Orson F."
+   }
+  ],
+  "title": "History of Utah",
+  "publisher": "George Q. Cannon & Sons",
+  "publisher-place": "Salt Lake City",
+  "URL": "https://archive.org/details/historyofutahcom02whitrich/page/48/mode/1up",
+  "issued": {
+   "date-parts": [
+    [
+     1893
+    ]
+   ]
+  }
+ },
+ {
   "id": "tullidge1886history",
   "type": "book",
   "note": "Tullidge, Edward W. History of Salt Lake City. Salt Lake City: Star Printing Company, 1886. Chapter 35, “Trial of the Morrisites,” pp. 318–24, prints Governor Harding’s two pardons of March 31, 1863, with every name, and the grand jury’s presentment of Harding. Internet Archive New",
