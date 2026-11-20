@@ -438,7 +438,7 @@
  {
   "id": "stenhouse1873rocky",
   "type": "book",
-  "note": "Stenhouse, T. B. H. The Rocky Mountain Saints: A Full and Complete History of the Mormons. New York: D. Appleton, 1873. Chapter 51, pp. 593–606, covers the Morrisites, with an unnamed Morrisite eyewitness’s account of the first day, Dow’s affidavit, the dead (naming Mrs. Marsh), Brigham Young’s instruction to the posse officers and Marshal Lawrence’s warning. Internet Archive",
+  "note": "Stenhouse, T. B. H. The Rocky Mountain Saints: A Full and Complete History of the Mormons. New York: D. Appleton, 1873. Chapter 51, pp. 593–606, covers the Morrisites, with an unnamed Morrisite eyewitness’s account of the first day (believed by Richard W. Young in 1890 to be Mark H. Forscutt’s), Dow’s affidavit, the dead (naming Mrs. Marsh), Brigham Young’s instruction to the posse officers and Marshal Lawrence’s warning. Internet Archive",
   "keyword": "Primary texts",
   "author": [
    {
@@ -1685,7 +1685,7 @@
  {
   "id": "young1890morrisite",
   "type": "article-journal",
-  "note": "Young, Richard W. “The Morrisite War.” Contributor 11 (1889–90): 281–84, 348ff., 369ff., 428ff., 466–71. Published in installments.",
+  "note": "Young, Richard W. “The Morrisite War.” The Contributor 11, no. 8 (June 1890): 281–84; no. 9 (July 1890): 348–50; no. 10 (August 1890): 369–72; no. 11 (September 1890): 428–31; no. 12 (October 1890): 466–71. The posse’s side, from Burton and other posse members, the court papers and Stenhouse, with the roster of the Soldiers of Israel, the writs, and the jury at Burton’s trial. Internet Archive: no. 8, no. 9, no. 10, no. 11, no. 12.",
   "keyword": "Articles and papers",
   "author": [
    {
@@ -1694,9 +1694,11 @@
    }
   ],
   "title": "The Morrisite War",
-  "container-title": "Contributor",
+  "container-title": "The Contributor",
   "volume": "11",
+  "issue": "8",
   "page": "281–84, 348ff., 369ff., 428ff., 466–71",
+  "URL": "https://archive.org/details/contributor1108eng/page/281/mode/1up",
   "issued": {
    "date-parts": [
     [
