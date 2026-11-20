@@ -602,6 +602,26 @@
   }
  },
  {
+  "id": "pugetsoundargus18781212",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Puget Sound Argus",
+  "note": "Puget Sound Argus (Port Townsend, WA), December 12, 1878, p. 2; August 28, 1879, p. 4. Spokan Times (Spokane, WA), September 4, 1879. William W. Davies and his camp near Walla Walla. December 1878: a summary of a New York Sun story in which S. W. Wood calls Davies “the Comforter” and his society the “Redemptionists.” August–September 1879: summaries of the Walla Walla Watchman’s exposé of Davies, who “claims that he has a child that is the Savior of the world,” and of a blind man’s claim against him. Quoted from the digitized text; not checked against the page images. Other links: Argus, Aug. 28, 1879: https://washingtondigitalnewspapers.org/?a=d&d=PSA18790828.1.4; Spokan Times, Sept. 4, 1879: https://washingtondigitalnewspapers.org/?a=d&d=SPOKANTMS18790904.2.23 Listed on https://morrisite.org/newspapers.html#np-1877",
+  "keyword": "Burton’s arrest and trial, 1877–1879",
+  "container-title": "Puget Sound Argus",
+  "publisher-place": "Port Townsend, WA",
+  "issued": {
+   "date-parts": [
+    [
+     1878,
+     12,
+     12
+    ]
+   ]
+  },
+  "page": "2",
+  "URL": "https://washingtondigitalnewspapers.org/?a=d&d=PSA18781212.1.2"
+ },
+ {
   "id": "saltlakeherald18790221",
   "type": "article-newspaper",
   "title": "The Burton Trial",
@@ -730,6 +750,45 @@
   },
   "page": "2",
   "URL": "https://www.newspapers.com/image/1236106884/"
+ },
+ {
+  "id": "dailyintelligencer18800304",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Daily Intelligencer",
+  "note": "Daily Intelligencer (Seattle), March 4, 1880, p. 3, reprinting the Walla Walla Watchman. The death of William W. Davies’s elder son, “no other than the Walla Walla Jesus Christ, so called,” the earliest use of the name yet found. Listed on https://morrisite.org/newspapers.html#np-1891",
+  "keyword": "1880–1900 and the 1891 letters",
+  "container-title": "Daily Intelligencer",
+  "publisher-place": "Seattle",
+  "issued": {
+   "date-parts": [
+    [
+     1880,
+     3,
+     4
+    ]
+   ]
+  },
+  "page": "3",
+  "URL": "https://washingtondigitalnewspapers.org/?a=d&d=DAILINT18800304.1.3"
+ },
+ {
+  "id": "wallawallastatesman18810101",
+  "type": "article-newspaper",
+  "title": "The Trinity",
+  "note": "Walla Walla Statesman, January 1, 1881, p. 2, “The Trinity”; February 5, 1881, pp. 3–4, “A Fiery Furnace Fraud” and “A Tedious Trial.” Testimony against William W. Davies before Judge W. G. Langford, referee, in the claims of former members: George Lee, D. V. Lambert and Peter C. Klemgard (see the case file under Repositories). Other links: Feb. 5, 1881, p. 3: https://washingtondigitalnewspapers.org/?a=d&d=WALLAWALLASTATE18810205.1.3; p. 4: https://washingtondigitalnewspapers.org/?a=d&d=WALLAWALLASTATE18810205.1.4 Listed on https://morrisite.org/newspapers.html#np-1891",
+  "keyword": "1880–1900 and the 1891 letters",
+  "container-title": "Walla Walla Statesman",
+  "issued": {
+   "date-parts": [
+    [
+     1881,
+     1,
+     1
+    ]
+   ]
+  },
+  "page": "2",
+  "URL": "https://washingtondigitalnewspapers.org/?a=d&d=WALLAWALLASTATE18810101.1.2"
  },
  {
   "id": "saltlakedemocrat18851124",
