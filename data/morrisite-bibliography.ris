@@ -18,6 +18,30 @@ N1  - Bear, John L. (Johann Lebrecht Bär). “The Autobiography of John L. Bear
 ID  - bear1911autobiography
 ER  - 
 
+TY  - BOOK
+AU  - Bancroft, Hubert Howe
+TI  - History of Utah, 1540–1886
+PB  - The History Company
+CY  - San Francisco
+PY  - 1889
+UR  - https://archive.org/details/historyofutah15400banc
+KW  - Primary texts
+N1  - Bancroft, Hubert Howe. History of Utah, 1540–1886. San Francisco: The History Company, 1889. Pages 615–21 cover the Morrisites; the notes list the nineteenth-century accounts, among them Waite, Beadle, Stenhouse, Tullidge, Hickman and the newspapers of 1877–79. Internet Archive New
+ID  - bancroft1889history
+ER  - 
+
+TY  - BOOK
+AU  - Beadle, J. H.
+TI  - Life in Utah; or, The Mysteries and Crimes of Mormonism
+PB  - National Publishing Company
+CY  - Philadelphia
+PY  - 1870
+UR  - https://archive.org/details/lifeinutahormys00bead
+KW  - Primary texts
+N1  - Beadle, J. H. Life in Utah; or, The Mysteries and Crimes of Mormonism. Philadelphia: National Publishing Company, 1870. Pages 413–28 cover the Morrisites, from Morrisites then at Camp Douglas, from Mormons, and from the papers of Judges Waite, Drake and Titus: Morris’s call, the siege, the pardon, Abraham Taylor’s homestead, and the earliest printed mention yet found of the child among William W. Davies’s followers. Internet Archive New
+ID  - beadle1870life
+ER  - 
+
 TY  - PAMP
 AU  - Brighouse, James
 AU  - Peterson, Lars
@@ -131,7 +155,7 @@ PB  - Salt Lake Tribune Publishing
 CY  - Salt Lake City
 PY  - 1909
 KW  - Primary texts
-N1  - Gibbs, Josiah F. Lights and Shadows of Mormonism. Salt Lake City: Salt Lake Tribune Publishing, 1909. Includes an account of the Morrisite War.
+N1  - Gibbs, Josiah F. Lights and Shadows of Mormonism. Salt Lake City: Salt Lake Tribune Publishing, 1909. Chapter 26, pp. 242–46, gives an account of the Morrisite War at second hand; it adds nothing to the earlier accounts.
 ID  - gibbs1909lights
 ER  - 
 
@@ -151,8 +175,9 @@ TI  - Brigham’s Destroying Angel: Life, Confessions and Startling Disclosures
 PB  - Shepard Book Company
 CY  - Salt Lake City
 PY  - 1904
+UR  - https://archive.org/details/brighamsdestroyi00hick
 KW  - Primary texts
-N1  - Hickman, Bill. Brigham’s Destroying Angel: Life, Confessions and Startling Disclosures. Salt Lake City: Shepard Book Company, 1904.
+N1  - Hickman, Bill. Brigham’s Destroying Angel: Life, Confessions and Startling Disclosures. Salt Lake City: Shepard Book Company, 1904. First published New York: Geo. A. Crofutt, 1872, with notes by J. H. Beadle. Its Appendix K (1872 ed., pp. 211–17) prints Governor Stephen S. Harding’s account of the siege, the 1863 trial, which he attended, and the pardon. Internet Archive (1872)
 ID  - hickman1904brighams
 ER  - 
 
@@ -201,6 +226,18 @@ PY  - 1873
 KW  - Primary texts
 N1  - Stenhouse, T. B. H. The Rocky Mountain Saints: A Full and Complete History of the Mormons. New York: D. Appleton, 1873.
 ID  - stenhouse1873rocky
+ER  - 
+
+TY  - BOOK
+AU  - Waite, C. V.
+TI  - The Mormon Prophet and His Harem; or, An Authentic History of Brigham Young, His Numerous Wives and Children
+PB  - Riverside Press
+CY  - Cambridge, MA
+PY  - 1866
+UR  - https://archive.org/details/mormonprophethis01wait
+KW  - Primary texts
+N1  - Waite, C. V. (Catherine Van Valkenburg). The Mormon Prophet and His Harem; or, An Authentic History of Brigham Young, His Numerous Wives and Children. Cambridge, MA: Riverside Press, 1866. Pages 122–28 give the earliest book account of the Morrisites yet found, by the wife of Associate Justice Charles B. Waite, with the first printing of Alexander Dow’s affidavit of April 18, 1863 (pp. 127–28); pp. 268–70 add two affidavits by witnesses she did not name, who also saw Burton shoot Morris. Internet Archive New
+ID  - waite1866mormon
 ER  - 
 
 TY  - BOOK

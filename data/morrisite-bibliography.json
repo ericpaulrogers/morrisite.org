@@ -37,6 +37,52 @@
   }
  },
  {
+  "id": "bancroft1889history",
+  "type": "book",
+  "note": "Bancroft, Hubert Howe. History of Utah, 1540–1886. San Francisco: The History Company, 1889. Pages 615–21 cover the Morrisites; the notes list the nineteenth-century accounts, among them Waite, Beadle, Stenhouse, Tullidge, Hickman and the newspapers of 1877–79. Internet Archive New",
+  "keyword": "Primary texts",
+  "author": [
+   {
+    "family": "Bancroft",
+    "given": "Hubert Howe"
+   }
+  ],
+  "title": "History of Utah, 1540–1886",
+  "publisher": "The History Company",
+  "publisher-place": "San Francisco",
+  "URL": "https://archive.org/details/historyofutah15400banc",
+  "issued": {
+   "date-parts": [
+    [
+     1889
+    ]
+   ]
+  }
+ },
+ {
+  "id": "beadle1870life",
+  "type": "book",
+  "note": "Beadle, J. H. Life in Utah; or, The Mysteries and Crimes of Mormonism. Philadelphia: National Publishing Company, 1870. Pages 413–28 cover the Morrisites, from Morrisites then at Camp Douglas, from Mormons, and from the papers of Judges Waite, Drake and Titus: Morris’s call, the siege, the pardon, Abraham Taylor’s homestead, and the earliest printed mention yet found of the child among William W. Davies’s followers. Internet Archive New",
+  "keyword": "Primary texts",
+  "author": [
+   {
+    "family": "Beadle",
+    "given": "J. H."
+   }
+  ],
+  "title": "Life in Utah; or, The Mysteries and Crimes of Mormonism",
+  "publisher": "National Publishing Company",
+  "publisher-place": "Philadelphia",
+  "URL": "https://archive.org/details/lifeinutahormys00bead",
+  "issued": {
+   "date-parts": [
+    [
+     1870
+    ]
+   ]
+  }
+ },
+ {
   "id": "brighouse1884voice",
   "type": "pamphlet",
   "note": "Brighouse, James, and Lars Peterson. The Voice at Midnight. Independence, MO, December 25, 1884. Four-page tract of the Order of Enoch.",
@@ -252,7 +298,7 @@
  {
   "id": "gibbs1909lights",
   "type": "book",
-  "note": "Gibbs, Josiah F. Lights and Shadows of Mormonism. Salt Lake City: Salt Lake Tribune Publishing, 1909. Includes an account of the Morrisite War.",
+  "note": "Gibbs, Josiah F. Lights and Shadows of Mormonism. Salt Lake City: Salt Lake Tribune Publishing, 1909. Chapter 26, pp. 242–46, gives an account of the Morrisite War at second hand; it adds nothing to the earlier accounts.",
   "keyword": "Primary texts",
   "author": [
    {
@@ -295,7 +341,7 @@
  {
   "id": "hickman1904brighams",
   "type": "book",
-  "note": "Hickman, Bill. Brigham’s Destroying Angel: Life, Confessions and Startling Disclosures. Salt Lake City: Shepard Book Company, 1904.",
+  "note": "Hickman, Bill. Brigham’s Destroying Angel: Life, Confessions and Startling Disclosures. Salt Lake City: Shepard Book Company, 1904. First published New York: Geo. A. Crofutt, 1872, with notes by J. H. Beadle. Its Appendix K (1872 ed., pp. 211–17) prints Governor Stephen S. Harding’s account of the siege, the 1863 trial, which he attended, and the pardon. Internet Archive (1872)",
   "keyword": "Primary texts",
   "author": [
    {
@@ -306,6 +352,7 @@
   "title": "Brigham’s Destroying Angel: Life, Confessions and Startling Disclosures",
   "publisher": "Shepard Book Company",
   "publisher-place": "Salt Lake City",
+  "URL": "https://archive.org/details/brighamsdestroyi00hick",
   "issued": {
    "date-parts": [
     [
@@ -406,6 +453,29 @@
    "date-parts": [
     [
      1873
+    ]
+   ]
+  }
+ },
+ {
+  "id": "waite1866mormon",
+  "type": "book",
+  "note": "Waite, C. V. (Catherine Van Valkenburg). The Mormon Prophet and His Harem; or, An Authentic History of Brigham Young, His Numerous Wives and Children. Cambridge, MA: Riverside Press, 1866. Pages 122–28 give the earliest book account of the Morrisites yet found, by the wife of Associate Justice Charles B. Waite, with the first printing of Alexander Dow’s affidavit of April 18, 1863 (pp. 127–28); pp. 268–70 add two affidavits by witnesses she did not name, who also saw Burton shoot Morris. Internet Archive New",
+  "keyword": "Primary texts",
+  "author": [
+   {
+    "family": "Waite",
+    "given": "C. V."
+   }
+  ],
+  "title": "The Mormon Prophet and His Harem; or, An Authentic History of Brigham Young, His Numerous Wives and Children",
+  "publisher": "Riverside Press",
+  "publisher-place": "Cambridge, MA",
+  "URL": "https://archive.org/details/mormonprophethis01wait",
+  "issued": {
+   "date-parts": [
+    [
+     1866
     ]
    ]
   }

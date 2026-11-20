@@ -584,6 +584,24 @@
   "URL": "https://www.newspapers.com/image/78172316/"
  },
  {
+  "id": "madisonian18771124",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Madisonian",
+  "note": "Madisonian (Virginia City, MT), November 24, 1877. An account of the Morrisites cited in the notes to H. H. Bancroft’s History of Utah (1889). Not yet found for this guide. Listed on https://morrisite.org/newspapers.html#np-1877",
+  "keyword": "Burton’s arrest and trial, 1877–1879",
+  "container-title": "Madisonian",
+  "publisher-place": "Virginia City, MT",
+  "issued": {
+   "date-parts": [
+    [
+     1877,
+     11,
+     24
+    ]
+   ]
+  }
+ },
+ {
   "id": "saltlakeherald18790221",
   "type": "article-newspaper",
   "title": "The Burton Trial",
