@@ -185,7 +185,7 @@
  {
   "id": "dove1879voice",
   "type": "book",
-  "note": "Dove, George S., and James Dove. A Voice from the West. San Francisco: Church of the Firstborn, 1879.",
+  "note": "Dove, George S., and James Dove. A Voice from the West to the Scattered People of Weber and All the Seed of Abraham. San Francisco: Jos. A. Dove, printer, 1879. 40, [2] pp. Elizabeth Hughes, scribe. Church History Library, M294.7 D743v 1879 (digitized). New",
   "keyword": "Primary texts",
   "author": [
    {
@@ -197,9 +197,8 @@
     "given": "James"
    }
   ],
-  "title": "A Voice from the West",
-  "publisher": "Church of the Firstborn",
-  "publisher-place": "San Francisco",
+  "title": "A Voice from the West to the Scattered People of Weber and All the Seed of Abraham",
+  "URL": "documents.html#voice-from-the-west-1879",
   "issued": {
    "date-parts": [
     [
