@@ -297,7 +297,7 @@
  {
   "id": "gibbs1909lights",
   "type": "book",
-  "note": "Gibbs, Josiah F. Lights and Shadows of Mormonism. Salt Lake City: Salt Lake Tribune Publishing, 1909. Chapter 26, pp. 242–46, gives an account of the Morrisite War at second hand; it adds nothing to the earlier accounts.",
+  "note": "Gibbs, Josiah F. Lights and Shadows of Mormonism. Salt Lake City: Salt Lake Tribune Publishing, 1909. Chapter 26, pp. 242–46, gives an account of the Morrisite War at second hand and is often wrong, but its statement that the bodies were put on exhibition in the City Hall is borne out by Wilford Woodruff’s journal (June 16, 1862).",
   "keyword": "Primary texts",
   "author": [
    {
@@ -476,6 +476,20 @@
    "date-parts": [
     [
      1893
+    ]
+   ]
+  }
+ },
+ {
+  "id": "anon1860",
+  "type": "book",
+  "note": "Woodruff, Wilford. Journal, January 1, 1860 – October 22, 1865. MS 1352, Church History Library. Transcribed online at the Wilford Woodruff Papers. Woodruff, then assistant Church historian, records the excommunications at South Weber (February 11, 1861), the siege as news reached Brigham Young’s office, the regalia and the bodies brought to the city, his notes of the hearing before Judge Kinney (June 18–19, 1862) and Young’s sermon of June 29, 1862.",
+  "keyword": "Primary texts",
+  "URL": "https://wilfordwoodruffpapers.org/",
+  "issued": {
+   "date-parts": [
+    [
+     1860
     ]
    ]
   }
