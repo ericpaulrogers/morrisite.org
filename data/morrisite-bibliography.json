@@ -1972,6 +1972,26 @@
   }
  },
  {
+  "id": "beal1971henry",
+  "type": "book",
+  "note": "Beal, Merrill D. Henry Allen Beal and George Washington Bean: Pioneers on the Utah Frontier. Garland, Utah: V. W. Johns, Printing, 1971. A family history; ch. “The Beal Multiple Family Order,” p. 35, names the three children of Joseph Morris and Mary Thorpe who died in infancy and says that their daughter Ann Eliza was raised in the Beal household. New",
+  "keyword": "Local and county histories",
+  "author": [
+   {
+    "family": "Beal",
+    "given": "Merrill D."
+   }
+  ],
+  "title": "Henry Allen Beal and George Washington Bean: Pioneers on the Utah Frontier",
+  "issued": {
+   "date-parts": [
+    [
+     1971
+    ]
+   ]
+  }
+ },
+ {
   "id": "barnard1958tosoiba",
   "type": "book",
   "note": "Barnard, Lula, Faundy Bybee, and Lola Walker. Tosoiba. Soda Springs, ID: Daughters of Utah Pioneers, Camp Meads, 1958. Soda Springs and Morristown.",
@@ -2125,6 +2145,26 @@
    "date-parts": [
     [
      1944
+    ]
+   ]
+  }
+ },
+ {
+  "id": "lever1898history",
+  "type": "book",
+  "note": "Lever, W. H. History of Sanpete and Emery Counties, Utah. Ogden, 1898. Biographical sketches; p. 302 gives Henry Beal’s marriage to Mary Thorpe, Morris’s first wife, at Ephraim, July 4, 1854. New",
+  "keyword": "Local and county histories",
+  "author": [
+   {
+    "family": "Lever",
+    "given": "W. H."
+   }
+  ],
+  "title": "History of Sanpete and Emery Counties, Utah",
+  "issued": {
+   "date-parts": [
+    [
+     1898
     ]
    ]
   }
