@@ -233,6 +233,63 @@
   }
  },
  {
+  "id": "deseretnews18630311",
+  "type": "article-newspaper",
+  "title": "Proceedings of the Third District Court",
+  "note": "Deseret News, March 11, 1863, p. 5. “Proceedings of the Third District Court.” Chief Justice Kinney’s charge to the grand jury, March 9, on the South Weber case. Listed on https://morrisite.org/newspapers.html#np-1863",
+  "keyword": "Trials, pardons and the removal to Soda Springs, 1863",
+  "container-title": "Deseret News",
+  "issued": {
+   "date-parts": [
+    [
+     1863,
+     3,
+     11
+    ]
+   ]
+  },
+  "page": "5",
+  "URL": "https://newspapers.lib.utah.edu/details?id=2593770"
+ },
+ {
+  "id": "deseretnews18630318",
+  "type": "article-newspaper",
+  "title": "Third Judicial District Court",
+  "note": "Deseret News, March 18, 1863, p. 8. “Third Judicial District Court.” March 13: twenty of the men bound over in June 1862 absent, their recognizances forfeited, with their names. Listed on https://morrisite.org/newspapers.html#np-1863",
+  "keyword": "Trials, pardons and the removal to Soda Springs, 1863",
+  "container-title": "Deseret News",
+  "issued": {
+   "date-parts": [
+    [
+     1863,
+     3,
+     18
+    ]
+   ]
+  },
+  "page": "8",
+  "URL": "https://newspapers.lib.utah.edu/details?id=2593822"
+ },
+ {
+  "id": "deseretnews18630325",
+  "type": "article-newspaper",
+  "title": "Third District Court",
+  "note": "Deseret News, March 25, 1863, p. 5. “Third District Court.” The indictments of March 19 (ten for murder, about ninety for resisting process), the motion to quash, and the witnesses in the resisting-process trial, among them Lot Smith for the prosecution and Mark Forscutt for the defence. Listed on https://morrisite.org/newspapers.html#np-1863",
+  "keyword": "Trials, pardons and the removal to Soda Springs, 1863",
+  "container-title": "Deseret News",
+  "issued": {
+   "date-parts": [
+    [
+     1863,
+     3,
+     25
+    ]
+   ]
+  },
+  "page": "5",
+  "URL": "https://newspapers.lib.utah.edu/details?id=2593849"
+ },
+ {
   "id": "deseretnews18630401",
   "type": "article-newspaper",
   "title": "Third District Territorial Court",
@@ -250,6 +307,44 @@
   },
   "page": "4",
   "URL": "https://morrisite.org/documents.html#dn-1863-04-01"
+ },
+ {
+  "id": "deseretnews18630401b",
+  "type": "article-newspaper",
+  "title": "A Contemptible Document",
+  "note": "Deseret News, April 1, 1863, p. 5. “A Contemptible Document.” Governor Harding’s pardon of the seven, printed in full, with the editors’ protest. Listed on https://morrisite.org/newspapers.html#np-1863",
+  "keyword": "Trials, pardons and the removal to Soda Springs, 1863",
+  "container-title": "Deseret News",
+  "issued": {
+   "date-parts": [
+    [
+     1863,
+     4,
+     1
+    ]
+   ]
+  },
+  "page": "5",
+  "URL": "https://newspapers.lib.utah.edu/details?id=2593901"
+ },
+ {
+  "id": "deseretnews18630408",
+  "type": "article-newspaper",
+  "title": "Executive Enormities",
+  "note": "Deseret News, April 8, 1863, p. 4. “Executive Enormities.” Editorial against the pardons. Listed on https://morrisite.org/newspapers.html#np-1863",
+  "keyword": "Trials, pardons and the removal to Soda Springs, 1863",
+  "container-title": "Deseret News",
+  "issued": {
+   "date-parts": [
+    [
+     1863,
+     4,
+     8
+    ]
+   ]
+  },
+  "page": "4",
+  "URL": "https://newspapers.lib.utah.edu/details?id=2593932"
  },
  {
   "id": "chicagotribune18630424",
