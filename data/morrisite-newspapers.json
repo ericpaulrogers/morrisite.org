@@ -1363,6 +1363,42 @@
   }
  },
  {
+  "id": "saintsherald1886",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Saints’ Herald",
+  "note": "Saints’ Herald (Lamoni, Iowa) 33 (1886): 86–87, 223; 34 (1887): 759; 37 (1890): 184; 38 (1891): 134, 531; 39 (1892): 438. Letters and notices in the Reorganized Church’s weekly, found by searching every name on the roll in November 2026: J. C. Clapp on the Morrisites of the Deer Lodge Valley (Stuart, January 18, 1886; Deer Lodge, March 4, 1890, with the baptism of the Emmonses); the marriage of Caroline Eliasson at Race Track (1886); the death of Mahlon Chase’s wife at Reese Creek (1887); John Davis’s baptism at Olney, Washington, of a man named Hastings who was with Morris when he was shot (February 1891); the obituary of “Soren Wilson,” probably the roll’s Soren Willadson (June 1891); and the deaths of John Parson and John Livingston (July 1892), the only printed notice of Parson’s death yet found. See the roll notes and chronology. Listed on https://morrisite.org/newspapers.html#np-1891",
+  "keyword": "1880–1900 and the 1891 letters",
+  "container-title": "Saints’ Herald",
+  "publisher-place": "Lamoni, Iowa",
+  "issued": {
+   "date-parts": [
+    [
+     1886
+    ]
+   ]
+  },
+  "URL": "https://www.latterdaytruth.org/"
+ },
+ {
+  "id": "saintsherald19080527",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Saints’ Herald",
+  "note": "Saints’ Herald (Lamoni, Iowa; Independence, Mo.) 49 (1902): 898; 50 (1903): 982, 998, 1027, 1046; 51 (1904): 213, 677; 55 (May 27, 1908): 524; 71 (January 23, 1924): 88; 72 (September 23, 1925): 1012; 74 (July 6, 1927): 791. William H. Kelley preaching to the “Morrisites or Canaanites” near Deer Lodge (1902); the deaths of Elizabeth and Mark H. Forscutt at Nebraska City (October 1903); the obituaries of James Bowman of Soda Springs (died 1903), James M. Emmons (1904) and Marie V. Emmons (1927); D. R. Jones’s memories of the Mottsville branch and the Carson Valley Morrisites (1908); George W. Thorburn among the Morrisites (1924); and a visit to the Lord’s House (1925). See the roll notes and chronology. Listed on https://morrisite.org/newspapers.html#np-1901",
+  "keyword": "Early twentieth century, 1901–1950",
+  "container-title": "Saints’ Herald",
+  "publisher-place": "Lamoni, Iowa; Independence, Mo.",
+  "issued": {
+   "date-parts": [
+    [
+     1908,
+     5,
+     27
+    ]
+   ]
+  },
+  "URL": "https://www.latterdaytruth.org/"
+ },
+ {
   "id": "saltlakeherald19040311",
   "type": "article-newspaper",
   "title": "On Trial for His Reason",
