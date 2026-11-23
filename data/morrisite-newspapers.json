@@ -982,6 +982,26 @@
   "URL": "https://newspapers.lib.utah.edu/details?id=10960446"
  },
  {
+  "id": "newnorthwest18800416",
+  "type": "article-newspaper",
+  "title": "Distressing Accident. A Little Girl Burned to Death",
+  "note": "New North-West (Deer Lodge), April 16, 1880, p. 3. “Distressing Accident. A Little Girl Burned to Death.” The original report of the death of the five-year-old daughter of Andrew Hendrickson, later president of the Montana Morrisites. The accident happened on the evening of Thursday, April 8, at the farm a few miles from Deer Lodge; the child lived twelve hours, and after a funeral on Saturday she was buried “in the silent village on the hill.” Her name is not given. Reprinted in the Helena Daily Independent, April 18, 1880, p. 3. See Andrew Hendrikson. Listed on https://morrisite.org/newspapers.html#np-1891",
+  "keyword": "1880–1900 and the 1891 letters",
+  "container-title": "New North-West",
+  "publisher-place": "Deer Lodge",
+  "issued": {
+   "date-parts": [
+    [
+     1880,
+     4,
+     16
+    ]
+   ]
+  },
+  "page": "3",
+  "URL": "https://www.newspapers.com/image/171874129/"
+ },
+ {
   "id": "helenaweeklyherald18800422",
   "type": "article-newspaper",
   "title": "A Little Girl Burned to Death",
@@ -1571,6 +1591,26 @@
     ]
    ]
   }
+ },
+ {
+  "id": "independentrecord19360111",
+  "type": "article-newspaper",
+  "title": "Pioneer Matron of Deer Lodge Passes",
+  "note": "Independent-Record (Helena), January 11, 1936, p. 2. “Pioneer Matron of Deer Lodge Passes.” Obituary of Carrie Hendrickson, widow of Andrew Hendrickson, who died at the family ranch in the Race Track valley on January 10, aged 83. Born Carrie Jensen, she came from Council Bluffs to Corinne, Utah, and by covered wagon to the Deer Lodge Valley in 1872, the year of her marriage; ten children survived her. See Andrew Hendrikson. Listed on https://morrisite.org/newspapers.html#np-1901",
+  "keyword": "Early twentieth century, 1901–1950",
+  "container-title": "Independent-Record",
+  "publisher-place": "Helena",
+  "issued": {
+   "date-parts": [
+    [
+     1936,
+     1,
+     11
+    ]
+   ]
+  },
+  "page": "2",
+  "URL": "https://www.newspapers.com/image/528019717/"
  },
  {
   "id": "silverstatepost19540115",
