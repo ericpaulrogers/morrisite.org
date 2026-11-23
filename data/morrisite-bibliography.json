@@ -718,6 +718,29 @@
   }
  },
  {
+  "id": "blythe2020terrible",
+  "type": "book",
+  "note": "Blythe, Christopher James. Terrible Revolution: Latter-day Saints and the American Apocalypse. New York: Oxford University Press, 2020. A study of apocalyptic belief among Latter-day Saints, cited here on Morrisite and later teachings about the last days and earlier lives (see Open questions).",
+  "keyword": "Books",
+  "author": [
+   {
+    "family": "Blythe",
+    "given": "Christopher James"
+   }
+  ],
+  "title": "Terrible Revolution: Latter-day Saints and the American Apocalypse",
+  "publisher": "Oxford University Press",
+  "publisher-place": "New York",
+  "URL": "questions.html",
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  }
+ },
+ {
   "id": "bringhurst2007scattering",
   "type": "book",
   "note": "Bringhurst, Newell G., and John C. Hamer, eds. Scattering of the Saints: Schism within Mormonism. Independence, MO: John Whitmer Books, 2007.",

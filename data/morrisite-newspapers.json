@@ -1520,6 +1520,25 @@
   "URL": "https://newspapers.lib.utah.edu/details?id=21842487"
  },
  {
+  "id": "idahorecorder19251009",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Idaho Recorder",
+  "note": "Idaho Recorder (Salmon, ID), October 9, 1925, p. 1. Obituary of Lars Christian Geertsen. Geertsen, who escaped from the Morrisites’ log-house jail in 1862, died at his homestead on Geertson Creek near Salmon on October 3, 1925, aged 93; a daughter was then living in Anaconda. Copy courtesy of the Lemhi County Historical Society, from the Salmon Public Library’s newspaper database. See his page. Listed on https://morrisite.org/newspapers.html#np-1901",
+  "keyword": "Early twentieth century, 1901–1950",
+  "container-title": "Idaho Recorder",
+  "publisher-place": "Salmon, ID",
+  "issued": {
+   "date-parts": [
+    [
+     1925,
+     10,
+     9
+    ]
+   ]
+  },
+  "page": "1"
+ },
+ {
   "id": "sodaspringssun19310530",
   "type": "article-newspaper",
   "title": "[Untitled item], Soda Springs Sun",
