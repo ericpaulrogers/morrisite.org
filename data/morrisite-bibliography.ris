@@ -498,6 +498,19 @@ ID  - staffanson2015witness
 ER  - 
 
 TY  - BOOK
+AU  - Smith, Carmen R.
+AU  - Hooper, Talana S.
+TI  - Lot Smith: Mormon Pioneer and American Frontiersman
+PB  - Greg Kofford Books
+CY  - Salt Lake City
+PY  - 2018
+UR  - questions.html#q-lot-smith
+KW  - Books
+N1  - Smith, Carmen R., and Talana S. Hooper. Lot Smith: Mormon Pioneer and American Frontiersman. Salt Lake City: Greg Kofford Books, 2018. Biography by family members, drawing on the Davis County court minutes for his years as sheriff. See Was Lot Smith at the siege?
+ID  - smith2018lot
+ER  - 
+
+TY  - BOOK
 AU  - Shields, Steven L.
 TI  - Divergent Paths of the Restoration: An Encyclopedia of the Smith–Rigdon Movement
 PB  - Signature Books
@@ -532,6 +545,23 @@ EP  - 69
 KW  - Articles and papers
 N1  - Anderson, C. LeRoy. “The Scattered Morrisites.” Montana: The Magazine of Western History 26, no. 4 (Autumn 1976): 52–69.
 ID  - anderson1976scattered
+ER  - 
+
+TY  - CHAP
+AU  - Alford, Kenneth L.
+AU  - Stuart, Joseph R.
+ED  - Alford, Kenneth L.
+TI  - The Lot Smith Cavalry Company: Utah Goes to War
+T2  - Civil War Saints
+PB  - Deseret Book
+CY  - Salt Lake City
+PY  - 2012
+SP  - 127
+EP  - 41
+UR  - https://rsc.byu.edu/civil-war-saints/lot-smith-cavalry-company-utah-goes-war
+KW  - Articles and papers
+N1  - Alford, Kenneth L., and Joseph R. Stuart. “The Lot Smith Cavalry Company: Utah Goes to War.” In Civil War Saints, edited by Kenneth L. Alford, 127–41. Provo, UT: Religious Studies Center, Brigham Young University; Salt Lake City: Deseret Book, 2012. Lot Smith’s company guarded the mail and telegraph near Independence Rock from May 1 to August 16, 1862, through the siege. Online
+ID  - alford2012lot
 ER  - 
 
 TY  - JOUR

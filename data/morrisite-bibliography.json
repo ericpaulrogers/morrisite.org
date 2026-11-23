@@ -992,6 +992,33 @@
   }
  },
  {
+  "id": "smith2018lot",
+  "type": "book",
+  "note": "Smith, Carmen R., and Talana S. Hooper. Lot Smith: Mormon Pioneer and American Frontiersman. Salt Lake City: Greg Kofford Books, 2018. Biography by family members, drawing on the Davis County court minutes for his years as sheriff. See Was Lot Smith at the siege?",
+  "keyword": "Books",
+  "author": [
+   {
+    "family": "Smith",
+    "given": "Carmen R."
+   },
+   {
+    "family": "Hooper",
+    "given": "Talana S."
+   }
+  ],
+  "title": "Lot Smith: Mormon Pioneer and American Frontiersman",
+  "publisher": "Greg Kofford Books",
+  "publisher-place": "Salt Lake City",
+  "URL": "questions.html#q-lot-smith",
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  }
+ },
+ {
   "id": "shields2021divergent",
   "type": "book",
   "note": "Shields, Steven L. Divergent Paths of the Restoration: An Encyclopedia of the Smith–Rigdon Movement. 5th ed. Salt Lake City: Signature Books, 2021. “Order of Enoch” (§5.4) and James Brighouse’s later Salt Lake City group (§5.4.1); the entry does not mention Morris. Google Books. Earlier editions include the 3rd ed., rev. and enl. (Bountiful, UT: Restoration Research, 1982), where the Order of Enoch is at p. 106, as cited by Wikipedia; not examined.",
@@ -1056,6 +1083,41 @@
    "date-parts": [
     [
      1976
+    ]
+   ]
+  }
+ },
+ {
+  "id": "alford2012lot",
+  "type": "chapter",
+  "note": "Alford, Kenneth L., and Joseph R. Stuart. “The Lot Smith Cavalry Company: Utah Goes to War.” In Civil War Saints, edited by Kenneth L. Alford, 127–41. Provo, UT: Religious Studies Center, Brigham Young University; Salt Lake City: Deseret Book, 2012. Lot Smith’s company guarded the mail and telegraph near Independence Rock from May 1 to August 16, 1862, through the siege. Online",
+  "keyword": "Articles and papers",
+  "author": [
+   {
+    "family": "Alford",
+    "given": "Kenneth L."
+   },
+   {
+    "family": "Stuart",
+    "given": "Joseph R."
+   }
+  ],
+  "editor": [
+   {
+    "family": "Alford",
+    "given": "Kenneth L."
+   }
+  ],
+  "title": "The Lot Smith Cavalry Company: Utah Goes to War",
+  "container-title": "Civil War Saints",
+  "page": "127–41",
+  "publisher": "Deseret Book",
+  "publisher-place": "Salt Lake City",
+  "URL": "https://rsc.byu.edu/civil-war-saints/lot-smith-cavalry-company-utah-goes-war",
+  "issued": {
+   "date-parts": [
+    [
+     2012
     ]
    ]
   }
