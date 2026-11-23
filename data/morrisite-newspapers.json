@@ -1540,6 +1540,26 @@
   "URL": "https://newspapers.lib.utah.edu/details?id=21842487"
  },
  {
+  "id": "powellcountypost19211021",
+  "type": "article-newspaper",
+  "title": "Anders Christofferson Passes at Ranch Home",
+  "note": "Powell County Post (Deer Lodge), October 21, 1921, p. 5, “Anders Christofferson Passes at Ranch Home”; Silver State Post (Deer Lodge), October 20, 1921, p. 1, “A. Christofferson Dies at Farm Home”. Obituaries of Anders (Andrew) Christoffersen, on the 1861–62 roll as Andrus Christofferson, who died at his ranch north of Deer Lodge on October 20, aged 80. The Post gives his emigration in 1857, Burlington, Iowa, Utah in 1859 and Soda Springs, then Alder Gulch, Jefferson Island, Holt County, Missouri, and the Caribou district before he settled near Deer Lodge; a member of the Reorganized Church. Neither mentions the Morrisites. See his page. Other links: Newspapers.com: https://www.newspapers.com/image/959881371/ Listed on https://morrisite.org/newspapers.html#np-1901",
+  "keyword": "Early twentieth century, 1901–1950",
+  "container-title": "Powell County Post",
+  "publisher-place": "Deer Lodge",
+  "issued": {
+   "date-parts": [
+    [
+     1921,
+     10,
+     21
+    ]
+   ]
+  },
+  "page": "5",
+  "URL": "https://www.newspapers.com/image/959546093/"
+ },
+ {
   "id": "idahorecorder19251009",
   "type": "article-newspaper",
   "title": "[Untitled item], Idaho Recorder",
@@ -1557,6 +1577,25 @@
    ]
   },
   "page": "1"
+ },
+ {
+  "id": "silverstatepost19270224",
+  "type": "article-newspaper",
+  "title": "Beloved Pioneer of Deer Lodge Called",
+  "note": "Silver State Post, February 24, 1927, p. 1, “Beloved Pioneer of Deer Lodge Called”; Silver State Post, March 3, 1927, p. 1, “Funeral Sunday for Mrs. Christofferson”. Obituary and funeral of Katie (Christiane Marie) Christoffersen, widow of Anders, born in Denmark and brought to the United States at twelve; married at Camp Floyd; died at Missoula on February 23, aged 80; buried in Hillcrest Cemetery, Deer Lodge. See her page. Other links: Newspapers.com: https://www.newspapers.com/image/959300274/ Listed on https://morrisite.org/newspapers.html#np-1901",
+  "keyword": "Early twentieth century, 1901–1950",
+  "container-title": "Silver State Post",
+  "issued": {
+   "date-parts": [
+    [
+     1927,
+     2,
+     24
+    ]
+   ]
+  },
+  "page": "1",
+  "URL": "https://www.newspapers.com/image/959300252/"
  },
  {
   "id": "sodaspringssun19310530",
