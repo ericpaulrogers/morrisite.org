@@ -1598,6 +1598,25 @@
   "URL": "https://www.newspapers.com/image/959300252/"
  },
  {
+  "id": "saintsherald19270504",
+  "type": "article-newspaper",
+  "title": "Our Departed Ones",
+  "note": "Saints’ Herald (Independence, Mo.), May 4, 1927, p. 526, “Our Departed Ones”. The Reorganized Church’s obituary of Katie Hansen Christoffersen (born in Denmark, December 12, 1846; died February 23, 1927): she “refused to be a plural wife of Heber C. Kimball,” was with her parents in “that unfortunate band under Joseph Morris at Weber Canyon,” and married Andrew Christoffersen at Camp Floyd on July 26, 1862; Montana from 1865; “joined the Reorganization in 1868.” See her page. Listed on https://morrisite.org/newspapers.html#np-1901",
+  "keyword": "Early twentieth century, 1901–1950",
+  "container-title": "Saints’ Herald",
+  "publisher-place": "Independence, Mo.",
+  "issued": {
+   "date-parts": [
+    [
+     1927,
+     5,
+     4
+    ]
+   ]
+  },
+  "page": "526"
+ },
+ {
   "id": "sodaspringssun19310530",
   "type": "article-newspaper",
   "title": "[Untitled item], Soda Springs Sun",
