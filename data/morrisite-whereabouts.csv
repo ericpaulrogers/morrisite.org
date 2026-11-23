@@ -1,7 +1,8 @@
 ﻿roll_name,year,place,latitude,longitude,certainty,kind,source
+"Anderson, Abelone",1863,"Soda Springs, Idaho",42.654,-111.605,probable,list,"With her husband and children, whom Shupe lists among the Morrisites at Soda Springs, May 1863 (Caribou County Chronology, p. 13)"
 "Anderson, Abelone",1870,"Soda Springs, Idaho",42.654,-111.605,probable,census,"1870 U.S. census, Oneida Co., ID"
 "Anderson, Abelone",1880,"Soda Springs, Idaho",42.654,-111.605,sure,census,"1880 U.S. census, Soda Springs, Oneida, ID"
-"Anderson, Abelone",1884,Idaho (place not given),44.1,-114.7,probable,death,Died 1884 in Idaho (Family Tree)
+"Anderson, Abelone",1884,"Soda Springs, Idaho",42.654,-111.605,probable,death,"Died at Soda Springs, Oct. 21, 1884; buried in Fairview Cemetery (Find a Grave memorial 26408751)"
 "Anderson, Christian",1869,"Council Bluffs, Iowa",41.2619,-95.8608,probable,list,"Council Bluffs register, ca. 1869–71 (MS 32226, Church History Library): baptized at South Weber; member at Council Bluffs from 1869 (as Christen Andersen, born on Fyn, 1809)"
 "Anderson, Christian",1874,"Deer Lodge County, Montana",46.3,-112.8,probable,list,"Montana church membership record, stake no. 2, begun July 1874 (MS 32226, folder 7, Church History Library): baptized at South Weber (as Christen Anderson, born on Fyn, 1809)"
 "Anderson, Niels",1880,"Soda Springs, Idaho",42.654,-111.605,sure,census,"1880 U.S. census, Soda Springs, Oneida, ID"
@@ -57,7 +58,7 @@
 "Christoffersen, Peter",1863,"Soda Springs, Idaho",42.654,-111.605,sure,list,"Shupe, Caribou County Chronology (Soda Springs, May 1863)"
 "Christoffersen, Peter",1870,"Soda Springs, Idaho",42.654,-111.605,sure,census,"1870 U.S. census, Oneida Co., ID"
 "Christoffersen, Peter",1880,"Soda Springs, Idaho",42.654,-111.605,sure,census,"1880 U.S. census (Ancestry index), Soda Springs, Oneida Co., ID, as P. Christopherson"
-"Christoffersen, Peter",1891,Idaho (place not given),44.1,-114.7,sure,death,Died 1891 in Idaho (Family Tree)
+"Christoffersen, Peter",1891,"Soda Springs, Idaho",42.654,-111.605,sure,death,"Died at Soda Springs, Sept. 20, 1891; buried in Fairview Cemetery (Find a Grave memorial 26408752)"
 "Christofferson, Andrus",1862,"Camp Floyd, Utah",40.2569,-112.0911,sure,note,"Married at Camp Floyd, July 26, 1862 (Saints' Herald, May 4, 1927)"
 "Christofferson, Andrus",1863,"Soda Springs, Idaho",42.654,-111.605,sure,list,"Shupe, Caribou County Chronology (Soda Springs, May 1863)"
 "Christofferson, Andrus",1865,"Alder Gulch (Virginia City), Montana",45.2938,-111.9461,sure,note,"Mining at Alder Gulch from 1865 (Powell County Post, Oct. 21, 1921)"
@@ -192,15 +193,17 @@
 "Hanson, Lars",1880,"Soda Springs, Idaho",42.654,-111.605,sure,census,"1880 U.S. census, Soda Springs, Oneida, ID"
 "Hanson, Lars Christian",1880,"Deer Lodge County, Montana",46.3,-112.8,sure,census,"1880 U.S. census, Cottonwood Creek, Deer Lodge, MT"
 "Hanson, Lars Christian",1889,Montana (place not given),46.9,-110.4,sure,death,Died 1889 in Montana (Family Tree)
+"Hanson, Lena",1863,"Soda Springs, Idaho",42.654,-111.605,sure,note,"Lived at Soda Springs after leaving Utah, before Deer Lodge County (Black, Early Members, vol. 3, s.v. ""Hanson, Lena""; year approximate)"
 "Hanson, Lena",1870,"Deer Lodge County, Montana",46.3,-112.8,sure,census,"1870 U.S. census, Butte City, Deer Lodge Co., MT (p. 108"
 "Hanson, Lena",1895,"Deer Lodge County, Montana",46.3,-112.8,sure,list,"Baptized into the RLDS Church, Oct. 13, 1895, and entered in the Deer Lodge Branch register as Lena D. Hansen, no. 72 (Record of the Deer Lodge Branch, Montana District, #228, Community of Christ Library Archives); Black, Early Members, vol. 3"
-"Hanson, Lena",1896,Montana (place not given),46.9,-110.4,sure,death,Died 1896 in Montana (Family Tree)
+"Hanson, Lena",1896,"Deer Lodge County, Montana",46.3,-112.8,sure,death,"Died at Deer Lodge, Jan. 25, 1896; buried in Hillcrest Cemetery (Find a Grave memorial 65287769)"
 "Hanson, Mattie",1880,"Deer Lodge County, Montana",46.3,-112.8,sure,census,"1880 U.S. census, Cottonwood Creek, Deer Lodge, MT"
 "Hanson, Mattie",1897,Montana (place not given),46.9,-110.4,sure,death,Died 1897 in Montana (Family Tree)
 "Hanson, Niels",1870,"Deer Lodge County, Montana",46.3,-112.8,sure,census,"1870 U.S. census, Butte City, Deer Lodge Co., MT (p. 108"
 "Hanson, Niels",1938,Montana (place not given),46.9,-110.4,sure,death,Died 1938 in Montana (Family Tree)
+"Hanson, Rasmus [1]",1863,"Soda Springs, Idaho",42.654,-111.605,sure,note,"Lived at Soda Springs after leaving Utah, before Deer Lodge County (Black, Early Members, vol. 3, s.v. ""Hanson, Lena""; year approximate)"
 "Hanson, Rasmus [1]",1870,"Deer Lodge County, Montana",46.3,-112.8,sure,census,"1870 U.S. census, Butte City P.O., Deer Lodge Co., MT"
-"Hanson, Rasmus [1]",1890,Montana (place not given),46.9,-110.4,sure,death,Died 1890 in Montana (Family Tree)
+"Hanson, Rasmus [1]",1890,"Deer Lodge County, Montana",46.3,-112.8,sure,death,"Died at Deer Lodge, Jan. 29, 1890; buried in Hillcrest Cemetery (Find a Grave memorial 65288557)"
 "Hanson, Rasmus [2]",1896,"Deer Lodge County, Montana",46.3,-112.8,probable,list,"Baptized into the RLDS Church, Mar. 11, 1896; Deer Lodge Branch register no. 75, Rasmus Hansen, born June 3, 1837, Jutland (Record of the Deer Lodge Branch, Montana District, #228, Community of Christ Library Archives); Black, Early Members, vol. 3"
 "Harris, Sarah",1870,"Dayton, Lyon County, Nevada",39.2371,-119.5929,sure,census,"1870 U.S. census, Dayton, Lyon Co., NV (dwelling 93)"
 "Harris, Sarah",1919,Nevada (place not given),39.3,-116.6,probable,death,Died 1919 in Nevada (Family Tree)
