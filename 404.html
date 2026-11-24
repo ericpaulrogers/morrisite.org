@@ -274,6 +274,18 @@ dialog.pn::backdrop { background: rgba(20,25,23,.45); }
 .roll-letter { font-family: var(--font-display); font-size: 22px; margin: 18px 0 6px; border-bottom: 1px solid var(--rule); }
 .roll-list { columns: 3 13em; column-gap: 24px; list-style: none; padding: 0; margin: 0 0 8px; }
 .roll-list li { break-inside: avoid; padding: 1px 0; }
+.r-name { background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; text-align: left; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.r-name:hover, .r-name:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
+.r-office { font-family: var(--font-mono, monospace); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-left: 5px; }
+.r-mark { color: var(--muted); font-size: .8em; margin-left: 4px; }
+.roll-legend, .roll-counts { font-size: .9em; color: var(--muted); }
+.roll-legend .aff-key { margin: 0 3px 0 8px; } .roll-legend .aff-key:first-child { margin-left: 0; }
+.roll-show { display: flex; flex-wrap: wrap; gap: 6px; flex-basis: 100%; margin-top: 4px; }
+.rf { font-family: var(--font-mono, monospace); font-size: 11.5px; border: 1px solid var(--rule); background: transparent; color: inherit; border-radius: 3px; padding: 2px 8px; cursor: pointer; }
+.rf.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.roll-families-after { margin: 1.6em 0; }
+.pn-facts dt:first-child { margin-top: 4px; }
+.pn-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
 .bail-chip { font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: .02em; white-space: nowrap; padding: 0 5px; border: 1px solid var(--rule); border-radius: 3px; color: inherit; text-decoration: none; }
 .held-chip { font-family: var(--font-mono, monospace); font-size: 11px; letter-spacing: .02em; white-space: nowrap; padding: 0 5px; border: 1px dashed var(--accent); border-radius: 3px; color: var(--accent); text-decoration: none; }
 .fs-link { font-family: var(--font-mono, monospace); font-size: 12px; letter-spacing: .02em; white-space: nowrap; }
