@@ -1877,6 +1877,26 @@
   "URL": "https://www.newspapers.com/image/959304184/"
  },
  {
+  "id": "montanastandard19540430",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Montana Standard",
+  "note": "Montana Standard (Butte), April 30, 1954, p. 1. Obituary of George Johnson Sr. Powell County’s oldest resident, born April 5, 1856, in “Lullan, Denmark,” came to the United States at fifteen and to the Deer Lodge Valley with Andrew Hendrickson in 1874; clerk at the Scott House, then a sheep raiser and justice of the peace. He “was a minister in the old Morrisite Church … His group built a small church in the upper valley which still stands but has not been used for many years.” Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1954",
+  "keyword": "The end of the Montana church, 1954–1962",
+  "container-title": "Montana Standard",
+  "publisher-place": "Butte",
+  "issued": {
+   "date-parts": [
+    [
+     1954,
+     4,
+     30
+    ]
+   ]
+  },
+  "page": "1",
+  "URL": "https://www.newspapers.com/image/349682209/"
+ },
+ {
   "id": "silverstatepost19540507",
   "type": "article-newspaper",
   "title": "George Johnson Sr’s Last Rites Sunday, Burial in Hillcrest",
