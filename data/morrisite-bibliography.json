@@ -696,6 +696,29 @@
   }
  },
  {
+  "id": "blair1908memoirs",
+  "type": "book",
+  "note": "Blair, Frederick B., comp. The Memoirs of President W. W. Blair. Lamoni, Iowa: Herald Publishing House, 1908. Compiled from the Saints’ Herald, with an obituary by Mark H. Forscutt. Covers the 1850s to about 1871 and does not mention the Morrisites; its account of Rowland Cobb, silenced for teaching transmigration in 1864 (pp. 98–99), is cited on the reincarnation question. Public domain; HathiTrust; Church History Library, M291.7 B635b 1908.",
+  "keyword": "Books",
+  "editor": [
+   {
+    "family": "Blair",
+    "given": "Frederick B."
+   }
+  ],
+  "title": "The Memoirs of President W. W. Blair",
+  "publisher": "Herald Publishing House",
+  "publisher-place": "Iowa",
+  "URL": "questions.html#q-reincarnation",
+  "issued": {
+   "date-parts": [
+    [
+     1908
+    ]
+   ]
+  }
+ },
+ {
   "id": "blankenship1942there",
   "type": "book",
   "note": "Blankenship, Russell. And There Were Men. New York: Alfred A. Knopf, 1942. Includes William W. Davies, whom the Church History Library’s catalog describes there as a former Morrisite who claimed a revelation to inaugurate the millennium and set up headquarters at Walla Walla (copy at 979.5 B642t 1942). New",
@@ -1268,6 +1291,31 @@
    "date-parts": [
     [
      1997
+    ]
+   ]
+  }
+ },
+ {
+  "id": "braby2015abode",
+  "type": "article-journal",
+  "note": "Braby, Junia Silsby. “An Abode in the Wilderness: Charles B. Thompson’s Communal Society in Western Iowa.” John Whitmer Historical Association Journal 35, no. 1 (Spring/Summer 2015): 84–103. On the Baneemyites at Preparation, Iowa, and the RLDS missionaries’ objections to Thompson’s “regeneration” and “transmigration of the soul” (p. 100); cited on the reincarnation question.",
+  "keyword": "Articles and papers",
+  "author": [
+   {
+    "family": "Braby",
+    "given": "Junia Silsby"
+   }
+  ],
+  "title": "An Abode in the Wilderness: Charles B. Thompson’s Communal Society in Western Iowa",
+  "container-title": "John Whitmer Historical Association Journal",
+  "volume": "35",
+  "issue": "1",
+  "page": "84–103",
+  "URL": "questions.html#q-reincarnation",
+  "issued": {
+   "date-parts": [
+    [
+     2015
     ]
    ]
   }
