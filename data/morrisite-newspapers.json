@@ -442,6 +442,25 @@
   "URL": "https://www.newspapers.com/image/666812829/"
  },
  {
+  "id": "saintsherald18660601",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Saints’ Herald",
+  "note": "Saints’ Herald (Plano, Ill.) 9, no. 11 (June 1, 1866): 162; 10, no. 4 (August 15, 1866): 50–53; 11, no. 1 (January 1, 1867): 1–5. The Reorganized Church’s paper on Morrisite belief. In his column “Pleasant Chat” Joseph Smith III lists “the followers of Joseph Morris, transmigrationists or regenerationists” among the groups grown up “as an outgrowth of Mormonism.” The unsigned two-part “Transmigration, or Sexual Resurrection” argues against former Latter Day Saints who taught rebirth into new bodies, including that children who die in infancy must be born again; it names no group. See the reincarnation question. Listed on https://morrisite.org/newspapers.html#np-1864",
+  "keyword": "Soda Springs and after, 1864–1869",
+  "container-title": "Saints’ Herald",
+  "publisher-place": "Plano, Ill.",
+  "issued": {
+   "date-parts": [
+    [
+     1866,
+     6,
+     1
+    ]
+   ]
+  },
+  "URL": "https://www.latterdaytruth.org/"
+ },
+ {
   "id": "newyorkherald18691212",
   "type": "article-newspaper",
   "title": "[Untitled item], New York Herald",
@@ -865,6 +884,25 @@
   },
   "page": "2",
   "URL": "https://www.newspapers.com/image/1236106884/"
+ },
+ {
+  "id": "saintsherald18790115",
+  "type": "article-newspaper",
+  "title": "Knowledge of God",
+  "note": "Saints’ Herald (Plano, Ill.) 26 (January 15, 1879): 20–24. Zenas H. Gurley Jr., “Knowledge of God,” dated Malad City, Idaho, October 2, 1878. Written while Burton’s case was pending. The RLDS apostle counts “the murder of Joseph Morris, John Banks, the Parishes, and many others” among killings of apostates by the Utah church (p. 22), and explains the “young ‘Jesus’” of the Davisites at Walla Walla by belief in transmigration (p. 23). See the Morrisite War and the Walla Walla question. Listed on https://morrisite.org/newspapers.html#np-1877",
+  "keyword": "Burton’s arrest and trial, 1877–1879",
+  "container-title": "Saints’ Herald",
+  "publisher-place": "Plano, Ill.",
+  "issued": {
+   "date-parts": [
+    [
+     1879,
+     1,
+     15
+    ]
+   ]
+  },
+  "URL": "https://latterdaytruth.org/pdf/100193.pdf"
  },
  {
   "id": "dailyintelligencer18800304",
