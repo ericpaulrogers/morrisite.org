@@ -461,6 +461,23 @@
   "URL": "https://www.latterdaytruth.org/"
  },
  {
+  "id": "saintsherald1869",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Saints’ Herald",
+  "note": "Saints’ Herald (Plano, Ill.) 16 (1869): 81. An editorial note, from a letter, on “six aspirants to the successorship of Joseph Morris, slain at Weber”: Livingstone (Nevada), Williams (Utah), “G. Gull” (Omaha), “William Davis” (Oregon), George Thompson (England) and Lorentzen (Denmark). See the movement at a glance. Listed on https://morrisite.org/newspapers.html#np-1864",
+  "keyword": "Soda Springs and after, 1864–1869",
+  "container-title": "Saints’ Herald",
+  "publisher-place": "Plano, Ill.",
+  "issued": {
+   "date-parts": [
+    [
+     1869
+    ]
+   ]
+  },
+  "URL": "https://latterdaytruth.org/pdf/100183.pdf#page=82"
+ },
+ {
   "id": "newyorkherald18691212",
   "type": "article-newspaper",
   "title": "[Untitled item], New York Herald",
@@ -541,6 +558,23 @@
   },
   "page": "5",
   "URL": "https://www.newspapers.com/image/1139634231/"
+ },
+ {
+  "id": "saintsherald1870",
+  "type": "article-newspaper",
+  "title": "[Untitled item], Saints’ Herald",
+  "note": "Saints’ Herald (Plano, Ill.) 17 (1870): 22, 242–43, 375, 442; 18 (1871): 601; 19 (1872): 52–53; 20 (1873): 364, 551. The Reorganized Church’s paper on the Morrisites, 1869–73: E. C. Brand on the Morrisite families at Soda Springs (Malad City, November 20, 1869); John L. Bear’s letter from Soda Springs (February 8, 1870); W. W. Thomas on two “of the Canaanite persuasion” gone to Wales (Silver Bow City, February 24, 1870); the RLDS Soda Springs branch in conference minutes of 1870, 1871 and 1873; an editorial on the factions (January 1, 1872); and C. W. Wandell on the Morrisites at San Juan, California (San Jose, July 29, 1873). See the RLDS question. Listed on https://morrisite.org/newspapers.html#np-1870",
+  "keyword": "Who was in command? 1870–1876",
+  "container-title": "Saints’ Herald",
+  "publisher-place": "Plano, Ill.",
+  "issued": {
+   "date-parts": [
+    [
+     1870
+    ]
+   ]
+  },
+  "URL": "https://latterdaytruth.org/pdf/100184.pdf"
  },
  {
   "id": "corinnedailyjournal18710726",
