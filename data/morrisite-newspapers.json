@@ -1649,6 +1649,25 @@
   "URL": "https://trove.nla.gov.au/newspaper/article/206482947"
  },
  {
+  "id": "anacondastandard19150705",
+  "type": "article-newspaper",
+  "title": "John Staffanson Is Killed by Lightning",
+  "note": "Anaconda Standard, July 5, 1915, p. 4. “John Staffanson Is Killed by Lightning.” John T. Staffanson, son of Peter Staffanson, killed by lightning on July 4, 1915, while irrigating on his ranch six miles east of Anaconda; the family “among the pioneers of the Deer Lodge valley.” It names his brothers Jacob, Nels, Joe, Hiram, Ephraim and Will. Newspapers.com links need a subscription. Listed on https://morrisite.org/newspapers.html#np-1901",
+  "keyword": "Early twentieth century, 1901–1950",
+  "container-title": "Anaconda Standard",
+  "issued": {
+   "date-parts": [
+    [
+     1915,
+     7,
+     5
+    ]
+   ]
+  },
+  "page": "4",
+  "URL": "https://www.newspapers.com/image/348013403/"
+ },
+ {
   "id": "ephraimenterprise19110223",
   "type": "article-newspaper",
   "title": "President Henry Beal",
