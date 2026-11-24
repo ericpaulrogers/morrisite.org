@@ -969,9 +969,30 @@
   }
  },
  {
+  "id": "staffanson1997from",
+  "type": "book",
+  "note": "Staffanson, RoLayne Rich. “From Sturdy Stock: The Staffansons of Sweden.” Family history, 1997; revised July 2008. On FamilySearch Memories (Peter Staffanson, KWJK-LWP). The first chapter of a family history: Peter and Cecilia Staffanson’s baptism at Copenhagen in 1852, their crossing in 1854–55, Brigham City, Council Bluffs, Montana and the family cemetery on Lost Creek. It does not mention the Morrisites. See Peter Staffanson.",
+  "keyword": "Books",
+  "author": [
+   {
+    "family": "Staffanson",
+    "given": "RoLayne Rich"
+   }
+  ],
+  "title": "From Sturdy Stock: The Staffansons of Sweden",
+  "URL": "person/peter-staffanson.html",
+  "issued": {
+   "date-parts": [
+    [
+     1997
+    ]
+   ]
+  }
+ },
+ {
   "id": "staffanson2015witness",
   "type": "book",
-  "note": "Staffanson, Robert. Witness to Spirit: My Life with Cowboys, Mozart & Indians. Deadwood, OR: Wyatt-MacKenzie, 2015; paperback 2016. A memoir by a grandson of Andrew Hendrikson, son of George Staffanson and Julia Hendrickson. The opening “Cowboys” section tells of his Danish grandmother’s coming to Montana, the families’ move north from Utah by wagon train in 1872, visits to his Grandmother Hendrickson’s farm in the Deer Lodge Valley, and his mother’s hymns from “the church in which her father was a minister.” It does not name the Morrisites or the Lord’s House. See Andrew Hendrikson.",
+  "note": "Staffanson, Robert. Witness to Spirit: My Life with Cowboys, Mozart & Indians. Deadwood, OR: Wyatt-MacKenzie, 2015; paperback 2016. A memoir by a grandson of Andrew Hendrikson and great-grandson of Peter Staffanson, son of George Staffanson and Julia Hendrickson. The opening “Cowboys” section tells of his Danish grandmother’s coming to Montana, the families’ move north from Utah by wagon train in 1872, visits to his Grandmother Hendrickson’s farm in the Deer Lodge Valley, and his mother’s hymns from “the church in which her father was a minister.” It does not name the Morrisites or the Lord’s House. See Andrew Hendrikson and Peter Staffanson.",
   "keyword": "Books",
   "author": [
    {
