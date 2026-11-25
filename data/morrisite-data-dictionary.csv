@@ -1,0 +1,43 @@
+﻿file,column,definition,allowed_values
+morrisite-roll-1861-62.csv,roll_name,"The name as printed on the roll. A repeated name takes its order on the roll in brackets, e.g. Hanson, Rasmus [1].",
+morrisite-roll-1861-62.csv,sex_from_name,"F or M, judged from the given name alone; blank if unclear.",F; M; blank
+morrisite-roll-1861-62.csv,name_origin,"Scandinavian, English-language, German or Swiss, or Unclear, judged from the name alone. Not evidence of birthplace.",Scandinavian; English-language; German or Swiss; Unclear
+morrisite-roll-1861-62.csv,familysearch_id,"The FamilySearch Family Tree person matched to this name, where a match has been made. Blank does not mean no match exists.",
+morrisite-roll-1861-62.csv,familytree_name,The name and dates in Family Tree.,
+morrisite-roll-1861-62.csv,born,"From Family Tree, as pulled on November 3, 2026. Family Tree is a shared, editable tree; check the sources attached there.",
+morrisite-roll-1861-62.csv,birthplace,"From Family Tree, as pulled on November 3, 2026. Family Tree is a shared, editable tree; check the sources attached there.",
+morrisite-roll-1861-62.csv,died,"From Family Tree, as pulled on November 3, 2026. Family Tree is a shared, editable tree; check the sources attached there.",
+morrisite-roll-1861-62.csv,death_place,"From Family Tree, as pulled on November 3, 2026. Family Tree is a shared, editable tree; check the sources attached there.",
+morrisite-roll-1861-62.csv,company,"The pioneer company the person crossed the plains with, from the records attached in Family Tree.",
+morrisite-roll-1861-62.csv,company_year,"The pioneer company the person crossed the plains with, from the records attached in Family Tree.",
+morrisite-roll-1861-62.csv,later_affiliation,Where the person is known to have gone in religion after 1862. Blank means not yet known.,
+morrisite-roll-1861-62.csv,person_page,"The guide’s page for the person, if there is one.",
+morrisite-whereabouts.csv,roll_name,As on the roll.,
+morrisite-whereabouts.csv,year,The year of the record.,
+morrisite-whereabouts.csv,place,"The place, as named on the map.",
+morrisite-whereabouts.csv,latitude,The map point for the place (approximate for towns and valleys).,
+morrisite-whereabouts.csv,longitude,The map point for the place (approximate for towns and valleys).,
+morrisite-whereabouts.csv,certainty,"Identity confidence: whether the person in the record is the person on the roll. sure: the record names the person and fits what is known; probable: the identification is likely but not proven (a common name, or a match by family and place); possible: one plausible candidate among others, kept for further research.",sure; probable; possible
+morrisite-whereabouts.csv,kind,"The type of record: census, list (a membership or other list), testimony, patent (a federal land patent), death (a death, burial or probate record), marriage, letter, or note (a statement in a published or manuscript source).",census; list; testimony; patent; death; marriage; letter; note
+morrisite-whereabouts.csv,source,"Where the record is, with page or image where known.",
+morrisite-relationships.csv,person,Read as a sentence: A is the parent of / spouse of / sibling of / inlaw of (in-law of) B. Both people are on the roll.,
+morrisite-relationships.csv,relationship,Read as a sentence: A is the parent of / spouse of / sibling of / inlaw of (in-law of) B. Both people are on the roll.,parent of; spouse of; sibling of; inlaw of
+morrisite-relationships.csv,other_person,Read as a sentence: A is the parent of / spouse of / sibling of / inlaw of (in-law of) B. Both people are on the roll.,
+morrisite-relationships.csv,familysearch_id,The Family Tree IDs of the two people.,
+morrisite-relationships.csv,other_familysearch_id,The Family Tree IDs of the two people.,
+morrisite-relationships.csv,source,"Where the relationship comes from. Most are from FamilySearch Family Tree, a shared, editable tree: treat them as leads and check the sources attached there.",
+morrisite-relationships.csv,certainty,"confident when both people are firmly identified and the relationship is supported by records beyond the tree (a census, an emigration register, an obituary); probable when either person is a probable match or the relationship rests on the tree alone.",confident; probable
+morrisite-relationships.csv,note,Any qualification.,
+morrisite-others-named.csv,name,Surname first.,
+morrisite-others-named.csv,group,"morris (Morris’s church), kington (held or tried after the siege), montana (the Deer Lodge church), or davies (the Walla Walla community).",morris; kington; montana; davies
+morrisite-others-named.csv,earlier,earlier if known or said to have been with the Morrisites before joining Davies.,earlier; blank
+morrisite-others-named.csv,dates,As known.,
+morrisite-others-named.csv,what_the_sources_say,The guide’s summary.,
+morrisite-others-named.csv,source,The citation.,
+morrisite-others-named.csv,certainty,Blank when a source names the person as a Morrisite (or a follower of the offshoot) and the identification is secure; probable when either the identification of the person or the membership itself is uncertain. The summary says which.,probable; blank
+morrisite-posse-1862.csv,image,The image number in the catalog’s digital copy.,
+morrisite-posse-1862.csv,unit,"The company or command, as the return describes it.",
+morrisite-posse-1862.csv,role,"Rank or duty where given (captain, lieut., sergeant, teamster), or the number on the roll.",
+morrisite-posse-1862.csv,name,As written; [?] marks an uncertain reading.,
+morrisite-posse-1862.csv,note,"Horses, wagons, arms or other details on the return, and the editor’s identifications.",
+morrisite-posse-1862.csv,reading,uncertain when any part of the name is an uncertain reading.,uncertain; blank
