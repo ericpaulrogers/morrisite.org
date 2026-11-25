@@ -1,4 +1,4 @@
-"""Build the passage index and people data for 'Ask the guide' from the built site.
+"""Build the passage index and people data for 'Ask Morrisite.org' from the built site.
 
 Usage: python3 build_index.py <built-site-dir> <out-dir>
 Writes passages.json (id, url, page, head, text) and people.json.

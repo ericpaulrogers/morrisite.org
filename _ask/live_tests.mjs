@@ -1,5 +1,5 @@
 // Live tests against the deployed Worker, with the real model. Run by the GitHub job
-// "Ask the guide" (Run workflow → run tests). Prints a Markdown report for the job summary.
+// "Ask Morrisite.org" (Run workflow → run tests). Prints a Markdown report for the job summary.
 // About 20 questions; costs about a cent with Claude Haiku 5.5.
 import fs from "fs";
 const URL_ = process.argv[2], TOKEN = process.env.TEST_TOKEN;
@@ -33,6 +33,6 @@ for (const t of [...tests, ...extra]) {
   if (verdict === "pass") pass++; else if (verdict.startsWith("REVIEW")) review++; else fail++;
   rows.push(`| ${esc(t.q)} | ${verdict} | ${esc(j.status || st)} / ${esc(j.level || "")}${j.reason ? " (" + esc(j.reason) + ")" : ""}${j.detail && !j.error ? " DETAIL: " + esc(j.detail) : ""} | ${esc(text).slice(0, 400)} | ${esc([...new Set(cites)].join(", "))} |`);
 }
-console.log(`## Ask the guide: live tests\n\n${pass} passed, ${fail} failed, ${review} to review by hand. Worker: ${URL_}\n`);
+console.log(`## Ask Morrisite.org: live tests\n\n${pass} passed, ${fail} failed, ${review} to review by hand. Worker: ${URL_}\n`);
 console.log("| Question | Result | Status / level | Answer | Cites |\n|---|---|---|---|---|\n" + rows.join("\n"));
 if (fail) process.exitCode = 1;

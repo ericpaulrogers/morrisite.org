@@ -1,4 +1,4 @@
-// Cloudflare Worker for "Ask the guide" on morrisite.org.
+// Cloudflare Worker for "Ask Morrisite.org" on morrisite.org.
 // Answers only from the guide's own passages (bundled at build time), checks every answer
 // against those passages before returning it, and keeps no record of the questions.
 //
@@ -105,7 +105,7 @@ export default {
     if (q.length < 3 || q.length > 300) return cors(env, { error: "Ask a question of 3 to 300 characters." }, 400);
     const testing = !!env.TEST_TOKEN && req.headers.get("x-test-token") === env.TEST_TOKEN; // automated tests only
     if (!testing && !(await turnstileOk(env, body.turnstile, ip))) return cors(env, { error: "Please confirm you are human and try again." }, 403);
-    if (!testing && !(await underLimits(env, ip))) return cors(env, { error: "The guide has had many questions just now. Please try again later." }, 429);
+    if (!testing && !(await underLimits(env, ip))) return cors(env, { error: "The site has had many questions just now. Please try again later." }, 429);
 
     const hits = A.search(INDEX, q, 8);
     if (!hits.length || hits[0].score < MIN_SCORE) return cors(env, notFound(q, hits, "no-passages"));

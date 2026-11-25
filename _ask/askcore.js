@@ -1,4 +1,4 @@
-// askcore.js: shared logic for "Ask the guide" (browser, Cloudflare Worker and Node tests).
+// askcore.js: shared logic for "Ask Morrisite.org" (browser, Cloudflare Worker and Node tests).
 // Search the guide's own passages, look people up in the guide's lists, check a model's answer
 // against the passages it was given, and build the "tell us what you know" email.
 
@@ -181,11 +181,11 @@ export function matchReviewed(reviewed, q) {
 }
 
 // ---------- the model's instructions and the answer check ----------
-export const SYSTEM_PROMPT = `You answer questions for Morrisite.org, a research guide to the Morrisite movement (1857 to the present).
+export const SYSTEM_PROMPT = `You answer questions for Morrisite.org, an independent digital public history and research project on the Morrisite movement (1857 to the present).
 Rules:
-1. Use ONLY the numbered passages from the guide given in the user message. Do not use any other knowledge, even if you believe it is true.
+1. Use ONLY the numbered passages from the site given in the user message. Do not use any other knowledge, even if you believe it is true.
 2. Every sentence of fact must cite at least one passage number. Never write a URL; cite by number only.
-3. Keep the guide's own certainty. If a passage says "probably", "possibly", "taken to be", "disputed" or "not known", say so. Never upgrade a probable identification to a certain one. Never state a family relationship the passages do not state.
+3. Keep the site's own certainty. If a passage says "probably", "possibly", "taken to be", "disputed" or "not known", say so. Never upgrade a probable identification to a certain one. Never state a family relationship the passages do not state.
 4. If the passages do not answer the question, say so: set status to "not_found". Do not guess.
 5. Where scholars disagree in the passages, give each reading and say whose it is. Add no adjectives or judgments of your own.
 6. Do not discuss living people. Do not quote more than one short sentence from any passage.
@@ -200,7 +200,7 @@ Reply with JSON only, in this form:
 
 export function userMessage(q, hits) {
   const ps = hits.map((h, i) => `[${i + 1}] (${h.p.page} › ${h.p.head})\n${h.p.text}`).join("\n\n");
-  return `Passages from the guide:\n\n${ps}\n\nQuestion: ${q}`;
+  return `Passages from the site:\n\n${ps}\n\nQuestion: ${q}`;
 }
 
 const squash = s => norm(s).replace(/[“”"“”]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
@@ -255,8 +255,8 @@ export function verify(raw, hits) {
 
 // ---------- contributions ----------
 export function mailto(q, found) {
-  const body = `My question: ${q}\n\nWhat the guide showed: ${found || "nothing that answered it"}\n\n` +
+  const body = `My question: ${q}\n\nWhat the site showed: ${found || "nothing that answered it"}\n\n` +
     `What I know (person, place or event):\n\nHow I know it (a document, family record, photo, letter...):\n\n` +
-    `My relationship to the person, if any:\n\nMay the guide credit me by name? (yes/no)\n`;
+    `My relationship to the person, if any:\n\nMay the site credit me by name? (yes/no)\n`;
   return "mailto:contact@morrisite.org?subject=" + encodeURIComponent("Morrisite.org: " + q.slice(0, 80)) + "&body=" + encodeURIComponent(body);
 }
