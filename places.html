@@ -731,7 +731,7 @@ dd p{margin:.4em 0}
     <a class="mark" href="index.html">Morrisite.org</a>
     <nav class="util" aria-label="Site">
       <a href="whats-new.html">What&rsquo;s new</a>
-      <a href="ask.html">Ask the guide</a>
+      <a href="ask.html">Ask Morrisite.org</a>
       <a href="about.html#share">Share records</a>
       <a href="about.html">About</a>
       <a lang="da" hreflang="da" href="dansk.html"><svg class="flag" viewBox="0 0 37 28" width="17" height="13" aria-hidden="true" focusable="false" style="vertical-align:-1px;margin-right:.3em;border-radius:1px"><rect width="37" height="28" fill="#C8102E"/><rect x="12" width="4" height="28" fill="#fff"/><rect y="12" width="37" height="4" fill="#fff"/></svg>Dansk</a>
@@ -854,13 +854,13 @@ var mk=document.querySelector('a.mark'),mh=mk?mk.getAttribute('href'):'',root=/i
 var idx=null,loading=false,sel=-1,timer=null;
 function norm(t){return (t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ø/g,'o').replace(/æ/g,'ae').replace(/å/g,'a').replace(/[^a-z0-9]+/g,' ');}
 function esc(t){return t.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-/* Questions ("Who was...?", "Why did...") also get a line that opens "Ask the guide". */
+/* Questions ("Who was...?", "Why did...") also get a line that opens "Ask Morrisite.org". */
 function isQ(t){t=t.trim().toLowerCase();var n=t.split(/\s+/).length;return (/\?$/.test(t)&&n>=2)||(n>=3&&/^(who|whom|whose|what|what's|whats|when|where|why|how|did|does|do|was|were|is|are|can|could|which|tell me)\b/.test(t));}
 var askLib=null,askRev=null,askBusy=false;
 function loadAsk(cb){if(askRev||askLib===false)return cb();if(askBusy)return;askBusy=true;
  try{import(new URL(root+'ask/askcore.js',location.href).href).then(function(m){askLib=m;return fetch(root+'ask/reviewed.json');}).then(function(r){return r.json();}).then(function(d){askRev=d;cb();}).catch(function(){askLib=false;cb();});}catch(e){askLib=false;cb();}}
 function askRow(raw){var r=askLib&&askRev?askLib.matchReviewed(askRev,raw):null;
- return '<a role="option" class="sr-ask" href="'+root+'ask.html?q='+encodeURIComponent(raw)+'"><span class="sr-kind">Ask the guide</span><span class="sr-title">'+esc(raw)+'</span><span class="sr-snip">'+(r?'The editor has a reviewed answer: <b>'+esc(r.q)+'</b>':'An answer drawn only from this guide&rsquo;s pages, with its sources. Press Enter.')+'</span></a>';}
+ return '<a role="option" class="sr-ask" href="'+root+'ask.html?q='+encodeURIComponent(raw)+'"><span class="sr-kind">Ask Morrisite.org</span><span class="sr-title">'+esc(raw)+'</span><span class="sr-snip">'+(r?'The editor has a reviewed answer: <b>'+esc(r.q)+'</b>':'An answer drawn only from this guide&rsquo;s pages, with its sources. Press Enter.')+'</span></a>';}
 function load(cb){if(idx)return cb();if(loading)return;loading=true;
  fetch(root+'search-index.json').then(function(r){return r.json();}).then(function(d){
   idx=d.map(function(e){e.nt=' '+norm(e.t)+' ';e.ns=' '+norm(e.s)+' ';return e;});cb();
