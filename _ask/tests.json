@@ -166,5 +166,13 @@
  {
   "q": "Why did Joseph Morris order the killing of dissenters?",
   "expect": "trap:model-must-refuse-premise"
+ },
+ {
+  "q": "Did the Morrisites ordain women?",
+  "expect": "reviewed:women-ordained"
+ },
+ {
+  "q": "Were there Morrisite priestesses?",
+  "expect": "reviewed:women-ordained"
  }
 ]
