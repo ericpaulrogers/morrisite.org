@@ -384,13 +384,16 @@ table.xt td.num, table.xt th.num { text-align: right; font-family: var(--font-mo
 table.xt tfoot td, table.xt tfoot th { border-top: 2px solid var(--rule); color: var(--muted); }
 .xt-note { font-size: 13.5px; color: var(--muted); }
 
+.cl-link { visibility: hidden; margin-left: 6px; color: var(--muted); text-decoration: none; font-size: .78em; font-family: var(--font-mono); font-weight: normal; letter-spacing: 0; white-space: nowrap; }
+.repo-top h3:hover .cl-link, li:hover > .date .cl-link, dt:hover .cl-link, .cl-link:focus, .cl-link.done { visibility: visible; }
+@media (hover: none) { .cl-link { visibility: visible; } }
 .r-anchor { visibility: hidden; margin-left: 4px; color: var(--muted); text-decoration: none; font-size: .85em; }
 .roll-list li:hover .r-anchor, .r-anchor:focus { visibility: visible; }
 .roll-list li:target { background: color-mix(in srgb, var(--accent) 16%, transparent); outline: 2px solid var(--accent); outline-offset: 1px; scroll-margin-top: 90px; }
 .place-pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 2em 0 0; padding-top: 1em; border-top: 1px solid var(--rule); font-size: 15px; }
 /* Print: drop navigation and controls; show link targets for outside sources */
 @media print {
-  header, nav, .subnav, .crumb, .skip, .site-search, #site-results, .toc, .dt-controls, .dt-status, button, .r-anchor, .aff-tip, footer .wrap span:not(:last-child), .place-pn { display: none !important; }
+  header, nav, .subnav, .crumb, .skip, .site-search, #site-results, .toc, .dt-controls, .dt-status, button, .r-anchor, .cl-link, .aff-tip, footer .wrap span:not(:last-child), .place-pn { display: none !important; }
   body { background: #fff !important; color: #000 !important; font-size: 11pt; }
   a { color: #000 !important; text-decoration: none; }
   main a[href^="http"]::after { content: " <" attr(href) ">"; font-size: 8.5pt; word-break: break-all; }
@@ -1291,6 +1294,10 @@ if(qs){var cards=qs.querySelectorAll('.repo');var bar2=document.createElement('d
   cards.forEach(function(c){var s=(c.querySelector('.callno')||{}).textContent||'';s=s.toLowerCase();c.hidden=!!f&&s.indexOf(f)!==0;});});}
 })();
 </script>
+<script>(function(){function mk(id){var a=document.createElement("a");a.className="cl-link";a.href="#"+id;a.title="Copy a link to this entry";a.setAttribute("aria-label","Copy a link to this entry");a.textContent="#";a.addEventListener("click",function(e){if(!navigator.clipboard)return;e.preventDefault();var u=location.origin+location.pathname+"#"+id;navigator.clipboard.writeText(u).then(function(){a.textContent="link copied";a.classList.add("done");try{history.replaceState(null,"","#"+id);}catch(x){}setTimeout(function(){a.textContent="#";a.classList.remove("done");},1800);},function(){location.hash=id;});});return a;}
+document.querySelectorAll(".repo[id] > .repo-top > h3").forEach(function(h){h.appendChild(mk(h.parentElement.parentElement.id));});
+document.querySelectorAll("li[id] > span.date").forEach(function(d){d.appendChild(mk(d.parentElement.id));});
+document.querySelectorAll("dl.glossary > dt[id]").forEach(function(t){t.appendChild(mk(t.id));});})();</script>
 <script data-goatcounter="https://morrisite.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
