@@ -19,7 +19,7 @@ function stem(w) {
 }
 
 export function tokens(s) {
-  return norm(s).replace(/'s\b/g, "").split(/[^a-z0-9]+/).filter(w => w.length > 1 && !STOP.has(w)).map(stem);
+  return norm(s).replace(/'s\b/g, "").split(/[^a-z0-9]+/).filter(w => (w.length > 1 || /^[0-9]$/.test(w)) && !STOP.has(w)).map(stem);
 }
 
 // ---------- passage search (BM25) ----------
