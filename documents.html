@@ -384,16 +384,13 @@ table.xt td.num, table.xt th.num { text-align: right; font-family: var(--font-mo
 table.xt tfoot td, table.xt tfoot th { border-top: 2px solid var(--rule); color: var(--muted); }
 .xt-note { font-size: 13.5px; color: var(--muted); }
 
-.cl-link { visibility: hidden; margin-left: 6px; color: var(--muted); text-decoration: none; font-size: .78em; font-family: var(--font-mono); font-weight: normal; letter-spacing: 0; white-space: nowrap; }
-.repo-top h3:hover .cl-link, li:hover > .date .cl-link, dt:hover .cl-link, .cl-link:focus, .cl-link.done { visibility: visible; }
-@media (hover: none) { .cl-link { visibility: visible; } }
 .r-anchor { visibility: hidden; margin-left: 4px; color: var(--muted); text-decoration: none; font-size: .85em; }
 .roll-list li:hover .r-anchor, .r-anchor:focus { visibility: visible; }
 .roll-list li:target { background: color-mix(in srgb, var(--accent) 16%, transparent); outline: 2px solid var(--accent); outline-offset: 1px; scroll-margin-top: 90px; }
 .place-pn { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 2em 0 0; padding-top: 1em; border-top: 1px solid var(--rule); font-size: 15px; }
 /* Print: drop navigation and controls; show link targets for outside sources */
 @media print {
-  header, nav, .subnav, .crumb, .skip, .site-search, #site-results, .toc, .dt-controls, .dt-status, button, .r-anchor, .cl-link, .aff-tip, footer .wrap span:not(:last-child), .place-pn { display: none !important; }
+  header, nav, .subnav, .crumb, .skip, .site-search, #site-results, .toc, .dt-controls, .dt-status, button, .r-anchor, .anchor-link, .aff-tip, footer .wrap span:not(:last-child), .place-pn { display: none !important; }
   body { background: #fff !important; color: #000 !important; font-size: 11pt; }
   a { color: #000 !important; text-decoration: none; }
   main a[href^="http"]::after { content: " <" attr(href) ">"; font-size: 8.5pt; word-break: break-all; }
@@ -705,6 +702,8 @@ footer .wrap { display: grid; gap: 8px; }
 .anchor-link { opacity: 0; margin-left: 6px; font-family: var(--font-mono); font-size: .7em; text-decoration: none; color: var(--muted); }
 :hover > .anchor-link, .anchor-link:focus { opacity: 1; }
 .anchor-link.copied::after { content: " link copied"; font-size: 11px; }
+@media (hover: none) { .anchor-link { opacity: .6; } }
+.place-chron[open] > summary .sa-c, .place-chron:not([open]) > summary .sa-o { display: none; }
 .to-top { position: fixed; right: 16px; bottom: 16px; z-index: 40; font-family: var(--font-mono); font-size: 12px; padding: 8px 12px; border: 1px solid var(--rule); background: var(--paper); color: var(--accent); text-decoration: none; border-radius: 3px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
 .filter-bar { margin: 0 0 16px; font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
 .filter-bar button { font: inherit; font-size: 13px; padding: 4px 10px; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); border-radius: 3px; cursor: pointer; }
@@ -888,7 +887,7 @@ dd p{margin:.4em 0}
             <h3>&ldquo;The Davis County Bandits,&rdquo; June 25, 1862</h3>
             <span class="callno"><i>Deseret News</i>, p. 412</span>
           </div>
-          <dl><dt>What it is</dt><dd>The result of the hearing before Judge Kinney in chambers, June 18&ndash;19, 1862. Richard Cook was fined fifty dollars and jailed thirty days for contempt and held to bail; Peter Klemgaard and Christian Neilson were remanded to prison; the other ninety-five men were held to bail of $1,500 each for the March 1863 term of the Third District Court, and stood surety for one another. It is the only list found so far of the men taken at Kington Fort, and a check on the roll: 78 of the 95 match a man on the roll, 8 more probably do, and 9 are not on it (marked * below).</dd><dt>On the roll</dt><dd>Every man on this list who matches a name on the 1861&ndash;62 <a href="roll.html#roll">roll of membership</a> is tagged <span class="bail-chip">1862 prisoner</span> there: the 78 held to bail, with Richard Cook, Peter Klemgaard and Christian Neilson. Hover over or tap a tag to see the name as the paper printed it and what happened to him. The 8 uncertain matches are not tagged. The men not on the roll are an open question (see <a href="questions.html#questions">Questions</a>); for the trials of March 1863, see the next entry.</dd><dt>Text</dt><dd><blockquote class="doc-text"><p>Richard Cook was fined fifty dollars and ordered to be imprisoned thirty days for contempt in not obeying the writ of Habeas Corpus, and also held to bail in the sum of fifteen hundred dollars for his appearance at the next term of the Court, to answer further in the premises. Peter Klemgaard and Christian Neilson were remanded to prison, and</p>
+          <dl><dt>What it is</dt><dd>The result of the hearing before Judge Kinney in chambers, June 18&ndash;19, 1862. Richard Cook was fined fifty dollars and jailed thirty days for contempt and held to bail; Peter Klemgaard and Christian Neilson were remanded to prison; the other ninety-five men were held to bail of $1,500 each for the March 1863 term of the Third District Court, and stood surety for one another. It is the only list found so far of the men taken at Kington Fort, and a check on the roll: 78 of the 95 match a man on the roll, 8 more probably do, and 9 are not on it (marked * below).</dd><dt>On the roll</dt><dd>Every man on this list who matches a name on the 1861&ndash;62 <a href="roll.html#roll">roll of membership</a> is marked &#9653; there (the roll&rsquo;s filters can show these men alone): the 78 held to bail, with Richard Cook, Peter Klemgaard and Christian Neilson. Click or tap a name there to see the name as the paper printed it and what happened to him. The 8 uncertain matches are not tagged. The men not on the roll are an open question (see <a href="questions.html#questions">Questions</a>); for the trials of March 1863, see the next entry.</dd><dt>Text</dt><dd><blockquote class="doc-text"><p>Richard Cook was fined fifty dollars and ordered to be imprisoned thirty days for contempt in not obeying the writ of Habeas Corpus, and also held to bail in the sum of fifteen hundred dollars for his appearance at the next term of the Court, to answer further in the premises. Peter Klemgaard and Christian Neilson were remanded to prison, and</p>
 <p>John Parsons, Peter L. McCue, Ed. Moss, Andrew Mason, Daniel Smith, Jos. Richardson, J. B. Ledgeway, J. A. Merrick, Wm. Hill, M. Mudd, L. C. Hanson, Wm. Rogers, Joseph Dove, G. Gudmenson, H. P. Smith, L. Parr*, Alonzo Brown, R. J. Livingston, James Bowman, John Winn, O. O. Rosenblad, Peter Christoferson, Josiah Price, N. M. Urumsen, J. Christiansen, John Neilson, J. C. Sorenson, J. G. Lousley, H. Hanson, S. P. Guhl, A. Jenson, J. Poulsen, Elijah Clifford, J. Petrie, Chas. Higham, C. Jensen, J. Jensen, S. Hagg, S. Williamsen*, P. Sorensen, Michael Christiansen, Neils Larson, J. P. Sorensen*, Alexander Dow, W. W. Thomas, R. E. Farley, John Jones, D. Thomas, John Gray, R. D. Alvy, Hugh Park, N. Peterson, Andrew Anderson, H. Okensen*, S. P. Rasmusson*, N. R. Beck, T. L. Williams, J. E. Reese*, J. Peterson, Edward Lloyd, J. C. Edwards*, Hugh Davies, Wm. Davies, Saml. Hulse*, Wm. Chamberlain, A. Warrenden, Wm. Adams, James Dove, George Dove, Abraham Taylor, Joseph Taylor, John Ames, R. Rasmusson, H. Peterson, Andrew Christofferson, James Laird, Peter Peterson, P. Swensen, N. Anderson, L. Olsen, Geo. Thompson, John Trehan, John Cook, Andrew Lee, William White, David Park, J. O. Mather, J. Mather, L. C. Larsen, Alexander Richardson, E. L. Chapell, Peter J. Moss, Wm. Magee, Peter McCue, Peter Moffat*</p>
 <p>were each held to bail, in the sum of fifteen hundred dollars, for their appearance at the next regular term of the Third Judicial District Court, to be held in Great Salt Lake City, on the second Monday of March, A.D. 1863, to answer such charges as may be brought against them by the Grand Jury.</p></blockquote></dd><dt>Read it</dt><dd><a href="https://newspapers.lib.utah.edu/" target="_blank" rel="noopener">Utah Digital Newspapers</a> (search the <i>Deseret News</i> for June 25, 1862)</dd></dl>
         </div>
@@ -1059,7 +1058,7 @@ document.addEventListener('click',function(ev){if(!ev.target.closest('.site-sear
 <script>
 /* Link icons beside entries, back-to-top button, and filters for Bibliography and Questions. */
 (function(){
-document.querySelectorAll('main h3[id], main dt[id], main .repo[id] > .repo-top h3, main article[id] > h3, main .ni-list li[id] > b, main .aff-who li[id] > b').forEach(function(h){
+document.querySelectorAll('main h3[id], main dt[id], main .repo[id] > .repo-top h3, main article[id] > h3, main .ni-list li[id] > b, main .aff-who li[id] > b, main li[id] > span.date').forEach(function(h){
  var host=h.id?h:h.closest('[id]');if(!host||!host.id||host.id==='top')return;
  var a=document.createElement('a');a.className='anchor-link';a.href='#'+host.id;a.textContent='#';a.setAttribute('aria-label','Link to this entry');a.title='Copy a link to this entry';
  a.addEventListener('click',function(e){var u=location.href.split('#')[0]+'#'+host.id;try{navigator.clipboard.writeText(u);a.classList.add('copied');setTimeout(function(){a.classList.remove('copied')},1500);}catch(x){}});
@@ -1081,10 +1080,6 @@ if(qs){var cards=qs.querySelectorAll('.repo');var bar2=document.createElement('d
   cards.forEach(function(c){var s=(c.querySelector('.callno')||{}).textContent||'';s=s.toLowerCase();c.hidden=!!f&&s.indexOf(f)!==0;});});}
 })();
 </script>
-<script>(function(){function mk(id){var a=document.createElement("a");a.className="cl-link";a.href="#"+id;a.title="Copy a link to this entry";a.setAttribute("aria-label","Copy a link to this entry");a.textContent="#";a.addEventListener("click",function(e){if(!navigator.clipboard)return;e.preventDefault();var u=location.origin+location.pathname+"#"+id;navigator.clipboard.writeText(u).then(function(){a.textContent="link copied";a.classList.add("done");try{history.replaceState(null,"","#"+id);}catch(x){}setTimeout(function(){a.textContent="#";a.classList.remove("done");},1800);},function(){location.hash=id;});});return a;}
-document.querySelectorAll(".repo[id] > .repo-top > h3").forEach(function(h){h.appendChild(mk(h.parentElement.parentElement.id));});
-document.querySelectorAll("li[id] > span.date").forEach(function(d){d.appendChild(mk(d.parentElement.id));});
-document.querySelectorAll("dl.glossary > dt[id]").forEach(function(t){t.appendChild(mk(t.id));});})();</script>
 <script data-goatcounter="https://morrisite.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
