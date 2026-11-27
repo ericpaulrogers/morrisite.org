@@ -2380,6 +2380,27 @@
   }
  },
  {
+  "id": "leeson1885history",
+  "type": "book",
+  "note": "Leeson, Michael A., ed. History of Montana, 1739–1885. Chicago: Warner, Beers & Co., 1885. County histories and some 1,500 biographical sketches. The Deer Lodge County history describes the Morrisite church building and its members (pp. 582–587); the biographies include Christian Nielsen (p. 1148), William Price Thomas (p. 1092), William James (p. 1075), Erik Eliasson (p. 1064), L. C. and Niels Hansen (p. 1069), Morgan Evans (pp. 1067–68) and John E. Reese’s sons (p. 1154); p. 301 mentions a Morrisite settlement at Fort Hall Bottom in 1864. HathiTrust",
+  "keyword": "Local and county histories",
+  "editor": [
+   {
+    "family": "Leeson",
+    "given": "Michael A."
+   }
+  ],
+  "title": "History of Montana, 1739–1885",
+  "URL": "https://catalog.hathitrust.org/Record/006791994",
+  "issued": {
+   "date-parts": [
+    [
+     1885
+    ]
+   ]
+  }
+ },
+ {
   "id": "lever1898history",
   "type": "book",
   "note": "Lever, W. H. History of Sanpete and Emery Counties, Utah. Ogden, 1898. Biographical sketches; p. 302 gives Henry Beal’s marriage to Mary Thorpe, Morris’s first wife, at Ephraim, July 4, 1854.",
